@@ -7,9 +7,10 @@
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="How To Implement a Progress Bar">
       <link rel="up" href="index.html" title="How To Implement a Progress Bar">
-      <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Implementing Progress Bars"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Implementing Progress Bars">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_implement_progress_bar/ch04.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -29,7 +30,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e270"></a>Chapter&nbsp;4.&nbsp;Troubleshooting
+                     <h2 class="title"><a name="xref_Troubleshooting"></a>Chapter&nbsp;4.&nbsp;Troubleshooting
                      </h2>
                   </div>
                </div>
@@ -37,10 +38,10 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch04.html#d0e273">4.1. My game's personality script takes a while to initialise</a></span></dt>
+                  <dt><span class="section"><a href="ch04.html#d0e273">4.1. My game's personality script takes a while to initialise</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -50,16 +51,16 @@
                   </div>
                </div>
                <p>The application will call method <span class="literal">setProgress</span>
-                        until it reaches 100%. Once this value is reached, the personality
-                        script <span class="literal">init</span> method is called.
+                      until it reaches 100%. Once this value is reached, the personality script
+                      <span class="literal">init</span> method is called.
                </p>
-               <p>If you want to seamlessly incorporate the loading of the
-                        application with the loading of the personality script, then make your
-                        loading bar GUI script rescale the incoming values.
+               <p>If you want to seamlessly incorporate the loading of the application
+                      with the loading of the personality script, then make your loading bar GUI
+                      script rescale the incoming values.
                </p>
                <p>For example in
-                        <span class="literal">fantasydemo/res/scripts/client/Helpers/ProgressBar.py</span>,
-                        here are the code snippets that perform this task:
+                      <span class="literal">fantasydemo/res/scripts/client/Helpers/ProgressBar.py</span>,
+                      here are the code snippets that perform this task:
                </p><pre class="programlisting">def setMinMax( self, min, max ):
     self.min = min
     self.max = max
@@ -77,13 +78,13 @@ def startPhase( self, num ):
     if num == 1:
         self.setMinMax( 0.0, self.phase1Ratio )
     else:
-        self.setMinMax( self.phase1Ratio, 1.0 )</pre><p><span class="citetitle">Incorporating the loading of application with loading
-                           of personality script</span></p>
+        self.setMinMax( self.phase1Ratio, 1.0 )</pre><p><span class="citetitle">Incorporating the loading of application with loading of
+                         personality script</span></p>
                <p>FantasyDemo's loading bar loads a value from the
-                        <span class="literal">.gui</span> file called <span class="literal">phase1ratio</span>. This
-                        is set to 0.66, meaning that the application's initialisation goes up to
-                        66% of the progress bar. Therefore 33% of the time will be used by the
-                        personality script to load chunks.
+                      <span class="literal">.gui</span> file called <span class="literal">phase1ratio</span>. This
+                      is set to 0.66, meaning that the application's initialisation goes up to
+                      66% of the progress bar. Therefore 33% of the time will be used by the
+                      personality script to load chunks.
                </p>
             </div>
          </div>
@@ -102,7 +103,7 @@ def startPhase( self, num ):
                   <td width="40%" align="right" valign="top">&nbsp;</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

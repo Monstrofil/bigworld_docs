@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch12.html" title="Chapter&nbsp;12.&nbsp;exporter.xml">
-      <link rel="next" href="ch14.html" title="Chapter&nbsp;14.&nbsp;flags.xml"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch14.html" title="Chapter&nbsp;14.&nbsp;flags.xml">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch13.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,24 +31,23 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e3563"></a>Chapter&nbsp;13.&nbsp;<span class="literal">filters.xml</span></h2>
+                     <h2 class="title"><a name="xref_Filters_XML"></a>Chapter&nbsp;13.&nbsp;<span class="literal">filters.xml</span></h2>
                   </div>
                </div>
             </div>
             <p>Used by WorldEditor to configure the filters available in Terrain
-                   Filtering panel, this file is located under
-                   <span class="literal">bigworld/tools/worldeditor/resources/data</span>.
+                 Filtering panel, this file is located under
+                 <span class="literal">bigworld/tools/worldeditor/resources/data</span>.
             </p>
             <p>From the pre-defined set of implemented filters, only the ones
-                   specified in this file will be listed in the <em class="emphasis">Terrain
-                      Filtering</em> panel's <em class="emphasis">Filters</em> list
-                   box (in the order in which they appear). For details, see the document
-                   <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                      Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">WorldEditor</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Panel summary</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Terrain Filtering
-                      panel</a>.
+                 specified in this file will be listed in the <em class="emphasis">Terrain
+                    Filtering</em> panel's <em class="emphasis">Filters</em> list
+                 box (in the order in which they appear). For details, see the document
+                 <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html" class="olink"><i>WorldEditor</i></a>
+                 <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Panel_Summary" class="olink">Panel summary</a> <span class="symbol">&#8594;</span>
+                 <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Terrain_Filtering_Panel" class="olink">Terrain Filtering panel</a>.
             </p>
-            <p>The grammar of <span class="literal">filters.xml</span> is listed
-                   below:
+            <p>The grammar of <span class="literal">filters.xml</span> is listed below:
             </p><pre class="programlisting">&lt;filters.xml&gt;
 
   *&lt;filter&gt;
@@ -62,53 +62,53 @@
    &lt;/filter&gt;
 
 &lt;/filters.xml&gt;</pre><p><span class="citetitle">Grammar of
-                      <span class="literal">filters.xml</span></span></p>
+                    <span class="literal">filters.xml</span></span></p>
             <p>The list below describes the tags in
-                   <span class="literal">filters.xml</span>:
+                 <span class="literal">filters.xml</span>:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal">constant</span></em></p>
                      <p>Base of strength, used in conjunction with the
-                                <span class="literal">strengthRatio</span> tag.
+                              <span class="literal">strengthRatio</span> tag.
                      </p>
                      <p>When refers to an actual filter, this value is used as strength
-                                directly (probably here it should be 0).
+                              directly (probably here it should be 0).
                      </p>
-                     <p>When refers to the terrain height brush (used in the <em class="emphasis">Terrain Height</em> panel<em class="emphasis"><sup>A</sup></em>), the final
-                                strength will be the product of constant and the value of <em class="emphasis">Terrain Height</em> panel's <em class="emphasis">Strength</em> field.
+                     <p>When refers to the terrain height brush (used in the <em class="emphasis">Terrain Height</em> panel<em class="emphasis"><sup>A</sup></em>), the final strength
+                              will be the product of constant and the value of <em class="emphasis">Terrain Height</em> panel's <em class="emphasis">Strength</em> field.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">filter</span></em></p>
                      <p>Section specifying parameters either for a filter (displayed in
-                                <em class="emphasis">Terrain Filtering</em>
-                                panel<sup>B</sup>), or for the terrain height brush
-                                (used in <em class="emphasis">Terrain Height</em>
-                                panel<sup>A</sup>).
+                              <em class="emphasis">Terrain Filtering</em>
+                              panel<sup>B</sup>), or for the terrain height brush
+                              (used in <em class="emphasis">Terrain Height</em>
+                              panel<sup>A</sup>).
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">included</span></em></p>
                      <p>Determines if the filter will be listed in <em class="emphasis">Terrain Filtering</em>
-                                panel<sup>B</sup>. Defaults to true.
+                              panel<sup>B</sup>. Defaults to true.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">index</span></em></p>
                      <p>Deprecated tag &#8212; used to determine order in which filter was
-                                listed in <em class="emphasis">Terrain Filtering</em>
-                                panel<sup>B</sup>.
+                              listed in <em class="emphasis">Terrain Filtering</em>
+                              panel<sup>B</sup>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">kernel</span></em></p>
-                     <p>The 3 kernel tags (of type <span class="literal">Vector3</span>) compose
-                                an array of <span class="literal">float[9]</span>.
+                     <p>The 3 kernel tags (of type <span class="literal">Vector3</span>) compose an
+                              array of <span class="literal">float[9]</span>.
                      </p>
                      <p>Each float value represents the strength to be applied to a cell
-                                enclosed by the brush.
+                              enclosed by the brush.
                      </p>
                   </li>
                   <li>
@@ -118,7 +118,7 @@
                      <div class="blockquote">
                         <blockquote class="blockquote">
                            <p>(nearby cell heights*corresponding kernel +
-                                        strength*strengthRatio) / kernelSum
+                                      strength*strengthRatio) / kernelSum
                            </p>
                         </blockquote>
                      </div>
@@ -126,10 +126,10 @@
                   <li>
                      <p><em class="emphasis"><span class="literal">name</span></em></p>
                      <p>Name of the filter. The name is used to match the filter
-                                pre-defined in the source code, determining thus its working. If an
-                                invalid name is listed, then it will be displayed in <em class="emphasis">Terrain Filtering</em>
-                                panel's<sup>B</sup> <em class="emphasis">Filters</em> list box, but will not be
-                                selectable.
+                              pre-defined in the source code, determining thus its working. If an
+                              invalid name is listed, then it will be displayed in <em class="emphasis">Terrain Filtering</em>
+                              panel's<sup>B</sup> <em class="emphasis">Filters</em> list box, but will not be
+                              selectable.
                      </p>
                      <p>Possible values are:</p>
                      <div class="itemizedlist">
@@ -156,10 +156,10 @@
                               <p><em class="emphasis">Sharpen More</em></p>
                            </li>
                            <li>
-                              <p><em class="emphasis">Raise 20cm</em> (the shipped
-                                             file sets the included tag for this filter to false &#8212; this section
-                                             configures <em class="emphasis">Terrain Height</em>
-                                             panel's<sup>A</sup> brush).
+                              <p><em class="emphasis">Raise 20cm</em> (the shipped file
+                                           sets the included tag for this filter to false &#8212; this section
+                                           configures <em class="emphasis">Terrain Height</em>
+                                           panel's<sup>A</sup> brush).
                               </p>
                            </li>
                         </ul>
@@ -168,21 +168,21 @@
                   <li>
                      <p><em class="emphasis"><span class="literal">strengthRatio</span></em></p>
                      <p>Value to multiply by the <em class="emphasis">Terrain
-                                   Height</em> panel's<sup>A</sup> <em class="emphasis">Strength</em> field before recalculating new
-                                height.
+                                 Height</em> panel's<sup>A</sup> <em class="emphasis">Strength</em> field before recalculating new
+                              height.
                      </p>
                      <p>So, if this ratio is 0, no strength is available</p>
                   </li>
                </ul>
             </div>
-            <p><em class="emphasis"><em class="emphasis">A</em> &#8212; For details, see
-                      the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                         Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">WorldEditor</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Panel summary</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Terrain Height
-                         panel</a>.</em></p>
-            <p><em class="emphasis"><em class="emphasis">B</em> &#8212; For details, see
-                      the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                         Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">WorldEditor</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Panel summary</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Terrain Filtering
-                         panel</a>.</em></p>
+            <p><em class="emphasis"><em class="emphasis">A</em> &#8212; For details, see the
+                    document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html" class="olink"><i>WorldEditor</i></a>
+                    <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Panel_Summary" class="olink">Panel summary</a> <span class="symbol">&#8594;</span>
+                    <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Terrain_Height_Panel" class="olink">Terrain Height panel</a>.</em></p>
+            <p><em class="emphasis"><em class="emphasis">B</em> &#8212; For details, see the
+                    document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html" class="olink"><i>WorldEditor</i></a>
+                    <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Panel_Summary" class="olink">Panel summary</a> <span class="symbol">&#8594;</span>
+                    <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Terrain_Filtering_Panel" class="olink">Terrain Filtering panel</a>.</em></p>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -200,7 +200,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;14.&nbsp;<span class="literal">flags.xml</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

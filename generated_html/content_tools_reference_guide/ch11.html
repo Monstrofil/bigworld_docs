@@ -2,25 +2,27 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    
-      <title>Chapter&nbsp;11.&nbsp;Lock Server&#8212;BWLockD</title>
+      <title>Chapter&nbsp;11.&nbsp;3ds Max and Maya Exporters</title>
       <link rel="stylesheet" href="../css/bigworld.css" type="text/css">
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="Content Tools Reference Guide">
       <link rel="up" href="index.html" title="Content Tools Reference Guide">
-      <link rel="prev" href="ch10.html" title="Chapter&nbsp;10.&nbsp;3ds Max and Maya Exporters"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch10.html" title="Chapter&nbsp;10.&nbsp;NavGen">
+      <link rel="next" href="ch12.html" title="Chapter&nbsp;12.&nbsp;Lock Server (BWLockD)">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/content_tools_reference_guide/ch11.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
                <tr>
-                  <th colspan="3" align="center">Chapter&nbsp;11.&nbsp;Lock Server&#8212;BWLockD</th>
+                  <th colspan="3" align="center">Chapter&nbsp;11.&nbsp;3ds Max and Maya Exporters</th>
                </tr>
                <tr>
                   <td width="20%" align="left"><a accesskey="p" href="ch10.html">Prev</a>&nbsp;
                   </td>
                   <th width="55%" align="center">&nbsp;</th>
-                  <td width="20%" align="right">&nbsp;</td>
+                  <td width="20%" align="right">&nbsp;<a accesskey="n" href="ch12.html">Next</a></td>
                </tr>
             </table>
             <hr class="navheaderline">
@@ -29,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="xref_Lock_Server_bwlockd"></a>Chapter&nbsp;11.&nbsp;Lock Server&#8212;BWLockD
+                     <h2 class="title"><a name="xref_3ds_Max_And_Maya_Exporters"></a>Chapter&nbsp;11.&nbsp;3ds Max and Maya Exporters
                      </h2>
                   </div>
                </div>
@@ -37,644 +39,1501 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch11.html#d0e32114">11.1. Installation and configuration</a></span></dt>
+                  <dt><span class="section"><a href="ch11.html#d0e30722">11.1. 3ds Max</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch11.html#xref_we_LockServer_Install_Server">11.1.1. Server</a></span></dt>
-                        <dt><span class="sect2"><a href="ch11.html#d0e32321">11.1.2. WorldEditor</a></span></dt>
-                        <dt><span class="sect2"><a href="ch11.html#d0e32367">11.1.3. NavGen</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#xref_3ds_Max_Visual_Exporter">11.1.1. 3ds Max visual exporter</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#xref_3ds_Max_Animation_Exporter">11.1.2. 3ds Max animation exporter</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#d0e31122">11.1.3. Data supported</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#d0e31283">11.1.4. Installing the 3ds Max exporters</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch11.html#xref_Using_A_Version_Control_System_Stub">11.2. Using a version control system stub</a></span></dt>
-                  <dt><span class="sect1"><a href="ch11.html#d0e32631">11.3. Enabling spaces for collaborative editing</a></span></dt>
-                  <dt><span class="sect1"><a href="ch11.html#xref_Locking_An_Area">11.4. Locking an area</a></span></dt>
+                  <dt><span class="section"><a href="ch11.html#xref_Maya">11.2. Maya</a></span></dt>
+                  <dd>
+                     <dl>
+                        <dt><span class="section"><a href="ch11.html#xref_Maya_Visual_And_Animation_Exporter">11.2.1. Maya visual and animation exporter</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#xref_Maya_Exporting">11.2.2. Exporting</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#xref_BigWorld_Shelf">11.2.3. BigWorld shelf</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#xref_Creating_Shells">11.2.4. Creating Shells</a></span></dt>
+                        <dt><span class="section"><a href="ch11.html#d0e31744">11.2.5. Installing the Maya exporters</a></span></dt>
+                     </dl>
+                  </dd>
+                  <dt><span class="section"><a href="ch11.html#xref_Exporting_Custom_Node_Hierarchy">11.3. Exporting custom node hierarchy</a></span></dt>
+                  <dt><span class="section"><a href="ch11.html#xref_Validation_Rules">11.4. Validation rules</a></span></dt>
                </dl>
             </div>
-            <p>When creating large worlds in a multi-user environment, it is
-                 necessary to have a mechanism in place that controls the access by multiple
-                 world builders to the same space at the same time.
+            <p>BigWorld offers plug-ins that allow you to export geometry and
+                 animation data from 3ds Max and Maya to the formats used by the game
+                 engine.
             </p>
-            <p>WorldEditor has built-in support for concurrent access, provided by
-                 its lock server <span class="literal">bwlockd</span>. It allows various users to edit
-                 the same space simultaneously, without conflicts.
-            </p>
-            <p>When using the lock server, you will need to lock the regions of the
-                 world that you want to edit, so you have exclusive access to it
-            </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e32114"></a>11.1.&nbsp;Installation and configuration
+                        <h2 class="title" style="clear: both"><a name="d0e30722"></a>11.1.&nbsp;3ds Max
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>To use the Lock Server (also called BWLockD) in WorldEditor, some
-                      steps must be followed both on the server and on the client
-                      machines.
+               <p>BigWorld offers plug-ins for exporting visuals and animations,
+                      supporting 3ds Max versions 2008, 2009, 2010 and 2011.
                </p>
-               <p>The following sub-sections describe these steps.</p>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="xref_we_LockServer_Install_Server"></a>11.1.1.&nbsp;Server
+                           <h3 class="title"><a name="xref_3ds_Max_Visual_Exporter"></a>11.1.1.&nbsp;3ds Max visual exporter
                            </h3>
                         </div>
                      </div>
                   </div>
-                  <p>To enable concurrent editing of the world without conflicts, the
-                           BWLockD service (the Lock Server) has to be running. It should be run on
-                           a Linux server.
+                  <p>The 3ds Max visual exporter is a plug-in that exports mesh data to
+                           the .visual format used by the BigWorld engine.
                   </p>
-                  <div class="sect3" lang="en">
+                  <p>It exports meshes, physiqued meshes, skinned meshes, transform
+                           nodes, morph targets, BSP trees, hard points, and portals, and can also
+                           generate tangents and binormals for normal mapping.
+                  </p>
+                  <p>In order to access the Visual Export plug-in, set the <em class="emphasis">Select File To Export</em> dialog box's <em class="emphasis">Save As Type</em> drop-down list box to <em class="emphasis">Visual Exporter (<span class="literal">*.VISUAL</span>)</em>, as
+                           illustrated below:
+                  </p>
+                  <div class="informalfigure">
+                     <div class="mediaobject"><img src="images/exporters_3ds_max_visual_exporter.png" height=""><span class="caption">
+                           <p>Accessing the Visual Export plug-in in 3ds
+                                        Max
+                           </p></span></div>
+                  </div>
+                  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                     <h3 class="title">Note</h3>
+                     <p>For unskinned meshes Visual Exporter can automatically select a
+                                32-bit index buffers if there are more than 65355 vertices in the
+                                model. However, skinned meshes are limited to 65355 vertices.
+                     </p>
+                     <p>The client engine can load both 16- and 32-bit index buffers
+                                automatically, but some low-end graphic cards do not support the
+                                latter. On those cards, objects with 32-bit index buffer will not
+                                render.
+                     </p>
+                  </div>
+                  <p>The components of the <em class="emphasis">Visual
+                              Exporter</em> and <em class="emphasis">Advanced
+                              Settings</em> dialog boxes are described below:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul type="disc">
+                        <li>
+                           <p><em class="emphasis">Visual type</em></p>
+                           <p>Type of visual being exported, and hence what kind of
+                                        information to save.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="circle">
+                                 <li>
+                                    <p><em class="emphasis">Animated, skinned</em></p>
+                                    <p>Specifies that the plug-in should export everything as is,
+                                                     <em class="emphasis">i.e.</em>, every piece should be exported as a
+                                                     separate object, and all transform nodes and morph targets
+                                                     should be exported.
+                                    </p>
+                                    <p>This option should only be used for visuals that have
+                                                     moving parts rigged with physique, skinned, or separate moving
+                                                     parts.
+                                    </p>
+                                    <p>This option does not generate BSP trees from the meshes.
+                                                     If you want to have a (static) BSP tree for an animated object,
+                                                     then you will have to create a custom one.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Static</em></p>
+                                    <p>Specifies that the plug-in should combine all meshes into
+                                                     one, discarding all transform nodes and modifiers, and
+                                                     generating a BSP tree for the combined mesh (unless there is a
+                                                     custom one in the current scene).
+                                    </p>
+                                    <p>This option should be used for shells and other static
+                                                     objects placed in the scene.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Static with nodes</em></p>
+                                    <p>Specifies that the plug-in should combine all meshes into
+                                                     one, exporting all transform nodes.
+                                    </p>
+                                    <p>This option is similar to <em class="emphasis">Static</em>, except that it will export all
+                                                     transform nodes for the scene.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Mesh particles</em></p>
+                                    <p>Specifies that the plug-in should allow these meshes to be
+                                                     sorted when rendered, so that alpha blending works correctly.
+                                                     Each individual object in the scene is exported as one particle,
+                                                     in the format used by the mesh particle renderer.
+                                    </p>
+                                    <p>There is a limit of 17 particle meshes exported for each
+                                                     mesh particle object.
+                                    </p>
+                                    <p>Visuals exported using this option can be used as a
+                                                     particle system in ParticleEditor. For details, see <a href="ch04.html#xref_pe_Renderer_Properties_Sub_Panel" title="4.10.2.2.2.&nbsp;Renderer Properties sub-panel">Renderer Properties sub-panel</a>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Allow scale</em></p>
+                           <p>Indicates that the transform nodes should be exported with
+                                        scale.
+                           </p>
+                           <p>This is generally not necessary, and should only be used if
+                                        you want to export animations that include scale.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Normal mapped</em></p>
+                           <p>Specifies that the plug-in should create additional data to be
+                                        used for normal-mapping the model.
+                           </p>
+                           <p>This option must be checked to use a normal-mapped material on
+                                        the model.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Keep existing
+                                           materials</em></p>
+                           <p>Specifies that the plug-in should keep changes made to the
+                                        material in ModelEditor.
+                           </p>
+                           <p>This option must be checked if you are overwriting a
+                                        previously exported model, and want to keep material changes made in
+                                        ModelEditor.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Snap vertices</em></p>
+                           <p>Specifies that the plug-in should snap the vertices of all
+                                        geometry to the nearest tenth of a millimetre.
+                           </p>
+                           <p>This option has been added primarily to support the new use of
+                                        portals &#8212; because the grid and axis alignment restrictions
+                                        have been removed for portals, snapping portals to the nearest tenth
+                                        of a millimetre can pull portals off bounding box or hull
+                                        boundaries.
+                           </p>
+                           <p>This option does not affect geometry exported when the
+                                        <em class="emphasis">Visual Type</em> drop-down list box is
+                                        set to <em class="emphasis">Animated</em>.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Advanced Settings
+                                           dialog</em></p>
+                           <div class="itemizedlist">
+                              <ul type="circle">
+                                 <li>
+                                    <p><em class="emphasis">Bone count</em></p>
+                                    <p>Specifies the number of bones used by the Visual Splitter
+                                                     to divide up any mesh.
+                                    </p>
+                                    <p>It is set to a default of 17 because all BigWorld skinned
+                                                     shaders are designed to use a maximum of 17 bones. When a visual
+                                                     file uses more than 17 bones, the Visual Splitter divides the
+                                                     object into 17, or less, bone segments.
+                                    </p>
+                                    <p>Only change this field if you have created shaders that
+                                                     support a different number of bones.
+                                    </p>
+                                    <p>The field's maximum value is 87, which is the upper limit
+                                                     of BigWorld vertex format.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Disable visual
+                                                        checker</em></p>
+                                    <p>Specifies that the plug-in should not check the exported
+                                                     model against the visual rules.
+                                                     <sup>A</sup></p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Fix cylindrical
+                                                        mapping</em></p>
+                                    <p>Specifies that the plug-in should try to use an
+                                                     alternative method for generating texture space vectors used for
+                                                     normal mapping.
+                                    </p>
+                                    <p>This option must be checked if there are artifacts along
+                                                     seams when using normal-mapped shaders.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Opposite facing
+                                                        direction</em></p>
+                                    <p>Specifies that the model has been modelled facing in the
+                                                     incorrect direction and that it should be rotated by 180 degrees
+                                                     so that is appears correctly inside the engine.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <p><em class="emphasis"><em class="emphasis">A</em> &#8212; The rules
+                              are defined in <span class="literal">bigworld/tools/res/visual_rules.xml</span>.
+                              For details, see <a href="ch11.html#xref_Validation_Rules" title="11.4.&nbsp;Validation rules">Validation rules</a>.</em></p>
+                  <div class="section" lang="en">
                      <div class="titlepage">
                         <div>
                            <div>
-                              <h4 class="title"><a name="d0e32126"></a>11.1.1.1.&nbsp;Installing and configuring the Lock Server service
+                              <h4 class="title"><a name="d0e30909"></a>11.1.1.1.&nbsp;Configuration file
                               </h4>
                            </div>
                         </div>
                      </div>
-                     <p>There is a script at
-                                <code class="filename">bigworld/tools/server/install/bwlockd.sh</code> that can
-                                be used to install the BWLockD service. Run the following command as
-                                root in the <code class="filename">bigworld/tools/server/install</code>
-                                directory.
-                     </p><pre class="programlisting"># ./bwlockd.sh install</pre><p>This will install the lock server init-script into
-                                <code class="filename">/etc/init.d</code>/bw_lockd and install symlinks for the
-                                <code class="filename">/etc/rc*.d</code> directories, such that the lock server
-                                starts up at boot.
+                     <p>The plug-in automatically generates the file
+                                <span class="literal">visualexporter.cfg</span>, under 3ds Max's folder
+                                <span class="literal">plugcfg</span>.
                      </p>
-                     <p>By default, the log file is at
-                                <code class="filename">/var/log/bigworld/bwlockd.log</code>. Check the log for
-                                a text message saying the daemon is listening on port 8168.
-                     </p>
-                     <p>You can edit the installed
-                                <code class="filename">/etc/init.d/bw_lockd</code> to tune the behaviour of the
-                                lock server. In particular, useful variables to change are:
+                     <p>The list below describes the configuration options written to
+                                this file:
                      </p>
                      <div class="itemizedlist">
                         <ul type="disc">
                            <li>
-                              <p><code class="code">BIND_IP</code>: the interface address the lock server
-                                             binds to
+                              <p><em class="emphasis"><span class="literal">allowScale</span></em></p>
+                              <p>Last value set for the <em class="emphasis">Allow
+                                                Scale</em> check box in the exporter dialog box.
                               </p>
                            </li>
                            <li>
-                              <p><code class="code">PORT</code>: the port the lock server listens
-                                             on
+                              <p><em class="emphasis"><span class="literal">bumpMapped</span></em></p>
+                              <p>Last value set for the <em class="emphasis">Bumpmapped</em> check box in the exporter dialog
+                                             box.
                               </p>
                            </li>
                            <li>
-                              <p><code class="code">LOG_OUTPUT_PATH</code>: the output path for the log,
-                                             by default this is set to
-                                             <code class="filename">/var/log/bigworld/bwlockd.log</code></p>
+                              <p><em class="emphasis"><span class="literal">exportMode</span></em></p>
+                              <p>Last export mode used in the exporter dialog box.</p>
+                           </li>
+                           <li>
+                              <p><em class="emphasis"><span class="literal">unitScale</span></em></p>
+                              <p>Conversion factor for units between 3ds Max and
+                                             BigWorld.
+                              </p>
+                              <p>The default value is 0.1, which means that 1 unit in 3ds Max
+                                             equals 0.1 units in BigWorld.
+                              </p>
+                              <p>It is important to note that you need to change this value
+                                             in both <span class="literal">animationexporter.cfg</span> and
+                                             <span class="literal">visualexporter.cfg</span>.
+                              </p>
+                              <p><em class="emphasis">This configuration option can be set only in the
+                                                configuration files.</em></p>
                            </li>
                         </ul>
                      </div>
-                     <p>As a system service, you can query the running state of the Lock
-                                Server.
-                     </p><pre class="programlisting"># /etc/init.d/bw_lockd status</pre></div>
-                  <div class="sect3" lang="en">
-                     <div class="titlepage">
-                        <div>
-                           <div>
-                              <h4 class="title"><a name="d0e32179"></a>11.1.1.2.&nbsp;Running from the command-line
-                              </h4>
-                           </div>
-                        </div>
-                     </div>
-                     <p>You can also run the lock server from the command line in the
-                                foreground. There are various command-line options as the
-                                <code class="code">--help</code> output shows:
-                     </p><pre class="programlisting">usage: bwlockd.py [options] 
-
-options: 
-
-  -h, --help            show this help message and exit 
-  --daemon              run process in the background (daemon mode) 
-  -I BIND_IP, --bind-ip=BIND_IP 
-                        IP/hostname of interface to bind to (default all 
-                        interfaces) 
-  -p BIND_PORT, --port=BIND_PORT 
-                        port to listen on (default 8168) 
-  --pid=PID_FILE 
-                        default daemon PID file (default "bwlockd.pid") 
-  -o OUT_FILE, --output=OUT_FILE 
-                        default daemon output file (only applies to non-daemon 
-                        mode, default "bwlockd.log") 
-  -v, --verbose         verbose output (only applies to non-daemon output, 
-                        daemon output is always verbose) 
-  --history=HISTORYPATH 
-                        output a history file that contains recent lock server 
-                        operations in XML format </pre><div class="sect4" lang="en">
-                        <div class="titlepage">
-                           <div>
-                              <div>
-                                 <h5 class="title"><a name="d0e32189"></a>11.1.1.2.1.&nbsp;History File
-                                 </h5>
-                              </div>
-                           </div>
-                        </div>
-                        <p>If you run the Lock Server from the command-line, you can pass
-                                     the <code class="code">--history</code> option for the daemon to output a history
-                                     file, which contains a list of recent operations that the Lock
-                                     Server has processed. This is useful for debugging in conjunction
-                                     with the logging output. By default, no history file is
-                                     created.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="sect3" lang="en">
-                     <div class="titlepage">
-                        <div>
-                           <div>
-                              <h4 class="title"><a name="d0e32197"></a>11.1.1.3.&nbsp;Keeping the Lock Server up-to-date
-                              </h4>
-                           </div>
-                        </div>
-                     </div>
-                     <p>In the event that you remove a space and recreate it before all
-                                clients have relinquished their locks on the old space, you may need
-                                to clear the locks and restart the lock server.
-                     </p>
-                     <p>BWLockD maintains its state in files with the
-                                <code class="code">.computer</code> suffix for each workstation that has ever
-                                created a lock. Each .computer file is an XML file, such as the one
-                                below.
-                     </p><pre class="programlisting">&lt;?xml version="1.0"?&gt;
-&lt;<em class="emphasis">hostname</em>&gt;
-    &lt;space&gt;
-        &lt;name&gt; <em class="emphasis">space_name</em><a name="LockServerComputerState_SpaceName"></a><img src="../images/callouts/1.png" alt="1" border="0"> &lt;/name&gt;
-        &lt;lock&gt;
-            &lt;rect&gt; <em class="emphasis">left</em> <em class="emphasis">top</em> <em class="emphasis">right</em> <em class="emphasis">bottom</em><a name="LockServerComputerState_RectCoords"></a><img src="../images/callouts/2.png" alt="2" border="0"> &lt;/rect&gt;
-            &lt;username&gt; <em class="emphasis">username</em><a name="LockServerComputerState_Username"></a><img src="../images/callouts/3.png" alt="3" border="0"> &lt;/username&gt;
-            &lt;desc&gt; <em class="emphasis">lock_description</em> <a name="LockServerComputerState_LockDescription"></a><img src="../images/callouts/4.png" alt="4" border="0">&lt;/desc&gt;
-            &lt;time&gt; <em class="emphasis">timestamp</em> <a name="LockServerComputerState_LockTime"></a><img src="../images/callouts/5.png" alt="5" border="0">&lt;/time&gt;
-        &lt;/lock&gt;
-        &lt;lock&gt;
-            ...
-        &lt;/lock&gt;
-        ...
-    &lt;/space&gt;
-    &lt;space&gt;
-        ...
-    &lt;/space&gt;
-    ....
-&lt;/<em class="emphasis">hostname</em>&gt;</pre><div class="calloutlist">
-                        <table border="0" summary="Callout list">
-                           <tr>
-                              <td width="5%" valign="top" align="left"><a href="#LockServerComputerState_SpaceName"><img src="../images/callouts/1.png" alt="1" border="0"></a> 
-                              </td>
-                              <td valign="top" align="left">
-                                 <p><code class="code">space_name</code>: the name of the space for this
-                                                space element.
-                                 </p>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td width="5%" valign="top" align="left"><a href="#LockServerComputerState_RectCoords"><img src="../images/callouts/2.png" alt="2" border="0"></a> 
-                              </td>
-                              <td valign="top" align="left">
-                                 <p><code class="code">left</code>, <code class="code">top</code>, <code class="code">right</code>,
-                                                <code class="code">bottom</code>: the coordinates of the lock rectangle
-                                 </p>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td width="5%" valign="top" align="left"><a href="#LockServerComputerState_Username"><img src="../images/callouts/3.png" alt="3" border="0"></a> 
-                              </td>
-                              <td valign="top" align="left">
-                                 <p><code class="code">username</code>: the name of the user who made the
-                                                lock
-                                 </p>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td width="5%" valign="top" align="left"><a href="#LockServerComputerState_LockDescription"><img src="../images/callouts/4.png" alt="4" border="0"></a> 
-                              </td>
-                              <td valign="top" align="left">
-                                 <p><code class="code">desc</code>: the description entered by the user at
-                                                the time of the lock creation
-                                 </p>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td width="5%" valign="top" align="left"><a href="#LockServerComputerState_LockTime"><img src="../images/callouts/5.png" alt="5" border="0"></a> 
-                              </td>
-                              <td valign="top" align="left">
-                                 <p><code class="code">timestamp</code>: a timestamp (seconds after the
-                                                Epoch) of the lock creation
-                                 </p>
-                              </td>
-                           </tr>
-                        </table>
-                     </div>
-                     <p>For each space the given host has ever locked, there is a
-                                <code class="code">space</code> element that contains a <code class="code">name</code> element
-                                for the space, and multiple <code class="code">lock</code> elements that describe
-                                the locks that the workstation has currently acquired. Each lock
-                                element has a <code class="code">rect</code> element describing the lock rectangle,
-                                who locked the region described by the <code class="code">username</code> element,
-                                the lock description entered when the lock was made in the
-                                <code class="code">desc</code> element, and the lock time in the <code class="code">time</code>
-                                element.
-                     </p>
-                     <p>It may be necessary to clear locks manually by remove sections
-                                from the <code class="code">.computer</code> state files. For example, if a space
-                                is removed and a new space is recreated with the same name, any
-                                existing locks on the old space will be applied incorrectly to the new
-                                space.If modifying the state files is required, you should shut down
-                                the lock server, make your changes, and restart the server.
-                     </p>
-                  </div>
-                  <div class="sect3" lang="en">
-                     <div class="titlepage">
-                        <div>
-                           <div>
-                              <h4 class="title"><a name="d0e32309"></a>11.1.1.4.&nbsp;Removing the BWLockD service
-                              </h4>
-                           </div>
-                        </div>
-                     </div>
-                     <p>You can run the BWLockD init-script with the <code class="code">remove</code>
-                                command line option:
-                     </p><pre class="programlisting">/etc/init.d/bwlockd remove</pre><p>This will stop any running BWLockD service and remove the
-                                startup symlinks so that the service is no longer started on
-                                boot.
-                     </p>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e32321"></a>11.1.2.&nbsp;WorldEditor
+                           <h3 class="title"><a name="xref_3ds_Max_Animation_Exporter"></a>11.1.2.&nbsp;3ds Max animation exporter
                            </h3>
                         </div>
                      </div>
                   </div>
-                  <p>WorldEditor can be configured to use BWLockD server as
-                           follows:
+                  <p>The 3ds Max Animation Exporter is a plug-in that exports
+                           animations to the .animation format used by the BigWorld engine.
                   </p>
-                  <div class="orderedlist">
-                     <ol type="1">
+                  <p>It supports exporting of node and morph animations (using the
+                           morpher modifier).
+                  </p>
+                  <p>To access the <em class="emphasis">Animation Export</em>
+                           plug-in, in the <em class="emphasis">Select File To Export</em>
+                           dialog box set the <em class="emphasis">Save As Type</em>
+                           drop-down list box to <em class="emphasis">Animation Exporter
+                              (<span class="literal">*.ANIMATION</span>)</em>, as illustrated
+                           below:
+                  </p>
+                  <div class="informalfigure">
+                     <div class="mediaobject"><img src="images/exporters_3ds_max_animation_exporter.png" height=""><span class="caption">
+                           <p>Accessing the Animation Export plug-in in 3ds
+                                        Max
+                           </p></span></div>
+                  </div>
+                  <p>The list below describes the components of the Visual Exporter
+                           dialog box:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul type="disc">
                         <li>
-                           <p>Open WorldEditor's options file -
-                                        <span class="literal">bigworld/tools/worldeditor/options.xml</span> (for
-                                        details on this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                                        <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal">options.xml</span></span>
-                                        <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">WorldEditor</span>).
+                           <p><em class="emphasis">Allow scale</em></p>
+                           <p>Indicates that the animation should be exported with scale
+                                        keys in it.
+                           </p>
+                           <p>If you wish to use scaling animations, you have to export the
+                                        visual you want to animate with this option enabled as well. For
+                                        more details, see <a href="ch11.html#xref_3ds_Max_Visual_Exporter" title="11.1.1.&nbsp;3ds Max visual exporter">3ds Max visual exporter</a>.
+                           </p>
+                           <p>This option only applies to node animation.</p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Export morph animation</em></p>
+                           <p>Indicates that morph animations should be exported.</p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Export node animation</em></p>
+                           <p>Indicates that node animations should be exported.</p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Use reference
+                                           hierarchy</em></p>
+                           <p>Indicates that the animation should be exported with a node
+                                        hierarchy different from the one in the current 3ds Max file.
+                           </p>
+                           <p>Once this option is selected, the <em class="emphasis">Select
+                                           Reference Hierarchy File</em> dialog box is displayed, where
+                                        you can select the visual file with the desired node
+                                        hierarchy.
+                           </p>
+                           <p>For details, see <a href="ch11.html#xref_Exporting_Custom_Node_Hierarchy" title="11.3.&nbsp;Exporting custom node hierarchy">Exporting custom node hierarchy</a>.
                            </p>
                         </li>
                         <li>
-                           <p>Update / add the following section as a child to the root
-                                        node:
-                           </p><pre class="programlisting">&lt;bwlockd&gt;
-   &lt;use&gt; true &lt;/use&gt;
-   &lt;host&gt; <em class="replaceable"><code>server_name</code></em>:<em class="replaceable"><code>server_port</code></em> &lt;/host&gt;
-&lt;/bwlockd&gt;</pre><p>The <em class="emphasis">server_name</em> is the name of the
-                                        computer running BWLockD server, and
-                                        <em class="emphasis">server_port</em> is an optional extension used to
-                                        specify a particulat port, which defaults to 8168. For additional
-                                        information on changing the port BWLockD server listens on, see
-                                        above in <a href="ch11.html#xref_we_LockServer_Install_Server" title="11.1.1.&nbsp;Server">Server</a>.
+                           <p><em class="emphasis">Export cue track</em></p>
+                           <p>Not supported for this version.</p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Opposite facing
+                                           direction</em></p>
+                           <p>Specifies that the model has been modelled facing in the
+                                        incorrect direction and that it should be rotated by 180 degrees so
+                                        that is appears correctly inside the engine.
                            </p>
                         </li>
-                     </ol>
+                     </ul>
+                  </div>
+                  <div class="section" lang="en">
+                     <div class="titlepage">
+                        <div>
+                           <div>
+                              <h4 class="title"><a name="d0e31055"></a>11.1.2.1.&nbsp;Configuration file
+                              </h4>
+                           </div>
+                        </div>
+                     </div>
+                     <p>The plug-in automatically generates the file
+                                <span class="literal">animationexporter.cfg</span>, under 3ds Max's folder
+                                plugcfg.
+                     </p>
+                     <p>The list below describes the configuration options written to
+                                this file:
+                     </p>
+                     <div class="itemizedlist">
+                        <ul type="disc">
+                           <li>
+                              <p><em class="emphasis"><span class="literal">allowScale</span></em></p>
+                              <p>Last value set for the <em class="emphasis">Allow
+                                                Scale</em> check box in the exporter dialog box.
+                              </p>
+                           </li>
+                           <li>
+                              <p><em class="emphasis"><span class="literal">exportMorphAnimation</span></em></p>
+                              <p>Last value set for the <em class="emphasis">Export Morph
+                                                Animation</em> check box in the exporter dialog box.
+                              </p>
+                           </li>
+                           <li>
+                              <p><em class="emphasis"><span class="literal">exportNodeAnimation</span></em></p>
+                              <p>Last value set for the <em class="emphasis">Export Node
+                                                Animation</em> check box in the exporter dialog box.
+                              </p>
+                           </li>
+                           <li>
+                              <p><em class="emphasis"><span class="literal">referenceNodesFile</span></em></p>
+                              <p>Last reference nodes file used for exporting
+                                             animation.
+                              </p>
+                           </li>
+                           <li>
+                              <p><em class="emphasis"><span class="literal">unitScale</span></em></p>
+                              <p>Conversion factor for units between 3ds Max and
+                                             BigWorld.
+                              </p>
+                              <p>The default value is 0.1, which means that 1 unit in 3ds Max
+                                             equals 0.1 units in BigWorld.
+                              </p>
+                              <p>It is important to note that you need to change this value
+                                             in both <span class="literal">animationexporter.cfg</span> and
+                                             <span class="literal">visualexporter.cfg</span>.
+                              </p>
+                              <p>This configuration option can be set only in the
+                                             configuration files.
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e32367"></a>11.1.3.&nbsp;NavGen
+                           <h3 class="title"><a name="d0e31122"></a>11.1.3.&nbsp;Data supported
                            </h3>
                         </div>
                      </div>
                   </div>
-                  <p>NavGen can be configured to use BWLockD server as follows:</p>
+                  <p>The list below gives an overview of the data supported by the
+                           plug-in:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul type="disc">
+                        <li>
+                           <p><em class="emphasis">BSP tree</em></p>
+                           <p>If the selected option in <em class="emphasis">Visual
+                                           Exporter</em> dialog box's <em class="emphasis">Visual
+                                           Type</em> group box is either <em class="emphasis">Static</em> or <em class="emphasis">Static With
+                                           Nodes</em>, then BSP trees are generated from the exported
+                                        object.
+                           </p>
+                           <p>It is also possible to define a custom BSP tree, by postfixing
+                                        an object name with '<span class="literal">_bsp</span>'. If a custom BSP tree
+                                        exists, then a new one will not be generated from the exported
+                                        object.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Hard point</em></p>
+                           <p>All nodes having the name prefixed by '<span class="literal">HP_</span>'
+                                        will be exported as a hard point (hard points are attachment points
+                                        for joining two models).
+                           </p>
+                           <p>Except for the transform node, no object will be exported for
+                                        a hard point.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Material</em></p>
+                           <p>If a standard 3ds Max material is applied to an object, then
+                                        the identifier, the diffuse map, and the self-illumination factors
+                                        of the material will be exported.
+                           </p>
+                           <p>If a DirectX 9 shader material is applied to a model, then the
+                                        properties and the shader name referenced by the material will be
+                                        exported.
+                           </p>
+                           <p>When exporting an existing visual, the plug-in tries to keep
+                                        its material settings.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Mesh</em></p>
+                           <p>Meshes in the current set will be exported according to the
+                                        selected option in the <em class="emphasis">Visual
+                                           Exporter</em> dialog box's <em class="emphasis">Visual
+                                           Type</em> group box.
+                           </p>
+                           <p>If <em class="emphasis">Visual Type</em> is set to
+                                        <em class="emphasis">Animated</em>, then the plug-in will
+                                        also export any morpher, skin, and physique modifiers applied to the
+                                        object.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Node</em></p>
+                           <p>If the selected option in <em class="emphasis">Visual
+                                           Exporter</em> dialog box's <em class="emphasis">Visual
+                                           Type</em> group box is either <em class="emphasis">Animated</em> or <em class="emphasis">Static With
+                                           Nodes</em>, then all transform nodes in the current set will
+                                        be exported.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Portal</em></p>
+                           <p>Portals are generally a single Quad with the surface normal
+                                        pointing toward the main body of the shell that it is part
+                                        of.
+                           </p>
+                           <p>The type of portal to export is defined by editing the user
+                                        properties of the object in 3ds Max. To define it, follow the steps
+                                        below:
+                           </p>
+                           <div class="orderedlist">
+                              <ol type="1">
+                                 <li>
+                                    <p>Right-click the object.</p>
+                                 </li>
+                                 <li>
+                                    <p>In the context menu, click <em class="emphasis">Properties</em>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>In the <em class="emphasis">Object Properties</em>
+                                                     dialog box, click the <em class="emphasis">User
+                                                        Defined</em> tab.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>In the multi-line field <em class="emphasis">User-Defined
+                                                        Properties</em>, enter the value according to the type of
+                                                     portal, as described in the list below:
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul type="circle">
+                                          <li>
+                                             <p><em class="emphasis">Portal type:
+                                                                     Standard</em></p>
+                                             <p>Used to link two shells together in
+                                                                  WorldEditor.
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul type="square">
+                                                   <li>
+                                                      <p><em class="emphasis">User-defined
+                                                                                  properties:</em></p><pre class="programlisting">portal=true</pre></li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <p><em class="emphasis">Portal type:
+                                                                     Exit</em></p>
+                                             <p>Used to link the outside world to a shell.</p>
+                                             <div class="itemizedlist">
+                                                <ul type="square">
+                                                   <li>
+                                                      <p><em class="emphasis">User-defined
+                                                                                  properties:</em></p><pre class="programlisting">portal=true
+exit=true</pre></li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <p><em class="emphasis">Portal type:
+                                                                     Heaven</em></p>
+                                             <p>Lets you see the outside world from an inside
+                                                                  chunk.
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul type="square">
+                                                   <li>
+                                                      <p><em class="emphasis">User-defined
+                                                                                  properties:</em></p><pre class="programlisting">portal=true
+exit=true
+heaven=true</pre></li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="d0e31283"></a>11.1.4.&nbsp;Installing the 3ds Max exporters
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>The proprietary 3ds Max exporters are provided for 3ds Max
+                           versions 2008, 2009, 2010 and 2011, and can be found in the folder
+                           <span class="literal">bigworld\tools\exporter</span></p>
+                  <p>To install the 3ds Max exporter, follow the steps below:</p>
                   <div class="orderedlist">
                      <ol type="1">
                         <li>
-                           <p>Open NavGen's options file
-                                        <span class="literal">bigworld/tools/misc/navgen_settings.xml</span> (for
-                                        details on this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                                        <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal">navgen_settings.xml</span></span>
-                                        <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">NavGen</span>).
-                           </p>
+                           <p>Open 3ds Max.</p>
                         </li>
                         <li>
-                           <p>Update / add the following section as a child to the root
-                                        node:
-                           </p><pre class="programlisting">&lt;bwlockd&gt; <em class="replaceable"><code>server_name</code></em>:<em class="replaceable"><code>server_port</code></em> &lt;/bwlockd&gt;</pre><p>The <em class="emphasis">server_name</em> is the name of the
-                                        computer running BWLockD server, and
-                                        <em class="emphasis">server_port</em> is an optional extension used to
-                                        specify a particulat port, which defaults to 8168. For additional
-                                        information on changing the port BWLockD server listens on, see
-                                        above in <a href="ch11.html#xref_we_LockServer_Install_Server" title="11.1.1.&nbsp;Server">Server</a>.
+                           <p>Open the <em class="emphasis">Configure System
+                                           Paths</em> dialog box:
                            </p>
+                           <p>On 3ds Max 2008, 2009, 2010 and 2011, select the <em class="emphasis">Customize <span class="symbol">&#8594;</span>
+                                           Configure System Paths</em> menu item.
+                           </p>
+                           <div class="informalfigure">
+                              <div class="mediaobject"><img src="images/exporters_3ds_max_installing_invoking_configure_user_paths_dialog_box.png" height=""><span class="caption">
+                                    <p>Invoking the Configure User Paths dialog
+                                                     box
+                                    </p></span></div>
+                           </div>
                         </li>
                         <li>
-                           <p>Update / add the following section as a child to the root
-                                        node:
-                           </p><pre class="programlisting">&lt;standalone&gt; false &lt;/standalone&gt;</pre><p>Use of the BWLockD server can be temporarily disabled by
-                                        setting this tag to true.
+                           <p>On the <em class="emphasis">Configure System Paths</em>
+                                        dialog box:
                            </p>
+                           <div class="itemizedlist">
+                              <ul type="disc">
+                                 <li>
+                                    <p>Click the <em class="emphasis">3rd Party
+                                                        Plug-Ins</em> tab.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Click the <em class="emphasis">Add</em> button
+                                                     &#8212; the <em class="emphasis">Choose Directory For New
+                                                        Entry</em> dialog box will open.
+                                    </p>
+                                    <div class="informalfigure">
+                                       <div class="mediaobject"><img src="images/exporters_3ds_max_installing_invoking_choose_directory_for_new_entry_dialog_box.png" height=""><span class="caption">
+                                             <p>Invoking the Choose Directory For New Entry
+                                                                  dialog box
+                                             </p></span></div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p>On the <em class="emphasis">Choose Directory For New
+                                           Entry</em> dialog box:
+                           </p>
+                           <div class="orderedlist">
+                              <ol type="a">
+                                 <li>
+                                    <p>On the <em class="emphasis">Folder</em> drop-down
+                                                     list, select the folder containing the BigWorld exporter plug-in
+                                                     for your 3ds Max version, e.g.
+                                                     <span class="literal">bigworld\tools\exporter\3dsmax2011</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>On the file list, select
+                                                     <span class="literal">visualexporter.dle</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>On the <em class="emphasis">Label</em> field, type
+                                                     '<span class="literal">BigWorld exporters</span>'.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Click the <em class="emphasis">Use Path</em> button
+                                                     &#8212; the <em class="emphasis">Configure System
+                                                        Paths</em> dialog box will be reactivated, listing
+                                                     BigWorld's exporter plug-in.
+                                    </p>
+                                    <div class="informalfigure">
+                                       <div class="mediaobject"><img src="images/exporters_3ds_max_installing_setting_choose_directory_for_new_entry_dialog_box.png" height=""><span class="caption">
+                                             <p>Setting the Choose Directory For New Entry
+                                                                  dialog box
+                                             </p></span></div>
+                                    </div>
+                                 </li>
+                              </ol>
+                           </div>
                         </li>
                      </ol>
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Using_A_Version_Control_System_Stub"></a>11.2.&nbsp;Using a version control system stub
+                        <h2 class="title" style="clear: both"><a name="xref_Maya"></a>11.2.&nbsp;Maya
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>The Lock Server supports the use of stubs for version control
-                      systems, which can be defined in WorldEditor's configuration file
-                      <span class="literal">options.xml</span>(for details on this file's grammar, see the
-                      document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar
-                         Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal">options.xml</span></span>
-                      <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">WorldEditor</span>.).
+               <p>The BigWorld plug-in allows you to export Maya visual and animations
+                      created with versions 2008, 2009, 2010 and 2011.
                </p>
-               <p>If no version control system stub is defined, then WorldEditor will
-                      use the default <span class="literal">resources/scripts/cvs_stub.py</span>. We also
-                      provide <span class="literal">svn_stub.py</span> and <span class="literal">p4_stub.py</span>
-                      for Subversion and Perforce.
+               <p>Its features and installation steps are described in the
+                      sub-sections below.
                </p>
-               <p><em class="emphasis">Important Note:</em> If you modify or
-                      add a stub, you must compile it into a Windows executable for it to work
-                      with WorldEditor. To create executables for our stubs we used
-                      <em class="emphasis">py2exe</em>. For more details visit
-                      <em class="emphasis">py2exe</em>'s website at <a xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.py2exe.org" target="_top">www.py2exe.org</a> .
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="xref_Maya_Visual_And_Animation_Exporter"></a>11.2.1.&nbsp;Maya visual and animation exporter
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>The Maya Visual and Animation Exporter is a plug-in that exports
+                           mesh and animation data respectively to the .visual and .animation
+                           formats used by the BigWorld engine.
+                  </p>
+                  <p>The visual exporter portion exports meshes, skinned meshes,
+                           transform nodes, BSP trees, hard points, portals and morph targets, and
+                           can also generate tangents and binormals for normal mapping. The
+                           animation exporter portion exports node animations and morph
+                           animations.
+                  </p>
+                  <p>This version supports:</p>
+                  <div class="itemizedlist">
+                     <ul type="disc">
+                        <li>
+                           <p>Static Models</p>
+                        </li>
+                        <li>
+                           <p>Static Models with Nodes</p>
+                        </li>
+                        <li>
+                           <p>Normal Models</p>
+                        </li>
+                        <li>
+                           <p>Animations</p>
+                        </li>
+                        <li>
+                           <p>Mesh Particles</p>
+                        </li>
+                        <li>
+                           <p>Custom BSPs</p>
+                        </li>
+                        <li>
+                           <p>Custom Hulls</p>
+                        </li>
+                        <li>
+                           <p>Bump Mapping</p>
+                        </li>
+                        <li>
+                           <p>Morph Targets and Animation</p>
+                        </li>
+                        <li>
+                           <p>Custom node hierarchies.</p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="xref_Maya_Exporting"></a>11.2.2.&nbsp;Exporting
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>In order to access the <em class="emphasis">Visual and Animation
+                              Exporter</em> plug-in, set the <em class="emphasis">Export</em> dialog box's <em class="emphasis">Files
+                              Of Type</em> drop-down list box to <em class="emphasis">BigWorld
+                              Asset (<span class="literal">*.*</span>)</em>, as illustrated below:
+                  </p>
+                  <div class="informalfigure">
+                     <div class="mediaobject"><img src="images/exporters_maya_visual_and_animation_exporter.png" height=""><span class="caption">
+                           <p>Invoking the Visual and Animation Exporter
+                                        plug-in
+                           </p></span></div>
+                  </div>
+                  <p>The list below describes the components of the <em class="emphasis">Export All Options</em> dialog box:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul type="disc">
+                        <li>
+                           <p><em class="emphasis">Export</em></p>
+                           <p>Sets the type of file being exported.</p>
+                           <div class="itemizedlist">
+                              <ul type="circle">
+                                 <li>
+                                    <p><em class="emphasis">Visual</em></p>
+                                    <p>Specifies that the objects should be saved into a
+                                                     <span class="literal">.visual</span> file.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Animation</em></p>
+                                    <p>Specifies that the objects should be saved into a
+                                                     <span class="literal">.animation</span> file.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Visual type</em></p>
+                           <p>Sets the type of visual being exported, and hence what
+                                        information to save.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="circle">
+                                 <li>
+                                    <p><em class="emphasis">Animated, skinned</em></p>
+                                    <p>Specifies that the plug-in should export everything as is,
+                                                     <em class="emphasis">i.e.</em>, every piece should be exported as a
+                                                     separate object, and all transform nodes and morph targets
+                                                     should be exported.
+                                    </p>
+                                    <p>This option should only be used for visuals that have
+                                                     moving parts, either skinned or separate moving parts.
+                                    </p>
+                                    <p>This option does not generate BSP trees from the meshes.
+                                                     If you want a (static) BSP tree for an animated object, then you
+                                                     will have to create a custom one.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Static</em></p>
+                                    <p>Specifies that the plug-in should combine all meshes into
+                                                     one, discarding all transform nodes and modifiers, and
+                                                     generating a BSP tree for the combined mesh (unless there is a
+                                                     custom one in the current scene).
+                                    </p>
+                                    <p>This option should be used for shells and other static
+                                                     objects placed in the scene.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Static with nodes</em></p>
+                                    <p>Specifies that the plug-in should combine all meshes into
+                                                     one, exporting all transform nodes.
+                                    </p>
+                                    <p>This option is similar to the option Static, except in
+                                                     that it will export all transform nodes for the scene
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Mesh particles</em></p>
+                                    <p>Specifies that the plug-in should allow these meshes to be
+                                                     sorted when rendered, so that alpha blending works correctly.
+                                                     Each individual object in the scene is exported as one particle,
+                                                     in the format used by the mesh particle renderer.
+                                    </p>
+                                    <p>There is a limit of 17 particle meshes exported for each
+                                                     mesh particle object.
+                                    </p>
+                                    <p>Visuals exported using this option can be used as a
+                                                     particle system in ParticleEditor. For details, see <a href="ch04.html#xref_pe_Renderer_Properties_Sub_Panel" title="4.10.2.2.2.&nbsp;Renderer Properties sub-panel">Renderer Properties sub-panel</a>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Allow scale</em></p>
+                           <p>Indicates that the object should be exported with scale keys
+                                        in it.
+                           </p>
+                           <p>If you wish to use scaling animations, then you have to export
+                                        both the visual and the animation with this option enabled.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Normal mapped</em></p>
+                           <p>Specifies that the plug-in should create additional data to be
+                                        used for normal-mapping the model.
+                           </p>
+                           <p>This option must be checked to use a normal-mapped material on
+                                        the model.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Keep existing
+                                           materials</em></p>
+                           <p>Specifies that the plug-in should keep changes to material
+                                        made in ModelEditor.
+                           </p>
+                           <p>This option must be checked if you are overwriting a
+                                        previously exported model, and want to keep material changes made in
+                                        ModelEditor.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Use reference node</em></p>
+                           <p>Indicates that the animation should be exported with a node
+                                        hierarchy different from the one in the current Maya file.
+                           </p>
+                           <p>Once this option is checked, the <em class="emphasis">Select
+                                           Reference Hierarchy File</em> dialog box is displayed, where
+                                        you can select the visual file with the desired node hierarchy. For
+                                        more details, see <a href="ch11.html#xref_Exporting_Custom_Node_Hierarchy" title="11.3.&nbsp;Exporting custom node hierarchy">Exporting custom node hierarchy</a>.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Snap vertices</em></p>
+                           <p>Specifies that the plug-in should snap the vertices of all
+                                        geometry to the nearest tenth of a millimetre.
+                           </p>
+                           <p>This option has been added primarily to support the new use of
+                                        portals &#8212; because the grid and axis alignment restrictions
+                                        have been removed for portals, snapping portals to the nearest tenth
+                                        of a millimetre can pull portals off bounding box or hull
+                                        boundaries.
+                           </p>
+                           <p>This option does not affect geometry exported when the
+                                        <em class="emphasis">Visual Type</em> drop-down list box is
+                                        set to <em class="emphasis">Animated</em>.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Strip reference prefix</em></p>
+                           <p>Specifies that the plug-in should strip the model name prefix
+                                        from the names of the animation nodes when using referenced models
+                                        inside Maya.
+                           </p>
+                           <p>When animating a model in Maya that uses a reference to a
+                                        rigged model, the name of the model will be prefixed to the name of
+                                        each animated node. As a result the node names of the original model
+                                        will not match those of the animation, so the animation will not
+                                        affect the model. By selecting this option, the model name will be
+                                        stripped from the names of the animation nodes so that the node
+                                        names in the visual file match those in the animation file.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis">Advanced Settings
+                                           dialog</em></p>
+                           <div class="itemizedlist">
+                              <ul type="circle">
+                                 <li>
+                                    <p><em class="emphasis">Bone count</em></p>
+                                    <p>Specifies the number of bones used by the Visual Splitter
+                                                     to divide any mesh up.
+                                    </p>
+                                    <p>It is set to a default of 17 because that is the maximum
+                                                     that all BigWorld skinned shaders are designed to use. When a
+                                                     visual file uses more than 17 bones, the Visual splitter divides
+                                                     the object into 17 or less bone segments.
+                                    </p>
+                                    <p>Only change this field if you have created shaders that
+                                                     support a different number of bones.
+                                    </p>
+                                    <p>The field's maximum value is 87, which is the upper limit
+                                                     of BigWorld vertex format.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Use decimetres</em></p>
+                                    <p>Specifies that Maya units are interpreted as decimetres (1
+                                                     unit = 10 decimetres) rather than metres.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Disable visual
+                                                        checker</em></p>
+                                    <p>Specifies that the plug-in should not check the exported
+                                                     model against the visual rules.
+                                                     <sup>A</sup></p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Fix cylindrical
+                                                        mapping</em></p>
+                                    <p>Specifies that the plug-in should try to use an
+                                                     alternative method for generating texture space vectors used for
+                                                     normal mapping.
+                                    </p>
+                                    <p>This option must be checked if there are artifacts along
+                                                     seams when using normal-mapped shaders.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Opposite facing
+                                                        direction</em></p>
+                                    <p>Specifies that the model has been modelled facing in the
+                                                     incorrect direction and that it should be rotated by 180 degrees
+                                                     so that is appears correctly inside the engine.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><em class="emphasis">Scene root added</em></p>
+                                    <p>Specifies that the model already has a dummy scene root
+                                                     added by the artist. If not selected, a scene root will be added
+                                                     automatically so that the correct node gets examined as the
+                                                     itinerant when testing for the &#8220;Is Movement&#8221; action inside the
+                                                     BigWorld engine. This option provides support for customers with
+                                                     manually added dummy scene roots, therefore not requiring assets
+                                                     to be altered.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <p><em class="emphasis"><em class="emphasis">A </em>&#8212; The rules
+                              are defined in file
+                              <span class="literal">bigworld/tools/res/visual_rules.xml</span>. For details, see
+                              <a href="ch11.html#xref_Validation_Rules" title="11.4.&nbsp;Validation rules">Validation rules</a>.</em></p>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="xref_BigWorld_Shelf"></a>11.2.3.&nbsp;BigWorld shelf
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>The BigWorld Shelf contains useful shortcuts for working with
+                           shells.
+                  </p>
+                  <p>These icons are described in the list below:</p>
+                  <div class="itemizedlist">
+                     <ul type="disc">
+                        <li>
+                           <p><span class="inlinemediaobject"><img src="images/exporters_maya_bigworld_shelf_button_add_portal.png"></span> &#8212; Adds the Portal attribute to the
+                                        object's face currently selected.
+                           </p>
+                        </li>
+                        <li>
+                           <p><span class="inlinemediaobject"><img src="images/exporters_maya_bigworld_shelf_button_add_exit.png"></span> &#8212; Adds the Exit attribute to the
+                                        object's face currently selected.
+                           </p>
+                        </li>
+                        <li>
+                           <p><span class="inlinemediaobject"><img src="images/exporters_maya_bigworld_shelf_button_add_heaven.png"></span> &#8212; Adds the Heaven attribute to the
+                                        object's face currently selected.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="xref_Creating_Shells"></a>11.2.4.&nbsp;Creating Shells
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>The requirements for creating in 3ds Max the game assets to be
+                           used in BigWorld Technology are covered in the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//content_creation.chm" class="olink">Content Creation Manual</a> (accessible via WorldEditor's,
+                           ModelEditor's, and ParticleEditor's <em class="emphasis">Help <span class="symbol">&#8594;</span> Content Creation</em> menu item, or
+                           directly by opening the
+                           <span class="literal">bigworld/doc/content_creation.chm</span> file).
+                  </p>
+                  <p>But there is a major difference between 3ds Max and Maya in the
+                           creation of portals. To create a portal in Maya, follow the steps
+                           below:
+                  </p>
+                  <div class="orderedlist">
+                     <ol type="1">
+                        <li>
+                           <p>Create a face on your shell model covering the area of the
+                                        portal.
+                           </p>
+                        </li>
+                        <li>
+                           <p>Ensure the normals for the portal are facing outwards from the
+                                        shell.
+                           </p>
+                        </li>
+                        <li>
+                           <p>Extract the face from the rest of the shell model.</p>
+                        </li>
+                        <li>
+                           <p>Apply the portal attribute (and <em class="emphasis">heaven</em>
+                                        and <em class="emphasis">exit</em> attributes, if applicable).
+                           </p>
+                        </li>
+                        <li>
+                           <p>If the portal is not being recognised, then try the steps
+                                        below:
+                           </p>
+                           <div class="orderedlist">
+                              <ol type="a">
+                                 <li>
+                                    <p>Recreate your portal, based on a face extracted from the
+                                                     shell model.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Centre the pivot point of the portal plane.</p>
+                                 </li>
+                                 <li>
+                                    <p>Ensure that the transforms for the shell and portal are
+                                                     all zeroed.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="d0e31744"></a>11.2.5.&nbsp;Installing the Maya exporters
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>In order to use the plug-in, you need to update your environment
+                           variables and Maya's plug-in settings. To do that, follow the steps
+                           below:
+                  </p>
+                  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                     <h3 class="title">Note</h3>
+                              The steps below are the same for all supported versions of Maya, only folder names for the latest version of Maya
+                     are shown 
+                           
+                  </div>
+                  <div class="orderedlist">
+                     <ol type="1">
+                        <li>
+                           <p>Add the BigWorld exporter folder as an additional plugin path
+                                        to Maya:
+                           </p>
+                           <div class="orderedlist">
+                              <ol type="a">
+                                 <li>
+                                    <p>Open Maya.env, e.g. <span class="literal">My
+                                                          Documents/maya/2011/Maya.env</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Add the BigWorld exporter path to the
+                                                       <span class="literal">MAYA_PLUG_IN_PATH</span> variable, e.g.
+                                                       <span class="literal">MAYA_PLUG_IN_PATH =
+                                                          C:/mf/bigworld/tools/exporter/maya2011</span>.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                           <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                              <h3 class="title">Note</h3>
+                              <p>Each installed version of Maya can point to its
+                                               appropriate version of the BigWorld exporters.
+                              </p>
+                           </div>
+                        </li>
+                        <li>
+                           <p>Copy the BigWorld's export script to the Maya folder:</p>
+                           <div class="orderedlist">
+                              <ol type="a">
+                                 <li>
+                                    <p>Open Windows Explorer.</p>
+                                 </li>
+                                 <li>
+                                    <p>Navigate to the folder
+                                                     <span class="literal">bigworld/tools/exporter/maya2011</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Select the <span class="literal">visualfileexporterscript.mel</span>
+                                                     file.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Copy the file to the <span class="literal">My
+                                                        Documents/maya/2011/scripts</span> folder.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                        <li>
+                           <p>Copy BigWorld's shelf and its icons to Maya folder:</p>
+                           <div class="orderedlist">
+                              <ol type="a">
+                                 <li>
+                                    <p>Open Windows Explorer.</p>
+                                 </li>
+                                 <li>
+                                    <p>Navigate to the folder
+                                                     <span class="literal">bigworld/tools/exporter/maya2011</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Select the <span class="literal">shelf_bigworld.mel</span>
+                                                     file.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Copy the file to the <span class="literal">My
+                                                        Documents/maya/2011/prefs/shelves</span> folder.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Navigate to the folder
+                                                     <span class="literal">bigworld/tools/exporter/maya2011</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Select the bitmap files
+                                                     <span class="literal">exit_portal.bmp</span>,
+                                                     <span class="literal">heavenly_portal.bmp</span>, and
+                                                     <span class="literal">standard_portal.bmp</span>.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Copy the selected files to the the <span class="literal">My
+                                                        Documents/maya/2011/prefs/icons</span> folder
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Open Maya &#8212; you should see the BigWorld's tab in the
+                                                     shelf area (if that option is selected in Maya), and the icons
+                                                     displayed below (for details, see <a href="ch11.html#xref_BigWorld_Shelf" title="11.2.3.&nbsp;BigWorld shelf">BigWorld shelf</a>).
+                                    </p>
+                                    <div class="informalfigure">
+                                       <div class="mediaobject"><img src="images/exporters_maya_bigworld_shelf.png" height=""><span class="caption">
+                                             <p>BigWorld shelf</p></span></div>
+                                    </div>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                        <li>
+                           <p>Update Maya's plug-in settings:</p>
+                           <div class="orderedlist">
+                              <ol type="a">
+                                 <li>
+                                    <p>Open Maya.</p>
+                                 </li>
+                                 <li>
+                                    <p>Select the <em class="emphasis">Window <span class="symbol">&#8594;</span> Setting/Preferences <span class="symbol">&#8594;</span> Plug-in Manager</em> menu
+                                                     item &#8212; the <em class="emphasis">Plug-in
+                                                        Manager</em> dialog box will be displayed.
+                                    </p>
+                                    <div class="informalfigure">
+                                       <div class="mediaobject"><img src="images/exporters_maya_installing_plug_in_manager_dialog_box.png" height=""><span class="caption">
+                                             <p>Plug-in Manager dialog box</p></span></div>
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <p>Select the <em class="emphasis">Loaded</em> (to
+                                                     load the plug-in for the current session) and <em class="emphasis">Auto Load</em> (to load it automatically on
+                                                     startup of future sessions) check boxes.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Click the <span class="inlinemediaobject"><img src="images/exporters_maya_installing_plug_in_manager_dialog_box_button_information.png"></span> button &#8212; the <em class="emphasis">Plug-in Information</em> dialog box will be
+                                                     displayed.
+                                    </p>
+                                    <p>The
+                                                     <span class="literal">bigworld/tools/exporter/maya2011/visual.mll</span>
+                                                     file should be listed.
+                                    </p>
+                                    <div class="informalfigure">
+                                       <div class="mediaobject"><img src="images/exporters_maya_installing_plug_in_information_dialog_box.png" height=""><span class="caption">
+                                             <p>Plug-in Information dialog
+                                                                  box
+                                             </p></span></div>
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <p>Click the <em class="emphasis">Close</em> button to
+                                                     return to the <em class="emphasis">Plug-in Manager</em>
+                                                     dialog box.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Click the <em class="emphasis">Close</em> button to
+                                                     return to Maya.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+                  <p>After carrying out these steps, you are ready to export your
+                           objects and animations to the <span class="literal">.visual</span> and
+                           <span class="literal">.animation</span> formats used by BigWorld.
+                  </p>
+               </div>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="xref_Exporting_Custom_Node_Hierarchy"></a>11.3.&nbsp;Exporting custom node hierarchy
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <p>Sometimes it is useful to create an animation where the node
+                      hierarchy in the scene is different from the one that the model was
+                      exported with. This usually occurs when there are two elements in the
+                      scene, and you want to link them, then move them together.
                </p>
-               <p>A stub must support following commands:</p>
+               <p>The example below illustrates such a scenario:</p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
-                        <p><em class="emphasis"><span class="literal">addfile</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> addfile
-                                         <em class="replaceable"><code>&lt;filename&gt;</code></em></span><sup>A</sup></em></p>
-                        <p>Adds the text file to the repository.</p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">addbinaryfile</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> addbinaryfile
-                                         <em class="replaceable"><code>&lt;filename&gt;</code></em></span><sup>A</sup></em></p>
-                        <p>Adds the binary file to the repository.</p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">removefile</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> removefile
-                                         <em class="replaceable"><code>&lt;filename&gt;</code></em></span><sup>A</sup></em></p>
-                        <p>Removes the file from repository.</p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">commitfile</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> commitfile msg
-                                         <em class="replaceable"><code>&lt;filename&gt;</code></em></span> [
-                                      ,<span class="literal"><em class="replaceable"><code>&lt;filename&gt;</code></em></span> ]*
-                                      <sup>A</sup></em></p>
-                        <p>Commits the files to the repository (the commit operation is
-                                   recursive).
+                        <p>When a character steps onto a little boat, you want both the
+                                   character and the whole boat to dip down where the character's foot
+                                   steps on.
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">updatefile</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> updatefile
-                                         <em class="replaceable"><code>&lt;filename&gt;</code></em></span> [
-                                      ,<span class="literal"><em class="replaceable"><code>&lt;filename&gt;</code></em></span> ]*
-                                      <sup>A</sup></em></p>
-                        <p>Updates all indicated files.</p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">updatefolder</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> updatefolder
-                                         <em class="replaceable"><code>&lt;foldername&gt;</code></em></span></em></p>
-                        <p>Recursively updates all files in the indicated folder.</p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">refreshfolder</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> refreshfolder
-                                         <em class="replaceable"><code>&lt;foldername&gt;</code></em></span><sup>A</sup></em></p>
-                        <p>Recursively refreshes the status of all files in the indicated
-                                   folder.
+                        <p>To accomplish this, the character is linked to a rotating box
+                                   used as a handle to rotate the whole boat, since this is easy to
+                                   animate in 3ds Max.
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">managed</span></em></p>
-                        <p><em class="emphasis">Syntax:
-                                      <span class="literal"><em class="replaceable"><code>&lt;stubname&gt;</code></em> managed
-                                         <em class="replaceable"><code>&lt;file_or_folder_name&gt;</code></em></span><sup>A</sup></em></p>
-                        <p>Returns 1 if the file or folder is managed by the repository, or
-                                   0 otherwise.
+                        <p>But if this animation were exported with the node hierarchy in
+                                   the current 3ds Max file, then the rotation would be lost, since that
+                                   node is not normally in the hierarchy of the visual.
                         </p>
                      </li>
                   </ul>
                </div>
-               <p><em class="emphasis"><em class="emphasis">A</em> &#8212;
-                         <span class="literal">filename</span> may include the wildcard character
-                         <span class="literal">*</span> (asterisk).</em></p>
+               <p>By exporting the model using the node hierarchy specified in a
+                      visual file, the resulting animation will look the same in the game engine
+                      as it does in 3ds Max or Maya.
+               </p>
+               <div class="informalfigure">
+                  <div class="mediaobject"><img src="images/exporters_exporting_custom_node_hierarchy_3ds_max.png" height=""><span class="caption">
+                        <p>3ds Max</p></span></div>
+               </div>
+               <div class="informalfigure">
+                  <div class="mediaobject"><img src="images/exporters_exporting_custom_node_hierarchy_maya.png" height=""><span class="caption">
+                        <p>Maya</p></span></div>
+               </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e32631"></a>11.3.&nbsp;Enabling spaces for collaborative editing
+                        <h2 class="title" style="clear: both"><a name="xref_Validation_Rules"></a>11.4.&nbsp;Validation rules
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>In order to be able to share your spaces with other world builders,
-                      you need to follow a few simple steps. If the new space is created while
-                      WorldEditor is connected to bwlockd, the whole space will be locked for
-                      editing automatically, but if the space is created while WorldEditor is
-                      disconnected, the whole space will not be locked for editing.
+               <p>Before exporting the visual, the <em class="emphasis">Visual
+                         Exporter</em> plug-in validates it according to a set of rules
+                      defined in the <span class="literal">bigworld/tools/res/visual_rules.xml</span>
+                      file.
                </p>
-               <p>When you create a new space while connected to the lock server, you
-                      need to follow these steps in order to share the space:
+               <p>The format of the <span class="literal">visual_rules.xml</span> file is as
+                      follows:
+               </p><pre class="programlisting">&lt;visual_rules.xml&gt;
+
+  *&lt;rule&gt;
+     &lt;identifier&gt;              id                                &lt;/identifier&gt;
+    ?&lt;parent&gt;                  parent_id                         &lt;/parent&gt;
+    ?&lt;exportAs&gt;               [normal|static|static with nodes]  &lt;/exportAs&gt;
+    ?&lt;path&gt;                    folder                            &lt;/path&gt;
+    ?&lt;filespec&gt;                file_matching_criteria            &lt;/filespec&gt;
+    ?&lt;minSize&gt;                 .f .f .f                          &lt;/minSize&gt;
+    ?&lt;maxSize&gt;                 .f .f .f                          &lt;/maxSize&gt;
+    ?&lt;maxNodesPerRenderSet&gt;    integer                           &lt;/maxNodesPerRenderSet&gt;
+    ?&lt;maxTriangles&gt;            integer                           &lt;/maxTriangles&gt;
+    ?&lt;minTriangles&gt;            integer                           &lt;/minTriangles&gt;
+    ?&lt;portals&gt;                 true|false                        &lt;/portals&gt;
+    ?&lt;portalSnap&gt;              .f .f .f                          &lt;/portalSnap&gt;
+    ?&lt;portalDistance&gt;          .f                                &lt;/portalDistance&gt;
+    ?&lt;portalOffset&gt;            .f                                &lt;/portalOffset&gt;
+    *&lt;hardPoint&gt;               hard_point_name                   &lt;/hardPoint&gt;
+    ?&lt;checkUnknownHardPoints&gt; [true|false]                       &lt;/checkUnknownHardPoints&gt;
+   &lt;/rule&gt;
+
+&lt;/visual_rules.xml &gt;</pre><p><span class="citetitle"><span class="literal">bigworld/tools/res/visual_rules.xml</span>
+                         file format</span></p>
+               <p>The plug-in determines which rule to use based on the visual's
+                      target path and file name &#8212; it will search through all matching
+                      rules (ordering the rules based on the length of the value for the path
+                      tag &#8212; from the longest to the shortest), and use the first matching
+                      one (with either no filespec tag, or with one that matches the filename
+                      using standard wildcard matching).
                </p>
-               <div class="orderedlist">
-                  <ol type="1">
+               <p>The list below describes the tags in the
+                      <span class="literal">visual_rules.xml</span> file:
+               </p>
+               <div class="itemizedlist">
+                  <ul type="disc">
                      <li>
-                        <p>Go to <em class="emphasis">Project</em> mode, by clicking the
-                                   <em class="emphasis">Project Tool</em> toolbar button
-                                   &#8212;<span class="inlinemediaobject"><img src="images/bwlockd_worldeditor_toolbar_button_project_mode.png"></span>&#8212; (for details, see <a href="ch02.html#xref_we_Toolbar" title="2.2.&nbsp;Toolbar">Toolbar</a>).
+                        <p><em class="emphasis"><span class="literal">checkUnknownHardPoints</span></em></p>
+                        <p>Specified if hard points not specified in the set of
+                                   <span class="literal">hardPoint</span> tags should be flagged as error.
                         </p>
                      </li>
                      <li>
-                        <p>Make sure that WorldEditor has successfully connected to the
-                                   Lock Server.
+                        <p><em class="emphasis"><span class="literal">exportAs</span></em></p>
+                        <p>Specifies how to save the visual.</p>
+                        <p>Can have the following values: <span class="literal">normal</span>,
+                                   <span class="literal">static</span>, or <span class="literal">static with
+                                      nodes</span>.
                         </p>
                      </li>
                      <li>
-                        <p>Click anywhere on the space.</p>
+                        <p><em class="emphasis"><span class="literal">fileSpec</span></em></p>
+                        <p>Matching criteria (using wildcards) specifying the visuals for
+                                   which this rule applies to.
+                        </p>
+                        <p>This option is not inherited via the parent tag.</p>
                      </li>
                      <li>
-                        <p>Enter a commit message and click on <em class="emphasis">Save and
-                                      Commit</em>, and wait for the source control operation to
-                                   complete.
+                        <p><em class="emphasis"><span class="literal">hardPoint</span></em></p>
+                        <p>Name of the hard point that the visual must have.</p>
+                        <p>The set of hard points to check against is the one formed by all
+                                   hard points mentioned in all parents.
+                        </p>
+                        <p>This tag may be defined multiple times for the same rule.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">identifier</span></em></p>
+                        <p>Name of the rule.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">maxNodesPerRenderSet</span><sup>A</sup></em></p>
+                        <p>Maximum nodes allowed per renderset, <em class="emphasis">i.e.</em>,
+                                   how many bones each geometric element is allowed to use for
+                                   skinning.
                         </p>
                      </li>
-                  </ol>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">maxSize</span><sup>A</sup></em></p>
+                        <p>Maximum size of the visual in metres.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">maxTriangles</span><sup>A</sup></em></p>
+                        <p>Maximum number of triangles in the visual.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">minSize</span><sup>A</sup></em></p>
+                        <p>Minimum size of the visual in metres.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">minTriangles</span><sup>A</sup></em></p>
+                        <p>Minimum number of triangles in the visual.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">parent</span></em></p>
+                        <p>Name of the rule from which to inherit options.</p>
+                        <p>For each option, the plug-in will search up the hierarchy until
+                                   it finds a match for it.
+                        </p>
+                        <p>The path and fileSpec options are not inherited.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">path</span></em></p>
+                        <p>Resource folder which visuals this rule applies to.</p>
+                        <p>This option is not inherited via parent tag.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">portalDistance</span><sup>A</sup></em></p>
+                        <p>Number of which the distance between the origin and the portal
+                                   must be a multiple of.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">portalOffset</span><sup>A</sup></em></p>
+                        <p>Number of which the centre of the portal must be a multiple of
+                                   on the portal plane.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">portals</span></em></p>
+                        <p>Determines if the visual may have portals.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">portalSnap</span><sup>A</sup></em></p>
+                        <p>Number of which the bounding box of the portal must be a
+                                   multiple of.
+                        </p>
+                        <p>A value must be specified for each dimension.</p>
+                     </li>
+                  </ul>
                </div>
-               <p>On the other hand, if the space was created before connecting to the
-                      lock server, you will need to follow these steps:
-               </p>
-               <div class="orderedlist">
-                  <ol type="1">
-                     <li>
-                        <p>Go to <em class="emphasis">Project</em> mode, make sure that
-                                     WorldEditor has successfully connected to the Lock Server.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Select any area inside the space using click-and-drag.</p>
-                     </li>
-                     <li>
-                        <p>Enter a descriptive message and click the <em class="emphasis">Lock
-                                        Selected Chunks</em> button. Note that even if you select only
-                                     one chunk, the whole space will be locked because it hasn't been
-                                     committed yet.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Finally, if the space is not under source control, enter a
-                                     commit message and click on <em class="emphasis">Save and Commit</em>,
-                                     and wait for the source control operation to complete.
-                        </p>
-                     </li>
-                  </ol>
-               </div>
-               <p>Once these steps have been completed, it will be possible
-                      for other world builders to get the space using the source control tools
-                      and then lock/unlock areas of the space to work on it simultaneously. For
-                      more details please refer to <a href="ch11.html#xref_Locking_An_Area" title="11.4.&nbsp;Locking an area">Locking an area</a>.
-               </p>
-            </div>
-            <div class="sect1" lang="en">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Locking_An_Area"></a>11.4.&nbsp;Locking an area
-                        </h2>
-                     </div>
-                  </div>
-               </div>
-               <p>While in <em class="emphasis">Project</em> mode, you can see the locked
-                      regions of the space. The red regions correspond to chunks locked by other
-                      world builders, while the blue indicates editable regions.
-               </p>
-               <div class="informalfigure">
-                  <div class="mediaobject"><img src="images/bwlockd_worldeditor_project_mode.png"><span class="caption">
-                        <p>WorldEditor displaying editable regions in blue and
-                                   non-editable regions in red
-                        </p></span></div>
-               </div>
-               <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-                  <h3 class="title">Note</h3>
-                  <p>As the mouse is hovered over a locked region, a tooltip is
-                           displayed with information on that lock, such as user, machine,
-                           date/time, chunk ID and lock message.
-                  </p>
-               </div>
-               <p>To enable or disable displaying non-editable areas shaded in red,
-                      select the <em class="emphasis">General Options</em> panel's
-                      <em class="emphasis">Shade Read-Only Areas</em> check box (for
-                      details, see <a href="ch02.html#xref_we_General_Options_Panel" title="2.10.11.&nbsp;General Options panel">General Options panel</a>).
-               </p>
-               <div class="informalfigure">
-                  <div class="mediaobject"><img src="images/bwlockd_worldeditor_project_mode_non_editable_areas_shaded_in_red.png"><span class="caption">
-                        <p>Non-editable areas shaded in red</p></span></div>
-               </div>
-               <p>To lock an area for editing, follow the steps below:</p>
-               <div class="orderedlist">
-                  <ol type="1">
-                     <li>
-                        <p>Click the <em class="emphasis">Project Tool</em> toolbar
-                                   button &#8212;<span class="inlinemediaobject"><img src="images/bwlockd_worldeditor_toolbar_button_project_mode.png"></span>&#8212; to activate the <em class="emphasis">Project</em>
-                                   mode.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Make sure that WorldEditor has successfully connected to the
-                                   Lock Server.
-                        </p>
-                        <p>WorldEditor tries to connect to bwlockd upon startup, using the
-                                   settings specified in
-                                   <span class="literal">bigworld/tools/worldeditor/options.xml</span>. (for
-                                   details on this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                                   <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal">options.xml</span></span>
-                                   <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">WorldEditor</span>).
-                        </p>
-                        <p>If it did not connect successfully, then the <em class="emphasis">Message</em> field will contain the text
-                                   <span class="literal">"failed to connect to bwlock, you cannot use the related
-                                      functionality"</span>, and the <em class="emphasis">Lock Selected
-                                      Chunks</em>, <em class="emphasis">Commit All Changes</em>
-                                   and <em class="emphasis">Discard All Changes</em> buttons will
-                                   be disabled.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Click-and-drag over the area that you want to lock for
-                                   editing.
-                        </p>
-                        <p>The selected area will be shaded, indicating the chunks that
-                                   will be locked <em class="emphasis">and</em> editable.
-                                   Around that area, an area shaded in light grey will be displayed,
-                                   indicating an area that will be locked but non-editable.
-                        </p>
-                        <div class="informalfigure">
-                           <div class="mediaobject"><img src="images/bwlockd_worldeditor_project_mode_chunk_information.png"><span class="caption">
-                                 <p>WorldEditor displaying information about chunks'
-                                                lock and edit status
-                                 </p></span></div>
-                        </div>
-                        <p>The actual editable area of a locked region is smaller by 1
-                                   chunk around the border. This is necessary to prevent tearing in the
-                                   terrain that may occur if two people edit adjacent terrain chunks to
-                                   different heights.
-                        </p>
-                     </li>
-                     <li>
-                        <p>In the <em class="emphasis">Message</em> field, type a
-                                   text indicating the reason for the lock.
-                        </p>
-                        <p>This message will be displayed on a tooltip when other users
-                                   hover over the locked area in WorldEditor while in
-                                   <em class="emphasis">Project</em> mode.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Press the <em class="emphasis">Lock Select Chunks</em>
-                                   button.
-                        </p>
-                        <p>The selected chunks and the ones surrounding it will be shaded
-                                   in blue, to indicate the success of the operation.
-                        </p>
-                     </li>
-                  </ol>
-               </div>
-               <p>This process can be repeated many times if you want to lock an
-                      irregular area.
-               </p>
-               <p>Once the world is complete, you will have to perform a pass over it
-                      to fill in the details in between previously locked sections.
-               </p>
+               <p><em class="emphasis"><em class="emphasis">A </em>&#8212; A value of
+                         zero indicates that the option should not be checked.</em></p>
             </div>
          </div>
          <div class="navfooter">
@@ -684,15 +1543,15 @@ options:
                   <td width="38%" align="left"><a accesskey="p" href="ch10.html">Prev</a>&nbsp;
                   </td>
                   <td width="20%" align="center">&nbsp;</td>
-                  <td width="37%" align="right">&nbsp;</td>
+                  <td width="37%" align="right">&nbsp;<a accesskey="n" href="ch12.html">Next</a></td>
                </tr>
                <tr>
-                  <td width="40%" align="left" valign="top">Chapter&nbsp;10.&nbsp;3ds Max and Maya Exporters&nbsp;</td>
+                  <td width="40%" align="left" valign="top">Chapter&nbsp;10.&nbsp;NavGen&nbsp;</td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;</td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;12.&nbsp;Lock Server (BWLockD)</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

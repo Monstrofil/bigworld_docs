@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Move Entities">
       <link rel="up" href="index.html" title="How To Move Entities">
       <link rel="prev" href="index.html" title="How To Move Entities">
-      <link rel="next" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Navigation Mesh"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Navigation Mesh">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_move_entities/ch01.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,49 +31,48 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="xref_HowTo_Move_Entities"></a>Chapter&nbsp;1.&nbsp;Introduction
+                     <h2 class="title"><a name="xref_Introduction"></a>Chapter&nbsp;1.&nbsp;Introduction
                      </h2>
                   </div>
                </div>
             </div>
             <p>Moving entities is one of the most fundamental processes in
                implementing a game. BigWorld provides two main mechanisms to accomplish
-                   this task: navigation and seeking.
+                 this task: navigation and seeking.
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis">Navigation</em></p>
                      <p>This is the primary way to move NPCs (non-player characters)
-                                around the world. It uses a map of navigation information generated in
-                                an offline process, and can take into account the size of the
-                                entity.
+                              around the world. It uses a map of navigation information generated in
+                              an offline process, and can take into account the size of the
+                              entity.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis">Seek</em></p>
                      <p>This is a client-side function used to line up the player for
-                                interactions with other entities.
+                              interactions with other entities.
                      </p>
                   </li>
                </ul>
             </div>
             <p>Navigation can take into account the size of the navigating object,
-                   and thus follow paths that do not pass too close to obstacles. The
-                   pre-generated navigation information is known as the navigation mesh
-                   (navmesh), as it is a collection of polygons generated in an offline tool
-                   called NavGen (for details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                      Guide</a>'s chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">NavGen</a>).
+                 and thus follow paths that do not pass too close to obstacles. The
+                 pre-generated navigation information is known as the navigation mesh
+                 (navmesh), as it is a collection of polygons generated in an offline tool
+                 called NavGen (for details, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch10.html" class="olink"><i>NavGen</i></a>).
             </p>
             <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                <h3 class="title">Note</h3>
                <p>The NavGen's executable <span class="literal">navgen.exe</span> can be found
-                        under the <span class="literal">bigworld/tools/misc</span> folder.
+                      under the <span class="literal">bigworld/tools/misc</span> folder.
                </p>
             </div>
-            <p>This document describes the steps necessary to make an entity
-                   navigate from one point to another in a sensible manner, taking into
-                   account their environment.
+            <p>This document describes the steps necessary to make an entity navigate
+                 from one point to another in a sensible manner, taking into account their
+                 environment.
             </p>
          </div>
          <div class="navfooter">
@@ -90,7 +90,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;2.&nbsp;Navigation Mesh</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

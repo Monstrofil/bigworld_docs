@@ -2,20 +2,21 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    
-      <title>Chapter&nbsp;30.&nbsp;space.settings</title>
+      <title>Chapter&nbsp;30.&nbsp;shadows.xml</title>
       <link rel="stylesheet" href="../css/bigworld.css" type="text/css">
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
-      <link rel="prev" href="ch29.html" title="Chapter&nbsp;29.&nbsp;shadows.xml">
-      <link rel="next" href="ch31.html" title="Chapter&nbsp;31.&nbsp;.texanim"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch29.html" title="Chapter&nbsp;29.&nbsp;.primitives">
+      <link rel="next" href="ch31.html" title="Chapter&nbsp;31.&nbsp;space.settings">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch30.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
                <tr>
-                  <th colspan="3" align="center">Chapter&nbsp;30.&nbsp;<span class="literal">space.settings</span></th>
+                  <th colspan="3" align="center">Chapter&nbsp;30.&nbsp;<span class="literal">shadows.xml</span></th>
                </tr>
                <tr>
                   <td width="20%" align="left"><a accesskey="p" href="ch29.html">Prev</a>&nbsp;
@@ -30,117 +31,65 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="xref_space_settings"></a>Chapter&nbsp;30.&nbsp;<span class="literal">space.settings</span></h2>
+                     <h2 class="title"><a name="xref_shadows_xml"></a>Chapter&nbsp;30.&nbsp;<span class="literal">shadows.xml</span></h2>
                   </div>
                </div>
             </div>
-            <p>Contains environment settings, bounding rectangle of grid squares,
-                   etc...
+            <p>Located under <span class="literal">bigworld/res/system/data</span>, this file
+                 is used by the 3D game engine to configure various shadowing
+                 capabilities.
             </p>
-            <p>Mentioned in document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Programming
-                      Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Chunks</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Implementation files</a>.
-            </p>
-            <p>The grammar for <span class="literal">space.settings</span> is described
-                   below:
-            </p><pre class="programlisting">&lt;root&gt;
-   &lt;timeOfDay&gt;        <em class="replaceable"><code>file</code></em>  &lt;/timeOfDay&gt;
-   &lt;skyGradientDome&gt;  <em class="replaceable"><code>file</code></em>  
-    ?&lt;farPlane&gt;      <em class="replaceable"><code>float</code></em> &lt;/farPlane&gt;
-   &lt;/skyGradientDome&gt;
-  ?&lt;seas&gt;
-    ?&lt;seaLevel&gt;         <em class="replaceable"><code>float</code></em>                    &lt;/seaLevel&gt;
-    ?&lt;wavePeriod&gt;       <em class="replaceable"><code>float</code></em>                    &lt;/wavePeriod&gt;
-    ?&lt;waveExtent&gt;       <em class="replaceable"><code>float</code></em>                    &lt;/waveExtent&gt;
-    ?&lt;tidePeriod&gt;       <em class="replaceable"><code>float</code></em>                    &lt;/tidePeriod&gt;
-    ?&lt;tideExtent&gt;       <em class="replaceable"><code>float</code></em>                    &lt;/tideExtent&gt;
-    ?&lt;surfaceTopColour&gt; <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em>  &lt;/surfaceTopColour&gt;
-    ?&lt;surfaceBotColour&gt; <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em>  &lt;/surfaceBotColour&gt;
-    ?&lt;underwaterColour&gt; <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em>  &lt;/underwaterColour&gt;
-   &lt;/seas&gt;
-  ?&lt;farPlane&gt;        <em class="replaceable"><code>float</code></em>              &lt;/farPlane&gt;
-  ?&lt;singleDir&gt;       [true|false]       &lt;/singleDir&gt;
-  ?&lt;startPosition&gt;   <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em>  &lt;/startPosition&gt;
-  ?&lt;startDirection&gt;  <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em>  &lt;/startDirection&gt;
-  ?&lt;bounds&gt;
-     &lt;minX&gt;  <em class="replaceable"><code>integer</code></em>  &lt;/minX&gt;
-     &lt;minY&gt;  <em class="replaceable"><code>integer</code></em>  &lt;/minY&gt;
-     &lt;maxX&gt;  <em class="replaceable"><code>integer</code></em>  &lt;/maxX&gt;
-     &lt;minY&gt;  <em class="replaceable"><code>integer</code></em>  &lt;/minY&gt;
-   &lt;/bounds&gt;
-&lt;/root&gt;</pre><p><span class="citetitle">Grammar of
-                      <span class="literal">space.settings</span></span></p>
-            <p>The list below describes the tags in
-                   <span class="literal">space.settings</span>:
+            <p>The grammar is listed below:</p><pre class="programlisting">&lt;shadows.xml&gt;
+
+  &lt;enabled&gt;   true|false &lt;/enabled&gt;
+  &lt;intensity&gt; <em class="replaceable"><code>float</code></em>      &lt;/intensity&gt;
+  &lt;distance&gt;  <em class="replaceable"><code>float</code></em>      &lt;/distance&gt;
+  &lt;fadeStart&gt; <em class="replaceable"><code>float</code></em>      &lt;/fadeStart&gt;
+  &lt;buferSize&gt; <em class="replaceable"><code>integer</code></em>    &lt;/bufferSize&gt;
+  &lt;maxCount&gt;  <em class="replaceable"><code>integer</code></em>    &lt;/maxCount&gt;
+
+&lt;/shadows.xml&gt;</pre><p><span class="citetitle">Grammar of shadow configuration file</span></p>
+            <p>The list below describes the tags in the shadow configuration
+                 file:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
-                     <p><em class="emphasis"><span class="literal">bounds</span></em></p>
-                     <p>The bounds in X- and Z-axis - the Y here is actually Z-axis in
-                                world space.
-                     </p>
-                     <p>The unit is the grid size.</p>
+                     <p><em class="emphasis"><span class="literal">bufferSize</span></em></p>
+                     <p>Size of the shadow texture.</p>
                   </li>
                   <li>
-                     <p><em class="emphasis"><span class="literal">farPlane</span></em></p>
-                     <p>Space's far plane.</p>
+                     <p><em class="emphasis"><span class="literal">distance</span></em></p>
+                     <p>Shadow cut-off distance.</p>
                   </li>
                   <li>
-                     <p><em class="emphasis"><span class="literal">maxX</span> (section
-                                   <span class="literal">bounds</span>)</em></p>
-                     <p>Max grid bounds in X</p>
+                     <p><em class="emphasis"><span class="literal">enabled</span></em></p>
+                     <p>Toggles the availability of shadows in the engine.</p>
                   </li>
                   <li>
-                     <p><em class="emphasis"><span class="literal">maxY</span> (section
-                                   <span class="literal">bounds</span>)</em></p>
-                     <p>Max grid bounds in Z</p>
+                     <p><em class="emphasis"><span class="literal">fadeStart</span></em></p>
+                     <p>Distance from which shadow will start to face.</p>
+                     <p>It will face until reaches distance.</p>
                   </li>
                   <li>
-                     <p><em class="emphasis"><span class="literal">minX</span> (section
-                                   <span class="literal">bounds</span>)</em></p>
-                     <p>Min grid bounds in X</p>
-                  </li>
-                  <li>
-                     <p><em class="emphasis"><span class="literal">minY</span> (section
-                                   <span class="literal">bounds</span>)</em></p>
-                     <p>Min grid bounds in Z</p>
-                  </li>
-                  <li>
-                     <p><em class="emphasis"><span class="literal">singleDir</span></em></p>
-                     <p>If this is set to true, all chunk files will reside in one
-                                folder. If this is set to false, all chunk files will be put into
-                                different folders ( for large space )
+                     <p><em class="emphasis"><span class="literal">intensity</span></em></p>
+                     <p>Maximum shadow intensity.</p>
+                     <p>Value ranges from 0 (fully transparent) to 1 (fully
+                              opaque).
                      </p>
                   </li>
                   <li>
-                     <p><em class="emphasis"><span class="literal">skyGradientDome</span></em></p>
-                     <p>Sky configuration file.<sup>A</sup></p>
-                     <p>The path is relative to game's resource folder &#8212;
-                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em></span>.
+                     <p><em class="emphasis"><span class="literal">maxCount</span></em></p>
+                     <p>Maximum number of simultaneous dynamic shadows casters in a
+                              scene.
                      </p>
-                  </li>
-                  <li>
-                     <p><em class="emphasis"><span class="literal">startDirection</span></em></p>
-                     <p>The direction a player faced when he starts game</p>
-                  </li>
-                  <li>
-                     <p><em class="emphasis"><span class="literal">startPosition</span></em></p>
-                     <p>The position a player in when he starts game</p>
-                  </li>
-                  <li>
-                     <p><em class="emphasis"><span class="literal">timeOfDay</span></em></p>
-                     <p>Sky configuration file.<sup>A</sup></p>
-                     <p>The path is relative to game's resource folder &#8212;
-                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em></span>.
+                     <p>This is the default value, but it is possible to set a smaller
+                              amount via graphics settings. The options available are derived by bit
+                              shifting this value towards zero.
                      </p>
                   </li>
                </ul>
             </div>
-            <p><em class="emphasis"><em class="emphasis">A</em> &#8212; For details, see
-                      the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Programming
-                         Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">3D Engine (Moo)</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Features</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Lighting</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Light
-                         maps</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Sky light map</a>. For details on
-                      file's grammar, see <a href="ch37.html#xref_sky_xml" title="37.8.&nbsp;<sky&gt;.xml"><span class="literal"><em class="replaceable"><code>&lt;sky&gt;</code></em>.xml</span></a>.</em></p>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -152,13 +101,13 @@
                   <td width="37%" align="right">&nbsp;<a accesskey="n" href="ch31.html">Next</a></td>
                </tr>
                <tr>
-                  <td width="40%" align="left" valign="top">Chapter&nbsp;29.&nbsp;<span class="literal">shadows.xml</span>&nbsp;
+                  <td width="40%" align="left" valign="top">Chapter&nbsp;29.&nbsp;<span class="literal">.primitives</span>&nbsp;
                   </td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;31.&nbsp;<span class="literal">.texanim</span></td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;31.&nbsp;<span class="literal">space.settings</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

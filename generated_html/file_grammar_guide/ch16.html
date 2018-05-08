@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch15.html" title="Chapter&nbsp;15.&nbsp;.font">
-      <link rel="next" href="ch17.html" title="Chapter&nbsp;17.&nbsp;gui.xml"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch17.html" title="Chapter&nbsp;17.&nbsp;gui.xml">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch16.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,26 +31,26 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e4336"></a>Chapter&nbsp;16.&nbsp;<span class="literal">.gui</span></h2>
+                     <h2 class="title"><a name="xref_GUI_File"></a>Chapter&nbsp;16.&nbsp;<span class="literal">.gui</span></h2>
                   </div>
                </div>
             </div>
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch16.html#d0e4687">16.1. SimpleGUIComponentSection</a></span></dt>
+                  <dt><span class="section"><a href="ch16.html#d0e4551">16.1. SimpleGUIComponentSection</a></span></dt>
                </dl>
             </div>
             <p>Used to persist GUI hierarchies, these files are located under
-                   <span class="literal">fantasydemo/res/gui</span>.
+                 <span class="literal">fantasydemo/res/gui</span>.
             </p>
             <p>For a detailed description of each section (GUI class) and tag (GUI
-                   member), see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Python API
-                      documentation</a>'s entry <em class="emphasis">Modules <span class="symbol">&#8594;</span> GUI</em>.
+                 member), see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/client/index.html" class="olink">Client Python API</a>'s entry <em class="emphasis">Modules <span class="symbol">&#8594;</span>
+                    GUI</em>.
             </p>
             <p>The grammar of
-                   <span class="literal"><em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span> files is
-                   listed below:
+                 <span class="literal"><em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span> files is
+                 listed below:
             </p><pre class="programlisting">&lt;file_name&gt;
 
   *&lt;SimpleGUIComponent&gt;  <em class="replaceable"><code>integer</code></em>
@@ -143,7 +144,7 @@
    &lt;/MatrixGUIShader&gt;
 
 &lt;/file_name&gt;</pre><p><span class="citetitle">Grammar of
-                      <span class="literal">fantasydemo/res/gui/<em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span></span></p>
+                    <span class="literal">fantasydemo/res/gui/<em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span></span></p>
             <div class="calloutlist">
                <table border="0" summary="Callout list">
                   <tr>
@@ -157,41 +158,39 @@
                </table>
             </div>
             <p>The list below describes the tags in file
-                   <span class="literal"><em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span>:
+                 <span class="literal"><em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span>:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal">AlphaGUIShader</span></em>, <em class="emphasis"><span class="literal">BoundingBoxGUIComponent</span></em>,
-                                <em class="emphasis"><span class="literal">ClipGUIShader</span></em>,
-                                <em class="emphasis"><span class="literal">ColourGUIShader</span></em>,
-                                <em class="emphasis"><span class="literal">ConsoleGUIComponent</span></em>,
-                                <em class="emphasis"><span class="literal">FrameGUIComponent</span></em>,
-                                <em class="emphasis"><span class="literal">GoboComponent</span></em>,
-                                <em class="emphasis"><span class="literal">GraphGUIComponent</span></em>,
-                                <em class="emphasis"><span class="literal">MatrixGUIShader</span></em>,
-                                <em class="emphasis"><span class="literal">SimpleGUIComponent</span></em>,
-                                <em class="emphasis"><span class="literal">TextGUIComponent</span></em>,
-                                <em class="emphasis"><span class="literal">WindowGUIComponent</span></em></p>
+                              <em class="emphasis"><span class="literal">ClipGUIShader</span></em>,
+                              <em class="emphasis"><span class="literal">ColourGUIShader</span></em>,
+                              <em class="emphasis"><span class="literal">ConsoleGUIComponent</span></em>,
+                              <em class="emphasis"><span class="literal">FrameGUIComponent</span></em>,
+                              <em class="emphasis"><span class="literal">GoboComponent</span></em>,
+                              <em class="emphasis"><span class="literal">GraphGUIComponent</span></em>,
+                              <em class="emphasis"><span class="literal">MatrixGUIShader</span></em>,
+                              <em class="emphasis"><span class="literal">SimpleGUIComponent</span></em>,
+                              <em class="emphasis"><span class="literal">TextGUIComponent</span></em>,
+                              <em class="emphasis"><span class="literal">WindowGUIComponent</span></em></p>
                      <p>Creates an object of the specified type.</p>
-                     <p>For details on GUI components, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Programming
-                                   Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Graphical User Interface
-                                   (GUI)</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">C++ GUI support</a>.
+                     <p>For details on GUI components, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch16.html" class="olink"><i>Graphical User Interface (GUI)</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch16.html#xref_C_GUI_Support" class="olink">C++ GUI support</a>.
                      </p>
                   </li>
                </ul>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e4687"></a>16.1.&nbsp;SimpleGUIComponentSection
+                        <h2 class="title" style="clear: both"><a name="d0e4551"></a>16.1.&nbsp;SimpleGUIComponentSection
                         </h2>
                      </div>
                   </div>
                </div>
                <p>The grammar for the <em class="emphasis">SimpleGUIComponentSection</em> is described
-                        below:
+                      below:
                </p><pre class="programlisting"> &lt;position&gt;          <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em> <em class="replaceable"><code>float</code></em>        &lt;/position&gt;
  &lt;widthInClip&gt;       true|false               &lt;/widthInClip&gt; 
  &lt;width&gt;             <em class="replaceable"><code>float</code></em>                    &lt;/width&gt;
@@ -216,10 +215,9 @@
 ?&lt;shaders&gt;
    +&lt;attribute&gt;  <em class="replaceable"><code>integer</code></em>  &lt;/attribute&gt;
  &lt;/shaders&gt;</pre><p><span class="citetitle">Grammar of
-                           <span class="literal"><em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span>'s
-                           <em class="emphasis">SimpleGUIComponentSection</em></span></p>
-               <p>For details on each of the tags, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Python API
-                           documentation</a>, entry <em class="emphasis">Modules <span class="symbol">&#8594;</span> GUI</em>.
+                         <span class="literal"><em class="replaceable"><code>&lt;gui&gt;</code></em>.gui</span>'s <em class="emphasis">SimpleGUIComponentSection</em></span></p>
+               <p>For details on each of the tags, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/client/index.html" class="olink">Client Python API</a>, entry <em class="emphasis">Modules
+                         <span class="symbol">&#8594;</span> GUI</em>.
                </p>
             </div>
          </div>
@@ -239,7 +237,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;17.&nbsp;<span class="literal">gui.xml</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

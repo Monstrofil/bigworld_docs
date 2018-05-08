@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Tutorial">
       <link rel="up" href="index.html" title="Tutorial">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Overview">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;A basic client-server game (CLIENT_SERVER)"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;A basic client-server game (CLIENT_SERVER)">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/bigworld_tutorial/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -39,21 +40,21 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="section"><a href="ch02.html#d0e179">2.1. Creating a new project</a></span></dt>
-                  <dt><span class="section"><a href="ch02.html#xref_Setting_Up_The_Client_Executable_Folder">2.2. Setting up the client executable folder</a></span></dt>
-                  <dt><span class="section"><a href="ch02.html#d0e233">2.3. Creating the resources folder</a></span></dt>
-                  <dt><span class="section"><a href="ch02.html#d0e247">2.4. Creating our first entity</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e174">2.1. Creating a new project</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Setting_Up_The_Client_Executable_Folder">2.2. Defining resource paths</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e237">2.3. Creating the resources directory</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e251">2.4. Creating our first entity</a></span></dt>
                   <dd>
                      <dl>
                         <dt><span class="section"><a href="ch02.html#xref_entities_xml">2.4.1. <span class="literal">entities.xml</span></a></span></dt>
                         <dt><span class="section"><a href="ch02.html#xref_Defining_The_Avatar_Entity_Type">2.4.2. Defining the Avatar entity type</a></span></dt>
-                        <dt><span class="section"><a href="ch02.html#d0e416">2.4.3. Implementing the <span class="literal">Avatar</span> entity type</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e411">2.4.3. Implementing the <span class="literal">Avatar</span> entity type</a></span></dt>
                      </dl>
                   </dd>
                   <dt><span class="section"><a href="ch02.html#xref_The_Personality_Script">2.5. The personality script</a></span></dt>
                   <dt><span class="section"><a href="ch02.html#d0e568">2.6. XML configuration files</a></span></dt>
                   <dt><span class="section"><a href="ch02.html#xref_A_Simple_Space">2.7. A simple space</a></span></dt>
-                  <dt><span class="section"><a href="ch02.html#d0e815">2.8. Running the client for the first time</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e790">2.8. Running the client for the first time</a></span></dt>
                </dl>
             </div>
             <p>This chapter describes how to get a bare-bones client up and running
@@ -62,7 +63,7 @@
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
-                     <p>Creating a new BigWorld project folder.</p>
+                     <p>Creating a new BigWorld project directory.</p>
                   </li>
                   <li>
                      <p>Creating files and directories necessary to define a single
@@ -81,70 +82,80 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e179"></a>2.1.&nbsp;Creating a new project
+                        <h2 class="title" style="clear: both"><a name="d0e174"></a>2.1.&nbsp;Creating a new project
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>The FantasyDemo project is located in the <code class="code">fantasydemo</code>
-                      folder in <code class="code">C:\mf</code>. Following that convention, we will start our
-                      new tutorial project in the same folder, by creating a folder called
-                      <code class="code">tutorial</code> in <code class="code">C:\mf</code>. All resources and scripts
-                      specific to this project will be located within this folder.
+               <p>The FantasyDemo project is located in the <code class="filename">fantasydemo</code> directory in <code class="filename">C:\BigWorld</code>. Following that convention, we
+                      will start our new tutorial project in the same directory, by creating a
+                      new directory called <code class="filename">tutorial</code> in
+                      <code class="filename">C:\BigWorld</code>. All resources and scripts specific to
+                      this project will be located within this directory.
+               </p>
+               <p>Please note that the tutorial project is shipped as part of your
+                      package. A skeleton project called <code class="filename">my_game</code> is also shipped as part of the Indie
+                      edition, in order to allow you to start a new project easily. Please
+                      review the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../getting_started/index.html" class="olink">Getting Started</a> document for more
+                      details.
                </p>
             </div>
             <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Setting_Up_The_Client_Executable_Folder"></a>2.2.&nbsp;Setting up the client executable folder
+                        <h2 class="title" style="clear: both"><a name="xref_Setting_Up_The_Client_Executable_Folder"></a>2.2.&nbsp;Defining resource paths
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>The client executable for a BigWorld game is independent of the game
-                      resources it loads (unless you have customised the client with your own
-                      extensions). Since the FantasyDemo executable does not have any such
-                      modifications, we can re-use it in our tutorial project.
+               <p>The BigWorld client is a generic executable, located at
+                      <code class="code">bigworld\bin\client\bwclient.exe</code>. Since it is independent of
+                      the game resources it loads, it needs to be instructed as to where to find
+                      your project's resources.
                </p>
-               <p>The client executable typically resides in a folder called
-                      <code class="code">game</code> in the root of your project. Simply copy the entire
-                      folder <code class="code">fantasydemo/game</code> into the <code class="code">tutorial</code>
-                      folder, and then rename <code class="code">fantasydemo.exe</code> to
-                      <code class="code">tutorial.exe</code> &#8212; this is not strictly required, but it is
-                      recommended to avoid confusing the tutorial executable with the shipped
-                      FantasyDemo executable.
+               <p>The easiest way to go about this is to use the
+                      <code class="option">--res</code> command line switch in conjunction with a batch
+                      file to provide a convenient way to start the client for your particular
+                      game. A benefit of doing it this way is that it also keeps the resource
+                      path configuration self contained within your project folder. Typically,
+                      you would create a batch file named <code class="code">run.bat</code> and it would be
+                      located at the root level of your project folder (i.e. in
+                      <code class="code">my_game</code>) and would look something like:
+               </p><pre class="programlisting">"..\bigworld\bin\client\bwclient.exe" --res %~dp0res;../../../bigworld/res</pre><p>Keep
+                      in mind that paths are relative to the executable location,
+                      <em class="emphasis">not</em> the current working directory. The above example
+                      uses <code class="code">%~dp0</code> to grab the batch file's directory as an absolute
+                      path in order to keep the batch file generic.
                </p>
-               <p>Other than the client executable itself, this folder also contains
-                      the DLLs that the client needs to run, as well as a file called
-                      <code class="code">paths.xml</code> which determines the folders from which the client
-                      loads its resources. The <span class="literal">paths.xml</span> file is set up for
-                      the FantasyDemo resources, so change it so it points to the tutorial
-                      resources instead:
-               </p><pre class="programlisting">&lt;root&gt;
-   &lt;Paths&gt;
-      &lt;!-- Path defines the root location of any available resources. --&gt;
-      &lt;!-- Multiple entries allow for multiple resource locations. --&gt;
-      &lt;!-- Path precedence is in order of listing. --&gt;
-      &lt;Path&gt;  ../../tutorial/res  &lt;/Path&gt;
-      &lt;Path&gt;  ../../bigworld/res  &lt;/Path&gt;
-   &lt;/Paths&gt;
-&lt;/root&gt;</pre><p><span class="citetitle">Example
-                         <span class="literal">tutorial/paths.xml</span></span></p>
+               <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                  <h3 class="title">Note</h3>
+                  <p>Remember, the %~dp0 trick will only work in a .BAT file. If you
+                           want to launch the from the command prompt directly, you will need to
+                           specifiy the full path explicitly.
+                  </p>
+               </div>
+               <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                  <h3 class="title">Note</h3>
+                  <p>For details on how the client searches for resources, see the
+                           <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch01.html#xref_Resource_Search_Paths" class="olink">Resource search paths</a> section in the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>.
+                  </p>
+               </div>
             </div>
             <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e233"></a>2.3.&nbsp;Creating the resources folder
+                        <h2 class="title" style="clear: both"><a name="d0e237"></a>2.3.&nbsp;Creating the resources directory
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>Resource folders for BigWorld games are typically named
-                      <code class="code">res</code>, therefore you can simply create a folder called
-                      <code class="code">res</code> in the <code class="code">tutorial</code> folder. This top-level
-                      resources folder will contain all game-specific scripts, assets, and
+               <p>Resource directories for BigWorld games are typically named
+                      <code class="filename">res</code>, therefore you can simply
+                      create a directory called <code class="filename">res</code> in
+                      the <code class="filename">tutorial</code> directory. This top-level resources
+                      directory will contain all game-specific scripts, assets, and
                       configuration files.
                </p>
             </div>
@@ -152,7 +163,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e247"></a>2.4.&nbsp;Creating our first entity
+                        <h2 class="title" style="clear: both"><a name="d0e251"></a>2.4.&nbsp;Creating our first entity
                         </h2>
                      </div>
                   </div>
@@ -167,8 +178,7 @@
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
                   <p>For details on this and other BigWorld server terms, see the
-                           document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Glossary of
-                              Terms</span>.
+                           document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../glossary_of_terms/index.html" class="olink">Glossary of Terms</a>.
                   </p>
                </div>
                <div class="section" lang="en">
@@ -179,20 +189,17 @@
                         </div>
                      </div>
                   </div>
-                  <p>Entity scripts for a BigWorld game must reside in a
-                           <code class="code">res/scripts</code> folder. One of the files that must exist in
-                           this folder is <code class="code">entities.xml</code>, which lists the game entities
-                           that will be used &#8212; for details on this file, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming Guide</span>'s
-                           section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Physical Entity
-                              Structure for Scripting</span> in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">The
-                              <span class="literal">entities.xml</span> file</span>.
+                  <p>Entity scripts for a BigWorld game must reside in a <code class="filename">res/scripts</code> directory. One of the files
+                           that must exist in this directory is
+                           <code class="filename">entities.xml</code><sup>[<a name="d0e272" href="#ftn.d0e272">3</a>]</sup>, which lists the game entities that will be used.
                   </p>
-                  <p>Create a basic <code class="code">tutorial/res/scripts/entities.xml</code> file
-                           that contains a player entity called <span class="literal">Avatar</span>:
+                  <p>Create a basic
+                           <code class="filename">tutorial/res/scripts/entities.xml</code> file that
+                           contains a player entity called <code class="classname">Avatar</code>:
                   </p><pre class="programlisting">&lt;root&gt;
    &lt;Avatar/&gt;
 &lt;/root&gt;</pre><p><span class="citetitle">Example
-                              <span class="literal">tutorial/res/scripts/entities.xml</span></span></p>
+                              <code class="filename">tutorial/res/scripts/entities.xml</code></span></p>
                </div>
                <div class="section" lang="en">
                   <div class="titlepage">
@@ -203,20 +210,17 @@
                         </div>
                      </div>
                   </div>
-                  <p>The other folder that must exist is
-                           <code class="code">res/scripts/entity_defs</code>, which contains the
-                           <span class="literal">.def</span> files, with definitions of the properties and
-                           methods for each entity &#8212; for details on these files, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming Guide</span>'s
-                           section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Physical Entity
-                              Structure for Scripting</span>, in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">The definition file</span>.
+                  <p>The other directory that must exist is <code class="filename">res/scripts/entity_defs</code>, which contains the
+                           <code class="filename">.def</code><sup>[<a name="d0e308" href="#ftn.d0e308">4</a>]</sup> files, with definitions of the properties and methods for
+                           each entity.
                   </p>
                   <p>It might be helpful to think of these definition files as being
-                           similar to C/C++ header files &#8212; they specify the types of properties and
-                           the method calls attached to the entity.
+                           similar to C/C++ header files as they specify the types of properties
+                           and the method calls attached to the entity.
                   </p>
                   <p>Create the
-                           <code class="code">tutorial/res/scripts/entity_defs/Avatar.def</code> file, with the
-                           following contents:
+                           <code class="filename">tutorial/res/scripts/entity_defs/Avatar.def</code> file,
+                           with the following contents:
                   </p><pre class="programlisting">&lt;root&gt;
    &lt;Volatile&gt;
       &lt;position/&gt;
@@ -224,7 +228,7 @@
    &lt;/Volatile&gt;
    &lt;Properties&gt;
       &lt;playerName&gt;
-         &lt;Type&gt;   STRING       &lt;/Type&gt;
+         &lt;Type&gt;   UNICODE_STRING       &lt;/Type&gt;
          &lt;Flags&gt;  ALL_CLIENTS  &lt;/Flags&gt;
       &lt;/playerName&gt;
    &lt;/Properties&gt;
@@ -235,9 +239,9 @@
    &lt;BaseMethods&gt;
    &lt;/BaseMethods&gt;
 &lt;/root&gt;</pre><p><span class="citetitle">Example
-                              <span class="literal">tutorial/res/scripts/entity_defs/Avatar.def</span></span></p>
-                  <p>This is a very basic entity definition &#8212; it defines properties for
-                           the entity, but not methods. Notice that the properties are separated
+                              <code class="filename">tutorial/res/scripts/entity_defs/Avatar.def</code></span></p>
+                  <p>This is a very basic entity definition which defines properties
+                           for the entity, but no methods. Notice that the properties are separated
                            into two sections: <em class="emphasis">volatile</em> and
                            <em class="emphasis">non-volatile</em>.
                   </p>
@@ -251,21 +255,23 @@
                         </div>
                      </div>
                      <p>For a BigWorld entity, volatile properties are
-                                positional/directional properties. They are described as "volatile"
-                                because they are constantly changing. The important thing is to know
-                                their current value (the history of changes on the property is less
-                                important, and in a bandwidth-constrained environment only the current
-                                value should be sent).
+                                positional/directional properties. They are described as
+                                <em class="emphasis">volatile</em> because they are constantly changing.
+                                The volatile properties' current value are only considered to be
+                                important thing while the history of changes on the property is less
+                                important. In a bandwidth-constrained environment only the current
+                                value should be sent.
                      </p>
                      <p>The supported volatile properties are
-                                <span class="literal">position</span>, <span class="literal">yaw</span>,
-                                <span class="literal">pitch</span>, and <span class="literal">roll</span>. For simplicity,
-                                the <span class="literal">tutorial/res/scripts/entity_defs/Avatar.def</span>
-                                that we have just defined only sends <span class="literal">position</span> and
-                                <span class="literal">yaw</span> of the <span class="literal">Avatar</span> entity.
+                                <code class="varname">position</code>, <code class="varname">yaw</code>,
+                                <code class="varname">pitch</code>, and <code class="varname">roll</code>. For simplicity,
+                                the <code class="filename">tutorial/res/scripts/entity_defs/Avatar.def</code>
+                                that we have just defined only sends <code class="varname">position</code> and
+                                <code class="varname">yaw</code> of the <code class="classname">Avatar</code>
+                                entity.
                      </p>
-                     <p>For details on volatile properties, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                                   Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Properties</span>, in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Volatile properties</span>.
+                     <p>For details on volatile properties, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a>, in
+                                <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a>.
                      </p>
                   </div>
                   <div class="section" lang="en">
@@ -285,17 +291,15 @@
                      </p>
                      <p>We have defined a simple property for storing the player's name,
                                 and for simplicity, we are only using the most necessary property
-                                settings, specifying the type (<code class="constant">STRING</code>) and
-                                distribution flags (<code class="constant">ALL_CLIENTS</code>). The
+                                settings, specifying the type <span class="literal">STRING</span> and
+                                distribution flags <span class="literal">ALL_CLIENTS</span>. The
                                 <span class="literal">ALL_CLIENTS</span> tags means that this property will be
                                 visible to the player controlling the client entity, as well as any
-                                other player that can see his entity &#8212; for details on this and other
-                                distribution flags, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                                   Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Properties</span>, in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Data
-                                   distribution</span>.
+                                other player that can see his entity. For details on this and other
+                                distribution flags, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a>, in
+                                <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a>.
                      </p>
-                     <p>For details on entity properties, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                                   Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Properties</span>.
+                     <p>For details on entity properties, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a>.
                      </p>
                   </div>
                </div>
@@ -303,19 +307,18 @@
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e416"></a>2.4.3.&nbsp;Implementing the <span class="literal">Avatar</span> entity type
+                           <h3 class="title"><a name="d0e411"></a>2.4.3.&nbsp;Implementing the <span class="literal">Avatar</span> entity type
                            </h3>
                         </div>
                      </div>
                   </div>
                   <p>The scripts that control the client-side entity logic are located
-                           in the <code class="code">res/scripts/client</code>, and the ones that control the
-                           server-side entity logic are located in <code class="code">res/scripts/cell</code>
-                           and <code class="code">res/scripts/base</code> folders.
+                           in the <code class="filename">res/scripts/client</code>, and
+                           the ones that control the server-side entity logic are located in
+                           <code class="filename">res/scripts/cell</code> and <code class="filename">res/scripts/base</code> directories.
                   </p>
-                  <p>Create each of these folders within the
-                           <code class="code">tutorial/res/scripts</code> folder &#8212; your folder structure should
-                           now look like this:
+                  <p>Create each of these directories within the <code class="filename">tutorial/res/scripts</code> directory. Your
+                           directory structure should now look like this:
                   </p><pre class="programlisting">tutorial
 +-res
   +-scripts
@@ -324,17 +327,16 @@
     +-client
     +-entity_defs</pre><p><span class="citetitle">Folder structure at this stage of the
                               tutorial</span></p>
-                  <p>For details on the exact structure and mechanics of the
-                           <span class="literal">scripts</span> folder, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming Guide</span>'s
-                           section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Physical Entity
-                              Structure for Scripting</span>.
+                  <p>For details on the exact structure and mechanics of the <code class="filename">scripts</code> directory, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch02.html" class="olink"><i>Physical Entity Structure for Scripting</i></a>.
                   </p>
-                  <p>Up to this point, we have declared the <span class="literal">Avatar</span>
-                           entity in <code class="code">tutorial/res/scripts/entities.xml</code> (see <a href="ch02.html#xref_entities_xml" title="2.4.1.&nbsp;entities.xml"><span class="literal">entities.xml</span></a>) and defined it in
-                           <code class="code">tutorial/scripts/entity_defs/Avatar.def</code> (see <a href="ch02.html#xref_Defining_The_Avatar_Entity_Type" title="2.4.2.&nbsp;Defining the Avatar entity type">Defining the Avatar entity type</a>). Now we must provide
-                           (at least part of) the script implementation of that entity. Since we
-                           are working only on the client-side at the moment, just create the
-                           <span class="literal">tutorial/res/scripts/client/Avatar.py</span> script :
+                  <p>Up to this point, we have declared the
+                           <code class="classname">Avatar</code> entity in
+                           <code class="filename">tutorial/res/scripts/entities.xml</code><sup>[<a name="d0e454" href="#ftn.d0e454">5</a>]</sup> and defined it in
+                           <code class="filename">tutorial/scripts/entity_defs/Avatar.def</code><sup>[<a name="d0e462" href="#ftn.d0e462">6</a>]</sup>Now we must provide (at least part of) the script
+                           implementation of that entity. Since we are working only on the
+                           client-side at the moment, just create the
+                           <code class="filename">tutorial/res/scripts/client/Avatar.py</code>
+                           script:
                   </p><pre class="programlisting">import BigWorld
 
 # These are constants for identifying keypresses, mouse movement etc
@@ -342,14 +344,14 @@ import Keys
 
 class Avatar( BigWorld.Entity ):
 
-   def enterWorld( self ):
+   def onEnterWorld( self, prereqs ):
       pass
 
 class PlayerAvatar( Avatar ):
 
-   def enterWorld( self ):
+   def onEnterWorld( self, prereqs ):
 
-      Avatar.enterWorld( self )
+      Avatar.onEnterWorld( self, prereqs )
 
       # Set the position/movement filter to correspond to an player avatar
       self.filter = BigWorld.PlayerAvatarFilter()
@@ -360,44 +362,45 @@ class PlayerAvatar( Avatar ):
       self.physics.collide = True
       self.physics.fall = True
 
-   def handleKeyEvent( self, isDown, key, mods ):
+   def handleKeyEvent( self, event ):
 
       # Get the current velocity
       v = self.physics.velocity
 
       # Update the velocity depending on the key input
-      if key == Keys.KEY_W:
-         v.z = isDown * 5.0
-      elif key == Keys.KEY_S:
-         v.z = isDown * -5.0
-      elif key == Keys.KEY_A:
-         v.x = isDown * -5.0
-      elif key == Keys.KEY_D:
-         v.x = isDown * 5.0
+      if event.key == Keys.KEY_W:
+         v.z = event.isKeyDown() * 5.0
+      elif event.key == Keys.KEY_S:
+         v.z = event.isKeyDown() * -5.0
+      elif event.key == Keys.KEY_A:
+         v.x = event.isKeyDown() * -5.0
+      elif event.key == Keys.KEY_D:
+         v.x = event.isKeyDown() * 5.0
 
       # Save back the new velocity
       self.physics.velocity = v</pre><p><span class="citetitle">Example
-                              <span class="literal">tutorial/res/scripts/client/Avatar.py</span></span></p>
-                  <p>Notice that the script declares two classes: <code class="code">Avatar</code>
-                           and <code class="code">PlayerAvatar</code> &#8212; this is to satisfy a hard-coded
-                           requirement in the BigWorld client that any entity type that can act as
-                           a client proxy must have a sub-class called
-                           <code class="code">Player<em class="replaceable"><code>&lt;class&gt;</code></em></code> that is used
-                           when attaching to the client.
+                              <code class="filename">tutorial/res/scripts/client/Avatar.py</code></span></p>
+                  <p>Notice that the script declares two classes:
+                           <code class="classname">Avatar</code> and <code class="classname">PlayerAvatar</code>.
+                           These two classes are required to satisfy a hard-coded requirement in
+                           the BigWorld client that any entity type that can act as a client proxy
+                           must have a sub-class called
+                           <code class="classname">Player<em class="replaceable"><code>&lt;class&gt;</code></em></code>
+                           that is used when attaching to the client.
                   </p>
                   <p>We are only interested in the player at the moment, so the
-                           implementation of the base <code class="code">Avatar</code> class is left blank. For
-                           the moment, we have just provided implementations of callbacks for
-                           initialisation (where we set up the position filter and player physics)
-                           and keyboard events (where we provide basic <span class="literal">WASD</span>
-                           controls).
+                           implementation of the base <code class="classname">Avatar</code> class is left
+                           blank. For the moment, we have just provided implementations of
+                           callbacks for initialisation (where we set up the position filter and
+                           player physics) and keyboard events (where we provide basic
+                           <span class="literal">WASD</span> controls).
                   </p>
-                  <p>Notice that the Avatar script imports a module called
-                           <span class="literal">Keys</span> &#8212; this module defines constants for things like
-                           keyboard character codes, mouse events, joystick events, and other
-                           commonly used constants. It is located in
-                           <code class="code">bigworld/res/scripts/client</code>, so we do not need to copy it
-                           or do anything special to access it from our scripts.
+                  <p>Notice that the <code class="classname">Avatar</code> script imports a
+                           module called <code class="classname">Keys</code>. This module defines constants
+                           for things like keyboard character codes, mouse events, joystick events,
+                           and other commonly used constants. It is located in <code class="filename">bigworld/res/scripts/client</code>, so we do not
+                           need to copy it or do anything special to access it from our
+                           scripts.
                   </p>
                </div>
             </div>
@@ -418,28 +421,29 @@ class PlayerAvatar( Avatar ):
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
                   <p>For details on this and other BigWorld client terms, see the
-                           <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Glossary of Terms</span>.
+                           <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../glossary_of_terms/index.html" class="olink">Glossary of Terms</a>.
                   </p>
                </div>
-               <p>There should be one personality script in each script folder
+               <p>There should be one personality script in each script directory
                       (<em class="emphasis">i.e.</em>, for cell, base, and client) and they are used
                       for defining callbacks to be called on startup and shutdown, as well as
                       other global, non-entity-related functionality. On the client, this might
                       include menu systems, user input management, camera control, etc...
                </p>
-               <p>For details on the client personality script, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Client Programming Guide</span>'s
-                      section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Scripting</span>, in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Personality script</span>.
+               <p>For details on the client personality script, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html" class="olink"><i>Scripting</i></a>, in <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html#xref_Personality_Script" class="olink">Personality script</a>.
                </p>
                <p>Save the basic personality script below as
-                      <code class="code">tutorial/res/scripts/client/BWPersonality.py</code>:
-               </p><pre class="programlisting"># This is the client personality script for the BigWorld tutorial.  Think of it
-# as the bootstrap script for the client.  It contains functions that are called
-# on initialisation, shutdown, and handlers for various input events.
+                      <code class="filename">tutorial/res/scripts/client/BWPersonality.py</code>:
+               </p>
+               <div class="informalexample"><pre class="programlisting"># This is the client personality script for the BigWorld tutorial.  Think of
+# it as the bootstrap script for the client.  It contains functions that
+# are called on initialisation, shutdown, and handlers for various input
+# events.
 import BigWorld
 
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # Section: Required callbacks
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # The init function is called as part of the BigWorld initialisation process.
 # It receives the BigWorld xml config files as arguments.  This is the best
 # place to configure all the application-specific BigWorld components, like
@@ -447,6 +451,10 @@ import BigWorld
 def init( scriptConfig, engineConfig, prefs ):
 
    initOffline( scriptConfig )
+
+   # Hide the mouse cursor and restrict it to the client area of the window.
+   GUI.mcursor().clipped = True
+   GUI.mcursor().visible = False
 
 # This is called immediately after init() finishes.  We're done with all our
 # init code, so this is a no-op.
@@ -463,21 +471,25 @@ def fini():
 def onChangeEnvironments( inside ):
    pass
 
+# This is called by the engine when a system generated message occurs.
+def addChatMsg( msg ):
+   print "addChatMsg:", msg
+
 # Keyboard event handler
-def handleKeyEvent( down, key, mods ):
+def handleKeyEvent( event ):
    return False
 
 # Mouse event handler
-def handleMouseEvent( dx, dy, dz ):
+def handleMouseEvent( event ):
     return False
 
 # Joystick event handler
-def handleAxisEvent( axis, value, dTime ):
+def handleAxisEvent( event ):
     return False
 
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # Section: Helper methods
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 def initOffline( scriptConfig ):
 
    # Create a space for the client to inhabit
@@ -497,14 +509,16 @@ def initOffline( scriptConfig ):
    BigWorld.player( BigWorld.entities[ playerID ] )
 
    # Use first person mode since we are not using models yet.
-   BigWorld.camera().firstPerson = True</pre><p><span class="citetitle">Example
+   BigWorld.camera().firstPerson = True</pre></div>
+               <p><span class="citetitle">Example
                          <span class="literal">tutorial/res/scripts/client/BWPersonality.py</span></span></p>
-               <p>This personality script provides an <code class="code">initOffline</code> method
-                      that contains enough code to get a basic client going, as well as stub
-                      implementations of all other required callbacks. The initialisation code
-                      expects various configuration files to be passed to it, and expects
-                      <code class="code">scriptConfig</code> to contain particular settings, such as
-                      <span class="literal">space</span>, <span class="literal">player/entityType</span>, and so
+               <p>This personality script provides an
+                      <code class="methodname">initOffline</code> method that contains enough code to
+                      get a basic client going, as well as stub implementations of all other
+                      required callbacks. The initialisation code expects various configuration
+                      files to be passed to it, and expects
+                      <code class="methodname">scriptConfig</code> to contain particular settings, such
+                      as <span class="literal">space</span>, <span class="literal">player/entityType</span>, and so
                       on.
                </p>
                <p>The following sections describe how to set up those files, so they
@@ -538,15 +552,10 @@ def initOffline( scriptConfig ):
                </div>
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                  <p>For details on these files, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Client Programming Guide</span>'s
-                           section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Overview</span>, in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Configuration files</span>,
-                           sub-sections <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File
-                              <span class="literal"><em class="replaceable"><code>&lt;engine_config&gt;</code></em>.xml</span></span>,
-                           <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File
-                              <span class="literal"><em class="replaceable"><code>&lt;scripts_config&gt;</code></em>.xml</span></span>,
-                           and <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File
-                              <span class="literal"><em class="replaceable"><code>&lt;preferences&gt;</code></em>.xml</span></span>
-                           respectively.
+                  <p>For details on these files, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html" class="olink"><i>Scripting</i></a>, in <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html#xref_Personality_Script" class="olink">Personality script</a>, sub-sections <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch01.html#xref_File_engine_config_xml" class="olink">File
+                              <span class="literal"><em class="replaceable"><code>&lt;engine_config&gt;</code></em>.xml</span></a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch01.html#xref_File_scripts_config_xml" class="olink">File
+                              <span class="literal"><em class="replaceable"><code>&lt;scripts_config&gt;</code></em>.xml</span></a>, and <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch01.html#xref_File_preferences_xml" class="olink">File
+                              <span class="literal"><em class="replaceable"><code>&lt;preferences&gt;</code></em>.xml</span></a> respectively.
                   </p>
                </div>
                <p>The
@@ -562,8 +571,8 @@ def initOffline( scriptConfig ):
                </p>
                <p>The
                       <code class="code"><em class="replaceable"><code>&lt;scripts_config&gt;</code></em>.xml</code> file is
-                      used to define the settings that the personality script is expecting &#8212;
-                      save the following into
+                      used to define the settings that the personality script is expecting
+                      &#8212; save the following into
                       <code class="code">tutorial/res/scripts_config.xml</code>:
                </p><pre class="programlisting">&lt;scripts_config.xml&gt;
    &lt;!-- The contents of this file are passed to the personality script
@@ -598,14 +607,17 @@ def initOffline( scriptConfig ):
                      </div>
                   </div>
                </div>
-               <p>Before starting up the application, copy
-                      <code class="code">tutorial/game/paths.xml</code> to
-                      <code class="code">bigworld/tools/worldeditor</code>, so that the editor is working
-                      with the same files and folders that the client loads. However, you will
-                      need to add an extra <code class="code">../</code> to each path in this file, since
-                      <code class="code">bigworld/tools/worldeditor</code> is one folder level deeper than
-                      <code class="code">tutorial/game</code>.
-               </p>
+               <p>Before starting World Editor, you will need to tell it where to find
+                      the resources for your particular project. To do this, open
+                      <code class="filename">bigworld/tools/worldeditor/paths.xml</code> and replace the
+                      reference to FantasyDemo to your own project. For example, 
+               </p><pre class="programlisting">&lt;root&gt;
+    &lt;Paths&gt;
+        &lt;Path&gt;../../../tutorial/res&lt;/Path&gt;
+        &lt;Path&gt;../../../bigworld/res&lt;/Path&gt;
+    &lt;/Paths&gt;
+&lt;/root&gt;</pre><p><span class="citetitle">Example
+                         <span class="literal">bigworld/worldeditor/paths.xml</span></span></p>
                <p>To create a simple space that can be navigated, follow the steps
                       below:
                </p>
@@ -613,7 +625,7 @@ def initOffline( scriptConfig ):
                   <ul type="disc">
                      <li>
                         <p>Start WorldEditor
-                                   (<code class="code">bigworld/tools/worldeditor/worldeditor.exe</code>).
+                                   (<code class="filename">bigworld/tools/worldeditor/worldeditor.exe</code>).
                         </p>
                      </li>
                      <li>
@@ -621,7 +633,7 @@ def initOffline( scriptConfig ):
                                    click the <em class="emphasis">Create</em> button.
                         </p>
                         <div class="informalfigure">
-                           <div class="mediaobject"><img src="images/open_space_dialog_box.png"><span class="caption">
+                           <div class="mediaobject"><img src="images/open_space_dialog_box.png" height=""><span class="caption">
                                  <p>Open Space dialog box</p></span></div>
                         </div>
                      </li>
@@ -654,15 +666,12 @@ def initOffline( scriptConfig ):
                            </ul>
                         </div>
                         <div class="informalfigure">
-                           <div class="mediaobject"><img src="images/new_space_dialog_box.png"><span class="caption">
+                           <div class="mediaobject"><img src="images/new_space_dialog_box.png" height=""><span class="caption">
                                  <p>New Space dialog box</p></span></div>
                         </div>
                         <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                            <h3 class="title">Note</h3>
-                           <p>For details on this dialog box, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Content Tools Reference
-                                           Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Dialog boxes</span>,
-                                        in <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">New Space dialog
-                                           box</span>.
+                           <p>For details on this dialog box, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_Dialog_Boxes" class="olink">Dialog boxes</a>, in <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch02.html#xref_we_New_Space_Dialog_Box" class="olink">New Space dialog box</a>.
                            </p>
                         </div>
                      </li>
@@ -671,19 +680,19 @@ def initOffline( scriptConfig ):
                                    displayed in WorldEditor, as displayed below.
                         </p>
                         <div class="informalfigure">
-                           <div class="mediaobject"><img src="images/the_main_space.png"><span class="caption">
+                           <div class="mediaobject"><img src="images/the_main_space.png" height=""><span class="caption">
                                  <p>The <span class="literal">main</span> space
                                  </p></span></div>
                         </div>
                      </li>
                      <li>
-                        <p>Select the <em class="emphasis">File <span class="symbol">&#8594;</span> Save</em> menu item
-                                   to save the new space
+                        <p>Select the <em class="emphasis">File <span class="symbol">&#8594;</span> Save</em> menu item to save the
+                                   new space
                         </p>
                      </li>
                      <li>
-                        <p>Select the <em class="emphasis">File <span class="symbol">&#8594;</span> Exit</em> menu item
-                                   to close WorldEditor.
+                        <p>Select the <em class="emphasis">File <span class="symbol">&#8594;</span> Exit</em> menu item to close
+                                   WorldEditor.
                         </p>
                      </li>
                   </ul>
@@ -693,20 +702,39 @@ def initOffline( scriptConfig ):
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e815"></a>2.8.&nbsp;Running the client for the first time
+                        <h2 class="title" style="clear: both"><a name="d0e790"></a>2.8.&nbsp;Running the client for the first time
                         </h2>
                      </div>
                   </div>
                </div>
                <p>Having carried out the steps in the previous sections of this
-                      tutorial, you can now run the client . To do that, run
-                      <code class="code">tutorial/game/tutorial.exe</code>. &#8212; you should have a basic
+                      tutorial, you can now run the client . To do that, use the
+                      <code class="filename">run.bat</code> you created earlier. You should have a basic
                       first-person player that can walk around a space using mouse-look and
                       <span class="literal">WASD</span> controls.
                </p>
                <div class="informalfigure">
-                  <div class="mediaobject"><img src="images/a_simple_first_person_client.png"><span class="caption">
+                  <div class="mediaobject"><img src="images/a_simple_first_person_client.png" height=""><span class="caption">
                         <p>A simple first-person client</p></span></div>
+               </div>
+            </div>
+            <div class="footnotes"><br><hr width="100" align="left">
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e272" href="#d0e272">3</a>] </sup>For details on this file, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch02.html" class="olink"><i>Physical Entity Structure for Scripting</i></a> in <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch02.html#xref_The_entities_xml_File" class="olink">The entities.xml File</a>.
+                  </p>
+               </div>
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e308" href="#d0e308">4</a>] </sup>For details on these files, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch02.html" class="olink"><i>Physical Entity Structure for Scripting</i></a>, in
+                               <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch02.html#xref_The_Definition_File" class="olink">The Entity Definition File</a>.
+                  </p>
+               </div>
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e454" href="#d0e454">5</a>] </sup>See <a href="ch02.html#xref_entities_xml" title="2.4.1.&nbsp;entities.xml"><span class="literal">entities.xml</span></a>.
+                  </p>
+               </div>
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e462" href="#d0e462">6</a>] </sup>See <a href="ch02.html#xref_Defining_The_Avatar_Entity_Type" title="2.4.2.&nbsp;Defining the Avatar entity type">Defining the Avatar entity type</a>.
+                  </p>
                </div>
             </div>
          </div>
@@ -726,7 +754,7 @@ def initOffline( scriptConfig ):
                   </td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

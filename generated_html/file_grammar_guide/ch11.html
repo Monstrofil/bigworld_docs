@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch10.html" title="Chapter&nbsp;10.&nbsp;dxenum.xml">
-      <link rel="next" href="ch12.html" title="Chapter&nbsp;12.&nbsp;exporter.xml"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch12.html" title="Chapter&nbsp;12.&nbsp;exporter.xml">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch11.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -36,29 +37,29 @@
                </div>
             </div>
             <p>Used by the EffectMaterial class, this section contains material
-                   information, and is part of the following file formats:
+                 information, and is part of the following file formats:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;material&gt;</code></em>.mfm</span></em>
-                                &#8212; See <a href="ch20.html" title="Chapter&nbsp;20.&nbsp;.mfm"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">.mfm</span></i></a>.
+                              &#8212; See <a href="ch20.html" title="Chapter&nbsp;20.&nbsp;.mfm"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">.mfm</span></i></a>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;item&gt;</code></em>.model</span></em>
-                                &#8212; See <a href="ch21.html" title="Chapter&nbsp;21.&nbsp;.model"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">.model</span></i></a>.
+                              &#8212; See <a href="ch21.html" title="Chapter&nbsp;21.&nbsp;.model"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">.model</span></i></a>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;item&gt;</code></em>.visual</span></em>
-                                &#8212; See <a href="ch35.html" title="Chapter&nbsp;35.&nbsp;.visual"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">.visual</span></i></a>.
+                              &#8212; See <a href="ch36.html" title="Chapter&nbsp;36.&nbsp;.visual"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">.visual</span></i></a>.
                      </p>
                   </li>
                </ul>
             </div>
             <p>The format of the <em class="emphasis">EffectMaterial</em>
-                   section is illustrated below:
+                 section is illustrated below:
             </p><pre class="programlisting">?&lt;identifier&gt;     <em class="replaceable"><code>string</code></em>   &lt;/identifier&gt;
 +&lt;fx&gt;             <em class="replaceable"><code>file</code></em>     &lt;/fx&gt; 
 ?&lt;channel&gt;        <em class="replaceable"><code>string</code></em>   &lt;/channel&gt;
@@ -85,25 +86,25 @@
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal">Bool</span> (section
-                                   <span class="literal">property</span>)</em></p>
+                                 <span class="literal">property</span>)</em></p>
                      <p>Generic material property requiring a bool value.</p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">collisionFlags</span><sup>A</sup></em></p>
-                     <p>Specifies if the material will collide with models, or be
-                                affected by light and other effects.
+                     <p>Specifies if the material will collide with models, or be affected
+                              by light and other effects.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">Float</span> (section
-                                   <span class="literal">property</span>)</em></p>
+                                 <span class="literal">property</span>)</em></p>
                      <p>Generic material property requiring a <span class="literal">float</span>
-                                value (<em class="emphasis">e.g.</em>,
-                                <span class="literal">diffuseLightExtraModulation</span>,
-                                <span class="literal">selfIllumination</span>,
-                                <span class="literal">parallaxAspectRatio</span>,
-                                <span class="literal">parallaxScale</span>, <span class="literal">glowRatio</span>,
-                                etc...)
+                              value (<em class="emphasis">e.g.</em>,
+                              <span class="literal">diffuseLightExtraModulation</span>,
+                              <span class="literal">selfIllumination</span>,
+                              <span class="literal">parallaxAspectRatio</span>,
+                              <span class="literal">parallaxScale</span>, <span class="literal">glowRatio</span>,
+                              etc...)
                      </p>
                   </li>
                   <li>
@@ -116,18 +117,18 @@
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">Int</span> (section
-                                   <span class="literal">property</span>)</em></p>
+                                 <span class="literal">property</span>)</em></p>
                      <p>Generic material property requiring an int value
-                                (<em class="emphasis">e.g.</em>, <span class="literal">alphaReference</span>,
-                                <span class="literal">lightDir</span>, etc...)
+                              (<em class="emphasis">e.g.</em>, <span class="literal">alphaReference</span>,
+                              <span class="literal">lightDir</span>, etc...)
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">materialKind</span><sup>A</sup></em></p>
                      <p>Material kind, used for sound and particle system This value is
-                                used to retrieve material information from file
-                                <span class="literal">bigworld/res/system/data/material_kinds.xml</span>. For
-                                details, see <a href="ch19.html" title="Chapter&nbsp;19.&nbsp;material_kinds.xml"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">material_kinds.xml</span></i></a>.
+                              used to retrieve material information from file
+                              <span class="literal">bigworld/res/system/data/material_kinds.xml</span>. For
+                              details, see <a href="ch19.html" title="Chapter&nbsp;19.&nbsp;material_kinds.xml"><i xmlns:xlink="http://www.w3.org/1999/xlink"><span class="literal">material_kinds.xml</span></i></a>.
                      </p>
                   </li>
                   <li>
@@ -136,29 +137,28 @@
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">Texture</span> (section
-                                   <span class="literal">property</span>)</em></p>
+                                 <span class="literal">property</span>)</em></p>
                      <p>Texture file to be assigned to the corresponding property
-                                (<em class="emphasis">e.g.</em>, <span class="literal">diffuseMap</span>,
-                                <span class="literal">heightMap</span>, <span class="literal">specularMap</span>,
-                                <span class="literal">normalMap</span>, <span class="literal">glowMap</span>,
-                                etc...)
+                              (<em class="emphasis">e.g.</em>, <span class="literal">diffuseMap</span>,
+                              <span class="literal">heightMap</span>, <span class="literal">specularMap</span>,
+                              <span class="literal">normalMap</span>, <span class="literal">glowMap</span>, etc...)
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">Vector4</span> (section
-                                   <span class="literal">property</span>)</em></p>
+                                 <span class="literal">property</span>)</em></p>
                      <p>Generic material property requiring 4 float values
-                                (<em class="emphasis">e.g.</em>, <span class="literal">specularColour</span>,
-                                <span class="literal">vTransform</span>, <span class="literal">uTransform</span>,
-                                <span class="literal">materialSpecular</span>, etc...)
+                              (<em class="emphasis">e.g.</em>, <span class="literal">specularColour</span>,
+                              <span class="literal">vTransform</span>, <span class="literal">uTransform</span>,
+                              <span class="literal">materialSpecular</span>, etc...)
                      </p>
                   </li>
                </ul>
             </div>
-            <p><em class="emphasis"><em class="emphasis">A</em> &#8212; For details, see
-                      the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                         Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">ModelEditor</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Panel summary</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Materials Settings
-                         panel</a>.</em></p>
+            <p><em class="emphasis"><em class="emphasis">A</em> &#8212; For details, see the
+                    document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html" class="olink"><i>ModelEditor</i></a>
+                    <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html#xref_me_Panel_Summary" class="olink">Panel summary</a> <span class="symbol">&#8594;</span>
+                    <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html#xref_me_Material_Settings_Panel" class="olink">Materials Settings panel</a>.</em></p>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -176,7 +176,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;12.&nbsp;<span class="literal">exporter.xml</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

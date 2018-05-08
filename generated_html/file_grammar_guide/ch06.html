@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Brush files">
-      <link rel="next" href="ch07.html" title="Chapter&nbsp;7.&nbsp;.cdata"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch07.html" title="Chapter&nbsp;7.&nbsp;.cdata">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch06.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,15 +39,15 @@
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
-                     <p>Document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Programming
-                                   Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Scripting</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Functional components</a>
-                                <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Action Matcher</a>.
+                     <p>Document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>'s section
+                              <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html" class="olink"><i>Scripting</i></a>
+                              <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html#xref_Functional_Components" class="olink">Functional components</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch09.html#xref_Action_Matcher" class="olink">Action Matcher</a>.
                      </p>
                   </li>
                   <li>
-                     <p>Document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                                   Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">ModelEditor</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Actions panel</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Action Triggers dialog
-                                   box</a>.
+                     <p>Document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s
+                              section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html" class="olink"><i>ModelEditor</i></a> <span class="symbol">&#8594;</span>
+                              <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html#xref_me_Actions_Panel" class="olink">Actions panel</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html#xref_me_Action_Triggers_Dialog_Box" class="olink">Action Triggers dialog box</a>.
                      </p>
                   </li>
                   <li>
@@ -56,9 +57,9 @@
                </ul>
             </div>
             <p>Used to create alias for entity capabilities (which are then used to
-                   trigger or cancel actions by Action Matcher), and located under
-                   <span class="literal">fantasydemo/res/scripts/common</span>, the grammar of
-                   <span class="literal">capabilities.xml</span> is described below:
+                 trigger or cancel actions by Action Matcher), and located under
+                 <code class="filename">fantasydemo/res/scripts/common</code>, the grammar of
+                 <code class="filename">capabilities.xml</code> is described below:
             </p><pre class="programlisting">&lt;capabilities.xml&gt;
 
   *&lt;state&gt; <em class="replaceable"><code>integer</code></em>
@@ -67,16 +68,16 @@
    &lt;/state&gt;
 
 &lt;/capabilities.xml&gt;</pre><p><span class="citetitle">Grammar of
-                      <span class="literal">fantasydemo/res/scripts/common/capabilities.xml</span></span></p>
+                    <span class="literal">fantasydemo/res/scripts/common/capabilities.xml</span></span></p>
             <p>The list below describes the tags in
-                   <span class="literal">flags.xml</span>:
+                 <span class="literal">flags.xml</span>:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal">id</span></em></p>
                      <p>Python-safe name of the capability, which can be used in
-                                scripts.
+                              scripts.
                      </p>
                   </li>
                   <li>
@@ -85,7 +86,9 @@
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">state</span></em></p>
-                     <p>Number representing the capability.</p>
+                     <p>Number representing the capability bit, integer in the range 0 -
+                              31.
+                     </p>
                   </li>
                </ul>
             </div>
@@ -106,7 +109,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;7.&nbsp;<span class="literal">.cdata</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

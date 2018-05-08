@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Client Programming Guide">
       <link rel="up" href="index.html" title="Client Programming Guide">
       <link rel="prev" href="ch13.html" title="Chapter&nbsp;13.&nbsp;Particles">
-      <link rel="next" href="ch15.html" title="Chapter&nbsp;15.&nbsp;Water"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch15.html" title="Chapter&nbsp;15.&nbsp;Water">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/client_programming_guide/ch14.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,15 +39,15 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch14.html#d0e4650">14.1. Flora</a></span></dt>
+                  <dt><span class="section"><a href="ch14.html#d0e4946">14.1. Flora</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch14.html#d0e4668">14.1.1. Placement</a></span></dt>
-                        <dt><span class="sect2"><a href="ch14.html#d0e4714">14.1.2. Implementation</a></span></dt>
-                        <dt><span class="sect2"><a href="ch14.html#d0e4744">14.1.3. Frame coherency</a></span></dt>
-                        <dt><span class="sect2"><a href="ch14.html#d0e4751">14.1.4. Animation</a></span></dt>
-                        <dt><span class="sect2"><a href="ch14.html#d0e4758">14.1.5. Lighting</a></span></dt>
-                        <dt><span class="sect2"><a href="ch14.html#d0e4765">14.1.6. File format</a></span></dt>
+                        <dt><span class="section"><a href="ch14.html#d0e4964">14.1.1. Placement</a></span></dt>
+                        <dt><span class="section"><a href="ch14.html#d0e5009">14.1.2. Implementation</a></span></dt>
+                        <dt><span class="section"><a href="ch14.html#d0e5034">14.1.3. Frame coherency</a></span></dt>
+                        <dt><span class="section"><a href="ch14.html#d0e5041">14.1.4. Animation</a></span></dt>
+                        <dt><span class="section"><a href="ch14.html#d0e5048">14.1.5. Lighting</a></span></dt>
+                        <dt><span class="section"><a href="ch14.html#d0e5055">14.1.6. File format</a></span></dt>
                      </dl>
                   </dd>
                </dl>
@@ -61,11 +62,11 @@
                  and rocks. The user does not interact with detail objects (for example, no
                  collision detection is performed).
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e4650"></a>14.1.&nbsp;Flora
+                        <h2 class="title" style="clear: both"><a name="d0e4946"></a>14.1.&nbsp;Flora
                         </h2>
                      </div>
                   </div>
@@ -77,13 +78,13 @@
                       specified by the <span class="literal">environment/floraXML</span> tag in your
                       configuration file
                       <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/resources.xml</span> &#8212;
-                      for details, see <a href="ch01.html#xref_File_resources_xml" title="1.3.1.&nbsp;File resources.xml">File <span class="literal">resources.xml</span></a>.).
+                      for details, see <a href="ch01.html#xref_File_resources_xml" title="1.4.1.&nbsp;File resources.xml">File <span class="literal">resources.xml</span></a>.).
                </p>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4668"></a>14.1.1.&nbsp;Placement
+                           <h3 class="title"><a name="d0e4964"></a>14.1.1.&nbsp;Placement
                            </h3>
                         </div>
                      </div>
@@ -129,16 +130,16 @@
                            mapping. This effectively antialiases the quantized detail map.
                   </p>
                   <p>Flora is calculated and stored in terrain files by the World
-                           Editor. For more details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Content Creation Manual</span>
-                           (accessible in WorldEditor, ModelEditor, and ParticleEditor via the
-                           <em class="emphasis">Help <span class="symbol">&#8594;</span> Content Creation</em> menu item, or
-                           by pressing <span class="literal">F1</span>).
+                           Editor. For more details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//content_creation.chm" class="olink">Content Creation Manual</a> (accessible in WorldEditor,
+                           ModelEditor, and ParticleEditor via the <em class="emphasis">Help
+                              <span class="symbol">&#8594;</span> Content Creation</em> menu
+                           item, or by pressing <span class="literal">F1</span>).
                   </p>
-                  <div class="sect3" lang="en">
+                  <div class="section" lang="en">
                      <div class="titlepage">
                         <div>
                            <div>
-                              <h4 class="title"><a name="d0e4707"></a>14.1.1.1.&nbsp;Visual consistency
+                              <h4 class="title"><a name="d0e5002"></a>14.1.1.1.&nbsp;Visual consistency
                               </h4>
                            </div>
                         </div>
@@ -154,11 +155,11 @@
                      </p>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4714"></a>14.1.2.&nbsp;Implementation
+                           <h3 class="title"><a name="d0e5009"></a>14.1.2.&nbsp;Implementation
                            </h3>
                         </div>
                      </div>
@@ -181,19 +182,17 @@
                   </p>
                   <p>The flora configuration XML file
                            <span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span> (for
-                           details on this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                           <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span></span>)
-                           can define the size of the vertex buffer either statically or as a set
-                           of options selectable by the user via the
-                           <span class="literal">FLORA_DENSITY</span> graphics setting. For details, see
-                           <a href="ch19.html#xref_FLORA_DENSITY" title="19.9.1.3.&nbsp;FLORA_DENSITY"><span class="literal">FLORA_DENSITY</span></a>.
+                           details on this file's grammar, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/index.html" class="olink">File Grammar Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/ch38.html#xref_flora_xml" class="olink"><span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span></a>) can define
+                           the size of the vertex buffer either statically or as a set of options
+                           selectable by the user via the <span class="literal">FLORA_DENSITY</span> graphics
+                           setting. For details, see <a href="ch21.html#xref_FLORA_DENSITY" title="21.9.1.3.&nbsp;FLORA_DENSITY"><span class="literal">FLORA_DENSITY</span></a>.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4744"></a>14.1.3.&nbsp;Frame coherency
+                           <h3 class="title"><a name="d0e5034"></a>14.1.3.&nbsp;Frame coherency
                            </h3>
                         </div>
                      </div>
@@ -210,11 +209,11 @@
                            frames, making for a huge saving in transformation cost.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4751"></a>14.1.4.&nbsp;Animation
+                           <h3 class="title"><a name="d0e5041"></a>14.1.4.&nbsp;Animation
                            </h3>
                         </div>
                      </div>
@@ -230,11 +229,11 @@
                            vertex shader.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4758"></a>14.1.5.&nbsp;Lighting
+                           <h3 class="title"><a name="d0e5048"></a>14.1.5.&nbsp;Lighting
                            </h3>
                         </div>
                      </div>
@@ -252,19 +251,18 @@
                            millions of detail objects in existence.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4765"></a>14.1.6.&nbsp;File format
+                           <h3 class="title"><a name="d0e5055"></a>14.1.6.&nbsp;File format
                            </h3>
                         </div>
                      </div>
                   </div>
                   <p>The XML flora file defines among other things, the light map to be
                            used, plus the ecotypes and noise generation functions. For details on
-                           this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                           <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span></span>.
+                           this file's grammar, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/index.html" class="olink">File Grammar Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/ch38.html#xref_flora_xml" class="olink"><span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span></a>.
                   </p>
                </div>
             </div>
@@ -284,7 +282,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;15.&nbsp;Water</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

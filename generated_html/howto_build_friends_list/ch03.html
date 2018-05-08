@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Build a Friends List">
       <link rel="up" href="index.html" title="How To Build a Friends List">
       <link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Features">
-      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Variations"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Variations">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_build_friends_list/ch03.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,18 +39,18 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch03.html#d0e109">3.1. Where should the friends list be stored?</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e125">3.2. Admirers</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e190">3.3. <span class="literal">DBID</span></a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e257">3.4. Persistent friends list</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e334">3.5. Client <span class="literal">friendsList</span></a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e361">3.6. Using list indexes as friend identifiers</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e416">3.7. Base online friends list</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e500">3.8. Console commands</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e557">3.9. Initialisation and destruction</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e673">3.10. Adding and deleting friends</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e878">3.11. Interacting with friends</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e1056">3.12. Declaring the methods</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e109">3.1. Where should the friends list be stored?</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e125">3.2. Admirers</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e190">3.3. <span class="literal">DBID</span></a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e257">3.4. Persistent friends list</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e334">3.5. Client <span class="literal">friendsList</span></a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e361">3.6. Using list indexes as friend identifiers</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e416">3.7. Base online friends list</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e500">3.8. Console commands</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e557">3.9. Initialisation and destruction</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e673">3.10. Adding and deleting friends</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e878">3.11. Interacting with friends</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e1056">3.12. Declaring the methods</a></span></dt>
                </dl>
             </div>
             <p>The example code is part of the <span class="literal">FantasyDemo</span>
@@ -69,14 +70,14 @@
                      </p>
                   </li>
                   <li>
-                     <p>The example does not implement any graphical UI elements. It uses
-                                the <span class="literal">FantasyDemo</span> console for user
+                     <p>The example does not implement any graphical UI elements. It
+                                uses the <span class="literal">FantasyDemo</span> console for user
                                 interactions.
                      </p>
                   </li>
                </ul>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -94,7 +95,7 @@
                         part of the player entity as well.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -156,7 +157,7 @@
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -170,8 +171,8 @@
                         <em class="emphasis">entity</em> is running or is just an entry in the
                         database.
                </p>
-               <p>Since lookup by <span class="literal">DBID</span> is quicker than by
-                        name, <em class="emphasis">Avatar</em>'s base also stores
+               <p>Since lookup by <span class="literal">DBID</span> is quicker than by name,
+                        <em class="emphasis">Avatar</em>'s base also stores
                         <em class="emphasis">friend</em>&#8217;s <span class="literal">DBID</span> (alongside its
                         name) in <em class="emphasis">friends list</em>.
                </p>
@@ -189,7 +190,7 @@
 &lt;/root&gt;</pre><p><span class="citetitle">Excerpt of
                            <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml</span></span></p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -260,7 +261,7 @@
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -269,17 +270,17 @@
                   </div>
                </div>
                <p>Since the <span class="literal">BASE_CLIENT</span> flag is not used, the
-                        structure of the <span class="literal">friendsList</span> variable on the client does
-                        not need to be identical to the one on the base.
+                        structure of the <span class="literal">friendsList</span> variable on the client
+                        does not need to be identical to the one on the base.
                </p>
-               <p>Therefore, the client's <span class="literal">friendsList</span> variable
-                        is implemented as a Python list of tuples
-                        (<span class="literal">&lt;friend&#8217;s name&gt;</span>, <span class="literal">&lt;whether they are
-                           online&gt;</span>), dropping <span class="literal">DBID</span> because it is
-                        not used in the client.
+               <p>Therefore, the client's <span class="literal">friendsList</span> variable is
+                        implemented as a Python list of tuples (<span class="literal">&lt;friend&#8217;s
+                           name&gt;</span>, <span class="literal">&lt;whether they are online&gt;</span>),
+                        dropping <span class="literal">DBID</span> because it is not used in the
+                        client.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -288,9 +289,9 @@
                      </div>
                   </div>
                </div>
-               <p>Even though the <span class="literal">friendsList</span> variable in the client
-                        and the base are different lists, both have the same order of items in
-                        them.
+               <p>Even though the <span class="literal">friendsList</span> variable in the
+                        client and the base are different lists, both have the same order of
+                        items in them.
                </p>
                <p>This allows the <em class="emphasis">Avatar</em> entity to use the list
                         index as the identifier for a <em class="emphasis">friend</em> when
@@ -335,7 +336,7 @@
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -363,7 +364,8 @@
                         None.
                </p>
                <p>This is how you would declare/initialise
-                        <span class="literal">friendBases</span>&#8212;as any ordinary Python member variable in
+                        <span class="literal">friendBases</span>&#8212;as any ordinary Python member
+                        variable in
                         <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</span>:
                </p><pre class="programlisting">class Avatar( BigWorld.Proxy, AvatarCommon ):
 
@@ -380,7 +382,7 @@
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -405,15 +407,15 @@
                <p>For the purposes of this document, typing the command
                         "<span class="literal">/addfriend</span>" would automatically call the
                         <span class="literal">Avatar.addFriend</span> function on the client. And
-                        <span class="literal">FantasyDemo.addChatMsg( -1, &lt;message&gt;)</span> outputs a message to
-                        the console.
+                        <span class="literal">FantasyDemo.addChatMsg( -1, &lt;message&gt;)</span> outputs
+                        a message to the console.
                </p>
                <p>For those interested in more details, look at
                         <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Helpers/ConsoleCommands.py</span>
                         file and search for its usage in Python code.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -433,8 +435,8 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p>On the base, send the <em class="emphasis">friends list</em> to the
-                                                  client.
+                                 <p>On the base, send the <em class="emphasis">friends list</em> to
+                                                  the client.
                                  </p>
                               </li>
                               <li>
@@ -468,14 +470,14 @@
                         </div>
                      </li>
                      <li>
-                        <p><em class="emphasis">When the player receives a notification from
-                                        a friend about his online status:</em></p>
+                        <p><em class="emphasis">When the player receives a notification
+                                        from a friend about his online status:</em></p>
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p>On the base, store the <em class="emphasis">friend</em>&#8217;s mailbox
-                                                  or None in <span class="literal">friendBases</span> and forward notification to
-                                                  client.
+                                 <p>On the base, store the <em class="emphasis">friend</em>&#8217;s
+                                                  mailbox or None in <span class="literal">friendBases</span> and forward
+                                                  notification to client.
                                  </p>
                               </li>
                            </ul>
@@ -579,7 +581,7 @@ class Avatar( BigWorld.Entity ):
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -599,22 +601,22 @@ class Avatar( BigWorld.Entity ):
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p>On the client, check that the new <em class="emphasis">friend</em>
-                                                  is not already in the list. Tell base to add the
-                                                  <em class="emphasis">friend</em>.
+                                 <p>On the client, check that the new
+                                                  <em class="emphasis">friend</em> is not already in the list. Tell
+                                                  base to add the <em class="emphasis">friend</em>.
                                  </p>
                               </li>
                               <li>
-                                 <p>On the base, check whether the <em class="emphasis">friend</em> is
-                                                  currently online. If not online, check whether the
+                                 <p>On the base, check whether the <em class="emphasis">friend</em>
+                                                  is currently online. If not online, check whether the
                                                   <em class="emphasis">friend</em> exists in the database. If the
-                                                  <em class="emphasis">friend</em> exists, tell him to add player
-                                                  as an <em class="emphasis">admirer</em>.
+                                                  <em class="emphasis">friend</em> exists, tell him to add player as an
+                                                  <em class="emphasis">admirer</em>.
                                  </p>
                               </li>
                               <li>
-                                 <p>On the base, tell the client that the <em class="emphasis">friend</em>
-                                                  was added.
+                                 <p>On the base, tell the client that the
+                                                  <em class="emphasis">friend</em> was added.
                                  </p>
                               </li>
                               <li>
@@ -632,8 +634,8 @@ class Avatar( BigWorld.Entity ):
                            <ul type="circle">
                               <li>
                                  <p>On the client, find the <em class="emphasis">friend</em> in
-                                                  <span class="literal">friendsList</span> and delete it. Tell the base to delete
-                                                  <em class="emphasis">friend</em> by index.
+                                                  <span class="literal">friendsList</span> and delete it. Tell the base to
+                                                  delete <em class="emphasis">friend</em> by index.
                                  </p>
                               </li>
                               <li>
@@ -726,8 +728,8 @@ class Avatar( BigWorld.Entity ):
                                         <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p>
                         <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                            <h3 class="title">Note</h3>
-                           <p>We have added additional code on the client to get the
-                                          name of the player currently targeted, in the case that it is not
+                           <p>We have added additional code on the client to get the name
+                                          of the player currently targeted, in the case that it is not
                                           specified in the console command.
                            </p>
                         </div><pre class="programlisting"># Helper method to get the target player name if friendName is empty
@@ -798,7 +800,8 @@ class Avatar( BigWorld.Entity ):
                   </p>
                   <p>In this case, <span class="literal">friendBases</span> is guaranteed to be
                              on the same BaseApp because it was created using
-                             <span class="literal">BigWorld.createBaseFromDB</span>, and was not already active.
+                             <span class="literal">BigWorld.createBaseFromDB</span>, and was not already
+                             active.
                   </p>
                   <p>Plus, local bases can have their properties and methods
                              accessed, even if not declared in the <span class="literal">.def</span>
@@ -806,9 +809,10 @@ class Avatar( BigWorld.Entity ):
                   </p>
                   <p>So, in principle, <span class="literal">onAddFriendCreateBaseCb</span>
                              would not have to call the <span class="literal">addAdmirer</span> method and
-                             receive a call to the <span class="literal">onAddedAdmirerToFriend</span> method,
-                             because it would be able access <span class="literal">friendBase.databaseID</span>
-                             directly. However, this is would mean code duplication.
+                             receive a call to the <span class="literal">onAddedAdmirerToFriend</span>
+                             method, because it would be able access
+                             <span class="literal">friendBase.databaseID</span> directly. However, this is
+                             would mean code duplication.
                   </p>
                   <p>The downside to these "goodies" is that it could mask bugs
                              during initial testing, when usually only one BaseApp is running,
@@ -854,7 +858,7 @@ class Avatar( BigWorld.Entity ):
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -883,15 +887,15 @@ class Avatar( BigWorld.Entity ):
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p>On the client, check that the <em class="emphasis">friend</em> is in
-                                                  <span class="literal">friendsList</span>. Tell base to send the message to
-                                                  the <em class="emphasis">friend</em>.
+                                 <p>On the client, check that the <em class="emphasis">friend</em>
+                                                  is in <span class="literal">friendsList</span>. Tell base to send the
+                                                  message to the <em class="emphasis">friend</em>.
                                  </p>
                               </li>
                               <li>
                                  <p>On the base, check that the <em class="emphasis">friend</em> is
-                                                  online. Tell the <em class="emphasis">friend</em>&#8217;s base to send the message
-                                                  to his client.
+                                                  online. Tell the <em class="emphasis">friend</em>&#8217;s base to send the
+                                                  message to his client.
                                  </p>
                               </li>
                            </ul>
@@ -909,9 +913,9 @@ class Avatar( BigWorld.Entity ):
                                  </p>
                               </li>
                               <li>
-                                 <p>On the base, check that the <em class="emphasis">friend</em>
-                                                  is online. Tell the <em class="emphasis">friend</em>&#8217;s base to get
-                                                  info on him.
+                                 <p>On the base, check that the <em class="emphasis">friend</em> is
+                                                  online. Tell the <em class="emphasis">friend</em>&#8217;s base to get info
+                                                  on him.
                                  </p>
                               </li>
                               <li>
@@ -921,16 +925,16 @@ class Avatar( BigWorld.Entity ):
                                  </p>
                               </li>
                               <li>
-                                 <p>On <em class="emphasis">friend</em>&#8217;s cell, get info for
-                                                  the <em class="emphasis">admirer</em> and tell the
+                                 <p>On <em class="emphasis">friend</em>&#8217;s cell, get info for the
+                                                  <em class="emphasis">admirer</em> and tell the
                                                   <em class="emphasis">admirer</em>&#8217;s base to send that info to his
                                                   client.
                                  </p>
                               </li>
                            </ul>
                         </div>
-                        <p>An extra access to the cell is made because that is where most of
-                                     the information is.
+                        <p>An extra access to the cell is made because that is where most
+                                     of the information is.
                         </p>
                      </li>
                      <li>
@@ -1041,7 +1045,7 @@ class Avatar( BigWorld.Entity ):
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -1157,7 +1161,7 @@ class Avatar( BigWorld.Entity ):
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;Variations</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

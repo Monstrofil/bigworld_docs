@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Move Entities">
       <link rel="up" href="index.html" title="How To Move Entities">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Introduction">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;How to Move Server-Controlled Entities"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;How to Move Server-Controlled Entities">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_move_entities/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,35 +31,30 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e57"></a>Chapter&nbsp;2.&nbsp;Navigation Mesh
+                     <h2 class="title"><a name="xref_Navigation_Mesh"></a>Chapter&nbsp;2.&nbsp;Navigation Mesh
                      </h2>
                   </div>
                </div>
             </div>
             <p>Use of the server-side navigation functions require the navigation
-               mesh (or navmesh) be generated for the space. The navmesh is a collection
-                   of interconnected convex polygons parallel to the XZ plane. These
-                   <em class="emphasis">navpolys</em> are generated using the tool NavGen, and are
-                   stored in the <span class="literal">.cdata</span> chunk files of the space.
+               mesh (or navmesh) be generated for the space. The navmesh is a collection of
+                 interconnected convex polygons parallel to the XZ plane. These
+                 <em class="emphasis">navpolys</em> are generated using the tool NavGen, and are
+                 stored in the <code class="filename">.cdata</code> chunk files of
+                 the space.
             </p>
             <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                <h3 class="title">Note</h3>
-               <p>The chunk files are stored under the
-                        <span class="literal">&lt;res&gt;/spaces/&lt;space&gt;</span>, and contain binary
-                        terrain and lighting data.
+               <p>The chunk files are stored under the <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/spaces/<em class="replaceable"><code>&lt;space&gt;</code></em></code>,
+                      and contain binary terrain and lighting data.
                </p>
                <p>For details on the information held by this and other chunk files,
-                        see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Programming
-                           Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Chunks</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Implementation
-                           files</a>.
+                      see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch06.html" class="olink"><i>Chunks</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch06.html#xref_Implementation_Files" class="olink">Implementation files</a>.
                </p>
-               <p>For details on this and other binary files' grammar, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Server Programming Guide</a>'s
-                        section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">BinSection files</a>.
+               <p>For details on this and other binary files' grammar, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/index.html" class="olink">File Grammar Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/ch03.html" class="olink"><i><span class="literal">BinSection</span> files</i></a>.
                </p>
             </div>
-            <p>For details on the generation of navmesh, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                      Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">NavGen</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Generating the
-                      navmesh</a>.
+            <p>For details on the generation of navmesh, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch10.html" class="olink"><i>NavGen</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch10.html#xref_Generating_The_Navmesh" class="olink">Generating the navmesh</a>.
             </p>
          </div>
          <div class="navfooter">
@@ -76,7 +72,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;How to Move Server-Controlled Entities</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

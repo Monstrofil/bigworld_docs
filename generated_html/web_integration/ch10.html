@@ -7,9 +7,10 @@
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="BigWorld Web Integration Reference">
       <link rel="up" href="index.html" title="BigWorld Web Integration Reference">
-      <link rel="prev" href="ch09.html" title="Chapter&nbsp;9.&nbsp;Porting to Other Scripting Languages"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch09.html" title="Chapter&nbsp;9.&nbsp;Porting to Other Scripting Languages">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/web_integration/ch10.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -29,7 +30,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e1268"></a>Chapter&nbsp;10.&nbsp;Caveats
+                     <h2 class="title"><a name="xref_Caveats"></a>Chapter&nbsp;10.&nbsp;Caveats
                      </h2>
                   </div>
                </div>
@@ -37,44 +38,43 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="section"><a href="ch10.html#d0e1271">10.1. Using Both the PHP BigWorld Extension and Apache/mod_python
-                                 Simultaneously</a></span></dt>
-                  <dt><span class="section"><a href="ch10.html#d0e1276">10.2. Restarting the Cluster</a></span></dt>
+                  <dt><span class="section"><a href="ch10.html#d0e1274">10.1. Using Both the PHP BigWorld Extension and Apache/mod_python
+                               Simultaneously</a></span></dt>
+                  <dt><span class="section"><a href="ch10.html#d0e1285">10.2. Restarting the Cluster</a></span></dt>
                </dl>
             </div>
             <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e1271"></a>10.1.&nbsp;Using Both the PHP BigWorld Extension and Apache/mod_python
-                                 Simultaneously
+                        <h2 class="title" style="clear: both"><a name="d0e1274"></a>10.1.&nbsp;Using Both the PHP BigWorld Extension and Apache/mod_python
+                               Simultaneously
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>The PHP module works by embedding a Python interpreter into the
-                  PHP process, which then forms part of the the Apache HTTPd process tree.
-                        This is also the behaviour of the mod_python Apache module, and loading
-                        both the PHP BigWorld extension and the mod_python Apache module
-                        simultaneously has undefined effects, and is therefore not
-                        supported.
+               <p>The PHP module works by embedding a Python interpreter into the PHP
+                      process, which then forms part of the the Apache HTTPd process tree. This
+                      is also the behaviour of the <span class="literal">mod_python</span> Apache module,
+                      and loading both the PHP BigWorld extension and the
+                      <span class="literal">mod_python</span> Apache module simultaneously has undefined
+                      effects, and is therefore not supported.
                </p>
             </div>
             <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e1276"></a>10.2.&nbsp;Restarting the Cluster
+                        <h2 class="title" style="clear: both"><a name="d0e1285"></a>10.2.&nbsp;Restarting the Cluster
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>The web integration module will cache mailboxes between
-                        transactions and even sessions for efficiency. However when the server
-                        cluster is restarted these mailboxes become invalid. The module must
-                        therefore also be reinitialised. The easiest way of doing this is by
-                        restarting the web server that loaded it, whenever the cluster is
-                        restarted.
+               <p>The web integration module will cache mailboxes between transactions
+                      and even sessions for efficiency. However when the server cluster is
+                      restarted these mailboxes become invalid. The module must therefore also
+                      be reinitialised. The easiest way of doing this is by restarting the web
+                      server that loaded it, whenever the cluster is restarted.
                </p>
             </div>
          </div>
@@ -93,7 +93,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

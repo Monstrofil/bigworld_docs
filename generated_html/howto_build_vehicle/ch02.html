@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Build Vehicles">
       <link rel="up" href="index.html" title="How To Build Vehicles">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Introduction">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Boarding and Alighting Vehicles"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Boarding and Alighting Vehicles">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_build_vehicle/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e47"></a>Chapter&nbsp;2.&nbsp;Controlling Vehicles
+                     <h2 class="title"><a name="xref_Controlling_Vehicles"></a>Chapter&nbsp;2.&nbsp;Controlling Vehicles
                      </h2>
                   </div>
                </div>
@@ -38,57 +39,60 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch02.html#d0e52">2.1. <span class="literal">controlledBy</span></a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e80">2.2. <span class="literal">BigWorld.player(<em class="replaceable"><code>&lt;entity&gt;</code></em>)</span></a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e53">2.1. <code class="varname">controlledBy</code></a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e81">2.2. <code class="methodname">BigWorld.player(
+                                  <em class="replaceable"><code>&lt;entity&gt;</code></em> )</code></a></span></dt>
                </dl>
             </div>
             <p>This document assumes that the majority of vehicles will be directly
-                   controllable by the player. This requires reversing the direction of
-                   vehicle updates, and diverting user inputs toward the vehicle.
+                 controllable by the player. This requires reversing the direction of vehicle
+                 updates, and diverting user inputs toward the vehicle.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e52"></a>2.1.&nbsp;<span class="literal">controlledBy</span></h2>
+                        <h2 class="title" style="clear: both"><a name="d0e53"></a>2.1.&nbsp;<code class="varname">controlledBy</code></h2>
                      </div>
                   </div>
                </div>
-               <p>The <span class="literal">controlledBy</span> property sets from whom
-                        updates to the vehicle's position will come from.
+               <p>The <code class="varname">controlledBy</code> property sets from whom updates
+                      to the vehicle's position will come from.
                </p>
-               <p>Setting the vehicle's controller to the player gives
-                        responsibility for the vehicle's movement to the player's client.
+               <p>Setting the vehicle's controller to the player gives responsibility
+                      for the vehicle's movement to the player's client.
                </p><pre class="programlisting"># Give control of the Ripper to the client. At this point the
 # client Ripper will get a .physics member.
-self.controlledBy = avatar.base</pre><p><span class="citetitle"><span class="literal">cell/Ripper.py</span></span></p>
-               <p>In the example above, <span class="literal">controlledBy</span> is set to
-                        the player's client, thus giving it the ability to dictate the position
-                        of the vehicle. Setting <span class="literal">controlledBy</span> back to
-                        <span class="literal">None</span> returns control to the vehicle's cell.
+self.controlledBy = avatar.base</pre><p><span class="citetitle"><code class="filename">cell/Ripper.py</code></span></p>
+               <p>In the example above, <code class="varname">controlledBy</code> is set to the
+                      player's client, thus giving it the ability to dictate the position of the
+                      vehicle. Setting <code class="varname">controlledBy</code> back to
+                      <span class="literal">None</span> returns control to the vehicle's cell.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e80"></a>2.2.&nbsp;<span class="literal">BigWorld.player(<em class="replaceable"><code>&lt;entity&gt;</code></em>)</span></h2>
+                        <h2 class="title" style="clear: both"><a name="d0e81"></a>2.2.&nbsp;<code class="methodname">BigWorld.player(
+                                  <em class="replaceable"><code>&lt;entity&gt;</code></em> )</code></h2>
                      </div>
                   </div>
                </div>
                <p>In order to allow the vehicle to respond to user inputs, you can
-                        make the vehicle become the player.
+                      make the vehicle become the player.
                </p>
                <p>To do this, you will need to implement a specialisation of the
-                        vehicle's client entity (in the same file) with the name
-                        <span class="literal">Player<em class="replaceable"><code>&lt;entity name&gt;</code></em></span>
-                        (<em class="emphasis">e.g.</em>, <span class="literal">Avatar</span> and
-                        <span class="literal">PlayerAvatar</span>).
+                      vehicle's client entity (in the same file) with the name
+                      <code class="classname">Player<em class="replaceable"><code>&lt;entity
+                               name&gt;</code></em></code>. For example, a client entity type of
+                      <code class="classname">Avatar</code> would require a corresponding
+                      <code class="classname">PlayerAvatar</code>.
                </p>
                <p>Setting the player:</p><pre class="programlisting">BigWorld.player( <em class="replaceable"><code>&lt;entity_to_become_player&gt;</code></em> )</pre><p>Changing the player as above will trigger the become player and
-                        become non-player events in the appropriate entities. You can use these
-                        callbacks to configure and later cleanup the user input handling
-                        mechanisms.
+                      become non-player events in the appropriate entities. You can use these
+                      callbacks to configure and later cleanup the user input handling
+                      mechanisms.
                </p><pre class="programlisting">class PlayerRipper( Ripper ):
     def onBecomePlayer( self ):
         self.setupKeyBindings()
@@ -99,13 +103,13 @@ self.controlledBy = avatar.base</pre><p><span class="citetitle"><span class="lit
     def onBecomeNonPlayer( self ):
         self.pilotAvatar = None
         self.filter = BigWorld.DumbFilter()
-        self.keyBindings = []</pre><p><span class="citetitle"><span class="literal">client/Ripper.py</span></span></p>
+        self.keyBindings = []</pre><p><span class="citetitle"><code class="filename">client/Ripper.py</code></span></p>
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                  <p>Be careful when changing from player vehicle to non-player
-                             vehicle from within a player vehicle's member function &#8212; changing the
-                             player back to the avatar will cause the type of the vehicle to change
-                             immediately.
+                  <p>Be careful when changing from a player vehicle to a non-player
+                           vehicle from within a player vehicle's member function. Changing the
+                           player back to the <code class="classname">Avatar</code> will cause the type of
+                           the vehicle to change immediately.
                   </p>
                </div>
             </div>
@@ -125,7 +129,7 @@ self.controlledBy = avatar.base</pre><p><span class="citetitle"><span class="lit
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Boarding and Alighting Vehicles</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

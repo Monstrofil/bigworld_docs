@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Build Vehicles">
       <link rel="up" href="index.html" title="How To Build Vehicles">
       <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Boarding and Alighting Vehicles">
-      <link rel="next" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Asynchronous and Ghost Cell Considerations"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Asynchronous and Ghost Cell Considerations">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_build_vehicle/ch04.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e215"></a>Chapter&nbsp;4.&nbsp;Models and Animation
+                     <h2 class="title"><a name="xref_Models_And_Animations"></a>Chapter&nbsp;4.&nbsp;Models and Animation
                      </h2>
                   </div>
                </div>
@@ -38,46 +39,47 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch04.html#d0e218">4.1. Pilot models</a></span></dt>
-                  <dt><span class="sect1"><a href="ch04.html#d0e227">4.2. Animating the vehicle</a></span></dt>
+                  <dt><span class="section"><a href="ch04.html#d0e225">4.1. Pilot models</a></span></dt>
+                  <dt><span class="section"><a href="ch04.html#d0e234">4.2. Animating the vehicle</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e218"></a>4.1.&nbsp;Pilot models
+                        <h2 class="title" style="clear: both"><a name="d0e225"></a>4.1.&nbsp;Pilot models
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>To display characters seated in or on the vehicle, use the
-                  entity's model as an attachment. Entities themselves cannot be used as
-                        attachments, so you will need to remove the model first, and then attach
-                        it to a hard point on the vehicle.
+               <p>To display characters seated in or on the vehicle, use the entity's
+                      model as an attachment. Entities themselves cannot be used as attachments,
+                      so you will need to remove the model first, and then attach it to a hard
+                      point on the vehicle.
                </p><pre class="programlisting">pilotModel = self.pilotAvatar.model    # hold the model with a local
 self.pilotAvatar.model = None          # detach model from entity
 self.model.mount = pilotModel          # attach model to hard point</pre><p>For each seat in the vehicle, you will need a separate hard point,
-                        and a corresponding hard point in the avatar's model.
+                      and a corresponding hard point in the avatar's model.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e227"></a>4.2.&nbsp;Animating the vehicle
+                        <h2 class="title" style="clear: both"><a name="d0e234"></a>4.2.&nbsp;Animating the vehicle
                         </h2>
                      </div>
                   </div>
                </div>
                <p>Controlling the animations of passengers and vehicles is likely to
-                        be very vehicle-specific, and so might be implemented in script on a
-                        per-vehicle basis, rather than using the Action Matcher.
+                      be very vehicle-specific, and so might be implemented in script on a
+                      per-vehicle basis, rather than using the Action Matcher.
                </p>
-               <p>In the Ripper example, a simple Action Matcher is implemented
-                        using lists of single frame and transition animations. A function called
-                        during the hover vehicle physics tick, <span class="literal">checkAnims</span>,
-                        manages the ripper's animation in flight.
+               <p>In the Ripper example, a simple Action Matcher is implemented using
+                      lists of single frame and transition animations. A method called during
+                      the hover vehicle physics tick,
+                      <code class="methodname">PlayerRipper.checkAnims()</code>, manages the ripper's
+                      animation in flight.
                </p><pre class="programlisting"> vehicleActions = [ "RIdle",
                     "RTurnLeft",
                     "RTurnRight",
@@ -98,7 +100,7 @@ self.model.mount = pilotModel          # attach model to hard point</pre><p>For 
 
      ripperAction = self.model.action(Ripper.vehicleActions[act])
      ripperAction()
-    ...</pre><p><span class="citetitle"><span class="literal">client/Ripper.py</span></span></p>
+    ...</pre><p><span class="citetitle"><code class="filename">client/Ripper.py</code></span></p>
             </div>
          </div>
          <div class="navfooter">
@@ -116,7 +118,7 @@ self.model.mount = pilotModel          # attach model to hard point</pre><p>For 
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;5.&nbsp;Asynchronous and Ghost Cell Considerations</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

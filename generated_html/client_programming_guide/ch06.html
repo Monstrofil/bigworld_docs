@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Client Programming Guide">
       <link rel="up" href="index.html" title="Client Programming Guide">
       <link rel="prev" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Cloud shadows">
-      <link rel="next" href="ch07.html" title="Chapter&nbsp;7.&nbsp;Entities"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch07.html" title="Chapter&nbsp;7.&nbsp;Entities">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/client_programming_guide/ch06.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,29 +39,29 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch06.html#d0e1867">6.1. Definitions</a></span></dt>
-                  <dt><span class="sect1"><a href="ch06.html#xref_Implementation_Files">6.2. Implementation files</a></span></dt>
-                  <dt><span class="sect1"><a href="ch06.html#xref_Details_And_Notes">6.3. Details and notes</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2146">6.1. Definitions</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#xref_Implementation_Files">6.2. Implementation files</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#xref_Details_And_Notes">6.3. Details and notes</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2010">6.3.1. Includes</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2028">6.3.2. Models</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2035">6.3.3. Entities</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#xref_Boundaries_And_Portals">6.3.4. Boundaries and portals</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2057">6.3.5. Transforms</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2062">6.3.6. Other items</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2278">6.3.1. Includes</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2296">6.3.2. Models</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2303">6.3.3. Entities</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#xref_Boundaries_And_Portals">6.3.4. Boundaries and portals</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2325">6.3.5. Transforms</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2330">6.3.6. Other items</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch06.html#d0e2086">6.4. Loading and ejecting</a></span></dt>
-                  <dt><span class="sect1"><a href="ch06.html#d0e2096">6.5. Focus grid</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2354">6.4. Loading and ejecting</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2364">6.5. Focus grid</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2107">6.5.1. Hull tree</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2117">6.5.2. Quad tree</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2375">6.5.1. Hull tree</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2385">6.5.2. Quad tree</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch06.html#d0e2124">6.6. Collisions</a></span></dt>
-                  <dt><span class="sect1"><a href="ch06.html#xref_Sway_Items">6.7. Sway items</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2392">6.6. Collisions</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#xref_Sway_Items">6.7. Sway items</a></span></dt>
                </dl>
             </div>
             <p>The scene graph drawn by the BigWorld client is built from small
@@ -71,11 +72,11 @@
             <p>The concepts and implementation of the chunking system are described
                  in the following sections.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e1867"></a>6.1.&nbsp;Definitions
+                        <h2 class="title" style="clear: both"><a name="d0e2146"></a>6.1.&nbsp;Definitions
                         </h2>
                      </div>
                   </div>
@@ -114,7 +115,7 @@
                       address them, and change their permissivity.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -129,8 +130,7 @@
                      <li>
                         <p><em class="emphasis">One <span class="literal">space.setting</span>s file
                                       for each space in the universe (XML format)</em></p>
-                        <p>For details on this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                                   <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal">space.settings</span></span>.
+                        <p>For details on this file's grammar, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/index.html" class="olink">File Grammar Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/ch31.html" class="olink"><i><span class="literal">space.settings</span></i></a>.
                         </p>
                         <div class="itemizedlist">
                            <ul type="circle">
@@ -153,9 +153,7 @@
                      <li>
                         <p><em class="emphasis">Multiple <span class="literal">.chunk</span> files
                                       for each space (XML format)</em></p>
-                        <p>For details on this file's grammar, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">File Grammar Guide</span>'s section
-                                   <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"><span class="literal"><em class="replaceable"><code>&lt;chunk&gt;</code></em>o.chunk,
-                                         <em class="replaceable"><code>&lt;chunk&gt;</code></em>i.chunk</span></span>.
+                        <p>For details on this file's grammar, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/index.html" class="olink">File Grammar Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../file_grammar_guide/ch08.html" class="olink"><i><span class="literal">.chunk</span></i></a>.
                         </p>
                         <div class="itemizedlist">
                            <ul type="circle">
@@ -242,7 +240,7 @@
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -251,11 +249,11 @@
                      </div>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2010"></a>6.3.1.&nbsp;Includes
+                           <h3 class="title"><a name="d0e2278"></a>6.3.1.&nbsp;Includes
                            </h3>
                         </div>
                      </div>
@@ -272,11 +270,11 @@
                   </p>
                   <p>The WorldEditor does not generate includes.</p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2028"></a>6.3.2.&nbsp;Models
+                           <h3 class="title"><a name="d0e2296"></a>6.3.2.&nbsp;Models
                            </h3>
                         </div>
                      </div>
@@ -285,11 +283,11 @@
                            model files. For more details, see <a href="ch10.html" title="Chapter&nbsp;10.&nbsp;Models"><i xmlns:xlink="http://www.w3.org/1999/xlink">Models</i></a>.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2035"></a>6.3.3.&nbsp;Entities
+                           <h3 class="title"><a name="d0e2303"></a>6.3.3.&nbsp;Entities
                            </h3>
                         </div>
                      </div>
@@ -304,7 +302,7 @@
                            property in its formal type definition.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
@@ -340,11 +338,11 @@
                   </p>
                   <p>In boundary definitions, the normals should point inward.</p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2057"></a>6.3.5.&nbsp;Transforms
+                           <h3 class="title"><a name="d0e2325"></a>6.3.5.&nbsp;Transforms
                            </h3>
                         </div>
                      </div>
@@ -354,11 +352,11 @@
                            section).
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2062"></a>6.3.6.&nbsp;Other items
+                           <h3 class="title"><a name="d0e2330"></a>6.3.6.&nbsp;Other items
                            </h3>
                         </div>
                      </div>
@@ -388,11 +386,11 @@
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e2086"></a>6.4.&nbsp;Loading and ejecting
+                        <h2 class="title" style="clear: both"><a name="d0e2354"></a>6.4.&nbsp;Loading and ejecting
                         </h2>
                      </div>
                   </div>
@@ -411,11 +409,11 @@
                       (unloading).
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e2096"></a>6.5.&nbsp;Focus grid
+                        <h2 class="title" style="clear: both"><a name="d0e2364"></a>6.5.&nbsp;Focus grid
                         </h2>
                      </div>
                   </div>
@@ -434,11 +432,11 @@
                       enough.
                </p>
                <p>Each column contains a hull tree and a quad tree.</p>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2107"></a>6.5.1.&nbsp;Hull tree
+                           <h3 class="title"><a name="d0e2375"></a>6.5.1.&nbsp;Hull tree
                            </h3>
                         </div>
                      </div>
@@ -453,11 +451,11 @@
                            of the camera)
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2117"></a>6.5.2.&nbsp;Quad tree
+                           <h3 class="title"><a name="d0e2385"></a>6.5.2.&nbsp;Quad tree
                            </h3>
                         </div>
                      </div>
@@ -473,11 +471,11 @@
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e2124"></a>6.6.&nbsp;Collisions
+                        <h2 class="title" style="clear: both"><a name="d0e2392"></a>6.6.&nbsp;Collisions
                         </h2>
                      </div>
                   </div>
@@ -497,7 +495,7 @@
                       <span class="literal">bigworld/src/client/physics.cpp</span>.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -610,7 +608,7 @@ bool wantsNest() const { return !!(wantFlags_ &amp; 8); }</pre></li>
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;7.&nbsp;Entities</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

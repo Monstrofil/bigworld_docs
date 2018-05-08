@@ -2,20 +2,21 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    
-      <title>Chapter&nbsp;13.&nbsp;Fault Tolerance</title>
+      <title>Chapter&nbsp;13.&nbsp;XML Data File Access</title>
       <link rel="stylesheet" href="../css/bigworld.css" type="text/css">
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="Server Programming Guide">
       <link rel="up" href="pt01.html" title="Part&nbsp;I.&nbsp;Server Scripting Guide">
-      <link rel="prev" href="ch12.html" title="Chapter&nbsp;12.&nbsp;XML Data File Access">
-      <link rel="next" href="ch14.html" title="Chapter&nbsp;14.&nbsp;Disaster Recovery"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch12.html" title="Chapter&nbsp;12.&nbsp;Entities and the Universe">
+      <link rel="next" href="ch14.html" title="Chapter&nbsp;14.&nbsp;External Services">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/server_programming_guide/ch13.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
                <tr>
-                  <th colspan="3" align="center">Chapter&nbsp;13.&nbsp;Fault Tolerance</th>
+                  <th colspan="3" align="center">Chapter&nbsp;13.&nbsp;XML Data File Access</th>
                </tr>
                <tr>
                   <td width="20%" align="left"><a accesskey="p" href="ch12.html">Prev</a>&nbsp;
@@ -30,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="xref_Fault_Tolerance"></a>Chapter&nbsp;13.&nbsp;Fault Tolerance
+                     <h2 class="title"><a name="xref_XML_Data_File_Access"></a>Chapter&nbsp;13.&nbsp;XML Data File Access
                      </h2>
                   </div>
                </div>
@@ -38,244 +39,318 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch13.html#d0e10565">13.1. CellApp Fault Tolerance</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e11794">13.1. <code class="classname">ResMgr</code>.<code class="classname">DataSection</code></a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#xref_Accessing_Data">13.2. Accessing Data</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch13.html#d0e10568">13.1.1. Overview</a></span></dt>
-                        <dt><span class="sect2"><a href="ch13.html#d0e10581">13.1.2. Restoration process</a></span></dt>
-                        <dt><span class="sect2"><a href="ch13.html#d0e10634">13.1.3. Example</a></span></dt>
+                        <dt><span class="section"><a href="ch13.html#d0e11836">13.2.1. Opening a Section Within an XML File</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch13.html#d0e10665">13.2. BaseApp Fault Tolerance</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e11851">13.3. Data Types</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e11953">13.4. Writing Data</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e12017">13.5. Performance Issues</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e12026">13.6. API Reference</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e10565"></a>13.1.&nbsp;CellApp Fault Tolerance
+                        <h2 class="title" style="clear: both"><a name="d0e11794"></a>13.1.&nbsp;<code class="classname">ResMgr</code>.<code class="classname">DataSection</code></h2>
+                     </div>
+                  </div>
+               </div>
+               <p>Server component scripting can access custom data stored in XML
+                      files. These would typically be used to store game data resources, for
+                      example, anything from gameplay tables to configuration data. The data is
+                      stored in an XML hierarchy, accessible by traversing the tree defined in
+                      the each XML file.
+               </p>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="xref_Accessing_Data"></a>13.2.&nbsp;Accessing Data
                         </h2>
                      </div>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <p>Suppose that a data file is defined as in the example below:</p><pre class="programlisting">&lt;root&gt;
+   &lt;character&gt;     Sir Manfred
+      &lt;description&gt; White knight                       &lt;/description&gt;
+      &lt;modelName&gt;   sets/main/characters/knight.model  &lt;/modelName&gt;
+      &lt;race&gt;        human                              &lt;/race&gt;
+      &lt;gender&gt;      0                                  &lt;/gender&gt;
+   &lt;/character&gt;
+
+   &lt;character&gt;     Sofia
+      &lt;description&gt; Evil queen                         &lt;/description&gt;
+      &lt;modelName&gt;   sets/main/characters/queen.model   &lt;/modelName&gt;
+      &lt;race&gt;        undead                             &lt;/race&gt;
+      &lt;gender&gt;      1                                  &lt;/gender&gt;
+
+      &lt;slaves&gt;
+         &lt;character&gt;     Underling
+           &lt;description&gt; Hapless underling                   &lt;/description&gt;
+           &lt;modelName&gt;   sets/main/characters/guard.model    &lt;/modelName&gt;
+           &lt;race&gt;        undead                              &lt;/race&gt;
+           &lt;gender&gt;      1                                    &lt;/gender&gt;
+         &lt;/character&gt;
+
+         &lt;character&gt;      Servant
+            &lt;description&gt; Unpaid slave                       &lt;/description&gt;
+            &lt;modelName&gt;   sets/main/characters/servant.model &lt;/modelName&gt;
+            &lt;race&gt;        undead                             &lt;/race&gt;
+            &lt;gender&gt;      1                                  &lt;/gender&gt;
+         &lt;/character&gt;
+      &lt;/slaves&gt;
+   &lt;/character&gt;
+&lt;/root&gt;</pre><p><span class="citetitle">Example XML file <span class="symbol">&#8208;</span>
+                         <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/data/Characters.xml</code></span></p>
+               <p>You can access this data by creating a new
+                      <code class="classname">DataSection</code> using the
+                      <code class="classname">ResMgr</code>.<code class="methodname">openSection</code> method.
+                      The path argument used is relative to the resources path. This is
+                      illustrated in the example below:
+               </p><pre class="programlisting">ds = ResMgr.openSection( 'scripts/data/Characters.xml' )
+
+# this will retrieve "Sir Manfred"
+ds.child( 0 ).asString
+
+# this will retrieve "White knight"
+ds.child( 0 )['description'].asString
+
+# this will retrieve 1
+ds.child( 0 )['gender'].asInt</pre><p><span class="citetitle">Reading an XML data file</span></p>
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e10568"></a>13.1.1.&nbsp;Overview
+                           <h3 class="title"><a name="d0e11836"></a>13.2.1.&nbsp;Opening a Section Within an XML File
                            </h3>
                         </div>
                      </div>
                   </div>
-                  <p>Periodically, a complete copy of each cell entity is backed up on
-                           the base entity. Only cell entities with an associated base entity are
-                           fault tolerant. The CellApp backup period specifies how often cell
-                           entities are backed up to their base entities, and is specified in the
-                           <code class="filename">bw.xml</code> option
-                           &lt;<span class="literal">cellApp/backupPeriod</span>&gt;.
-                  </p>
-                  <p>Should a CellApp process become unavailable, the real entities
-                           located on the cells residing on that process will be restored by their
-                           corresponding base entities to other CellApps. The state of the cell data
-                           of the restored cell entities is the same state as was given from the most
-                           recent backup from the cell entity to the base entity.
-                  </p>
-               </div>
-               <div class="sect2" lang="en">
-                  <div class="titlepage">
-                     <div>
-                        <div>
-                           <h3 class="title"><a name="d0e10581"></a>13.1.2.&nbsp;Restoration process
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-                  <p>The CellApp restoration process typically follows these
-                           steps:
-                  </p>
-                  <div class="orderedlist">
-                     <ol type="1">
-                        <li>
-                           <p>A CellApp process becomes unavailable.</p>
-                        </li>
-                        <li>
-                           <p>Base entities that have cell entities on the now unavailable
-                                        CellApp process restore their corresponding real entities to other
-                                        CellApps.
-                           </p>
-                        </li>
-                        <li>
-                           <p>Restored cell entities have the
-                                        <code class="methodname">onRestore</code>() callback called on them. Because
-                                        the restored cell data is taken from the last time the cell entity
-                                        backed up to the base, this copy can be up to twice the backup period.
-                                        This callback should check that the entity's properties are in a
-                                        consistent state.
-                           </p>
-                        </li>
-                        <li>
-                           <p>For player cell entities, their corresponding client-side player
-                                        entities have the <code class="methodname">onRestore</code>() callback called
-                                        on them.
-                           </p>
-                        </li>
-                     </ol>
-                  </div>
-                  <p>The callback <code class="methodname">onRestore</code>() is invoked on the
-                           cell entity to inform it that it is being restored.
-                  </p>
-                  <p>The code fragment below illustrates its implementation on the cell
-                           entity:
-                  </p><pre class="programlisting">class <em class="emphasis"><em class="replaceable"><code>SomeEntity</code></em></em>( BigWorld.Entity ):
-  ...
-  def <em class="emphasis">__init__</em>( self ):
-    # set up initial property values
-  ...
-  def <em class="emphasis">onRestore</em>( self ):
-    # check that property values are consistent, and
-    # perform any cleanups that need to occur
-  ...</pre><p><span class="citetitle">Example file
-                              <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/<em class="replaceable"><code>SomeEntity</code></em>.py</code></span></p>
-               </div>
-               <div class="sect2" lang="en">
-                  <div class="titlepage">
-                     <div>
-                        <div>
-                           <h3 class="title"><a name="d0e10634"></a>13.1.3.&nbsp;Example
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="figure"><a name="d0e10637"></a><p class="title"><b>Figure&nbsp;13.1.&nbsp;CellApp Fault Tolerance Example</b></p>
-                     <div class="figure-contents">
-                        <div class="mediaobject"><object data="images/fault_tolerance_overview_example.svg" type="image/svg+xml" width="592" height="420"></object></div>
-                     </div>
-                  </div><br class="figure-break"><p>The above diagram shows a space divided into three cells, the top
-                           cell residing on CellApp 4, the bottom-left cell residing on CellApp 3
-                           (not shown) and the bottom-right cell residing on CellApp 8 (not shown).
-                           In the cell that CellApp 4 has in this space, it has the cell entities
-                           with IDs 4156, 5712 and 2114, all within the same spatial region. The
-                           entities 4156 and 2114 have corresponding base entities that reside on
-                           BaseApp 1 and 2 respectively. Entity 5712 does not have a base entity, and
-                           is a cell-only entity.
-                  </p>
-                  <p>Cell entities back up their data to their corresponding base
-                           entities. So in this example, entities 4156 and 2114 send a copy of
-                           themselves to their corresponding base entities. The rate at which they do
-                           this can be configured by changing the backup period, using the
-                           <code class="filename">bw.xml</code> option
-                           &lt;<span class="literal">cellApp/backupPeriod</span>&gt; (see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span> for more details).
-                           When a single CellApp goes down, cell entities are restored from the
-                           backup data sent to their base entities. Any cell entities that do not
-                           have corresponding base entities will not have been backed up, and so will
-                           not be restored.
-                  </p>
-                  <p>If CellApp 4 was to go down, the cell entities for 4156 and 2114
-                           will be restored onto other CellApps from their base entities. Entity 5712
-                           will not be restored, as it has no corresponding base entity.
-                  </p>
-                  <p>It is important to note that when restoring cell entities, the cell
-                           data that is used will be whatever data was present at the time of the
-                           last cell entity backup. Thus, any modification to the cell entity data
-                           since the last backup is lost, and the state of that cell entity may be
-                           inconsistent when it is restored. For example, a backup of a cell entity
-                           may be made in the middle of a multi-step transaction. The script callback
-                           <code class="classname">Entity</code>.<code class="methodname">onRestore</code>() can be
-                           used to check the state of outstanding transactions, and the decision to
-                           either roll them back or continue them can be made in script.
+                  <p>You can access a section within the XML file by adding the name of
+                           the section to the end of the path given to ResMgr.openSection:
+                  </p><pre class="programlisting">dsChild = ResMgr.openSection(
+  'scripts/data/Characters.xml/character' )</pre><p><em class="emphasis">Reading an XML data file <span class="symbol">&#8208;</span> Accessing a specific section</em></p>
+                  <p>If there are multiple elements with the same under the root
+                           element, then the first one is returned.
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e10665"></a>13.2.&nbsp;BaseApp Fault Tolerance
+                        <h2 class="title" style="clear: both"><a name="d0e11851"></a>13.3.&nbsp;Data Types
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>With BaseApp fault tolerance, BaseApps back up the base entity data
-                      and cell backup data of all their base entities to other BaseApp processes
-                      periodically:
-               </p>
-               <div class="itemizedlist">
-                  <ul type="disc">
-                     <li>
-                        <p><em class="emphasis">Distributed BaseApp Backup</em></p>
-                        <p>Each BaseApp backs up its entities on other (more than one)
-                                   regular BaseApps.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis">Non-distributed BaseApp
-                                      Backup</em></p>
-                        <p>Regular BaseApps back up all their entities on dedicated Backup
-                                   BaseApps.
-                        </p>
-                     </li>
-                  </ul>
+               <p>The available data types are:</p>
+               <div class="altrow">
+                  <table border="0" width="40%">
+                     <colgroup>
+                        <col width="55%">
+                        <col width="45%">
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th align="left">Data type</th>
+                           <th align="left">Accessed by</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td align="left">64-bit floating-point numbers</td>
+                           <td align="left"><code class="methodname">.asDouble</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">64-bit integers</td>
+                           <td align="left"><code class="methodname">.asInt64</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Data blob</td>
+                           <td align="left"><code class="methodname">.asBlob</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Floating-point numbers</td>
+                           <td align="left"><code class="methodname">.asFloat</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Integers</td>
+                           <td align="left"><code class="methodname">.asInt</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Matrix</td>
+                           <td align="left"><code class="methodname">.asMatrix</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Raw binary representation of the XML
+                                            node
+                           </td>
+                           <td align="left"><code class="methodname">.asBinary</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">String</td>
+                           <td align="left"><code class="methodname">.asString</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Vector2</td>
+                           <td align="left"><code class="methodname">.asVector2</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Vector3</td>
+                           <td align="left"><code class="methodname">.asVector3</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Vector4</td>
+                           <td align="left"><code class="methodname">.asVector4</code></td>
+                        </tr>
+                        <tr>
+                           <td align="left">Wide strings</td>
+                           <td align="left"><code class="methodname">.asWideString</code></td>
+                        </tr>
+                     </tbody>
+                  </table>
                </div>
-               <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-                  <h3 class="title">Note</h3>
-                  <p>As of BigWorld 1.9, non-distributed BaseApp is deprecated. It is
-                           planned that support for this feature will be removed in BigWorld
-                           2.0.
-                  </p>
-                  <p>BigWorld recommends the Distributed BaseApp Backup method, for the
-                           following reasons:
-                  </p>
-                  <div class="itemizedlist">
-                     <ul type="disc">
-                        <li>
-                           <p>No need for dedicated Backup BaseApps.</p>
-                        </li>
-                        <li>
-                           <p>Backup load is distributed over a period of time.</p>
-                        </li>
-                        <li>
-                           <p>No need for IP switching, which might not be allowed by
-                                        operating system and/or router. This also makes cluster management
-                                        easier.
-                           </p>
-                        </li>
-                     </ul>
+               <p><span class="citetitle">Available data types in
+                         XML</span></p>
+               <p>For more details, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/client/index.html" class="olink">Client Python API</a>'s
+                      entry <em class="emphasis">Class List <span class="symbol">&#8594;</span> DataSection</em>.
+               </p>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="d0e11953"></a>13.4.&nbsp;Writing Data
+                        </h2>
+                     </div>
                   </div>
                </div>
-               <p>Should the primary BaseApp become unavailable, then all its entities
-                      are restored from the backup process. In this case, the BaseApp invokes the
-                      callback <code class="methodname">onRestore</code> on the base or proxy entity, in
-                      a process similar to the one for CellApp restoration. This callback should
-                      ensure that all properties on the entity are in a consistent state.
+               <p>You can write to properties by referencing the appropriate
+                      <code class="varname">.as<em class="replaceable"><code>&lt;data type&gt;</code></em></code>
+                      property, then saving the XML file.
                </p>
-               <p>It should be noted that in the Distributed BaseApp Backup method,
-                      entities that were on the same BaseApp before its death, might be restored
-                      to different BaseApps. Care should be taken when writing scripts, to avoid
-                      assumptions that a Base entity is local. When performing an entity backup,
-                      Base entity properties are streamed using their description in the
-                      definition file (if there is one). For properties that are not specified in
-                      the definition file, these are pickled. Each entity is backed up
-                      individually, so if two entities refer to the same object, on restoration
-                      they will likely each have a copy of that object. An option is available to
-                      prevent properties not specified in the definition file from being backed
-                      up. To disable backing up undefined properties set the
-                      <code class="filename">bw.xml</code> option
-                      <code class="property">&lt;baseApp/backUpUndefinedProperties&gt;</code> to
-                      <span class="literal">false</span>. For more information on this option refer to the
-                      <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span> section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>.
+               <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                  <h3 class="title">Note</h3>
+                  <p>This feature is for use only on server tools, and you should avoid
+                           using it in game scripts.
+                  </p>
+               </div>
+               <p>An important limitation to be aware of is that it is only possible
+                      to save a <code class="classname">DataSection</code> that has been opened by
+                      reference to an XML document. It is not possible to directly save a
+                      section that is retrieved by a path to a sub-element within a file.
                </p>
-               <p>For more details regarding Fault Tolerance, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Operations Guide</span>'s
-                      chapter <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Fault Tolerance</span>, and the document
-                      <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                         Components</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BaseApp</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Fault
-                         tolerance</span>.
+               <p>For example, the code below will <em class="emphasis">not</em> work:
+               </p><pre class="programlisting"># this will not work, throws IOError
+dsChild = ResMgr.openSection( 'scripts/data/Characters.xml/<em class="emphasis">character</em>' )
+dsChild.asString = "Sir Lancelot"
+dsChild.save()</pre><p><span class="citetitle">Example of incorrect procedure for writing to
+                         XML</span></p>
+               <p>The code excerpt below, on the other, will work:</p><pre class="programlisting"># this will work
+dsRoot = ResMgr.openSection( 'scripts/data/Characters.xml' )
+dsChild = dsRoot.child( 0 )
+dsChild.asString = "Sir Lancelot"
+dsRoot.save()</pre><p><span class="citetitle">Example of correct procedure for writing to
+                         XML</span></p>
+               <p>You can also add or remove child elements from each data
+                      section:
+               </p><pre class="programlisting"># get the document data section
+dsRoot = ResMgr.openSection( 'scripts/data/Characters.xml' )
+
+# this will delete the first character
+dsRoot.deleteSection( 'character' )
+
+# create a new character, which is appended to the top-level
+newChild = dsRoot.createSection( 'character' )
+newChild.asString = "King Arthur"
+
+newChild.createSection( 'description' )
+newChild.createSection( 'modelName' )
+newChild.createSection( 'race' )
+newChild.createSection( 'gender' )
+newChild.createSection( 'slaves' )
+
+newChild['description'].asString = "The King of Camelot"
+newChild['modelName'].asString = 'sets/main/character/knight.model'
+newChild['race'].asString = 'human'
+newChild['gender'].asInt = 0
+dsRoot.save()</pre><p><span class="citetitle">Deleting sections and adding new ones</span></p>
+               <p>Running the code excerpt below, and assuming a
+                      <code class="filename">Characters.xml</code> as described in <a href="ch13.html#xref_Accessing_Data" title="13.2.&nbsp;Accessing Data">Accessing Data</a>, the result will be the file below:
+               </p><pre class="programlisting">&lt;root&gt;
+   &lt;character&gt;      Sofia
+      &lt;description&gt; Evil queen                       &lt;/description&gt;
+      &lt;modelName&gt;   sets/main/characters/queen.model &lt;/modelName&gt;
+      &lt;race&gt;        undead                           &lt;/race&gt;
+      &lt;gender&gt;      1                                &lt;/gender&gt;
+
+      &lt;slaves&gt;
+         &lt;character&gt;      Underling
+            &lt;description&gt; Hapless underling                  &lt;/description&gt;
+            &lt;modelName&gt;   sets/main/characters/guard.model   &lt;/modelName&gt;
+            &lt;race&gt;        undead                             &lt;/race&gt;
+            &lt;gender&gt;      1                                  &lt;/gender&gt;
+         &lt;/character&gt;
+
+         &lt;character&gt;      Servant
+            &lt;description&gt; Unpaid slave                       &lt;/description&gt;
+            &lt;modelName&gt;   sets/main/characters/servant.model &lt;/modelName&gt;
+            &lt;race&gt;        undead                             &lt;/race&gt;
+            &lt;gender&gt;      1                                  &lt;/gender&gt;
+         &lt;/character&gt;
+      &lt;/slaves&gt;
+   &lt;/character&gt;
+
+<em class="emphasis">
+   &lt;character&gt;       King Arthur
+      &lt;description&gt;  The King of Camelot              &lt;/description&gt;
+      &lt;modelName&gt;    sets/main/character/knight.model &lt;/modelName&gt;
+      &lt;race&gt;         human                            &lt;/race&gt;
+      &lt;gender&gt;       0                                &lt;/gender&gt;
+      &lt;slaves&gt;                                        &lt;/slaves&gt;
+   &lt;/character&gt;
+</em>
+&lt;/root&gt;</pre><p><span class="citetitle">Resulting
+                         <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/data/Characters.xml</code></span></p>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="d0e12017"></a>13.5.&nbsp;Performance Issues
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <p>Accessing the XML files on disk can potentially halt game
+                      processing. This can occur from disk I/O and parsing of the resulting
+                      data. This halt to processing can occur for both reading as well as
+                      writing of XML files and should be avoided as much as possible.
                </p>
-               <p>The backup method is determined by <span class="literal">bw.xml</span>'s
-                      configuration option <span class="literal">baseAppMgr/useNewStyleBackup</span>. For
-                      details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                         Operations Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Software Configuration
-                         with bw.xml</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink"> BaseAppMgr configuration
-                         options</span>.
+               <p>Due to the adverse impact this can cause to game development and
+                      resulting behaviour, a separate document has been written to address these
+                      issues. For more details please refer to the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../howto_avoid_file_in_main_thread/index.html" class="olink">How To Avoid Files Being Loaded in the Main Thread</a>.
+               </p>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="d0e12026"></a>13.6.&nbsp;API Reference
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <p><code class="classname">ResMgr</code> documents the
+                      <code class="classname">DataSection</code>'s methods, and can be found in the
+                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/baseapp/index.html" class="olink">BaseApp Python API</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/cellapp/index.html" class="olink">CellApp Python API</a>, and <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/client/index.html" class="olink">Client Python API</a>.
                </p>
             </div>
          </div>
@@ -289,12 +364,12 @@
                   <td width="37%" align="right">&nbsp;<a accesskey="n" href="ch14.html">Next</a></td>
                </tr>
                <tr>
-                  <td width="40%" align="left" valign="top">Chapter&nbsp;12.&nbsp;XML Data File Access&nbsp;</td>
+                  <td width="40%" align="left" valign="top">Chapter&nbsp;12.&nbsp;Entities and the Universe&nbsp;</td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;14.&nbsp;Disaster Recovery</td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;14.&nbsp;External Services</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

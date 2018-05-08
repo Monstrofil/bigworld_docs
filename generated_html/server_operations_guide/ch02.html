@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Server Operations Guide">
       <link rel="up" href="index.html" title="Server Operations Guide">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Introduction">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Admin Tools"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Cluster Administration Tools">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/server_operations_guide/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -37,51 +38,54 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch02.html#xref_The_Entry_parentFile">2.1. The entry <span class="literal">parentFile</span></a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_User_Dependent_Configuration">2.2. User dependent configuration</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Command_Line_Options_Override_XML">2.3. Command-Line Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_General_Configuration_Options">2.4. General Configuration Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Network_Configuration_Options">2.5. Network Configuration Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Load_Balancing_Configuration_Options">2.6. Load Balancing Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_The_Entry_parentFile">2.1. The entry <span class="literal">parentFile</span></a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_User_Dependent_Configuration">2.2. User dependent configuration</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Command_Line_Options_Override_XML">2.3. Command-Line Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_General_Configuration_Options">2.4. General Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e1179">2.5. Billing System Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Network_Configuration_Options">2.6. Network Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Network_Address_Translation_Configuration_Options">2.7. Network Address Translation Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Load_Balancing_Configuration_Options">2.8. Load Balancing Configuration Options</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#d0e1275">2.6.1. Entities Cardinality Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e1509">2.8.1. Entities Cardinality Configuration Options</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch02.html#xref_BaseApp_Configuration_Options">2.7. BaseApp Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_BaseApp_Configuration_Options">2.9. BaseApp Configuration Options</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#xref_BaseApp_Secondary_Database_Configuration_Options">2.7.1. Secondary Database Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e1860">2.7.2. Packet Log Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e1917">2.7.3. ID Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e1982">2.7.4. Client Upstream Limits</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#xref_BaseApp_Secondary_Database_Configuration_Options">2.9.1. Secondary Database Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e2042">2.9.2. Packet Log Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e2099">2.9.3. ID Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e2164">2.9.4. Client Upstream Limits</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch02.html#xref_BaseAppMgr_Configuration_Options">2.8. BaseAppMgr Configuration Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Bots_Configuration_Options">2.9. Bots Configuration Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_CellApp_Configuration_Options">2.10. CellApp Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_BaseAppMgr_Configuration_Options">2.10. BaseAppMgr Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Bots_Configuration_Options">2.11. Bots Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_CellApp_Configuration_Options">2.12. CellApp Configuration Options</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#d0e2921">2.10.1. Noise Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e3020">2.10.2. ID Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e3085">2.10.3. CellApp Profiles Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e3128">2.12.1. Noise Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e3225">2.12.2. ID Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e3290">2.12.3. CellApp Profiles Configuration Options</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch02.html#xref_CellAppMgr_Configuration_Options">2.11. CellAppMgr Configuration Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_DBMgr_Configuration_Options">2.12. DBMgr Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_CellAppMgr_Configuration_Options">2.13. CellAppMgr Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_DBMgr_Configuration_Options">2.14. DBMgr Configuration Options</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#d0e4096">2.12.1. Data Consolidation Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e4134">2.14.1. Data Consolidation Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e4170">2.14.2. XML Database Options</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch02.html#xref_LoginApp_Configuration_Options">2.13. LoginApp Configuration Options</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Reviver_Configuration_Options">2.14. Reviver Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_LoginApp_Configuration_Options">2.15. LoginApp Configuration Options</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Reviver_Configuration_Options">2.16. Reviver Configuration Options</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#d0e4605">2.14.1. Reviver's BaseAppMgr Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e4641">2.14.2. Reviver's CellAppMgr Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e4677">2.14.3. Reviver's DBMgr Configuration Options</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e4713">2.14.4. Reviver's LoginApp Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e4662">2.16.1. Reviver's BaseAppMgr Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e4698">2.16.2. Reviver's CellAppMgr Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e4734">2.16.3. Reviver's DBMgr Configuration Options</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#d0e4770">2.16.4. Reviver's LoginApp Configuration Options</a></span></dt>
                      </dl>
                   </dd>
                </dl>
@@ -116,7 +120,7 @@
                </ul>
             </div><pre class="programlisting">&lt;dbMgr&gt;
   &lt;allowEmptyDigest&gt; true &lt;/allowEmptyDigest&gt;
-&lt;/dbMgr&gt;</pre><div class="sect1" lang="en">
+&lt;/dbMgr&gt;</pre><div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -151,11 +155,14 @@
                      </li>
                   </ul>
                </div>
-               <p>All default values are stored in file
-                      <code class="filename">bigworld/res/server/defaults.xml</code>. Typically, the
-                      entry <span class="literal">parentFile</span> in file
+               <p>All default values for a production environment are stored in file
+                      <code class="filename">bigworld/res/server/production_defaults.xml</code>. The file
+                      <code class="filename">bigworld/res/server/development_defaults.xml</code>
+                      specialises this with default values for a development environment.
+                      Typically, the entry <span class="literal">parentFile</span> in file
                       <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/bw.xml</span> is
-                      set to <span class="literal">server/defaults.xml</span>, and only non-default
+                      set to either <span class="literal">server/production_defaults.xml</span> or
+                      <span class="literal">server/development_defaults.xml</span>, and only non-default
                       options are stored in your <span class="literal">server/bw.xml</span>.
                </p>
                <p>The example below shows the configuration option
@@ -169,7 +176,7 @@
                         </p></span></div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -193,7 +200,7 @@
                       such as <code class="code">dbMgr/databaseName</code> would be in this file.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -219,7 +226,7 @@
                       process.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -323,20 +330,18 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
                         </div>
                      </li>
                      <li>
-                        <p><a name="xref_externalLatencyMax"></a><em class="emphasis"><span class="literal">externalLatencyMax</span>
+                        <p><em class="emphasis"><span class="literal">externalLatencyMax</span>
                                       (Float)</em></p>
                         <p>Maximum number of seconds by which packets sent from the server
                                    process will be artificially delayed. Each packet will be randomly
@@ -348,23 +353,22 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
                         </div>
                         <p><em class="emphasis">This feature is useful for testing during
                                       development.</em></p>
-                        <p>See also <a href="ch02.html#xref_externalLossRatio">???</a>, <a href="ch02.html#xref_externalLatencyMin">???</a></p>
+                        <p>See also <span class="literal">externalLossRatio</span>,
+                                   <span class="literal">xref_externalLatencyMin</span></p>
                      </li>
                      <li>
-                        <p><a name="xref_externalLatencyMin"></a><em class="emphasis"><span class="literal">externalLatencyMin</span>
+                        <p><em class="emphasis"><span class="literal">externalLatencyMin</span>
                                       (Float)</em></p>
                         <p>Minimum number of seconds by which packets sent from the server
                                    process will be artificially delayed. Each packet will be randomly
@@ -376,23 +380,22 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
                         </div>
                         <p><em class="emphasis">This feature is useful for testing during
                                       development.</em></p>
-                        <p>See also <a href="ch02.html#xref_externalLossRatio">???</a>, <a href="ch02.html#xref_externalLatencyMax">???</a></p>
+                        <p>See also <span class="literal">xref_externalLossRatio</span>,
+                                   <span class="literal">xref_externalLatencyMax</span></p>
                      </li>
                      <li>
-                        <p><a name="xref_externalLossRatio"></a><em class="emphasis"><span class="literal">externalLossRatio</span>
+                        <p><em class="emphasis"><span class="literal">externalLossRatio</span>
                                       (Float)</em></p>
                         <p>Proportion of outgoing packets that will be dropped by this
                                    processes external nub to simulate loss on the external network. This
@@ -405,20 +408,19 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For more details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
                         </div>
                         <p><em class="emphasis">This feature is useful for testing during
                                       development.</em></p>
-                        <p>See also <a href="ch02.html#xref_externalLatencyMin">???</a>, <a href="ch02.html#xref_externalLatencyMax">???</a></p>
+                        <p>See also <span class="literal">xref_externalLatencyMin</span>,
+                                   <span class="literal">xref_externalLatencyMax</span></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">gameUpdateHertz</span>
@@ -445,9 +447,8 @@
                      <li>
                         <p><em class="emphasis"><span class="literal">internalInterface</span></em><em class="emphasis"> (String)</em></p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>
+                                      <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
                         <p>Network adapter interface to use for internal communication, if
                                    not explicitly set by the server component.
                         </p>
@@ -475,31 +476,27 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">baseAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.8.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>.
+                                 <p><span class="literal">baseAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.10.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">cellApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                                 <p><span class="literal">cellApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.12.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">cellAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                                 <p><span class="literal">cellAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellAppMgr_Configuration_Options" title="2.13.&nbsp;CellAppMgr Configuration Options">CellAppMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">dbMgr</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.12.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>.
+                                 <p><span class="literal">dbMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.14.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
@@ -534,36 +531,31 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">baseAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.8.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>.
+                                 <p><span class="literal">baseAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.10.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">cellApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                                 <p><span class="literal">cellApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.12.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">cellAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                                 <p><span class="literal">cellAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.12.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">dbMgr</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.12.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>.
+                                 <p><span class="literal">dbMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.14.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">reviver</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.14.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
+                                 <p><span class="literal">reviver</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.16.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
@@ -587,36 +579,31 @@
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
-                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                 <p><span class="literal">baseApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">baseAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.8.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>.
+                                 <p><span class="literal">baseAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.10.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">cellApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                                 <p><span class="literal">cellApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.12.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">cellAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                                 <p><span class="literal">cellAppMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.12.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">dbMgr</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.12.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>.
+                                 <p><span class="literal">dbMgr</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.14.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.13.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
+                                 <p><span class="literal">loginApp</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_LoginApp_Configuration_Options" title="2.15.&nbsp;LoginApp Configuration Options">LoginApp Configuration Options</a>.
                                  </p>
                               </li>
                               <li>
-                                 <p><span class="literal">reviver</span> <span class="symbol">&#8208;</span>
-                                                For details, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.14.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
+                                 <p><span class="literal">reviver</span> <span class="symbol">&#8208;</span> For details, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.16.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
                                  </p>
                               </li>
                            </ul>
@@ -627,17 +614,16 @@
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">loggerID</span>
-                                      (Integer)</em></p>
+                                      (String)</em></p>
                         <p>The ID used by the process when registering with MessageLoggers.
                                    If this ID does not match a MessageLogger's filter, the process will
                                    not log to that MessageLogger. (For details on MessageLogger, see
-                                   <a href="ch03.html#xref_MessageLogger" title="3.2.1.&nbsp;MessageLogger">MessageLogger</a>).
+                                   <a href="ch03.html#xref_MessageLogger" title="3.2.&nbsp;Message Logger">Message Logger</a>).
                         </p>
-                        <p>The value range of the ID is 0-255.</p>
                         <p>Multiple BigWorld servers can share the same logger process. If
                                    this behaviour is not desired, then you can use a unique loggerID per
-                                   server instance <span class="symbol">&#8208;</span> this will cause
-                                   MessageLogger to filter out all messages that do not match the
+                                   server instance <span class="symbol">&#8208;</span> this will
+                                   cause MessageLogger to filter out all messages that do not match the
                                    loggerID it has been told to monitor.
                         </p>
                      </li>
@@ -661,8 +647,9 @@
                                    at runtime using the <code class="code">logger/addSpamSuppressionPattern</code> and
                                    <code class="code">logger/delSpamSuppressionPattern</code> watchers.
                         </p>
-                        <p>Please see <code class="filename">bigworld/res/server/defaults.xml</code>
-                                   for an example of a suppression list.
+                        <p>Please see
+                                   <code class="filename">bigworld/res/server/production_defaults.xml</code> for
+                                   an example of a suppression list.
                         </p>
                      </li>
                      <li>
@@ -684,6 +671,36 @@
                         </p>
                         <p>See the BaseApp's configuration option externalInterface for
                                    accepted formats.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis">networkCompression/external
+                                      (String)</em></p>
+                        <p>The type of compress to use on large some external messages sent
+                                   over the network. The supported options are <span class="literal">NONE</span>
+                                   and <span class="literal">ZIP</span>. For zip compression, a compression level
+                                   can be set between 1 and 9 with 1 being the fastest and 9 being the
+                                   best compression.
+                        </p><pre class="programlisting">&lt;networkCompression&gt;
+  &lt;internal&gt; ZIP &lt;level&gt; 3 &lt;/level&gt; &lt;/internal&gt;
+  &lt;external&gt; NONE &lt;/external&gt;
+&lt;/networkCompression&gt;</pre><p>This setting can be overwritten entity type via
+                                   <span class="literal">NetworkCompression/external</span> section of the entity
+                                   type's <code class="filename">.def</code> file.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis">networkCompression/internal
+                                      (String)</em></p>
+                        <p>The type of compress to use on some large internal messages sent
+                                   over the network.
+                        </p>
+                        <p>This setting can be overwritten entity type via
+                                   <span class="literal">NetworkCompression/internal</span> section of the entity
+                                   type's <code class="filename">.def</code> file.
+                        </p>
+                        <p>See <span class="literal">networkCompression/external</span> for more
+                                   information.
                         </p>
                      </li>
                      <li>
@@ -796,22 +813,18 @@
                                  <p>All CellApps are dead.</p>
                               </li>
                               <li>
-                                 <p>Currently, the following scenarios are handled:</p>
+                                 <p>An attempt to restore Base entities after a BaseApp crash
+                                                fails. This could happen if:
+                                 </p>
                                  <div class="itemizedlist">
                                     <ul type="square">
                                        <li>
                                           <p>All BaseApps are dead.</p>
                                        </li>
                                        <li>
-                                          <p>Old BaseApp fault tolerance style is being used, and
-                                                             there are no backup BaseApps.
-                                          </p>
-                                       </li>
-                                       <li>
-                                          <p>Two BaseApps die in quick succession, and thus base
-                                                             entities originally residing on the first BaseApp are not
-                                                             restored from the second one to a third one, and are therefore
-                                                             lost forever.
+                                          <p>Two BaseApps die in quick succession. This can cause the
+                                                             loss of base entities that were on the first BaseApp to crash
+                                                             and being backed up on the second BaseApp to crash.
                                           </p>
                                        </li>
                                     </ul>
@@ -846,9 +859,8 @@
                                    corrupted packet is detected by Mercury (meaning that it has somehow
                                    passed the UDP checksum), you will see an error message like:
                         </p>
-                        <p><span class="literal">ERROR Nub::processFilteredPacket( 10.40.9.103:32823 ):
-                                      Packet (flags 178, size 1459) failed checksum (wanted 3dc56738, got
-                                      9fe7000a)</span></p>
+                        <p><span class="literal">ERROR Packet::validateChecksum: Packet (flags 178, size
+                                      1459) failed checksum (wanted 3dc56738, got 9fe7000a)</span></p>
                         <p>If after running servers for long enough and not seeing this
                                    error message you feel confident that the UDP checksum is reliable
                                    enough on your hardware, you can disable this option for a small
@@ -865,6 +877,24 @@
                         </p>
                      </li>
                      <li>
+                        <p><em class="emphasis"><span class="literal">tickStatsPeriod</span>
+                                      (Float)</em></p>
+                        <p>Number of seconds between ticking statistics that keep a moving
+                                   average. There can be a lot of statistics that need to be ticked. If
+                                   too much time is spent maintaining these statistics, consider
+                                   increasing this value. The time taken ticking statistics is measured
+                                   by the tickStats profile. For example, see
+                                   <code class="code">profiles/summaries/tickStats</code> watcher value.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">timeSyncPeriod</span>
+                                      (Float)</em></p>
+                        <p>Number of seconds between each synchronisation of game time
+                                   between CellAppMgr and other applications.
+                        </p>
+                     </li>
+                     <li>
                         <p><em class="emphasis"><span class="literal">useDefaultSpace</span>
                                       (Boolean)</em></p>
                         <p>Flag indicating whether to automatically create an initial space
@@ -877,11 +907,93 @@
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Network_Configuration_Options"></a>2.5.&nbsp;Network Configuration Options
+                        <h2 class="title" style="clear: both"><a name="d0e1179"></a>2.5.&nbsp;Billing System Configuration Options
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <p>The configuration options specified in this section relate to user
+                      authentication and billing systems.
+               </p>
+               <div class="itemizedlist">
+                  <ul type="disc">
+                     <li>
+                        <p><em class="emphasis"><span class="literal">billingSystem/authenticateViaBaseEntity</span>
+                                      (Boolean)</em></p>
+                        <p>This option is used to indicate that user authentication and
+                                   billing system integration will be done via base entity script.
+                        </p>
+                        <p>If <span class="literal">true</span>, the usual user authentication done
+                                   by DBMgr is bypassed and a base entity of type
+                                   <span class="literal">entityTypeForUnknownUsers</span> is always created. The
+                                   DBMgr attempts to load the entity with the username. If this does not
+                                   exist, a new entity is created.
+                        </p>
+                        <p>This new entity is not initially stored in the database. It is
+                                   up to the base entity script to call <code class="code">Base.writeToDB()</code> if
+                                   it wants the entity to persist.
+                        </p>
+                        <p>See also option
+                                   <span class="literal">entityTypeForUnknownUsers</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">billingSystem/entityTypeForUnknownUsers</span>
+                                      (String)</em></p>
+                        <p>This specifies the type of the entity to create when
+                                   <span class="literal">shouldAcceptUnknownUsers</span> or
+                                   <span class="literal">authenticateViaBaseEntity</span> are used.
+                        </p>
+                        <p>See also options <span class="literal">shouldAcceptUnknownUsers</span> and
+                                   <span class="literal">shouldRememberUnknownUsers</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">isPasswordHashed</span>
+                                      (Boolean)</em></p>
+                        <p>Flag indicating whether the password stored in the database's
+                                   <span class="literal">bigworldLogOnMapping</span> table is hashed. Hashing is
+                                   recommended for security reasons. With hashing, it is very difficult
+                                   to determine the original password from the database. For more
+                                   details, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch20.html#xref_bigworldLogOnMapping_Table" class="olink">Default Authentication via MySQL</a>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">billingSystem/shouldAcceptUnknownUsers</span>
+                                      (Boolean)</em></p>
+                        <p>If <span class="literal">true</span>, a user can log in with an unknown
+                                   login name and a new entity of type specified in
+                                   <span class="literal">entityType</span>ForUnknownUsers will be created.
+                        </p>
+                        <p>See also options <span class="literal">entityTypeForUnknownUsers</span>
+                                   and <span class="literal">shouldRememberUnknownUsers</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">billingSystem/shouldRememberUnknownUsers</span>
+                                      (Boolean)</em></p>
+                        <p>If <span class="literal">true</span>, the entity created for an unknown
+                                   user will be stored in the database and an account record will be
+                                   stored for this entity. This option is only used when
+                                   <span class="literal">shouldAcceptUnknownUsers</span> is
+                                   <span class="literal">true</span>.
+                        </p>
+                        <p>See also option
+                                   <span class="literal">shouldAcceptUnknownUsers</span>.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="xref_Network_Configuration_Options"></a>2.6.&nbsp;Network Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -896,7 +1008,7 @@
                       in order to handle packet resends.
                </p>
                <p>The maximum packet options defines a per channel type threshold to
-                      assist in preventing channels from using indefinate amounts of memory
+                      assist in preventing channels from using indefinite amounts of memory
                       while buffering overflow packets.
                </p>
                <div class="itemizedlist">
@@ -906,7 +1018,9 @@
                                       (Boolean)</em></p>
                         <p>Specifies whether the offending channel should raise a program
                                    assertion, effectively terminating the process, when the maximum
-                                   number of overflow packets has been reached.
+                                   number of overflow packets has been reached. This only applies to
+                                   internal channels and does not apply for channels to client
+                                   applications.
                         </p>
                      </li>
                      <li>
@@ -917,7 +1031,7 @@
                                    <span class="literal">ERROR</span> message, or <span class="literal">ASSERT</span>'ing if
                                    <span class="literal">&lt;isAssert&gt;</span> has been set to
                                    <span class="literal">true</span>. A value of <span class="literal">0</span> disables any
-                                   log messages and assertions from occuring.
+                                   log messages and assertions from occurring.
                         </p>
                      </li>
                      <li>
@@ -928,7 +1042,7 @@
                                    <span class="literal">ERROR</span> message, or <span class="literal">ASSERT</span>'ing if
                                    <span class="literal">&lt;isAssert&gt;</span> has been set to
                                    <span class="literal">true</span>. A value of <span class="literal">0</span> disables any
-                                   log messages and assertions from occuring.
+                                   log messages and assertions from occurring.
                         </p>
                      </li>
                      <li>
@@ -939,20 +1053,84 @@
                                    <span class="literal">ERROR</span> message, or <span class="literal">ASSERT</span>'ing if
                                    <span class="literal">&lt;isAssert&gt;</span> has been set to
                                    <span class="literal">true</span>. A value of <span class="literal">0</span> disables any
-                                   log messages and assertions from occuring.
+                                   log messages and assertions from occurring.
                         </p>
                         <p>An indexed channel is a channel that is used for communicating
-                                   directly to an entity.
+                                   directly between the cell and base parts of an entity.
                         </p>
                      </li>
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Load_Balancing_Configuration_Options"></a>2.6.&nbsp;Load Balancing Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_Network_Address_Translation_Configuration_Options"></a>2.7.&nbsp;Network Address Translation Configuration Options
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <p>The configuration options specified in this section relate to
+                      running the server behind a NAT (Network Address Translator). This may be
+                      useful during development to allow a BigWorld server to run behind a
+                      NAT'ing firewall.
+               </p>
+               <p>These configuration options are specified in file
+                      <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/bw.xml</span>
+                      under the section <span class="literal">&lt;networkAddressTranslation&gt;</span>,
+                      and are described below:
+               </p>
+               <div class="itemizedlist">
+                  <ul type="disc">
+                     <li>
+                        <p><em class="emphasis"><span class="literal">externalAddress</span>
+                                      (String)</em></p>
+                        <p>Address to be returned to client if he is outside the server
+                                   cluster LAN.
+                        </p>
+                        <p>If the client is outside the server cluster LAN (the option
+                                   localNetMask is used to determine that), then LoginApp will return the
+                                   IP address set in this option, instead of the address that the BaseApp
+                                   thinks it is on.
+                        </p>
+                        <p>This option is intended for use only during development, when
+                                   the machines that the BaseApps are running on do not have real IP
+                                   addresses (<em class="emphasis">i.e.</em>, they are behind a NAT'ing
+                                   firewall), but you still want clients to log in from the
+                                   Internet.
+                        </p>
+                        <p>See also option <span class="literal">localNetMask</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">localNetMask</span>
+                                      (String)</em></p>
+                        <p>Mask to be used against the client's IP address in order to
+                                   determine whether he is inside the server cluster LAN.
+                        </p>
+                        <p>The net mask is an IP address followed by the number of bits to
+                                   match. For example, <span class="literal">10.0.0.0/8</span> would match any IP
+                                   starting with 10 (<em class="emphasis">i.e.</em>,
+                                   <span class="literal">10.*.*.*</span>). The default is
+                                   <span class="literal">0.0.0.0/0</span>, in which case no redirecting will be
+                                   done.
+                        </p>
+                        <p>If it is determined that the client is not on the server cluster
+                                   LAN, the LoginApp will return the IP address set in option
+                                   externalAddress.
+                        </p>
+                        <p>See also option <span class="literal">externalAddress</span>.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="xref_Load_Balancing_Configuration_Options"></a>2.8.&nbsp;Load Balancing Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -1013,11 +1191,11 @@
                      </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e1275"></a>2.6.1.&nbsp;Entities Cardinality Configuration Options
+                           <h3 class="title"><a name="d0e1509"></a>2.8.1.&nbsp;Entities Cardinality Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -1064,11 +1242,11 @@
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_BaseApp_Configuration_Options"></a>2.7.&nbsp;BaseApp Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_BaseApp_Configuration_Options"></a>2.9.&nbsp;BaseApp Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -1107,9 +1285,7 @@
                                    value (less than a minute) since it only impacts the BaseApp machine
                                    and the load is independent of number of BaseApps - unless the
                                    secondary database directory is on a shared network drive. For more
-                                   details on secondary databases, see <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                                      Guide</span>'s chapter <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Secondary
-                                      Databases</span>.
+                                   details on secondary databases, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch08.html#xref_Secondary_Databases" class="olink">Secondary Databases</a>.
                         </p>
                         <p>This option is also available for CellAppMgr.</p>
                      </li>
@@ -1122,8 +1298,7 @@
                         <p>As a first level of fault tolerance, base entities can be copied
                                    to a backup BaseApp (<em class="emphasis">i.e.</em>, backup to RAM), while
                                    cell entities are copied to their base entity. For more details on
-                                   BaseApp and CellApp fault tolerance, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                                      Guide</span>'s chapter <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Fault Tolerance</span>.
+                                   BaseApp and CellApp fault tolerance, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch15.html" class="olink"><i>Fault Tolerance</i></a>.
                         </p>
                         <p>The value for this option is very dependant on the game. A small
                                    value means frequent backups, and consequently less lost data in case
@@ -1133,7 +1308,8 @@
                         <p>In general this period can be much smaller than the one
                                    specified in option archivePeriod.
                         </p>
-                        <p>See also option <span class="literal">backupPeriod</span> on <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.10.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
+                        <p>Setting this to 0 disables backups.</p>
+                        <p>See also option <span class="literal">backupPeriod</span> on <a href="ch02.html#xref_CellApp_Configuration_Options" title="2.12.&nbsp;CellApp Configuration Options">CellApp Configuration Options</a>.
                         </p>
                      </li>
                      <li>
@@ -1174,7 +1350,7 @@
                                    and so this option should be set to greater than
                                    <span class="literal">inactivityTimeout * gameUpdateHertz</span>.
                         </p>
-                        <p>See also option <span class="literal">inactivityTimeout</span> on <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a></p>
+                        <p>See also option <span class="literal">inactivityTimeout</span> on <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">createBaseElsewhereThreshold</span>
@@ -1205,10 +1381,10 @@
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">externalPort</span>
+                        <p><em class="emphasis"><span class="literal">externalPorts/port</span>
                                       (Integer)</em></p>
                         <p>Port that may be used for the BaseApp's external socket <span class="symbol">&#8208;</span> the BaseApp can have more than one
-                                   <span class="literal">externalPort</span> definition.
+                                   <span class="literal">externalPorts/port</span> definition.
                         </p>
                         <p>This option is useful when BaseApp is running behind a firewall
                                    and NAT port mappings need to be set up.
@@ -1218,27 +1394,31 @@
                                    definition.
                         </p>
                         <p>If this option is not specified, or all specified externalPorts
-                                   are taken. then the BaseApp will bind to any available port on the
+                                   are taken then the BaseApp will bind to any available port on the
                                    external interface.
-                        </p>
-                     </li>
+                        </p><pre class="programlisting">&lt;baseApp&gt;
+  &lt;externalPorts&gt;
+    &lt;port&gt; 40013 &lt;/port&gt;
+    &lt;port&gt; 40014 &lt;/port&gt;
+    &lt;port&gt; 40015 &lt;/port&gt;
+  &lt;/externalPorts&gt;
+&lt;/baseApp&gt;</pre></li>
                      <li>
                         <p><em class="emphasis"><span class="literal">inactivityTimeout</span>
-                                      (Integer)</em></p>
+                                      (Float)</em></p>
                         <p>Number of seconds that a proxy will proceed without
                                    communication from the client before it considers the connection to be
                                    dead.
                         </p>
-                        <p>See also option <span class="literal">clientOverflowLimit</span> on <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a></p>
+                        <p>See also option <span class="literal">clientOverflowLimit</span> on <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">internalInterface</span></em></p>
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
                         </p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>
+                                      <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">internalLatencyMax</span></em></p>
@@ -1296,43 +1476,6 @@
                                    packets from the server and wait for the lost packet to arrive. If the
                                    resend timeout is long, the user will notice a temporary halting of
                                    updates from the server.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">noSuchPortTimeout</span>
-                                      (Float)</em></p>
-                        <p>Number of seconds of grace given to a client connection
-                                   encountering a <span class="literal">REASON_NO_SUCH_PORT</span> error before the
-                                   connection is terminated.
-                        </p>
-                        <p>The <span class="literal">REASON_NO_SUCH_PORT</span> error indicates that
-                                   the host is no longer reachable, a condition that is sometimes
-                                   temporary, caused by intermittent network problems.
-                        </p>
-                        <p>Note that this setting is only approximate <span class="symbol">&#8208;</span> the timeout is shortened if the server sends
-                                   more than one packet per tick to the client.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">oldStyleBaseDestroy</span>
-                                      (Boolean)</em></p>
-                        <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. This option is planned for removal in BigWorld 2.0.
-                                      </em></p>
-                        <p>Flag indicating whether the destruction of a base entity should
-                                   be carried out like in BigWorld versions earlier than 1.6.
-                        </p>
-                        <p>In those versions, the base entity could be destroyed before the
-                                   cell entity; doing so would also destroy the cell entity. From
-                                   BigWorld 1.6 and later versions, the base entity must be destroyed
-                                   after the cell entity. Calling the method Base.destroy on an entity
-                                   that still has its cell part raises a Python exception.
-                        </p>
-                        <p>If this option is set to true, calling the method Base.destroy
-                                   on an entity with a cell part causes the method Base.destroyCellEntity
-                                   to be called. After the cell entity has been destroyed, it the
-                                   callback onLoseCell is not implemented on the base entity, then the
-                                   base entity is destroyed.
                         </p>
                      </li>
                      <li>
@@ -1402,7 +1545,7 @@
                      <li>
                         <p><em class="emphasis"><span class="literal">shouldResolveMailBoxes</span>
                                       (Boolean)</em></p>
-                        <p>Flag indicating whether a mailbox shoud be resolved to a Base
+                        <p>Flag indicating whether a mailbox should be resolved to a Base
                                    entity, when possible. If a mailbox refers to a Base entity on the
                                    local BaseApp, the entity is used instead of the mailbox.
                         </p>
@@ -1413,7 +1556,7 @@
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">verboseExternalNub</span>
+                        <p><em class="emphasis"><span class="literal">verboseExternalInterface</span>
                                       (Boolean)</em></p>
                         <p>Flag indicating whether to generate verbose log output related
                                    to external network traffic.
@@ -1440,7 +1583,7 @@
                                    <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/bw.xml</span>.
                         </p>
                         <p>For example, to set value of
-                                   <span class="literal">debug/baseapp.cpp</span> to 2:
+                                   <span class="literal">logger/cppThresholds/baseapp.cpp</span> to 2:
                         </p><pre class="programlisting">&lt;baseApp&gt;
   &lt;watcherValues&gt;
     &lt;debug&gt;
@@ -1448,38 +1591,25 @@
       ...</pre><p>Do not use this feature if there is a parameter that can be set
                                    directly. Like all configuration options, this one is only evaluated
                                    once. It means that if there is an entry for watcherValues in
-                                   <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/defaults.xml</span>,
+                                   <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/production_defaults.xml</code>,
                                    then all tags defined in it will be ignored if
-                                   <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/
-                                      bw.xml</span> also has an entry for
-                                   <span class="literal">watcherValues</span> (even if different tags are specified
-                                   in each one). This option is also available for CellApps.
+                                   <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/bw.xml</code>
+                                   also has an entry for <span class="literal">watcherValues</span> (even if
+                                   different tags are specified in each one). This option is also
+                                   available for CellApps.
                         </p>
                         <div class="informalfigure">
                            <div class="mediaobject"><img src="images/baseapp_configuration_option_watchervalues.png"><span class="caption">
                                  <p>File hierarchy</p></span></div>
                         </div>
                      </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">writePythonLog</span>
-                                      (Boolean)</em></p>
-                        <p>Flag indicating whether to write the output of Python scripts to
-                                   the local log file
-                                   <span class="literal">&lt;game_executable_folder&gt;/python.log</span>.
-                        </p>
-                        <p>This should generally be set to false, since the data is sent to
-                                   the central logger anyway, and the disk I/O generated by logging could
-                                   block the process.
-                        </p>
-                        <p>This option is also available for CellApps.</p>
-                     </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="xref_BaseApp_Secondary_Database_Configuration_Options"></a>2.7.1.&nbsp;Secondary Database Configuration Options
+                           <h3 class="title"><a name="xref_BaseApp_Secondary_Database_Configuration_Options"></a>2.9.1.&nbsp;Secondary Database Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -1496,9 +1626,7 @@
                            <p><em class="emphasis"><span class="literal">enable</span>
                                            (Boolean)</em></p>
                            <p>Flag indicating whether to use secondary databases.</p>
-                           <p>For more details about secondary databases, see <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming Guide
-                                           </span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Secondary
-                                           Databases</span>.
+                           <p>For more details about secondary databases, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch08.html#xref_Secondary_Databases" class="olink">Secondary Databases</a>.
                            </p>
                         </li>
                         <li>
@@ -1536,12 +1664,25 @@
                         </li>
                      </ul>
                   </div>
+                  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                     <h3 class="title">Note</h3>
+                     <p>It is not recommended to set the SQLite secondary database
+                                directory to reside on a network file-system. SQLite has specific
+                                requirements with regards to using file locking services from the
+                                file-system which may not be implemented properly for network
+                                file-systems.
+                     </p>
+                     <p>It is recommended that each BaseApp machine has a dedicated
+                                space on a local file-system for storing secondary database
+                                files.
+                     </p>
+                  </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e1860"></a>2.7.2.&nbsp;Packet Log Configuration Options
+                           <h3 class="title"><a name="d0e2042"></a>2.9.2.&nbsp;Packet Log Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -1593,11 +1734,11 @@
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e1917"></a>2.7.3.&nbsp;ID Configuration Options
+                           <h3 class="title"><a name="d0e2099"></a>2.9.3.&nbsp;ID Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -1625,17 +1766,18 @@
                            <p>Target number of IDs in the BaseApp's available ID pool when
                                         requesting IDs to the parent broker ID (in case it fell below
                                         <span class="literal">lowSize</span>), or returning IDs to it (in case it rose
-                                        above highLevel) <span class="symbol">&#8208;</span> for CellApps and
-                                        BaseApps, the parent ID broker is the CellAppMgr, while for
-                                        CellAppMgr it is DBMgr.
+                                        above highLevel) <span class="symbol">&#8208;</span> for
+                                        CellApps and BaseApps, the parent ID broker is the CellAppMgr, while
+                                        for CellAppMgr it is DBMgr.
                            </p>
                         </li>
                         <li>
                            <p><em class="emphasis"><span class="literal">highSize</span>
                                            (Integer)</em></p>
                            <p>Maximum number of IDs in the BaseApp's available ID pool
-                                        before IDs are returned to the parent ID broker <span class="symbol">&#8208;</span> for CellApps and BaseApps, the parent ID
-                                        broker is the CellAppMgr, while for CellAppMgr it is DBMgr.
+                                        before IDs are returned to the parent ID broker <span class="symbol">&#8208;</span> for CellApps and BaseApps, the
+                                        parent ID broker is the CellAppMgr, while for CellAppMgr it is
+                                        DBMgr.
                            </p>
                            <p>ID recycling is currently disabled, so this value is actually
                                         never used.
@@ -1647,18 +1789,19 @@
                            <p>Minimum number of IDs that should be available in the
                                         BaseApp's available ID pool before a request is sent to the parent
                                         ID broker to restore it to the value specified in configuration
-                                        option <span class="literal">desiredSize</span> <span class="symbol">&#8208;</span> for CellApps and BaseApps, the parent ID
-                                        broker is the CellAppMgr, while for CellAppMgr it is DBMgr.
+                                        option <span class="literal">desiredSize</span> <span class="symbol">&#8208;</span> for CellApps and BaseApps, the
+                                        parent ID broker is the CellAppMgr, while for CellAppMgr it is
+                                        DBMgr.
                            </p>
                         </li>
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e1982"></a>2.7.4.&nbsp;Client Upstream Limits
+                           <h3 class="title"><a name="d0e2164"></a>2.9.4.&nbsp;Client Upstream Limits
                            </h3>
                         </div>
                      </div>
@@ -1712,7 +1855,8 @@
                                           received messages that are dispatched, measured in bytes per
                                           second. When this limit is exceeded, a warning is emitted. No
                                           further warnings for this client of this type are emitted until
-                                          the incomng message data throughput drops below this limit.
+                                          the incoming message data throughput drops below this
+                                          limit.
                            </p>
                         </li>
                         <li>
@@ -1768,11 +1912,11 @@
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_BaseAppMgr_Configuration_Options"></a>2.8.&nbsp;BaseAppMgr Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_BaseAppMgr_Configuration_Options"></a>2.10.&nbsp;BaseAppMgr Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -1791,8 +1935,8 @@
                                    to be considered in overload, and thus reject new logins.
                         </p>
                         <p>Similar overload levels are specified for for any CellApp (by
-                                   option <span class="literal">&lt;cellAppOverloadLevel&gt;</span> <span class="symbol">&#8208;</span> for more details, see <a href="ch02.html#xref_CellAppMgr_Configuration_Options" title="2.11.&nbsp;CellAppMgr Configuration Options">CellAppMgr Configuration Options</a>), and for DBMgr (by
-                                   option <span class="literal">&lt;overloadLevel&gt;</span> <span class="symbol">&#8208;</span> for more details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.12.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>).
+                                   option <span class="literal">&lt;cellAppOverloadLevel&gt;</span> <span class="symbol">&#8208;</span> for more details, see <a href="ch02.html#xref_CellAppMgr_Configuration_Options" title="2.13.&nbsp;CellAppMgr Configuration Options">CellAppMgr Configuration Options</a>), and for DBMgr (by
+                                   option <span class="literal">&lt;overloadLevel&gt;</span> <span class="symbol">&#8208;</span> for more details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.14.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>).
                         </p>
                      </li>
                      <li>
@@ -1800,6 +1944,18 @@
                                       (Float)</em></p>
                         <p>Number of seconds for a BaseApp to respond before it is
                                    considered dead.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">createBaseRatio</span>
+                                      (Float)</em></p>
+                        <p>The number of BaseApps that a destination BaseApp will have
+                                   pointing to it. For example, if <span class="literal">createBaseRatio</span> is
+                                   4, the least loaded quarter of the machines will each have 4 BaseApps
+                                   choosing them as the destination to create Base entities.
+                        </p>
+                        <p>See also the option
+                                   <span class="literal">updateCreateBaseInfoPeriod</span>.
                         </p>
                      </li>
                      <li>
@@ -1812,7 +1968,7 @@
                                    backup to take over its IP address and ID. BaseApp non-responsiveness
                                    is determined by its backup, so a BaseApp running without a backup
                                    will never be reported as being non-responsive (see also configuration
-                                   option baseApp/backupTimeout in <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>).
+                                   option baseApp/backupTimeout in <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>).
                         </p>
                         <p>When this option is set to false, no signal is sent to the
                                    non-responsive BaseApp.
@@ -1826,9 +1982,8 @@
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
                         </p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>
+                                      <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">internalLatencyMax</span></em></p>
@@ -1864,40 +2019,23 @@
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">timeSyncPeriod</span>
+                        <p><em class="emphasis"><span class="literal">updateCreateBaseInfoPeriod</span>
                                       (Float)</em></p>
-                        <p>Number of seconds between each synchronisation of game time
-                                   between BaseAppMgr and CellAppMgr.
+                        <p>Time (in seconds) between updating all BaseApps with information
+                                   to assist them in creating entities on other BaseApps when using
+                                   <code class="classname">BigWorld</code><code class="methodname">.createBaseAnywhere()</code>.
                         </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">useNewStyleBackup</span>
-                                      (Boolean)</em></p>
-                        <p><em class="emphasis">Old-style backup is deprecated and its use is not
-                                      recommended. It is planned for removal in BigWorld 2.0.
-                                      </em></p>
-                        <p>Flag indicating whether Distributed BaseApp Backup method should
-                                   be used, instead of the older Non-distributed BaseApp Backup
-                                   method.
-                        </p>
-                        <p>In the Distributed BaseApp Backup method, a BaseApp's entities
-                                   are backed up in various other real BaseApps, while in the
-                                   Non-distributed BaseApp Backup method, various BaseApps would back up
-                                   all their entities on a dedicated Backup BaseApp.
-                        </p>
-                        <p>For details, see <a href="ch05.html#xref_BaseApp_Fault_Tolerance" title="5.2.&nbsp;BaseApp Fault Tolerance">BaseApp Fault Tolerance</a>, and the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                      Components</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BaseApp</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Fault
-                                      tolerance</span>.
+                        <p>See also the option <span class="literal">createBaseRatio</span>.
                         </p>
                      </li>
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Bots_Configuration_Options"></a>2.9.&nbsp;Bots Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_Bots_Configuration_Options"></a>2.11.&nbsp;Bots Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -1925,6 +2063,18 @@
                         <p><em class="emphasis"><span class="literal">controllerType</span>
                                       (String)</em></p>
                         <p>Type of the controller to be created with bot.</p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">interface</span>
+                                      (String)</em></p>
+                        <p>Network adapter interface to use for game communication. For
+                                   example: <span class="literal">eth0</span>. If not specified, the process will
+                                   bind to all interfaces and report one of them. This should be
+                                   appropriate in most situations.
+                        </p>
+                        <p>See the BaseApp's configuration option externalInterface for
+                                   accepted formats.
+                        </p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">password</span>
@@ -1992,13 +2142,15 @@
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis">standinEntity(String)</em></p>
+                        <p><em class="emphasis"><span class="literal">standinEntity</span>
+                                      (String)</em></p>
                         <p>Default entity script to be used when a specific Entity type
                                    does not have its corresponding game script.
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis">loginMD5Digest(String)</em></p>
+                        <p><em class="emphasis"><span class="literal">loginMD5Digest</span>
+                                      (String)</em></p>
                         <p>MD5 digest string (in hex readable form) for server
                                    login.
                         </p>
@@ -2018,11 +2170,11 @@
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_CellApp_Configuration_Options"></a>2.10.&nbsp;CellApp Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_CellApp_Configuration_Options"></a>2.12.&nbsp;CellApp Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -2035,6 +2187,73 @@
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
+                        <p><em class="emphasis">aoiUpdateSchemes
+                                      (Section)</em></p>
+                        <p>This section contains a list of the different schemes that can
+                                   be used when calculating the update rate of entities in an Area of
+                                   Interest. The update rate of entities depends on their distance from
+                                   the viewing client. The greater their update delta, the less frequent
+                                   an entity's position is sent to the viewing client.
+                        </p>
+                        <p>Each scheme contains the following values:</p>
+                        <div class="itemizedlist">
+                           <ul type="circle">
+                              <li>
+                                 <p>name - The name of the scheme.</p>
+                              </li>
+                              <li>
+                                 <p>minDelta - The update delta when the distance to the entity
+                                                is 0 metres.
+                                 </p>
+                              </li>
+                              <li>
+                                 <p>maxDelta - The update delta when the distance to the entity
+                                                is 500 metres.
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                        <p>The delta value for distances between this is calculated by a
+                                   linear interpolation between these two points.
+                        </p>
+                        <p>Setting minDelta to 1 and maxDelta to 101 means the delta for a
+                                   given distance would be:
+                        </p><pre class="programlisting">delta = 1 + 0.2 * distance</pre><p>This means that entities at 20 metres (with a delta of 5) would
+                                   be updated roughly 4.2 times more frequently than entities at metres
+                                   (with a delta of 21).
+                        </p>
+                        <p>The scheme can be set for an entity with the
+                                   <code class="property">Entity.aoiUpdateScheme</code> property or for an entity
+                                   pair with the <code class="methodname">Entity.setAoIUpdateScheme()</code>
+                                   method.
+                        </p><pre class="programlisting">&lt;cellApp&gt;
+  ...
+  &lt;aoiUpdateSchemes&gt;
+
+    &lt;scheme&gt;
+      &lt;name&gt; default &lt;/name&gt;
+      &lt;minDelta&gt; 1 &lt;/minDelta&gt;
+      &lt;maxDelta&gt; 101 &lt;/maxDelta&gt;
+    &lt;/scheme&gt;
+
+    &lt;!-- Update rate is not dependant on distance. This could be used on entities that are in sniper scope, for example. --&gt;
+    &lt;scheme&gt;
+      &lt;name&gt; sniper &lt;/name&gt;
+      &lt;minDelta&gt; 10 &lt;/minDelta&gt;
+      &lt;maxDelta&gt; 10 &lt;/maxDelta&gt;
+    &lt;/scheme&gt;
+
+    &lt;!-- Update twice as frequently as other entities at the same distance. Useful for large entities like dragons. --&gt;
+    &lt;scheme&gt;
+      &lt;name&gt; largeEntity &lt;/name&gt;
+      &lt;minDelta&gt; 0.5 &lt;/minDelta&gt;
+      &lt;maxDelta&gt; 50.5 &lt;/maxDelta&gt;
+    &lt;/scheme&gt;
+
+  &lt;/aoiUpdateSchemes&gt;
+&lt;/cellApp&gt;
+</pre></li>
+                     <li>
                         <p><em class="emphasis"><span class="literal">backupPeriod</span>
                                       (Float)</em></p>
                         <p>Number of seconds between backups of each cell entity to its
@@ -2043,16 +2262,17 @@
                         <p>As a first level of fault tolerance, cell entities are copied to
                                    their base entities, while base entities can be copied to their backup
                                    BaseApps. For more details on BaseApp and CellApp fault tolerance, see
-                                   the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                      Programming Guide</span>'s chapter <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Fault Tolerance</span>.
+                                   the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s chapter
+                                   <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch15.html" class="olink"><i>Fault Tolerance</i></a>.
                         </p>
                         <p>The value for this option is very dependant on the game. A small
                                    value means frequent backups, and consequently less lost data in case
                                    a CellApp fails. But backups cost bandwidth and CPU on the
                                    CellApp.
                         </p>
+                        <p>Setting this to 0 disables backups.</p>
                         <p>See also options <span class="literal">archivePeriod</span> and
-                                   <span class="literal">backupPeriod</span> on <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.7.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
+                                   <span class="literal">backupPeriod</span> on <a href="ch02.html#xref_BaseApp_Configuration_Options" title="2.9.&nbsp;BaseApp Configuration Options">BaseApp Configuration Options</a>.
                         </p>
                      </li>
                      <li>
@@ -2082,14 +2302,13 @@
                         <p><em class="emphasis"><span class="literal">defaultAoIRadius</span>
                                       (Float)</em></p>
                         <p>The default AoI radius of new cell entities for proxy entities
-                                   when they are created. See also the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">CellApp Python API
-                                      documentation</span>'s entry <em class="emphasis">Main <span class="symbol">&#8594;</span> Cell <span class="symbol">&#8594;</span>
-                                      BigWorld <span class="symbol">&#8594;</span> Classes <span class="symbol">&#8594;</span> Entity <span class="symbol">&#8594;</span>
+                                   when they are created. See also the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/cellapp/index.html" class="olink">CellApp Python API</a>'s entry <em class="emphasis">Main
+                                      <span class="symbol">&#8594;</span> Cell <span class="symbol">&#8594;</span> BigWorld <span class="symbol">&#8594;</span> Classes <span class="symbol">&#8594;</span> Entity <span class="symbol">&#8594;</span>
                                       <span class="literal">setAoIRadius</span></em>.
                         </p>
                         <p><em class="emphasis">Note</em>: If this is larger than
-                                   <span class="literal">GHOST_DISTANCE</span> (500m), then the AoI radius of
-                                   player entities is clamped to <span class="literal">GHOST_DISTANCE</span> across
+                                   the option <span class="literal">ghostDistance</span>, then the AoI radius of
+                                   player entities is clamped to <span class="literal">ghostDistance</span> across
                                    cell boundaries.
                         </p>
                      </li>
@@ -2097,10 +2316,11 @@
                         <p><em class="emphasis"><span class="literal">enforceGhostDecorators</span>
                                       (Boolean)</em></p>
                         <p>Specifies whether to enforce the requirement of adding a
-                                   decorator to methods that can safely be called on ghost entities.
+                                   decorator to methods that can safely be called on ghost
+                                   entities.
                         </p>
-                        <p>When enabled, methods that have not been labelled as safe and are
-                                   called on an entity that could be a ghost will generate a Python
+                        <p>When enabled, methods that have not been labelled as safe and
+                                   are called on an entity that could be a ghost will generate a Python
                                    exception. To be considered safe, the method must either be described
                                    in the <code class="filename">.def</code> file or be decorated with
                                    <code class="code">@bwdecorators.callableOnGhost</code>.
@@ -2112,11 +2332,12 @@ class Table( BigWorld.Entity ):
                      <li>
                         <p><em class="emphasis"><span class="literal">entitySpamSize</span>
                                       (Integer)</em></p>
-                        <p>Number of bytes that an entity can send to another before a
-                                   warning message is displayed.
+                        <p>Number of bytes that an entity in a player's AoI can add to an
+                                   update packet to that player before a warning message is
+                                   displayed.
                         </p>
                         <p>This can be useful to identify entities that are causing a lot
-                                   of network traffic.
+                                   of downstream network traffic.
                         </p>
                      </li>
                      <li>
@@ -2125,6 +2346,13 @@ class Table( BigWorld.Entity ):
                         <p>Specifies whether to avoid normal chunk unloading when the
                                    system is being shut down. This considerably speeds up the shutdown
                                    process.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">ghostDistance</span>
+                                      (Float)</em></p>
+                        <p>The distance in metres outside the active cell boundaries where
+                                   entities will be ghosted.
                         </p>
                      </li>
                      <li>
@@ -2140,8 +2368,8 @@ class Table( BigWorld.Entity ):
                      <li>
                         <p><em class="emphasis"><span class="literal">ghostUpdateHertz</span>
                                       (Integer)</em></p>
-                        <p>Number of seconds between the flushing messages to channels of
-                                   neighbouring CellApps.
+                        <p>Number of times per second channels to neighbouring CellApps are
+                                   flushed.
                         </p>
                         <p>Channels are created between neighbouring CellApps. Messages
                                    (such as ghost data) sent over these channels are not sent
@@ -2150,13 +2378,6 @@ class Table( BigWorld.Entity ):
                         </p>
                         <p>If the value of this option is decreased, then there will be
                                    more lag for cross-cell communications.
-                        </p>
-                        <p>Be careful about increasing this value, because CellApps have a
-                                   fixed window size, after which they are flagged as dead. This window
-                                   is currently 4096, which mean that if 4,096 packets are not
-                                   acknowledged, then the CellApp is flagged as dead. At 50Hz, this takes
-                                   around a minute, which is enough to survive occasional heavy bouts of
-                                   unexpected swapping.
                         </p>
                         <p><em class="emphasis">Note</em>: Bases always flush
                                    messages immediately.
@@ -2167,9 +2388,9 @@ class Table( BigWorld.Entity ):
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
                         </p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">internalLatencyMax</span></em></p>
@@ -2367,7 +2588,7 @@ class Table( BigWorld.Entity ):
                      <li>
                         <p><em class="emphasis"><span class="literal">shouldResolveMailBoxes</span>
                                       (Boolean)</em></p>
-                        <p>Flag indicating whether a mailbox shoud be resolved to a Cell
+                        <p>Flag indicating whether a mailbox should be resolved to a Cell
                                    entity, when possible. If a mailbox refers to a Cell entity on the
                                    local CellApp, the entity is used instead of the mailbox.
                         </p>
@@ -2394,10 +2615,8 @@ class Table( BigWorld.Entity ):
                               </li>
                               <li>
                                  <p>Property access will be read-only, and limited to
-                                                <span class="literal">CELL_PUBLIC</span> (or more public) properties (for
-                                                more details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                                                   Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Properties</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Data
-                                                   distribution</span>).
+                                                <span class="literal">CELL_PUBLIC</span> (or more public)
+                                                properties<sup>[<a name="d0e3057" href="#ftn.d0e3057">1</a>]</sup>.
                                  </p>
                               </li>
                               <li>
@@ -2429,7 +2648,7 @@ class Table( BigWorld.Entity ):
                                    <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/bw.xml</span>.
                         </p>
                         <p>For example, to set the watcher value
-                                   <span class="literal">debug/cellapp.cpp</span> to 2:
+                                   <span class="literal">logger/cppThresholds/cellapp.cpp</span> to 2:
                         </p><pre class="programlisting">&lt;cellApp&gt;
   &lt;watcherValues&gt;
     &lt;debug&gt;
@@ -2439,7 +2658,7 @@ class Table( BigWorld.Entity ):
                         </p>
                         <p>Like all configuration options, this one is only evaluated once.
                                    It means that if there is an entry for watcherValues in
-                                   <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/defaults.xml</span>,
+                                   <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/production_defaults.xml</code>,
                                    then all tags defined in it will be ignored if
                                    <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/server/bw.xml</span>
                                    also has an entry for <span class="literal">watcherValues</span> (even if
@@ -2451,25 +2670,13 @@ class Table( BigWorld.Entity ):
                                  <p>File hierarchy</p></span></div>
                         </div>
                      </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">writePythonLog</span>
-                                      (Boolean)</em></p>
-                        <p>Indicates if output of Python scripts should be written to
-                                   <span class="literal"><em class="replaceable"><code>&lt;game_executable_folder&gt;</code></em>/python.log</span>.
-                        </p>
-                        <p>This should generally be set to false, since the data is sent to
-                                   the central logger anyway, and the disk I/O generated by logging could
-                                   block the process.
-                        </p>
-                        <p>This option is also available for BaseApps.</p>
-                     </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2921"></a>2.10.1.&nbsp;Noise Configuration Options
+                           <h3 class="title"><a name="d0e3128"></a>2.12.1.&nbsp;Noise Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -2497,10 +2704,7 @@ class Table( BigWorld.Entity ):
                                            (Float)</em></p>
                            <p>Distance in metres through which a noise is propagated.</p>
                            <p>This value is multiplied by the level of a noise. For details,
-                                        see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">CellApp
-                                           Python API documentation</span>'s entry <em class="emphasis">Main
-                                           <span class="symbol">&#8594;</span> Cell <span class="symbol">&#8594;</span> BigWorld <span class="symbol">&#8594;</span>
-                                           Classes <span class="symbol">&#8594;</span> Entity <span class="symbol">&#8594;</span>
+                                        see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/cellapp/index.html" class="olink">CellApp Python API</a>'s entry <em class="emphasis">Main <span class="symbol">&#8594;</span> Cell <span class="symbol">&#8594;</span> BigWorld <span class="symbol">&#8594;</span> Classes <span class="symbol">&#8594;</span> Entity <span class="symbol">&#8594;</span>
                                            <span class="literal">makeNoise</span></em>.
                            </p>
                         </li>
@@ -2511,22 +2715,20 @@ class Table( BigWorld.Entity ):
                                         second), the entity makes a noise.
                            </p>
                            <p>This is done via script method
-                                        <span class="literal">Entity.makeNoise</span> <span class="symbol">&#8208;</span>
-                                        for noises generated this way, the parameter event and info are set
-                                        to 0. For details, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">CellApp Python API
-                                           documentation</span>'s entry <em class="emphasis">Main <span class="symbol">&#8594;</span> Cell <span class="symbol">&#8594;</span>
-                                           BigWorld <span class="symbol">&#8594;</span> Classes <span class="symbol">&#8594;</span> Entity <span class="symbol">&#8594;</span>
+                                        <span class="literal">Entity.makeNoise</span> <span class="symbol">&#8208;</span> for noises generated this way, the
+                                        parameter event and info are set to 0. For details, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/cellapp/index.html" class="olink">CellApp Python API</a>'s entry <em class="emphasis">Main
+                                           <span class="symbol">&#8594;</span> Cell <span class="symbol">&#8594;</span> BigWorld <span class="symbol">&#8594;</span> Classes <span class="symbol">&#8594;</span> Entity <span class="symbol">&#8594;</span>
                                            <span class="literal">makeNoise</span></em>.
                            </p>
                         </li>
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e3020"></a>2.10.2.&nbsp;ID Configuration Options
+                           <h3 class="title"><a name="d0e3225"></a>2.12.2.&nbsp;ID Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -2554,17 +2756,18 @@ class Table( BigWorld.Entity ):
                            <p>Target number of IDs in the CellApp's available ID pool when
                                         requesting IDs to the parent broker ID (in case it fell below
                                         <span class="literal">lowSize</span>), or returning IDs to it (in case it rose
-                                        above <span class="literal">highSize</span>) <span class="symbol">&#8208;</span>
-                                        for CellApps and BaseApps, the parent ID broker is the CellAppMgr,
-                                        and for CellAppMgr it is DBMgr.
+                                        above <span class="literal">highSize</span>) <span class="symbol">&#8208;</span> for CellApps and BaseApps, the
+                                        parent ID broker is the CellAppMgr, and for CellAppMgr it is
+                                        DBMgr.
                            </p>
                         </li>
                         <li>
                            <p><em class="emphasis"><span class="literal">highSize</span>
                                            (Integer)</em></p>
                            <p>Maximum number of IDs in the CellApp's available ID pool
-                                        before IDs are returned to the parent ID broker <span class="symbol">&#8208;</span> for CellApps and BaseApps, the parent ID
-                                        broker is the CellAppMgr, and for CellAppMgr it is DBMgr.
+                                        before IDs are returned to the parent ID broker <span class="symbol">&#8208;</span> for CellApps and BaseApps, the
+                                        parent ID broker is the CellAppMgr, and for CellAppMgr it is
+                                        DBMgr.
                            </p>
                            <p>ID recycling is currently disabled, so this value is actually
                                         never used.
@@ -2576,19 +2779,19 @@ class Table( BigWorld.Entity ):
                            <p>Minimum number of IDs that should be available in the
                                         CellApp's available ID pool before a request is sent to the parent
                                         ID broker to restore it to the value specified in configuration
-                                        option desiredSize <span class="symbol">&#8208;</span> for CellApps and
-                                        BaseApps, the parent ID broker is the CellAppMgr, and for CellAppMgr
-                                        it is DBMgr.
+                                        option desiredSize <span class="symbol">&#8208;</span> for
+                                        CellApps and BaseApps, the parent ID broker is the CellAppMgr, and
+                                        for CellAppMgr it is DBMgr.
                            </p>
                         </li>
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e3085"></a>2.10.3.&nbsp;CellApp Profiles Configuration Options
+                           <h3 class="title"><a name="d0e3290"></a>2.12.3.&nbsp;CellApp Profiles Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -2717,11 +2920,11 @@ class Table( BigWorld.Entity ):
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_CellAppMgr_Configuration_Options"></a>2.11.&nbsp;CellAppMgr Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_CellAppMgr_Configuration_Options"></a>2.13.&nbsp;CellAppMgr Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -2754,17 +2957,7 @@ class Table( BigWorld.Entity ):
                         <p>This option is also available for BaseApps.</p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">archiveSpaceData</span>
-                                      (Boolean)</em></p>
-                        <p>Boolean indicating whether or not the space data should be
-                                   archived to the database during each <span class="literal">archivePeriod</span>.
-                                   Disabling this will help reduce database load if your game is not
-                                   reliant on recovering spaces to their previous configuration after a
-                                   server crash.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">cellAppLoadLowerBound</span>
+                        <p><em class="emphasis"><span class="literal">cellAppLoad/lowerBound</span>
                                       (Float)</em></p>
                         <p>Minimum average load that a CellApp must achieve before being
                                    retired.
@@ -2784,7 +2977,7 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">cellAppLoadSafetyBound</span>
+                        <p><em class="emphasis"><span class="literal">cellAppLoad/safetyBound</span>
                                       (Float)</em></p>
                         <p>Limit that the load balancing can increase a cell's load
                                    to.
@@ -2795,7 +2988,7 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">cellAppLoadSafetyRatio</span>
+                        <p><em class="emphasis"><span class="literal">cellAppLoad/safetyRatio</span>
                                       (Float)</em></p>
                         <p>Cell's average load safety ratio.</p>
                         <p>When the average load of the cells in a space is high, the limit
@@ -2805,14 +2998,14 @@ class Table( BigWorld.Entity ):
                         </p>
                         <div class="blockquote">
                            <blockquote class="blockquote">
-                              <p>max( cellAppLoadSafetyRatio, avgCellAppLoad *
+                              <p>max( cellAppLoadSafetyBound, avgCellAppLoad *
                                            cellAppLoadSafetyRatio )
                               </p>
                            </blockquote>
                         </div>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">cellAppLoadUpperBound</span>
+                        <p><em class="emphasis"><span class="literal">cellAppLoad/upperBound</span>
                                       (Float)</em></p>
                         <p>Minimum average load that a CellApp must achieve before a new
                                    cell is considered to be required.
@@ -2830,7 +3023,7 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">cellAppLoadWarningLevel</span>
+                        <p><em class="emphasis"><span class="literal">cellAppLoad/warningLevel</span>
                                       (Float)</em></p>
                         <p>Minimum value that average load of CellApps must achieve (when
                                    there are no other CellApps available to share the load) before
@@ -2838,14 +3031,14 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">cellAppOverloadLevel</span>
+                        <p><em class="emphasis"><span class="literal">cellAppLoad/overloadLevel</span>
                                       (Float)</em></p>
                         <p>Minimum load level that any CellApp should reach for the system
                                    to be considered in overload, and thus reject new logins.
                         </p>
                         <p>Similar overload levels are specified for all BaseApps (by
-                                   option <span class="literal">&lt;baseAppOverloadLevel&gt;</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.8.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>), and for DBMgr (by
-                                   option <span class="literal">&lt;overloadLevel&gt;</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.12.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>).
+                                   option <span class="literal">&lt;baseAppOverloadLevel&gt;</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.10.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>), and for DBMgr (by
+                                   option <span class="literal">&lt;overloadLevel&gt;</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_DBMgr_Configuration_Options" title="2.14.&nbsp;DBMgr Configuration Options">DBMgr Configuration Options</a>).
                         </p>
                      </li>
                      <li>
@@ -2866,8 +3059,8 @@ class Table( BigWorld.Entity ):
                         </p>
                         <p>It is important to terminate the non-responsive CellApp, in
                                    order to prevent duplicate entities, since some of the entities on the
-                                   non-responsive CellApp will be recreated on neighbouring CellApps (for
-                                   details, see <a href="ch05.html#xref_CellApp_Fault_Tolerance" title="5.1.&nbsp;CellApp Fault Tolerance">CellApp Fault Tolerance</a>).
+                                   non-responsive CellApp will be recreated on neighbouring
+                                   CellApps<sup>[<a name="d0e3615" href="#ftn.d0e3615">2</a>]</sup>.
                         </p>
                         <p>When this option is set to false, no signal will be sent to the
                                    non-responsive CellApp. This option should only be used for debugging
@@ -2880,9 +3073,9 @@ class Table( BigWorld.Entity ):
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
                         </p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">internalLatencyMax</span></em></p>
@@ -2939,6 +3132,40 @@ class Table( BigWorld.Entity ):
                                    add to a space to help it initially load its geometry.
                         </p>
                         <p>To disable this feature, set this value to 0.</p>
+                        <p>See also <span class="literal">minLoadingArea</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">metaLoadBalanceScheme</span>
+                                      (Integer)</em></p>
+                        <p>The type of scheme that should be used to determine which Spaces
+                                   should be a priority to meta load balanced. Current valid values
+                                   are:
+                        </p>
+                        <div class="itemizedlist">
+                           <ul type="circle">
+                              <li>
+                                 <p><em class="emphasis">0</em> - Largest Space
+                                                First
+                                 </p>
+                                 <p>The largest space contained in the most loaded group of
+                                                connected CellApps will be chosen as the candidate for adding a
+                                                new Cell into.
+                                 </p>
+                              </li>
+                              <li>
+                                 <p><em class="emphasis">1</em> - Smallest Space
+                                                First
+                                 </p>
+                                 <p>The smallest space contained in the most loaded group of
+                                                connected CellApps will be chosen as the candidate for adding a
+                                                new Cell into. This will enable the space to migrate off onto
+                                                another CellApp thus reducing the overall load of the heavily
+                                                loaded group.
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">metaLoadBalancePeriod</span>
@@ -2956,8 +3183,20 @@ class Table( BigWorld.Entity ):
                                    attempting to initially load the geometry of a space.
                         </p>
                         <p>If the average area is less than this value, then no more cells
-                                   will be added to the meta-load balancing <span class="symbol">&#8208;</span> this is meant to prevent too many cells being
-                                   allocated to small spaces.
+                                   will be added to the meta-load balancing <span class="symbol">&#8208;</span> this is meant to prevent too many
+                                   cells being allocated to small spaces.
+                        </p>
+                        <p>The number of cells that will be used for loading a space can be
+                                   thought of as:
+                        </p>
+                        <div class="blockquote">
+                           <blockquote class="blockquote">
+                              <div class="equation"><a name="d0e3765"></a><p class="title"><b>Equation&nbsp;2..&nbsp;</b></p>
+                                 <div class="equation-contents"><span class="mathphrase">min( maxLoadingCells, spaceGeometrySize /
+                                                   minLoadingArea )</span></div>
+                              </div><br class="equation-break"></blockquote>
+                        </div>
+                        <p>See also <span class="literal">maxLoadingCells</span>.
                         </p>
                      </li>
                      <li>
@@ -2982,11 +3221,11 @@ class Table( BigWorld.Entity ):
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_DBMgr_Configuration_Options"></a>2.12.&nbsp;DBMgr Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_DBMgr_Configuration_Options"></a>2.14.&nbsp;DBMgr Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -3008,99 +3247,15 @@ class Table( BigWorld.Entity ):
                                    is sent to the server. This is to ensure that the client is using
                                    resources consistent with the server's.
                         </p>
-                        <p>This should be true if you are using egclient or bots to log in,
+                        <p>This should be true if you are using either an example client,
+                                   as found in <code class="filename">bigworld/src/examples</code>, or bots to log in,
                                    since those programs do not read the entity definition files (named
                                    <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/<em class="replaceable"><code>&lt;entity&gt;</code></em>.def</span>).
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">backupDatabases</span>
-                                      (List)</em></p>
-                        <p><em class="emphasis">Only valid when the MySQL database layer is
-                                      used.</em></p>
-                        <p>Each element in the list describes a backup database to use in
-                                   case the primary database fails. The format of this list is:
-                        </p><pre class="programlisting">&lt;label&gt;
-  &lt;host&gt;     <em class="replaceable"><code>hostname</code></em>      &lt;/host&gt;
-  &lt;username&gt; <em class="replaceable"><code>username</code></em>      &lt;/username&gt;
-  &lt;password&gt; <em class="replaceable"><code>password</code></em>      &lt;/password&gt;
-  &lt;databaseName&gt;     <em class="replaceable"><code>database_name</code></em> &lt;/databaseName&gt;
-&lt;/label&gt;</pre><p>For details on each tag, see <span class="literal">host</span>,
-                                   <span class="literal">username</span>, <span class="literal">password</span> and
-                                   <span class="literal">databaseName</span> configuration options in this
-                                   table.
-                        </p>
-                        <p>If one of the above tags is not specified, then the backup
-                                   database is assumed to be the same as the primary one.
-                                   <span class="literal">&lt;label&gt;</span> can be any valid XML tag, and is
-                                   currently purely cosmetic.
-                        </p>
-                        <p>DBMgr immediately switches to a backup database when the
-                                   connection to the primary database unexpectedly fails. It assumes that
-                                   the backup database is an up-to-date replica of the primary one.
-                                   Database replication must be set up manually prior to using DBMgr's
-                                   automatic fail-over feature.
-                        </p>
-                        <p>If multiple backup databases are specified, then DBMgr connects
-                                   to them in the order specified in the configuration. If the last
-                                   backup database fails, then DBMgr tries to connect to the primary
-                                   database again. And so on.
-                        </p>
-                        <p><em class="emphasis">EXAMPLE:</em></p>
-                        <p>The example below configures two backup databases. Since
-                                   <span class="literal">username</span>, <span class="literal">password</span>, and
-                                   <span class="literal">name</span> of the second backup database are omitted,
-                                   they are inherited from the primary database <span class="symbol">&#8208;</span> <em class="emphasis">i.e.</em>,
-                                   <span class="literal">username</span> is <span class="literal">biguser</span>,
-                                   <span class="literal">password</span> is <span class="literal">bigpwd</span>, and
-                                   <span class="literal">databaseName</span> is
-                                   <span class="literal">fantasydemo</span>.
-                        </p><pre class="programlisting">&lt;dbMgr&gt;
-  &lt;host&gt;     dbnode01    &lt;/host&gt;
-  &lt;username&gt; biguser     &lt;/username&gt;
-  &lt;password&gt; bigpwd      &lt;/password&gt;
-  &lt;databaseName&gt;     fantasydemo &lt;/databaseName&gt;
-  &lt;backupDatabases&gt;
-    &lt;backup&gt;
-      &lt;host&gt;     dbnode02    &lt;/host&gt;
-      &lt;username&gt; bckpuser    &lt;/username&gt;
-      &lt;password&gt; bckpusrpass &lt;/password&gt;
-      &lt;databaseName&gt;     fantasy_bkp &lt;/databaseName&gt;
-    &lt;/backup&gt;
-    &lt;anotherBackup&gt;
-      &lt;host&gt; dbnode03 &lt;/host&gt;
-    &lt;/anotherBackup&gt;
-  &lt;/backupDatabases&gt;
-&lt;/dbMgr&gt;</pre></li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">clearRecoveryData</span>
-                                      (Boolean)</em></p>
-                        <p>Flag indicating whether the previous state of the server should
-                                   be cleared from the database.
-                        </p>
-                        <p>If set to true, then the previous state of the server is cleared
-                                   from the database, and is not loaded.
-                        </p>
-                        <p>If set to false, then the previous state of the server is loaded
-                                   from the database.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">createUnknown</span>
-                                      (Boolean)</em></p>
-                        <p>If <span class="literal">true</span>, a user can log in with an unknown
-                                   login name and a new entity of type specified in
-                                   <span class="literal">entityType</span> will be created. If
-                                   <span class="literal">loadUnknown</span> is also <span class="literal">true</span>, a new
-                                   entity is created only if an existing entity is not found.
-                        </p>
-                        <p>See also options <span class="literal">entityType</span>,
-                                   <span class="literal">loadUnknown</span> and
-                                   <span class="literal">rememberUnknown</span>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">databaseName</span></em></p>
+                        <p><em class="emphasis"><span class="literal">databaseName</span>
+                                      (String)</em></p>
                         <p><em class="emphasis">Only valid when the MySQL database layer is
                                       used.</em></p>
                         <p>Name of the underlying database to use.</p>
@@ -3133,19 +3288,6 @@ class Table( BigWorld.Entity ):
                         </div>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">entityType</span>
-                                      (String)</em></p>
-                        <p>Type of entity to create when client logs in with an unknown
-                                   name.
-                        </p>
-                        <p>This option only has effect if option
-                                   <span class="literal">createUnknown</span> is set to
-                                   <span class="literal">true</span>.
-                        </p>
-                        <p>See also option <span class="literal">createUnknown</span>.
-                        </p>
-                     </li>
-                     <li>
                         <p><em class="emphasis"><span class="literal">host</span>
                                       (String)</em></p>
                         <p><em class="emphasis">Only valid when the MySQL database layer is
@@ -3156,59 +3298,32 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">internalInterface</span></em></p>
-                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
-                        </p>
-                        <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">internalLatencyMax</span></em></p>
-                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">internalLatencyMin</span></em></p>
-                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">internalLossRatio</span></em></p>
-                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">loadUnknown</span>
-                                      (Boolean)</em></p>
-                        <p>Flag indicating whether a user can log in with an unknown name
-                                   if there is an entity of type specified in
-                                   <span class="literal">entityType</span> with the same name as the
-                                   <span class="literal">Username</span>.
-                        </p>
-                        <p>See also options <span class="literal">entityType</span>,
-                                   <span class="literal">createUnknown</span>, and
-                                   <span class="literal">rememberUnknown</span>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">maxSpaceDataSize</span>
-                                      (Integer)</em></p>
-                        <p><em class="emphasis">Only valid when the MySQL database layer is
-                                      used.</em></p>
-                        <p>The maximum size (in bytes) of space data that can be written to
-                                   the database. The maximum value is 16MB.
-                        </p>
-                        <p>See also the CellAppMgr option
-                                   <span class="literal">archiveSpaceData</span>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">name</span>
+                        <p><em class="emphasis"><span class="literal">internalInterface</span>
                                       (String)</em></p>
+                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
+                        </p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. Use databaseName instead.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">internalLatencyMax</span>
+                                      (Float)</em></p>
+                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">internalLatencyMin</span>
+                                      (Float)</em></p>
+                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">internalLossRatio</span>
+                                      (Float)</em></p>
+                        <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
+                        </p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">numConnections</span>
@@ -3227,8 +3342,8 @@ class Table( BigWorld.Entity ):
                                    considered in overload, and thus reject new logins.
                         </p>
                         <p>Similar overload levels are specified for all BaseApp's (using
-                                   <span class="literal">baseAppOverloadLevel</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.8.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>), and for any
-                                   CellApp (using <span class="literal">cellAppOverloadLevel</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_CellAppMgr_Configuration_Options" title="2.11.&nbsp;CellAppMgr Configuration Options">CellAppMgr Configuration Options</a>.
+                                   <span class="literal">baseAppOverloadLevel</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_BaseAppMgr_Configuration_Options" title="2.10.&nbsp;BaseAppMgr Configuration Options">BaseAppMgr Configuration Options</a>), and for any
+                                   CellApp (using <span class="literal">cellAppOverloadLevel</span> <span class="symbol">&#8208;</span> for details, see <a href="ch02.html#xref_CellAppMgr_Configuration_Options" title="2.13.&nbsp;CellAppMgr Configuration Options">CellAppMgr Configuration Options</a>.
                         </p>
                      </li>
                      <li>
@@ -3241,7 +3356,7 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">Password</span>
+                        <p><em class="emphasis"><span class="literal">password</span>
                                       (String)</em></p>
                         <p><em class="emphasis">Only valid when the MySQL database layer is
                                       used.</em></p>
@@ -3256,21 +3371,6 @@ class Table( BigWorld.Entity ):
                                       used.</em></p>
                         <p>Port to be used when the DBMgr connects to the underlying
                                    database. Set it to 0 to use the MySQL default port.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">rememberUnknown</span>
-                                      (Boolean)</em></p>
-                        <p><em class="emphasis">Only valid when the MySQL database layer is
-                                      used.</em></p>
-                        <p>Flag indicating whether unknown users allowed to log in (due to
-                                   <span class="literal">createUnknown</span> or <span class="literal">loadUnknown</span>
-                                   options being <span class="literal">true</span>) will be stored in the database
-                                   so that future logins by the same user will no longer be
-                                   unknown.
-                        </p>
-                        <p>See also options <span class="literal">createUnknown</span> and
-                                   <span class="literal">loadUnknown</span>.
                         </p>
                      </li>
                      <li>
@@ -3298,15 +3398,11 @@ class Table( BigWorld.Entity ):
                         <p>DBMgr will fail to start if the database structure does not
                                    exactly match the entity definitions.
                         </p>
-                        <p>This option is intended to help prevent accidental deletion of
-                                   data in case there are unintended changes to the entity
-                                   definitions.
-                        </p>
-                        <p>It is recommended to set this option to a safe mode
-                                   (<em class="emphasis">i.e.</em>, false), then manually update the MySQL
-                                   database structure by running DBMgr with the command line option
-                                   <span class="symbol">&#8208;</span>
-                                   <span class="literal">--sync-tables-to-defs</span>.
+                        <p>This option is convenient during development as entity
+                                   definitions change frequently. During production it is recommended to
+                                   set this option to a safe mode (<em class="emphasis">i.e.</em>, false),
+                                   then manually update the MySQL database structure by running the
+                                   <span class="literal">sync_db</span> tool.
                         </p>
                      </li>
                      <li>
@@ -3314,6 +3410,35 @@ class Table( BigWorld.Entity ):
                                       (String)</em></p>
                         <p>Type of database to use. Current options are:
                                    <span class="literal">xml</span> and <span class="literal">mysql</span>.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">unicodeString/characterSet</span>
+                                      (String)</em></p>
+                        <p>This is the character set that the database should use to store
+                                   <span class="literal">UNICODE_STRING</span> properties in the database. This is
+                                   set to <em class="emphasis">utf8</em> by default. It should be rare that
+                                   this should ever be changed. For more details on the effects of
+                                   setting this option please refer to the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>, chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch09.html" class="olink"><i>Character Sets and Encodings</i></a>, section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch09.html#xref_DBMgr_MySQL_UNICODE_STRING" class="olink">UNICODE_STRING storage</a>.
+                        </p>
+                        <p>See the option <span class="literal">dbMgr/unicodeString/collation</span>
+                                   for for information on setting the collation type.
+                        </p>
+                     </li>
+                     <li>
+                        <p><em class="emphasis"><span class="literal">unicodeString/collation</span>
+                                      (String)</em></p>
+                        <p>This is the default collation that the database associates with
+                                   <span class="literal">UNICODE_STRING</span> properties. This is set to
+                                   <em class="emphasis">utf8_bin</em> by default. This can be set to
+                                   <em class="emphasis">utf8_general_ci</em>, for example, if case insensitive
+                                   lookups on identifier fields are required. With this setting,
+                                   identifiers need to be unique using a case-insensitive comparison. For
+                                   more details on the effects of setting this option please refer to the
+                                   <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>, chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch09.html" class="olink"><i>Character Sets and Encodings</i></a>, section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch09.html#xref_Encodings_Sorting_Search_Results" class="olink">Sorting search results</a>.
+                        </p>
+                        <p>See <span class="literal">dbMgr/unicodeString/characterSet</span> for
+                                   setting the character set.
                         </p>
                      </li>
                      <li>
@@ -3325,26 +3450,13 @@ class Table( BigWorld.Entity ):
                                    database.
                         </p>
                      </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">writePythonLog</span>
-                                      (Boolean)</em></p>
-                        <p>Flag indicating whether to write the output of Python scripts to
-                                   the local log file
-                                   <span class="literal"><em class="replaceable"><code>&lt;game_executable_folder&gt;</code></em>/python.log</span>.
-                        </p>
-                        <p>This should generally be set to false, since the data is sent to
-                                   the central logger anyway, and the disk I/O generated by logging could
-                                   block the process.
-                        </p>
-                        <p>This option is also available for CellApps.</p>
-                     </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4096"></a>2.12.1.&nbsp;Data Consolidation Options
+                           <h3 class="title"><a name="d0e4134"></a>2.14.1.&nbsp;Data Consolidation Options
                            </h3>
                         </div>
                      </div>
@@ -3352,7 +3464,7 @@ class Table( BigWorld.Entity ):
                   <p>The options for data consolidation tool are located in the
                            <code class="code">&lt;dbMgr&gt;/&lt;consolidation&gt;</code> section of the server
                            configuration file <code class="code">&lt;res&gt;/server/bw.xml</code></p>
-                  <p>For more detail about the data consolidation process, see <a href="ch06.html#xref_Data_Consolidation_Tool" title="6.3.&nbsp;Data Consolidation Tool">Data Consolidation Tool</a>).
+                  <p>For more detail about the data consolidation process, see <a href="ch05.html#xref_Data_Consolidation_Tool" title="5.3.&nbsp;Data Consolidation Tool">Data Consolidation Tool</a>).
                   </p>
                   <div class="itemizedlist">
                      <ul type="disc">
@@ -3372,13 +3484,78 @@ class Table( BigWorld.Entity ):
                         </li>
                      </ul>
                   </div>
+                  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                     <h3 class="title">Note</h3>
+                     <p>It is not recommended to set the SQLite secondary database
+                                directory to reside on a network file-system. SQLite has specific
+                                requirements with regards to using file locking services from the
+                                file-system which may not be implemented properly for network
+                                file-systems.
+                     </p>
+                     <p>It is recommended that each BaseApp machine has a dedicated
+                                space on a local file-system for storing secondary database
+                                files.
+                     </p>
+                  </div>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="d0e4170"></a>2.14.2.&nbsp;XML Database Options
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>The options specific to using XML as the database type are located
+                           in the <code class="code">&lt;dbMgr&gt;/&lt;xml&gt;</code> section of the server
+                           configuration file <code class="code">&lt;res&gt;/server/bw.xml</code></p>
+                  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                     <h3 class="title">Note</h3>
+                     <p>The XML database is written in the main thread. If saving takes
+                                a long time, this can block any processing by DBMgr. To avoid this,
+                                disable archiving and automatic saving.
+                     </p>
+                  </div>
+                  <div class="itemizedlist">
+                     <ul type="disc">
+                        <li>
+                           <p><em class="emphasis"><span class="literal">archivePeriod</span>
+                                           (Float)</em></p>
+                           <p>Number of seconds between making an archive of the XML
+                                        database. The newest archive is
+                                        <code class="filename">scripts/db.xml.1</code> then
+                                        <code class="filename">scripts/db.xml.2</code> etc.
+                           </p>
+                           <p>To disable archiving, set this value to
+                                        <span class="literal">0.0</span>.
+                           </p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis"><span class="literal">numArchives</span>
+                                           (Integer)</em></p>
+                           <p>Number of archives to keep of the XML database.</p>
+                        </li>
+                        <li>
+                           <p><em class="emphasis"><span class="literal">savePeriod</span>
+                                           (Float)</em></p>
+                           <p>Number of seconds between saving the XML database to disk. The
+                                        previous file is <code class="filename">backed up as
+                                           scripts/db.xml.bak</code>.
+                           </p>
+                           <p>To disable backing up, set this value to
+                                        <span class="literal">0.0</span>.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_LoginApp_Configuration_Options"></a>2.13.&nbsp;LoginApp Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_LoginApp_Configuration_Options"></a>2.15.&nbsp;LoginApp Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -3401,10 +3578,9 @@ class Table( BigWorld.Entity ):
                                    server load chunks before allowing logins).
                         </p>
                         <p>Logins can be enabled by setting <span class="literal">allowLogin</span>
-                                   watcher on each LoginApp to <span class="literal">true</span> <span class="symbol">&#8208;</span> for a simpler way to achieve this for all
-                                   running LoginApps, see <span class="literal">control_cluster.py</span>'s
-                                   <span class="literal">set</span> command (for details on
-                                   <span class="literal">control_cluster.py</span>, see <a href="ch03.html#xref_control_cluster_py" title="3.3.1.&nbsp;control_cluster.py"><span class="literal">control_cluster.py</span></a>).
+                                   watcher on each LoginApp to <span class="literal">true</span> <span class="symbol">&#8208;</span> for a simpler way to achieve this for
+                                   all running LoginApps, see <span class="literal">control_cluster.py</span>'s
+                                   <span class="literal">set</span> command<sup>[<a name="d0e4271" href="#ftn.d0e4271">3</a>]</sup>.
                         </p>
                      </li>
                      <li>
@@ -3432,26 +3608,6 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">externalAddress</span>
-                                      (String)</em></p>
-                        <p>Address to be returned to client if he is outside the server
-                                   cluster LAN.
-                        </p>
-                        <p>If the client is outside the server cluster LAN (the option
-                                   localNetMask is used to determine that), then LoginApp will return the
-                                   IP address set in this option, instead of the address that the BaseApp
-                                   thinks it is on.
-                        </p>
-                        <p>This option is intended for use only during development, when
-                                   the machines that the BaseApps are running on do not have real IP
-                                   addresses (<em class="emphasis">i.e.</em>, they are behind a NAT'ing
-                                   firewall), but you still want clients to log in from the
-                                   Internet.
-                        </p>
-                        <p>See also option <span class="literal">localNetMask</span>.
-                        </p>
-                     </li>
-                     <li>
                         <p><em class="emphasis"><span class="literal">externalInterface</span></em></p>
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
                         </p>
@@ -3476,9 +3632,9 @@ class Table( BigWorld.Entity ):
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
                         </p>
                         <p><em class="emphasis">This tag is deprecated, and its use is not
-                                      recommended. For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Overview</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server
-                                         Components</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined</span>, <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">BWMachined interface
-                                         discovery</span>.</em></p>
+                                      recommended. For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined" class="olink">BWMachined</a>,
+                                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_BWMachined_Interface_Discovery" class="olink">BWMachined Interface Discovery</a>.</em></p>
                      </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">internalLatencyMax</span></em></p>
@@ -3493,26 +3649,6 @@ class Table( BigWorld.Entity ):
                      <li>
                         <p><em class="emphasis"><span class="literal">internalLossRatio</span></em></p>
                         <p>For details, see <a href="ch02.html#xref_General_Configuration_Options" title="2.4.&nbsp;General Configuration Options">General Configuration Options</a>.
-                        </p>
-                     </li>
-                     <li>
-                        <p><em class="emphasis"><span class="literal">localNetMask</span>
-                                      (String)</em></p>
-                        <p>Mask to be used against the client's IP address in order to
-                                   determine whether he is inside the server cluster LAN.
-                        </p>
-                        <p>The net mask is an IP address followed by the number of bits to
-                                   match. For example, <span class="literal">10.0.0.0/8</span> would match any IP
-                                   starting with 10 (<em class="emphasis">i.e.</em>,
-                                   <span class="literal">10.*.*.*</span>). The default is
-                                   <span class="literal">0.0.0.0/0</span>, in which case no redirecting will be
-                                   done.
-                        </p>
-                        <p>If it is determined that the client is not on the server cluster
-                                   LAN, the LoginApp will return the IP address set in option
-                                   externalAddress.
-                        </p>
-                        <p>See also option <span class="literal">externalAddress</span>.
                         </p>
                      </li>
                      <li>
@@ -3545,7 +3681,7 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">port</span>
+                        <p><em class="emphasis"><span class="literal">externalPorts/port</span>
                                       (Integer)</em></p>
                         <p>Port that the LoginApp should listen to for login
                                    requests.
@@ -3553,11 +3689,28 @@ class Table( BigWorld.Entity ):
                         <p>If set to zero, then a random port is chosen, which is useful
                                    when running multiple BigWorld server instances in a LAN. The client
                                    would then need to auto-detect the available servers. For more
-                                   details, see <a href="ch11.html#xref_Auto_Detections_Of_LoginApps" title="11.3.&nbsp;Auto-Detection of LoginApps">Auto-Detection of LoginApps</a>.
+                                   details, see <a href="ch10.html#xref_Auto_Detections_Of_LoginApps" title="10.3.&nbsp;Auto-Detection of LoginApps">Auto-Detection of LoginApps</a>.
                         </p>
-                        <p><em class="emphasis">Note</em>: This option can be
-                                   overridden when starting LoginApp with the command-line
-                        </p><pre class="programlisting">-loginPort n</pre></li>
+                        <p>Multiple port entries may be specified if necessary in order to
+                                   provide a range of ports to use on a machine. This is useful if
+                                   multiple LoginApps are intended to be used on the same machine, and
+                                   would generally be used in conjunction with the option
+                                   <span class="literal">shouldShutDownIfPortUsed</span>. For example:
+                        </p><pre class="programlisting">&lt;loginApp&gt;
+  &lt;externalPorts&gt;
+    &lt;port&gt; 20013 &lt;/port&gt;
+    &lt;port&gt; 20014 &lt;/port&gt;
+    &lt;port&gt; 20015 &lt;/port&gt;
+  &lt;/externalPorts&gt;
+  &lt;shouldShutDownIfPortUsed&gt; true &lt;/shouldShutDownIfPortUsed&gt;
+&lt;/loginApp&gt;</pre></li>
+                     <li>
+                        <p><em class="emphasis">maxLoginDelay (Float)</em></p>
+                        <p>If the response from the LoginApp to the client is lost, the
+                                   successful login needs to be resent to the client. This setting is the
+                                   number of seconds that a successful login attempt is kept.
+                        </p>
+                     </li>
                      <li>
                         <p><em class="emphasis"><span class="literal">privateKey</span>
                                       (String)</em></p>
@@ -3565,9 +3718,8 @@ class Table( BigWorld.Entity ):
                                    from. This is the key that is used to decrypt the client's login
                                    credentials.
                         </p>
-                        <p>Please see <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Encrypting
-                                      Client-Server Traffic </span> for more information about the
-                                   encryption support in BigWorld.
+                        <p>Please see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch28.html" class="olink"><i>Encrypting Client-Server Traffic</i></a> for more
+                                   information about the encryption support in BigWorld.
                         </p>
                      </li>
                      <li>
@@ -3603,8 +3755,8 @@ class Table( BigWorld.Entity ):
                                    specified port to listen to is not available.
                         </p>
                         <p>If set to true, the LoginApp will shut down if the specified
-                                   port to listen to is not available. If set to false, the LoginApp will
-                                   find another port to listen to.
+                                   ports to listen to is not available. If set to false, the LoginApp
+                                   will find another port to listen to.
                         </p>
                         <p>See also option <span class="literal">port</span>.
                         </p>
@@ -3620,7 +3772,7 @@ class Table( BigWorld.Entity ):
                         </p>
                      </li>
                      <li>
-                        <p><em class="emphasis"><span class="literal">verboseExternalNub</span>
+                        <p><em class="emphasis"><span class="literal">verboseExternalInterface</span>
                                       (Boolean)</em></p>
                         <p>Flag indicating whether to generate verbose log output related
                                    to external network traffic.
@@ -3632,11 +3784,11 @@ class Table( BigWorld.Entity ):
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="xref_Reviver_Configuration_Options"></a>2.14.&nbsp;Reviver Configuration Options
+                        <h2 class="title" style="clear: both"><a name="xref_Reviver_Configuration_Options"></a>2.16.&nbsp;Reviver Configuration Options
                         </h2>
                      </div>
                   </div>
@@ -3725,11 +3877,11 @@ class Table( BigWorld.Entity ):
                      </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4605"></a>2.14.1.&nbsp;Reviver's BaseAppMgr Configuration Options
+                           <h3 class="title"><a name="d0e4662"></a>2.16.1.&nbsp;Reviver's BaseAppMgr Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -3739,7 +3891,7 @@ class Table( BigWorld.Entity ):
                            under section <span class="literal">&lt;reviver&gt;/&lt;baseAppMgr&gt;</span>.
                            These are the same as general Reviver options, but specific to
                            BaseAppMgr. If the setting is not specified, then the general one is
-                           used. For details on these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.14.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
+                           used. For details on these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.16.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
                   </p>
                   <p>The options are listed below:</p>
                   <div class="itemizedlist">
@@ -3759,11 +3911,11 @@ class Table( BigWorld.Entity ):
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4641"></a>2.14.2.&nbsp;Reviver's CellAppMgr Configuration Options
+                           <h3 class="title"><a name="d0e4698"></a>2.16.2.&nbsp;Reviver's CellAppMgr Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -3773,7 +3925,7 @@ class Table( BigWorld.Entity ):
                            under section <span class="literal">&lt;reviver&gt;/&lt;cellAppMgr&gt;</span>.
                            These are the same as general Reviver options, but specific to
                            CellAppMgr. If the setting is not specified, then the general one is
-                           used. For details on these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.14.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
+                           used. For details on these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.16.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
                   </p>
                   <p>The options are listed below:</p>
                   <div class="itemizedlist">
@@ -3793,11 +3945,11 @@ class Table( BigWorld.Entity ):
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4677"></a>2.14.3.&nbsp;Reviver's DBMgr Configuration Options
+                           <h3 class="title"><a name="d0e4734"></a>2.16.3.&nbsp;Reviver's DBMgr Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -3807,7 +3959,7 @@ class Table( BigWorld.Entity ):
                            under section <span class="literal">&lt;reviver&gt;/&lt;dbMgr&gt;</span>. These
                            are the same as general Reviver options, but specific to DBMgr. If the
                            setting is not specified, then the general one is used. For details on
-                           these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.14.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
+                           these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.16.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
                   </p>
                   <p>The options are listed below:</p>
                   <div class="itemizedlist">
@@ -3827,11 +3979,11 @@ class Table( BigWorld.Entity ):
                      </ul>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4713"></a>2.14.4.&nbsp;Reviver's LoginApp Configuration Options
+                           <h3 class="title"><a name="d0e4770"></a>2.16.4.&nbsp;Reviver's LoginApp Configuration Options
                            </h3>
                         </div>
                      </div>
@@ -3841,7 +3993,7 @@ class Table( BigWorld.Entity ):
                            under section <span class="literal">&lt;reviver&gt;/&lt;loginApp&gt;</span>. These
                            are the same as general Reviver options, but specific to LoginApp. If
                            the setting is not specified, then the general one is used. For details
-                           on these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.14.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
+                           on these options, see <a href="ch02.html#xref_Reviver_Configuration_Options" title="2.16.&nbsp;Reviver Configuration Options">Reviver Configuration Options</a>.
                   </p>
                   <p>The options are listed below:</p>
                   <div class="itemizedlist">
@@ -3862,6 +4014,21 @@ class Table( BigWorld.Entity ):
                   </div>
                </div>
             </div>
+            <div class="footnotes"><br><hr width="100" align="left">
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e3057" href="#d0e3057">1</a>] </sup>For more details, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html#xref_Data_Distribution" class="olink">Data Distribution</a>.
+                  </p>
+               </div>
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e3615" href="#d0e3615">2</a>] </sup>For details, see <a href="ch04.html#xref_CellApp_Fault_Tolerance" title="4.1.&nbsp;CellApp Fault Tolerance">CellApp Fault Tolerance</a>.
+                  </p>
+               </div>
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e4271" href="#d0e4271">3</a>] </sup>For details on <span class="literal">control_cluster.py</span>, see
+                                 <a href="ch03.html#xref_control_cluster_py" title="3.4.1.&nbsp;Control Cluster">Control Cluster</a>.
+                  </p>
+               </div>
+            </div>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -3875,10 +4042,10 @@ class Table( BigWorld.Entity ):
                <tr>
                   <td width="40%" align="left" valign="top">Chapter&nbsp;1.&nbsp;Introduction&nbsp;</td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Admin Tools</td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Cluster Administration Tools</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

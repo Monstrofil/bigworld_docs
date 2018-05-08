@@ -7,9 +7,10 @@
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="Server Overview">
       <link rel="up" href="index.html" title="Server Overview">
-      <link rel="prev" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Server Components"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Server Components">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/server_overview/ch06.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -37,33 +38,33 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch06.html#d0e2180">6.1. IDs</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2082">6.1. IDs</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2185">6.1.1. ID Allocation</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2087">6.1.1. ID Allocation</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch06.html#xref_Inter_Process_Communication_Mercury">6.2. Inter-Process Communication (Mercury)</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#xref_Inter_Process_Communication_Mercury">6.2. Inter-Process Communication (Mercury)</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2215">6.2.1. Overview</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2220">6.2.2. Nub</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2229">6.2.3. Messages</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2252">6.2.4. Requests</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2257">6.2.5. Bundles</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2264">6.2.6. Channels</a></span></dt>
-                        <dt><span class="sect2"><a href="ch06.html#d0e2317">6.2.7. Interfaces</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2114">6.2.1. Overview</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2119">6.2.2. Nub</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2128">6.2.3. Messages</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2151">6.2.4. Requests</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2156">6.2.5. Bundles</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2163">6.2.6. Channels</a></span></dt>
+                        <dt><span class="section"><a href="ch06.html#d0e2218">6.2.7. Interfaces</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch06.html#d0e2329">6.3. Fault Tolerance and Disaster Recovery</a></span></dt>
-                  <dt><span class="sect1"><a href="ch06.html#d0e2336">6.4. Packed Files</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2230">6.3. Fault Tolerance and Disaster Recovery</a></span></dt>
+                  <dt><span class="section"><a href="ch06.html#d0e2237">6.4. Packed Files</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e2180"></a>6.1.&nbsp;IDs
+                        <h2 class="title" style="clear: both"><a name="d0e2082"></a>6.1.&nbsp;IDs
                         </h2>
                      </div>
                   </div>
@@ -72,11 +73,11 @@
                       creates a new entity, it needs a unique entity ID. The CellAppMgr
                       currently provides this functionality.
                </p>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2185"></a>6.1.1.&nbsp;ID Allocation
+                           <h3 class="title"><a name="d0e2087"></a>6.1.1.&nbsp;ID Allocation
                            </h3>
                         </div>
                      </div>
@@ -93,13 +94,11 @@
                   </p>
                   <p>Excess unused IDs are stored in special tables
                            <code class="varname">bigworldNewID</code> and <code class="varname">bigworldUsedIDs</code>.
-                           For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Programming
-                              Guide</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">MySQL Database Schema</span> <span class="symbol">&#8594;</span>
-                           <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Non-entity tables</span>.
+                           For details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch33.html" class="olink"><i>MySQL Database Schema</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch33.html#xref_Non_Entity_Tables" class="olink">Non-Entity Tables</a>.
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -108,11 +107,11 @@
                      </div>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2215"></a>6.2.1.&nbsp;Overview
+                           <h3 class="title"><a name="d0e2114"></a>6.2.1.&nbsp;Overview
                            </h3>
                         </div>
                      </div>
@@ -122,11 +121,11 @@
                            UDP, and allows both reliable and unreliable communications.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2220"></a>6.2.2.&nbsp;Nub
+                           <h3 class="title"><a name="d0e2119"></a>6.2.2.&nbsp;Nub
                            </h3>
                         </div>
                      </div>
@@ -135,8 +134,8 @@
                            receiving packets, delivering timer messages, and general socket
                            notifications.
                   </p>
-                  <p>Almost all communication uses UDP, a single socket is used for most
-                           connections.
+                  <p>Almost all communication uses UDP, a single socket is used for
+                           most connections.
                   </p>
                   <p>The Nub normally controls the event loop of the application. So it
                            also provides a time queue, and user socket notifications. The time
@@ -146,11 +145,11 @@
                            reading.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2229"></a>6.2.3.&nbsp;Messages
+                           <h3 class="title"><a name="d0e2128"></a>6.2.3.&nbsp;Messages
                            </h3>
                         </div>
                      </div>
@@ -161,7 +160,8 @@
                   <div class="itemizedlist">
                      <ul type="disc">
                         <li>
-                           <p><em class="emphasis">Message type</em> &#8212; 1 byte.
+                           <p><em class="emphasis">Message type</em> &#8212; 1
+                                        byte.
                            </p>
                         </li>
                         <li>
@@ -182,29 +182,29 @@
                            to make marshalling easy.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2252"></a>6.2.4.&nbsp;Requests
+                           <h3 class="title"><a name="d0e2151"></a>6.2.4.&nbsp;Requests
                            </h3>
                         </div>
                      </div>
                   </div>
                   <p>A request is a message that expects an answer. It is possible to
-                           issue a request to a remote process, and receive a reply associated with it
-                           without blocking the process' execution. Internally, Mercury will
+                           issue a request to a remote process, and receive a reply associated with
+                           it without blocking the process' execution. Internally, Mercury will
                            allocate a unique request ID that is used to associate the reply with
                            the request. When a request is made, a reply handler is constructed to
                            handle the reply. It also handles timeouts, and will invoke a timeout
                            callback if no reply is received within a specified time.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2257"></a>6.2.5.&nbsp;Bundles
+                           <h3 class="title"><a name="d0e2156"></a>6.2.5.&nbsp;Bundles
                            </h3>
                         </div>
                      </div>
@@ -217,34 +217,34 @@
                   </p>
                   <p>The maximum size of a packet is chosen based on efficiency and is
                            related to the MTU (Maximum Transmission Unit) of a network. Each packet
-                           in a bundle may optionally contain additional data,
-                           including sequence numbers, request IDs, and acknowledgement IDs.
+                           in a bundle may optionally contain additional data, including sequence
+                           numbers, request IDs, and acknowledgement IDs.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2264"></a>6.2.6.&nbsp;Channels
+                           <h3 class="title"><a name="d0e2163"></a>6.2.6.&nbsp;Channels
                            </h3>
                         </div>
                      </div>
                   </div>
                   <p>Channels are used to provide reliable communication between two
                            Nubs. A channel may have different characteristics, depending on whether
-                           it is a client/server channel or a server/server channel and between which
-                           components it connects.
+                           it is a client/server channel or a server/server channel and between
+                           which components it connects.
                   </p>
                   <p>The table below describes the characteristics of some
                            channels.
                   </p>
                   <div class="altrow">
-                     <table border="0">
+                     <table border="0" width="50%">
                         <colgroup>
-                           <col width="54">
-                           <col width="39">
-                           <col width="51">
-                           <col width="27">
+                           <col width="25%">
+                           <col width="25%">
+                           <col width="25%">
+                           <col width="25%">
                         </colgroup>
                         <thead>
                            <tr>
@@ -279,9 +279,10 @@
                            packet is also treated as reliable. The sender gives it a sequence
                            number, and stores it in a sliding window. The receiver acknowledges the
                            packet by placing an ACK on the next outgoing packet. Channels that have
-                           regular bi-directional communication (e.g. 10Hz for client/server,
-                           50Hz for CellApp/CellApp) do not send the ACK immediately while other
-                           channels without regular communication will send this immediately.
+                           regular bi-directional communication (e.g. 10Hz for client/server, 50Hz
+                           for CellApp/CellApp) do not send the ACK immediately while other
+                           channels without regular communication will send this
+                           immediately.
                   </p>
                   <p>If the sender receives an out-of-order ACK, then it will assume
                            that the previous packets were lost, and resend them. For low-latency
@@ -294,11 +295,11 @@
                            order to save bandwidth.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e2317"></a>6.2.7.&nbsp;Interfaces
+                           <h3 class="title"><a name="d0e2218"></a>6.2.7.&nbsp;Interfaces
                            </h3>
                         </div>
                      </div>
@@ -312,11 +313,11 @@
                   <p>Interfaces are normally defined using the macros in
                            <code class="filename">src/lib/network/interface_minder.hpp</code>. These are
                            designed to hide the details involved in decoding the message and
-                           dispatching it. For simple fixed-length messages, the result is that
-                           a method is called on an object, with a structure containing the
-                           message parameters. For more complex variable-length messages, the
-                           method is called with a stream object, and parameters must be streamed
-                           off manually.
+                           dispatching it. For simple fixed-length messages, the result is that a
+                           method is called on an object, with a structure containing the message
+                           parameters. For more complex variable-length messages, the method is
+                           called with a stream object, and parameters must be streamed off
+                           manually.
                   </p>
                   <p>Interfaces also define whether each message is variable or
                            fixed-length. For fixed-length messages, the size need not be sent,
@@ -324,11 +325,11 @@
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e2329"></a>6.3.&nbsp;Fault Tolerance and Disaster Recovery
+                        <h2 class="title" style="clear: both"><a name="d0e2230"></a>6.3.&nbsp;Fault Tolerance and Disaster Recovery
                         </h2>
                      </div>
                   </div>
@@ -345,11 +346,11 @@
                       restarted using this information.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e2336"></a>6.4.&nbsp;Packed Files
+                        <h2 class="title" style="clear: both"><a name="d0e2237"></a>6.4.&nbsp;Packed Files
                         </h2>
                      </div>
                   </div>
@@ -384,7 +385,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

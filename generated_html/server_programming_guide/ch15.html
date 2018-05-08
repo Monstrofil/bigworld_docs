@@ -2,20 +2,21 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    
-      <title>Chapter&nbsp;15.&nbsp;Controlled Startup and Shutdown</title>
+      <title>Chapter&nbsp;15.&nbsp;Fault Tolerance</title>
       <link rel="stylesheet" href="../css/bigworld.css" type="text/css">
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="Server Programming Guide">
       <link rel="up" href="pt01.html" title="Part&nbsp;I.&nbsp;Server Scripting Guide">
-      <link rel="prev" href="ch14.html" title="Chapter&nbsp;14.&nbsp;Disaster Recovery">
-      <link rel="next" href="ch16.html" title="Chapter&nbsp;16.&nbsp;Transactions and Handling Fault Tolerance and Disaster Recovery"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch14.html" title="Chapter&nbsp;14.&nbsp;External Services">
+      <link rel="next" href="ch16.html" title="Chapter&nbsp;16.&nbsp;Disaster Recovery">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/server_programming_guide/ch15.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
                <tr>
-                  <th colspan="3" align="center">Chapter&nbsp;15.&nbsp;Controlled Startup and Shutdown</th>
+                  <th colspan="3" align="center">Chapter&nbsp;15.&nbsp;Fault Tolerance</th>
                </tr>
                <tr>
                   <td width="20%" align="left"><a accesskey="p" href="ch14.html">Prev</a>&nbsp;
@@ -30,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="xref_Controlled_Startup_And_Shutdown"></a>Chapter&nbsp;15.&nbsp;Controlled Startup and Shutdown
+                     <h2 class="title"><a name="xref_Fault_Tolerance"></a>Chapter&nbsp;15.&nbsp;Fault Tolerance
                      </h2>
                   </div>
                </div>
@@ -38,194 +39,194 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch15.html#d0e10826">15.1. Controlled Shutdown</a></span></dt>
-                  <dt><span class="sect1"><a href="ch15.html#d0e10955">15.2. Controlled Startup</a></span></dt>
+                  <dt><span class="section"><a href="ch15.html#d0e12229">15.1. CellApp Fault Tolerance</a></span></dt>
+                  <dd>
+                     <dl>
+                        <dt><span class="section"><a href="ch15.html#d0e12232">15.1.1. Overview</a></span></dt>
+                        <dt><span class="section"><a href="ch15.html#d0e12245">15.1.2. Restoration process</a></span></dt>
+                        <dt><span class="section"><a href="ch15.html#d0e12298">15.1.3. Example</a></span></dt>
+                     </dl>
+                  </dd>
+                  <dt><span class="section"><a href="ch15.html#d0e12331">15.2. BaseApp Fault Tolerance</a></span></dt>
                </dl>
             </div>
-            <p>There may be times when the server needs to be shut down and later
-                 restarted in a similar state. This chapter describes the script-related
-                 details of this scenario.
-            </p>
-            <p>For more details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>'s chapter <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>.
-            </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e10826"></a>15.1.&nbsp;Controlled Shutdown
+                        <h2 class="title" style="clear: both"><a name="d0e12229"></a>15.1.&nbsp;CellApp Fault Tolerance
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>The process of controlled shutdown is described in the list
-                      below:
-               </p>
-               <div class="orderedlist">
-                  <ol type="1">
-                     <li>
-                        <p><span class="literal">USR1</span> signal is received by LoginApp
-                                   processes.
-                        </p>
-                     </li>
-                     <li>
-                        <p>The LoginApp processes shut down immediately.</p>
-                     </li>
-                     <li>
-                        <p>The CellAppMgr receives a message to schedule the shutdown (in
-                                   game time).
-                        </p>
-                     </li>
-                     <li>
-                        <p>The CellAppMgr sends a message to the other processes informing
-                                   them when the shutdown is scheduled for.
-                        </p>
-                     </li>
-                     <li>
-                        <p>The callback <code class="methodname">onCellAppShuttingDown</code> on
-                                   the CellApp personality script is invoked.
-                        </p>
-                        <p>The personality scripts on this step and the next should perform
-                                   the appropriate finishing tasks, like ending long running tasks such
-                                   as combats or trades, informing the players, and stopping new long
-                                   running tasks from starting.
-                        </p>
-                     </li>
-                     <li>
-                        <p>The callback <code class="methodname">onBaseAppShuttingDown</code> on
-                                   the BaseApp personality script is invoked.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Once these callbacks have been executed, calls to method
-                                   <code class="classname">BigWorld</code>.<code class="methodname">isShuttingDown</code>
-                                   will return <span class="literal">True</span>.
-                        </p>
-                     </li>
-                     <li>
-                        <p>The other server processes (CellApps, BaseAppMgr, BaseApps,
-                                   Backup BaseApps, DBMgr, Reviver) do not stop immediately, instead
-                                   performing any finishing tasks.
-                        </p>
-                        <p>This delay can be specified in the file
-                                   <code class="filename">res/server/bw.xml</code> by using the configuration
-                                   option <code class="property">&lt;shuttingDownDelay&gt;</code>. For more
-                                   details on this option, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Server Operations Guide</span>'s
-                                   section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Software
-                                      Configuration with <span class="literal">bw.xml</span></span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">General configuration
-                                      options</span>.
-                        </p>
-                     </li>
-                     <li>
-                        <p>Shutdown game time is reached.</p>
-                     </li>
-                     <li>
-                        <p>Game stops running, but the processes not.</p>
-                        <p>This means that the game time is no longer incremented, and no
-                                   game object is ticked.
-                        </p>
-                     </li>
-                     <li>
-                        <p>When ready to shut down, CellAppMgr writes the spaces, their
-                                   data, and the game time to the database.
-                        </p>
-                     </li>
-                     <li>
-                        <p>This step takes place in parallel with step <em class="emphasis">11</em>.
-                        </p>
-                        <p>Each BaseApp performs the following steps:</p>
-                        <div class="itemizedlist">
-                           <ul type="disc">
-                              <li>
-                                 <p>Receives a message to disconnect any connected
-                                                clients.
-                                 </p>
-                              </li>
-                              <li>
-                                 <p>Invokes the callback
-                                                <code class="methodname">onBaseAppShutDown</code> with an argument of
-                                                <span class="literal">0</span> before disconnecting the clients.
-                                 </p>
-                                 <p>For each disconnected client, the proxy's callback
-                                                <code class="methodname">onClientDeath</code> is invoked.
-                                 </p>
-                              </li>
-                              <li>
-                                 <p>Invokes the callback
-                                                <code class="methodname">onBaseAppShutDown</code> with an argument of
-                                                <span class="literal">1</span>, before writing to the database each entity
-                                                with a database entry.
-                                 </p>
-                              </li>
-                              <li>
-                                 <p>Invokes the callback
-                                                <code class="methodname">onBaseAppShutDown</code> with an argument of
-                                                <span class="literal">2</span>.
-                                 </p>
-                              </li>
-                           </ul>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="d0e12232"></a>15.1.1.&nbsp;Overview
+                           </h3>
                         </div>
-                     </li>
-                     <li>
-                        <p>All server process shut down.</p>
-                     </li>
-                  </ol>
+                     </div>
+                  </div>
+                  <p>Periodically, a complete copy of each cell entity is backed up on
+                           the base entity. Only cell entities with an associated base entity are
+                           fault tolerant. The CellApp backup period specifies how often cell
+                           entities are backed up to their base entities, and is specified in the
+                           <code class="filename">bw.xml</code> option
+                           &lt;<span class="literal">cellApp/backupPeriod</span>&gt;.
+                  </p>
+                  <p>Should a CellApp process become unavailable, the real entities
+                           located on the cells residing on that process will be restored by their
+                           corresponding base entities to other CellApps. The state of the cell
+                           data of the restored cell entities is the same state as was given from
+                           the most recent backup from the cell entity to the base entity.
+                  </p>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="d0e12245"></a>15.1.2.&nbsp;Restoration process
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <p>The CellApp restoration process typically follows these
+                           steps:
+                  </p>
+                  <div class="orderedlist">
+                     <ol type="1">
+                        <li>
+                           <p>A CellApp process becomes unavailable.</p>
+                        </li>
+                        <li>
+                           <p>Base entities that have cell entities on the now unavailable
+                                        CellApp process restore their corresponding real entities to other
+                                        CellApps.
+                           </p>
+                        </li>
+                        <li>
+                           <p>Restored cell entities have the
+                                        <code class="methodname">onRestore</code>() callback called on them.
+                                        Because the restored cell data is taken from the last time the cell
+                                        entity backed up to the base, this copy can be up to twice the
+                                        backup period. This callback should check that the entity's
+                                        properties are in a consistent state.
+                           </p>
+                        </li>
+                        <li>
+                           <p>For player cell entities, their corresponding client-side
+                                        player entities have the <code class="methodname">onRestore</code>()
+                                        callback called on them.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+                  <p>The callback <code class="methodname">onRestore</code>() is invoked on
+                           the cell entity to inform it that it is being restored.
+                  </p>
+                  <p>The code fragment below illustrates its implementation on the cell
+                           entity:
+                  </p><pre class="programlisting">class <em class="emphasis"><em class="replaceable"><code>SomeEntity</code></em></em>( BigWorld.Entity ):
+  ...
+  def <em class="emphasis">__init__</em>( self ):
+    # set up initial property values
+  ...
+  def <em class="emphasis">onRestore</em>( self ):
+    # check that property values are consistent, and
+    # perform any cleanups that need to occur
+  ...</pre><p><span class="citetitle">Example file
+                              <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/<em class="replaceable"><code>SomeEntity</code></em>.py</code></span></p>
+               </div>
+               <div class="section" lang="en">
+                  <div class="titlepage">
+                     <div>
+                        <div>
+                           <h3 class="title"><a name="d0e12298"></a>15.1.3.&nbsp;Example
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="figure"><a name="d0e12301"></a><p class="title"><b>Figure&nbsp;15.1.&nbsp;CellApp Fault Tolerance Example</b></p>
+                     <div class="figure-contents">
+                        <div class="mediaobject"><img src="images/fault_tolerance_overview_example.png" alt="CellApp Fault Tolerance Example"></div>
+                     </div>
+                  </div><br class="figure-break"><p>The above diagram shows a space divided into three cells, the top
+                           cell residing on CellApp 4, the bottom-left cell residing on CellApp 3
+                           (not shown) and the bottom-right cell residing on CellApp 8 (not shown).
+                           In the cell that CellApp 4 has in this space, it has the cell entities
+                           with IDs 4156, 5712 and 2114, all within the same spatial region. The
+                           entities 4156 and 2114 have corresponding base entities that reside on
+                           BaseApp 1 and 2 respectively. Entity 5712 does not have a base entity,
+                           and is a cell-only entity.
+                  </p>
+                  <p>Cell entities back up their data to their corresponding base
+                           entities. So in this example, entities 4156 and 2114 send a copy of
+                           themselves to their corresponding base entities. The rate at which they
+                           do this can be configured by changing the backup period, using the
+                           <code class="filename">bw.xml</code> option
+                           &lt;<span class="literal">cellApp/backupPeriod</span>&gt; (see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/ch02.html#xref_CellApp_Configuration_Options" class="olink">CellApp Configuration Options</a> for more details). When
+                           a single CellApp goes down, cell entities are restored from the backup
+                           data sent to their base entities. Any cell entities that do not have
+                           corresponding base entities will not have been backed up, and so will
+                           not be restored.
+                  </p>
+                  <p>If CellApp 4 was to go down, the cell entities for 4156 and 2114
+                           will be restored onto other CellApps from their base entities. Entity
+                           5712 will not be restored, as it has no corresponding base
+                           entity.
+                  </p>
+                  <p>It is important to note that when restoring cell entities, the
+                           cell data that is used will be whatever data was present at the time of
+                           the last cell entity backup. Thus, any modification to the cell entity
+                           data since the last backup is lost, and the state of that cell entity
+                           may be inconsistent when it is restored. For example, a backup of a cell
+                           entity may be made in the middle of a multi-step transaction. The script
+                           callback
+                           <code class="classname">Entity</code>.<code class="methodname">onRestore</code>() can
+                           be used to check the state of outstanding transactions, and the decision
+                           to either roll them back or continue them can be made in script.
+                  </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e10955"></a>15.2.&nbsp;Controlled Startup
+                        <h2 class="title" style="clear: both"><a name="d0e12331"></a>15.2.&nbsp;BaseApp Fault Tolerance
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>When starting up, the DBMgr initially waits until all components are
-                      ready. A minimum number of BaseApp and CellApp processes can be specified
-                      in <code class="filename">bw.xml</code> via the options
-                      <code class="property">&lt;desiredBaseApps&gt;</code> and
-                      <code class="property">&lt;desiredCellApps&gt;</code><sup>[<a name="d0e10968" href="#ftn.d0e10968">18</a>]</sup>. Once ready, the DBMgr loads the spaces and their data back
-                      into the system.
+               <p>With BaseApp fault tolerance, BaseApps back up the base entity data
+                      and cell backup data of all their base entities to other BaseApp processes
+                      periodically.
                </p>
-               <p>Entities stored from a previous session are then loaded into the
-                      system by creating the base entities. The script function
-                      <code class="classname">BigWorld</code>.<code class="methodname">hasStarted</code> will
-                      return <span class="literal">False</span> during this stage. This can be handy for
-                      implementing different behaviour in the method
-                      <code class="methodname">__init__</code> of restored entities.
+               <p>Should the primary BaseApp become unavailable, then all its entities
+                      are restored from the backup process. In this case, the BaseApp invokes
+                      the callback <code class="methodname">onRestore</code> on the base or proxy
+                      entity, in a process similar to the one for CellApp restoration. This
+                      callback should ensure that all properties on the entity are in a
+                      consistent state.
                </p>
-               <p>It is up to the script to create the cell entity, if desired.
-                      Creating a cell entity during startup is often different from doing so
-                      during other times. Usually the method
-                      <code class="classname">Base</code>.<code class="methodname">createCellEntity</code> is
-                      called with a cell entity mailbox to indicate the entity's space. But
-                      during startup, the entity's space ID is restored and set in the
-                      <code class="classname">Base</code>.<code class="varname">cellData</code> map. The base
-                      entity script may use this by calling the method
-                      <code class="classname">Base</code>.<code class="methodname">createCellEntity</code> with
-                      no arguments.
+               <p>It should be noted that when a BaseApp fails unexpectedly, entities
+                      that were on that BaseApp before the death might be restored to different
+                      BaseApps. Care should be taken when writing scripts, to avoid assumptions
+                      that a Base entity is local. When performing an entity backup, Base entity
+                      properties are streamed using their description in the definition file (if
+                      there is one). For properties that are not specified in the definition
+                      file, these are pickled. Each entity is backed up individually, so if two
+                      entities refer to the same object, on restoration they will likely each
+                      have a copy of that object. An option is available to prevent properties
+                      not specified in the definition file from being backed up. To disable
+                      backing up undefined properties set the <code class="filename">bw.xml</code> option
+                      <code class="property">&lt;baseApp/backUpUndefinedProperties&gt;</code> to
+                      <span class="literal">false</span>. For more information on this option refer to the
+                      <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/index.html" class="olink">Server Operations Guide</a> section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/ch02.html#xref_BaseApp_Configuration_Options" class="olink">BaseApp Configuration Options</a>.
                </p>
-               <p>Once the server is ready to start running, the callbacks
-                      <code class="methodname">onBaseAppReady</code> and
-                      <code class="methodname">onCellAppReady</code> from the personality script are
-                      called on the BaseApps and CellApps, respectively.
+               <p>For more details regarding Fault Tolerance, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/index.html" class="olink">Server Operations Guide</a>'s chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/ch04.html" class="olink"><i>Fault Tolerance</i></a>,
+                      and the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/index.html" class="olink">Server Overview</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html" class="olink"><i>Server Components</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_Server_Components_BaseApp" class="olink">BaseApp</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_overview/ch05.html#xref_Server_Components_BaseApp_Fault_Tolerance" class="olink">Fault Tolerance</a>.
                </p>
-               <p>The game recovery function can be disabled by setting the
-                      <code class="property">&lt;dbMgr/clearRecoveryData&gt;</code><sup>[<a name="d0e11027" href="#ftn.d0e11027">19</a>]</sup> configuration option to <span class="literal">true</span>. When game
-                      recovery is disabled, the game is restarted with a single default space
-                      with no entities. For information on how to re-populate the game, see
-                      <a href="ch11.html#xref_Initialisation_Personality_Script_eload_And_runscript" title="11.4.&nbsp;Initialisation: Personality script, eload, and runscript">Initialisation: Personality script, eload, and runscript</a>.
-               </p>
-            </div>
-            <div class="footnotes"><br><hr width="100" align="left">
-               <div class="footnote">
-                  <p><sup>[<a name="ftn.d0e10968" href="#d0e10968">18</a>] </sup>For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>.
-                  </p>
-               </div>
-               <div class="footnote">
-                  <p><sup>[<a name="ftn.d0e11027" href="#d0e11027">19</a>] </sup>For details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>'s section <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span> <span class="symbol">&#8594;</span> <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">????</span>.
-                  </p>
-               </div>
             </div>
          </div>
          <div class="navfooter">
@@ -238,12 +239,12 @@
                   <td width="37%" align="right">&nbsp;<a accesskey="n" href="ch16.html">Next</a></td>
                </tr>
                <tr>
-                  <td width="40%" align="left" valign="top">Chapter&nbsp;14.&nbsp;Disaster Recovery&nbsp;</td>
+                  <td width="40%" align="left" valign="top">Chapter&nbsp;14.&nbsp;External Services&nbsp;</td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;16.&nbsp;Transactions and Handling Fault Tolerance and Disaster Recovery</td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;16.&nbsp;Disaster Recovery</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

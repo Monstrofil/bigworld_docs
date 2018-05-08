@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Perform Accurate Targeting Of Entities">
       <link rel="up" href="index.html" title="How To Perform Accurate Targeting Of Entities">
       <link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Creating the targeting boxes">
-      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Saving/loading the SkeletonCollider"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Saving/loading the SkeletonCollider">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_accurately_target_entities/ch03.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -37,15 +38,15 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch03.html#d0e123">3.1. Creating the <span class="literal">SkeletonCollider</span></a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e155">3.2. Enabling skeleton checking</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e124">3.1. Creating the <span class="literal">SkeletonCollider</span></a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e157">3.2. Enabling skeleton checking</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e123"></a>3.1.&nbsp;Creating the <span class="literal">SkeletonCollider</span></h2>
+                        <h2 class="title" style="clear: both"><a name="d0e124"></a>3.1.&nbsp;Creating the <span class="literal">SkeletonCollider</span></h2>
                      </div>
                   </div>
                </div>
@@ -54,31 +55,26 @@
                         with the box attachments. A new instance of the
                         <span class="literal">SkeletonCollider</span> class needs be created and added to
                         the entity's <span class="literal">skeletonCollider</span> property, we also need
-                        to add the <span class="literal">BoxAttachments</span> to the <span class="literal">SkeletonCollider</span> so
-                        it knows which boxes to use for targeting.
+                        to add the <span class="literal">BoxAttachments</span> to the
+                        <span class="literal">SkeletonCollider</span> so it knows which boxes to use for
+                        targeting.
                </p><pre class="programlisting">#Create the Skeleton Collider object
 creature.skeletonCollider=BigWorld.SkeletonCollider()
 #Add our colliders to it
 creature.skeletonCollider.addCollider(headBox)
 creature.skeletonCollider.addCollider(pelvisBox)</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                             it is important that the new 
-                  
-                            <span class="literal">SkeletonCollider</span>
-                  
-                             object is assigned to the entity's 
-                  
-                            <span class="literal">skeletonCollider</span>
-                  
-                             property as this is recognised by the targeting system 
-                          
+                  <p>It is important that the new <span class="literal">SkeletonCollider</span>
+                             object is assigned to the entity's <span class="literal">skeletonCollider</span>
+                             property as this is recognised by the targeting system.
+                  </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e155"></a>3.2.&nbsp;Enabling skeleton checking
+                        <h2 class="title" style="clear: both"><a name="d0e157"></a>3.2.&nbsp;Enabling skeleton checking
                         </h2>
                      </div>
                   </div>
@@ -89,7 +85,7 @@ creature.skeletonCollider.addCollider(pelvisBox)</pre><div class="note" style="m
                         targeting rather than the model bounding box. This will need to be done
                         from script whenever you want to enable skeleton targeting.
                         
-               </p><pre class="programlisting">#enable sketon checks
+               </p><pre class="programlisting">#enable skeleton checks
 BigWorld.target.skeletonCheckEnabled=True</pre><p>You should now only
                         be able to target the creature entity when looking at its head or
                         body.
@@ -111,7 +107,7 @@ BigWorld.target.skeletonCheckEnabled=True</pre><p>You should now only
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;Saving/loading the <span class="literal">SkeletonCollider</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

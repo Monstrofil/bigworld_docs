@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Server Overview">
       <link rel="up" href="index.html" title="Server Overview">
       <link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Rules of Thumb">
-      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Design Introduction"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Design Introduction">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/server_overview/ch03.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,21 +39,21 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch03.html#d0e93">3.1. Location of an Object's Data</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e132">3.2. Actions</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e170">3.3. Publishers and Subscribers</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e186">3.4. Latency</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e208">3.5. Spaces and Cells</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e92">3.1. Location of an Object's Data</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e131">3.2. Actions</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e169">3.3. Latency</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e191">3.4. Spaces and Cells</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#xref_Coordinate_system">3.5. Coordinate System</a></span></dt>
                </dl>
             </div>
             <p>This section explains general concepts and issues relevant to the
                  design.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e93"></a>3.1.&nbsp;Location of an Object's Data
+                        <h2 class="title" style="clear: both"><a name="d0e92"></a>3.1.&nbsp;Location of an Object's Data
                         </h2>
                      </div>
                   </div>
@@ -96,11 +97,11 @@
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e132"></a>3.2.&nbsp;Actions
+                        <h2 class="title" style="clear: both"><a name="d0e131"></a>3.2.&nbsp;Actions
                         </h2>
                      </div>
                   </div>
@@ -151,46 +152,11 @@
                   </ol>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e170"></a>3.3.&nbsp;Publishers and Subscribers
-                        </h2>
-                     </div>
-                  </div>
-               </div>
-               <p>Many objects in the system will be publishers of data. Currently
-                      there is an implicit publisher/subscriber relationship between the real
-                      avatar (publisher) and its ghosts (subscribers). This can be generalised
-                      so that anything can be a subscriber to an entity. This is also true for
-                      bases.
-               </p>
-               <p>For example, a door subscribing to the bases of a button. When the
-                      button changes state, the door reacts appropriately.
-               </p>
-               <p>Subscriptions can be implemented so that they have different
-                      types.
-               </p>
-               <p>For example, in order to allow a player to see into another part of
-                      the world, there might be the concepts of camera and screen. One way to
-                      implement this would be for the camera to be similar to an avatar. When a
-                      client is able to see a screen, it can subscribe to the camera with
-                      different qualities of service (or bandwidth), depending on the screen
-                      size. Another example is the door in the example above being implemented
-                      as to react only to the button being pressed, but not being turned or
-                      moved.
-               </p>
-               <p>For a detailed discussion on the Publisher/Subscriber (Observer)
-                      pattern, see the book <em class="emphasis">Design Patterns &#8212; Elements of
-                         Reusable Object-Oriented Software</em>, by Erich Gamma et al.
-               </p>
-            </div>
-            <div class="sect1" lang="en">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h2 class="title" style="clear: both"><a name="d0e186"></a>3.4.&nbsp;Latency
+                        <h2 class="title" style="clear: both"><a name="d0e169"></a>3.3.&nbsp;Latency
                         </h2>
                      </div>
                   </div>
@@ -227,11 +193,11 @@
                       server, or between receiving data and displaying it.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e208"></a>3.5.&nbsp;Spaces and Cells
+                        <h2 class="title" style="clear: both"><a name="d0e191"></a>3.4.&nbsp;Spaces and Cells
                         </h2>
                      </div>
                   </div>
@@ -265,6 +231,29 @@
                         <p>A small space covered by only one cell</p></span></div>
                </div>
             </div>
+            <div class="section" lang="en">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h2 class="title" style="clear: both"><a name="xref_Coordinate_system"></a>3.5.&nbsp;Coordinate System
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <p>BigWorld uses a left-hand coordinate system. The x-axis points
+                      <em class="emphasis">"left"</em>, the y-axis points <em class="emphasis">"up"</em>
+                      and the z-axis points <em class="emphasis">"forward"</em>.
+               </p>
+               <p><em class="emphasis">yaw</em> is rotation around the y-axis. Positive is
+                      to the right, negative is to the left.
+               </p>
+               <p><em class="emphasis">pitch</em> is rotation around the x-axis. Positive
+                      is nose pointing down, negative is nose pointing up.
+               </p>
+               <p><em class="emphasis">roll</em> is rotation around the z-axis. Positive is
+                      to the left, negative is to the right.
+               </p>
+            </div>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -281,7 +270,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;Design Introduction</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

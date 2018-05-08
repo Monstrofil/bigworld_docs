@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Implement a Progress Bar">
       <link rel="up" href="index.html" title="How To Implement a Progress Bar">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Introduction">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Implementing Progress Bars"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Implementing Progress Bars">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_implement_progress_bar/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e27"></a>Chapter&nbsp;2.&nbsp;The Script and GUI Files
+                     <h2 class="title"><a name="xref_Script_And_Gui_Files"></a>Chapter&nbsp;2.&nbsp;The Script and GUI Files
                      </h2>
                   </div>
                </div>
@@ -38,29 +39,28 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch02.html#d0e32">2.1. Script for generating the GUI file</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e73">2.2. Generating the GUI file</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e132">2.3. The generated GUI file</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e33">2.1. Script for generating the GUI file</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e74">2.2. Generating the GUI file</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e132">2.3. The generated GUI file</a></span></dt>
                </dl>
             </div>
-            <p>Creating a progress bar using BigWorld technology is a
-                   straightforward task. In this document, we will implement a progress bar
-                   using a GUI script (in Python), which in turn generates the GUI file (in
-                   XML format).
+            <p>Creating a progress bar using BigWorld technology is a straightforward
+                 task. In this document, we will implement a progress bar using a GUI script
+                 in Python, which will in turn generate a GUI file in XML format.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e32"></a>2.1.&nbsp;Script for generating the GUI file
+                        <h2 class="title" style="clear: both"><a name="d0e33"></a>2.1.&nbsp;Script for generating the GUI file
                         </h2>
                      </div>
                   </div>
                </div>
                <p>For this example, we will be using the FantasyDemo scripts.</p>
                <p>Open the
-                        <span class="literal">fantasydemo/res/scripts/client/PyGUI.py</span>, and include
-                        the following lines:
+                      <code class="filename">fantasydemo/res/scripts/client/PyGUI.py</code>, and include
+                      the following lines:
                </p><pre class="programlisting">"""
 This class is a simple Progress Bar.
    """
@@ -73,36 +73,36 @@ This class is a simple Progress Bar.
                     
       def setProgress( self, value ):
          pass</pre><p><span class="citetitle">Progress bar script
-                           <span class="literal">PyGUI.py</span></span></p>
+                         <code class="filename">PyGUI.py</code></span></p>
                <p>The example given in this document uses
-                        <span class="literal">PyGUIBase</span>, which is the base class for GUI
-                        components, and is described in file
-                        <span class="literal">fantasydemo/res/scripts/client/helpers/PyGUI.py</span>. The
-                        use of this class to implement the progress bar is optional.
+                      <code class="classname">PyGUIBase</code>, which is the base class for GUI
+                      components, and is described in file
+                      <code class="filename">fantasydemo/res/scripts/client/helpers/PyGUI.py</code>. The
+                      use of this class to implement the progress bar is optional.
                </p>
-               <p>The class attribute <span class="literal">factoryString</span> tells the GUI
-                        library which class to instantiate when we load our GUI from the XML
-                        file. The XML will contain a <span class="literal">&lt;script&gt;</span> entry
-                        with the value "<span class="literal">PyGUI.ProgressBar</span>"
+               <p>The class attribute <code class="varname">factoryString</code> tells the GUI
+                      library which class to instantiate when we load our GUI from the XML file.
+                      The XML will contain a <span class="literal">&lt;script&gt;</span> entry with the
+                      value "<span class="literal">PyGUI.ProgressBar</span>"
                </p>
-               <p>The method <span class="literal">setProgress</span> is called by the user to
-                        set the current progress level. Our script will respond by moving the
-                        bar to the appropriate place.
+               <p>The method <code class="methodname">setProgress()</code> is called by the
+                      user to set the current progress level. Our script will respond by moving
+                      the bar to the appropriate place.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e73"></a>2.2.&nbsp;Generating the GUI file
+                        <h2 class="title" style="clear: both"><a name="d0e74"></a>2.2.&nbsp;Generating the GUI file
                         </h2>
                      </div>
                   </div>
                </div>
                <p>It is easier to create a GUI at runtime if you use the in-game
-                        Python console. So, first launch the FantasyDemo executable, then press
-                        <span class="literal">Caps Lock</span>+<span class="literal">P</span> to open the Python
-                        console. The code below defines the GUI for our progress bar:
+                      Python console. So, first launch the FantasyDemo executable, then press
+                      <span class="literal"><em class="replaceable"><code>DEBUG</code></em>+P</span> to open the Python
+                      console. The code below defines the GUI for our progress bar:
                </p><pre class="programlisting">import GUI
 progress = GUI.Window( "maps/gui/gui_bar_back.dds" )
 progress.bar = GUI.Simple( "maps/gui/gui_bar.dds" )
@@ -110,14 +110,12 @@ progress.bar.clipper = GUI.ClipShader()
 progress.height = progress.bar.height = 0.1
 progress.materialFX = progress.bar.materialFX = "BLEND"
 progress.bar.colour = (128,128,255,255)
-GUI.addRoot( progress )</pre><p><span class="citetitle">Script for generating GUI file &#8212; Defining visual
-                           elements</span></p>
-               <p>The file above defines a bitmapped border component for the bar,
-                        and a bitmapped bar component hooked up to a Clip GUI Shader.
+GUI.addRoot( progress )</pre><p><span class="citetitle">Script for generating GUI file (Defining visual
+                         elements)</span></p>
+               <p>The file above defines a bitmapped border component for the bar, and
+                      a bitmapped bar component hooked up to a Clip GUI Shader.
                </p>
-               <p>Given that the specified border component is the image
-                        below:
-               </p>
+               <p>Given that the specified border component is the image below:</p>
                <div class="informalfigure">
                   <div class="mediaobject"><img src="images/border_component.png"><span class="caption">
                         <p>Border component</p></span></div>
@@ -127,26 +125,26 @@ GUI.addRoot( progress )</pre><p><span class="citetitle">Script for generating GU
                   <div class="mediaobject"><img src="images/bar_component.png"><span class="caption">
                         <p>Bar component</p></span></div>
                </div>
-               <p>Note that we have created the progress bar as a Window. This
-                        enables us to reposition the whole progress bar simply by moving the
-                        root component.
+               <p>Note that we have created the progress bar as a Window. This enables
+                      us to reposition the whole progress bar simply by moving the root
+                      component.
                </p>
                <p>For example, to move the entire progress bar to the top middle of
-                        the screen, we would write:
-               </p><pre class="programlisting">progress.position = (0,0.8,1)</pre><p><span class="citetitle">Script for generating GUI file &#8212; Positioning bar on top
-                           middle screen</span></p>
-               <p>The final attribute we need to set on the progress bar component
-                        is its script. We do this simply by instantiating the appropriate Python
-                        class, as illustrated below:
+                      the screen, we would write:
+               </p><pre class="programlisting">progress.position = (0,0.8,1)</pre><p><span class="citetitle">Script for generating GUI file &#8212; Positioning bar on
+                         top middle screen</span></p>
+               <p>The final attribute we need to set on the progress bar component is
+                      its script. We do this simply by instantiating the appropriate Python
+                      class, as illustrated below:
                </p><pre class="programlisting">from Helpers import PyGUI
 progress.script = PyGUI.ProgressBar(None)</pre><p><span class="citetitle">Script for generating GUI file &#8212; Defining bar's
-                           script</span></p>
-               <p>To generate the progress bar GUI file, hook up the script to the
-                        GUI component and save it to disk, as illustrated below:
-               </p><pre class="programlisting">progress.save( "guis/progress_bar.gui" )</pre><p><span class="citetitle">Script for generating GUI file &#8212; Generating the bar's
-                           GUI file</span></p>
+                         script</span></p>
+               <p>To generate the progress bar GUI file, hook up the script to the GUI
+                      component and save it to disk, as illustrated below:
+               </p><pre class="programlisting">progress.save( "guis/progress_bar.gui" )</pre><p><span class="citetitle">Script for generating GUI file (Generating the bar's GUI
+                         file)</span></p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -155,8 +153,8 @@ progress.script = PyGUI.ProgressBar(None)</pre><p><span class="citetitle">Script
                      </div>
                   </div>
                </div>
-               <p>The generated file <span class="literal">guis/progress_bar.gui</span> will
-                        look something like this:
+               <p>The generated file <code class="filename">guis/progress_bar.gui</code> will
+                      look something like this:
                </p><pre class="programlisting">&lt;progress_bar.gui&gt;
 
     &lt;WindowGUIComponent&gt;   301410224
@@ -219,19 +217,19 @@ progress.script = PyGUI.ProgressBar(None)</pre><p><span class="citetitle">Script
     &lt;/ClipGUIShader&gt;
 
 &lt;/progress_bar.gui&gt;</pre><p><span class="citetitle">GUI file
-                           <span class="literal">progress_bar.gui</span></span></p>
+                         <code class="filename">progress_bar.gui</code></span></p>
                <p>Now that we know the names of the components, we can implement the
-                        GUI script. The script controls the progress bar via its method
-                        <span class="literal">setProgress</span>:
+                      GUI script. The script controls the progress bar via its method
+                      <span class="literal">setProgress</span>:
                </p><pre class="programlisting">def setProgress( self, value ):
     clipper = self.frame.bar.clipper
     if value &gt; clipper.value:
-        self.frame.bar.clipper.value = value</pre><p><span class="citetitle">Progress bar script file <span class="literal">PyGUI.py</span> &#8212;
-                           Controlling the progress</span></p>
-               <p>This method simply maps the incoming progress value (between 0.0
-                        and 1.0) to the clip value on the GUI Clip shader. The Clip shader will
-                        smoothly clip the component to the new value over a set amount of
-                        time.
+        self.frame.bar.clipper.value = value</pre><p><span class="citetitle">Progress bar script file <span class="literal">PyGUI.py</span>
+                         (Controlling the progress)</span></p>
+               <p>This method simply maps the incoming progress value (between 0.0 and
+                      1.0) to the clip value on the GUI Clip shader. The Clip shader will
+                      smoothly clip the component to the new value over a set amount of
+                      time.
                </p>
             </div>
          </div>
@@ -250,7 +248,7 @@ progress.script = PyGUI.ProgressBar(None)</pre><p><span class="citetitle">Script
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Implementing Progress Bars</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

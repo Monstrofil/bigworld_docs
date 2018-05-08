@@ -2,20 +2,21 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    
-      <title>Chapter&nbsp;8.&nbsp;Panel System</title>
+      <title>Chapter&nbsp;8.&nbsp;Meta Data</title>
       <link rel="stylesheet" href="../css/bigworld.css" type="text/css">
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="Content Tools Reference Guide">
       <link rel="up" href="index.html" title="Content Tools Reference Guide">
       <link rel="prev" href="ch07.html" title="Chapter&nbsp;7.&nbsp;Asset Browser">
-      <link rel="next" href="ch09.html" title="Chapter&nbsp;9.&nbsp;NavGen"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch09.html" title="Chapter&nbsp;9.&nbsp;Panel System">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/content_tools_reference_guide/ch08.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
                <tr>
-                  <th colspan="3" align="center">Chapter&nbsp;8.&nbsp;Panel System</th>
+                  <th colspan="3" align="center">Chapter&nbsp;8.&nbsp;Meta Data</th>
                </tr>
                <tr>
                   <td width="20%" align="left"><a accesskey="p" href="ch07.html">Prev</a>&nbsp;
@@ -30,245 +31,114 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="xref_Panel_System"></a>Chapter&nbsp;8.&nbsp;Panel System
+                     <h2 class="title"><a name="xref_Meta_Data"></a>Chapter&nbsp;8.&nbsp;Meta Data
                      </h2>
                   </div>
                </div>
             </div>
-            <div class="toc">
-               <p><b>Table of Contents</b></p>
-               <dl>
-                  <dt><span class="sect1"><a href="ch08.html#d0e28589">8.1. Manipulating the panels/tabs</a></span></dt>
-                  <dd>
-                     <dl>
-                        <dt><span class="sect2"><a href="ch08.html#d0e28601">8.1.1. Title bar buttons</a></span></dt>
-                        <dt><span class="sect2"><a href="ch08.html#d0e28632">8.1.2. Drag-and-drop</a></span></dt>
-                     </dl>
-                  </dd>
-                  <dt><span class="sect1"><a href="ch08.html#d0e28744">8.2. Layout management</a></span></dt>
-               </dl>
-            </div>
-            <p>BigWorld tools such as WorldEditor, ModelEditor and ParticleEditor,
-                 give the user the ability to change the layout of the application's
-                 different panels using the Panel System.
+            <p>Meta Data can be used to define arbitrary properties for existing
+               objects. With meta data, you can add extra properties to models, particle
+               systems or any objects in chunk. Those properties are listed along other
+                 properties and can be edited in the same way.
             </p>
-            <p>The Panel System allows the user to have different parts of the
-                 application in different positions in the screen, as a tab or as a
-                 panel.
-            </p>
-            <p>The picture below illustrates the basic elements of the system (fields
-                 are blurred to highlight the relevant items):
-            </p>
-            <div class="informalfigure">
-               <div class="mediaobject"><img src="images/ps_main_diagram.png"><span class="caption">
-                     <p>A window (left), a floating panel (middle), and two
-                              docked panels (right)
-                     </p></span></div>
-            </div>
-            <div class="sect1" lang="en">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h2 class="title" style="clear: both"><a name="d0e28589"></a>8.1.&nbsp;Manipulating the panels/tabs
-                        </h2>
-                     </div>
-                  </div>
-               </div>
-               <p>The panels can be manipulated in two ways:</p>
-               <div class="itemizedlist">
-                  <ul type="disc">
-                     <li>
-                        <p>via the title bar buttons</p>
-                     </li>
-                     <li>
-                        <p>via drag-and-drop</p>
-                     </li>
-                  </ul>
-               </div>
-               <div class="sect2" lang="en">
-                  <div class="titlepage">
-                     <div>
-                        <div>
-                           <h3 class="title"><a name="d0e28601"></a>8.1.1.&nbsp;Title bar buttons
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-                  <p>The panels might be manipulated by the following buttons:</p>
-                  <div class="itemizedlist">
-                     <ul type="disc">
-                        <li>
-                           <p>Create New Floating Panel button &#8212;<span class="inlinemediaobject"><img src="images/ps_title_bar_button_new.png"></span>&#8212;
-                           </p>
-                        </li>
-                        <li>
-                           <p>Expand/collapse button &#8212;<span class="inlinemediaobject"><img src="images/ps_title_bar_button_expand.png"></span>/<span class="inlinemediaobject"><img src="images/ps_title_bar_button_collapse.png"></span>&#8212;
-                           </p>
-                        </li>
-                        <li>
-                           <p>Close button &#8212;<span class="inlinemediaobject"><img src="images/ps_title_bar_button_close.png"></span>&#8212;
-                           </p>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="sect2" lang="en">
-                  <div class="titlepage">
-                     <div>
-                        <div>
-                           <h3 class="title"><a name="d0e28632"></a>8.1.2.&nbsp;Drag-and-drop
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-                  <p>Most of the manipulation can be done via drag-and-drop, with grey
-                           rectangles indicating the area where the dragged area will be
-                           fit.
-                  </p>
-                  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-                     <h3 class="title">Note</h3>
-                     <p>Pressing <span class="literal">Ctrl</span> makes the panel system ignore
-                                dockable areas.
+            <p>Currently we have two kinds of meta data:</p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p><em class="emphasis">Asset meta data</em>: They are extra
+                              properties added to individual asset like model, particle system, etc.
+                              They are saved with the asset.
                      </p>
-                  </div>
-                  <div class="itemizedlist">
-                     <ul type="disc">
-                        <li>
-                           <p><em class="emphasis">To create a docked panel on an area of
-                                           the viewport</em></p>
-                           <p>Drag the desired tab or panel, and drop it near the top,
-                                        bottom, left, or right of the viewport.
-                           </p>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_docked_panel_on_viewport_before.png"><span class="caption">
-                                    <p>Before dragging the tab to the left side of the
-                                                     viewport
-                                    </p></span></div>
-                           </div>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_docked_panel_on_viewport_after.png"><span class="caption">
-                                    <p>After dragging the tab to the left side of the
-                                                     viewport &#8212; New docked panel created
-                                    </p></span></div>
-                           </div>
-                        </li>
-                        <li>
-                           <p><em class="emphasis">To create a new docked panel inside
-                                           another docked panel</em></p>
-                           <p>Drag the desired tab or panel, and drop it near the panel's
-                                        title bar &#8212; if the drop happens inside the title bar, then a new tab
-                                        is created.
-                           </p>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_docked_panel_inside_docked_panel_before.png"><span class="caption">
-                                    <p>Before dragging the tab near the panel's title
-                                                     bar
-                                    </p></span></div>
-                           </div>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_docked_panel_inside_docked_panel_after.png"><span class="caption">
-                                    <p>After dragging the tab near the panel's title bar
-                                                     &#8212; New docked panel created
-                                    </p></span></div>
-                           </div>
-                        </li>
-                        <li>
-                           <p><em class="emphasis">To create a new floating
-                                           panel</em></p>
-                           <p>Drag the desired tab or panel, and drop it in the
-                                        viewport.
-                           </p>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_new_floating_panel_before.png"><span class="caption">
-                                    <p>Before dragging the tab to the
-                                                     viewport
-                                    </p></span></div>
-                           </div>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_new_floating_panel_after.png"><span class="caption">
-                                    <p>After dragging the tab to the viewport &#8212; New
-                                                     floating panel created
-                                    </p></span></div>
-                           </div>
-                        </li>
-                        <li>
-                           <p><em class="emphasis">To create a new window</em></p>
-                           <p>Drag the desired tab or panel, and drop it inside a floating
-                                        panel, near its title bar &#8212; if the drop happens inside the title
-                                        bar, then a new tab is created.
-                           </p>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_new_window_before.png"><span class="caption">
-                                    <p>Before dragging the tab near the floating panel's
-                                                     title bar
-                                    </p></span></div>
-                           </div>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_new_window_after.png"><span class="caption">
-                                    <p>After dragging the tab near the floating panel's
-                                                     title bar &#8212; New window created
-                                    </p></span></div>
-                           </div>
-                        </li>
-                        <li>
-                           <p><em class="emphasis">To create a new panel</em></p>
-                           <p>Drag the desired tab or panel, and drop it near an existing
-                                        tab or panel's title bar &#8212; if the drop happens near the title bar,
-                                        then a new panel is created.
-                           </p>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_new_panel_before.png"><span class="caption">
-                                    <p>Before dragging the tab inside the panel's title
-                                                     bar
-                                    </p></span></div>
-                           </div>
-                           <div class="informalfigure">
-                              <div class="mediaobject"><img src="images/ps_drag_and_drop_new_panel_after.png"><span class="caption">
-                                    <p>After dragging the tab inside the panel's title
-                                                     bar &#8212; New tab created
-                                    </p></span></div>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+                  </li>
+               </ul>
             </div>
-            <div class="sect1" lang="en">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h2 class="title" style="clear: both"><a name="d0e28744"></a>8.2.&nbsp;Layout management
-                        </h2>
-                     </div>
-                  </div>
-               </div>
-               <p>Upon exit, panel layouts are automatically saved to the
-                      <span class="literal">layout.xml</span> file inside the tool's application folder.
-                      Upon startup, the last panel layout is reloaded. If the layout file does
-                      not exist, then the tool will load its default panel layout. Please note
-                      that the <span class="literal">layout.xml</span> file should not be edited
-                      manually.
-               </p>
-               <p>In all tools, the user has the option to load the tool's default
-                      panel layout, or reload the last customised layout.
-               </p>
-               <p>For details on the menu items related to the Panel System,
-                      see:
-               </p>
-               <div class="itemizedlist">
-                  <ul type="disc">
-                     <li>
-                        <p>WorldEditor's menu items in <a href="ch02.html#xref_we_Menu_Items" title="2.1.&nbsp;Menu items">Menu items</a></p>
-                     </li>
-                     <li>
-                        <p>ModelEditor's menu items in <a href="ch03.html#xref_me_Menu_Items" title="3.1.&nbsp;Menu items">Menu items</a></p>
-                     </li>
-                     <li>
-                        <p>ParticleEditor's menu items in <a href="ch04.html#xref_pe_Menu_Items" title="4.1.&nbsp;Menu items">Menu items</a></p>
-                     </li>
-                  </ul>
-               </div>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p><em class="emphasis">Instance meta data</em>: They are
+                              extra properties added to the instance of an asset in the space. They
+                              are saved to chunk file by <em class="emphasis">WorldEditor</em>.
+                     </p>
+                  </li>
+               </ul>
             </div>
+            <div class="informalfigure">
+               <div class="mediaobject"><img src="images/md_main_window.png" height=""><span class="caption">
+                     <p>Meta Data</p></span></div>
+            </div>
+            <p>Above is the <em class="emphasis">Properties</em> panel of
+                 <em class="emphasis">WorldEditor</em>, it shows properties of a
+                 selected model. The properties listed under "asset metadata" (surrounded by
+                 the red rectangle) are the meta data properties of the model itself (asset
+                 meta data). The properties marked by a prefix red bar are the meta data
+                 properties of this chunk model instance (instance meta data).
+            </p>
+            <p><em class="emphasis">Note</em>: Asset meta data is read-only in
+                 <em class="emphasis">WorldEditor</em>.
+            </p>
+            <p>Meta data properties are defined by <span class="literal">XML</span> files.
+                 Currently we only support three kind of meta data, they are:
+            </p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     <p>Meta data for models: its definition file is defined in section
+                              <span class="literal">editor/metaDataConfig/model</span> of
+                              <code class="filename">resources.xml</code>, the default value is
+                              <code class="filename">helpers/meta_data/model.xml</code></p>
+                  </li>
+                  <li>
+                     <p>Meta data for particles: its definition file is defined in section
+                              <span class="literal">editor/metaDataConfig/metaParticleSystem</span> of
+                              <code class="filename">resources.xml</code>, the default value is
+                              <code class="filename">helpers/meta_data/meta_particle_system.xml</code></p>
+                  </li>
+                  <li>
+                     <p>Meta data for chunk items: its definition file is defined in
+                              section <span class="literal">editor/metaDataConfig/chunkItem</span> of
+                              <code class="filename">resources.xml</code>, the default value is
+                              <code class="filename">helpers/meta_data/chunk_item.xml</code></p>
+                  </li>
+               </ul>
+            </div>
+            <p>Each section in the files defines a property. Its format is:</p><pre class="programlisting">&lt;PropertyName&gt;
+    &lt;description&gt; optional description &lt;/description&gt;
+    &lt;type&gt; TYPE &lt;/type&gt;
+&lt;/PropertyName&gt;</pre><p>Currently, the types we support are <span class="literal">STRING</span>,
+                 <span class="literal">INT</span>, <span class="literal">FLOAT</span>, <span class="literal">COMMENT</span>
+                 and <span class="literal">DATETIME</span>. If description section is not presented, we
+                 will use. For example, if you want to add a new property named "girth
+                 index", which is the index into a girth array to describe the model's girth.
+                 As "girth index" cannot be used as <span class="literal">XML</span> section name, a
+                 description must be provided. This property could be defined as
+                 follow:
+            </p><pre class="programlisting">&lt;girth_index&gt;
+    &lt;description&gt; girth index &lt;/description&gt;
+    &lt;type&gt; INT &lt;/type&gt;
+&lt;/girth_index&gt;</pre><p>In addition to the properties defined in the <span class="literal">XML</span>
+                 files, each object with meta data also has some default properties. They are
+                 defined in the engine. Currently we only have 6 default properties:
+                 "<span class="literal">created by</span>", "<span class="literal">created on</span>",
+                 "<span class="literal">modified by</span>", "<span class="literal">modified on</span>",
+                 "<span class="literal">comments</span>" and "<span class="literal">description</span>".
+            </p>
+            <p>"<span class="literal">created by</span>" and "<span class="literal">created on</span>"
+                 are automatically filled when the object linked to this meta data is first
+                 created, i.e. when a model is exported by the exporter, a meta particle
+                 system is created in ParticleEditor or an object placed/cloned inside
+                 WorldEditor. "<span class="literal">modified by</span>" and "<span class="literal">modified
+                    on</span>" are automatically filled when there is any modification made
+                 to the object. All those fields are generated by the system and are
+                 read-only to the user.
+            </p>
+            <p>"<span class="literal">description</span>" is a single string field used to add
+                 a simple description to the object while "<span class="literal">comments</span>" can
+                 have multiple entries under it. Besides the text, each comment also records
+                 the user who creates the comment and the time the comment is created.
+            </p>
+            <p>If one of the definition files does not exist, the corresponding
+                 objects will still get their default properties.
+            </p>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -282,10 +152,10 @@
                <tr>
                   <td width="40%" align="left" valign="top">Chapter&nbsp;7.&nbsp;Asset Browser&nbsp;</td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;9.&nbsp;NavGen</td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;9.&nbsp;Panel System</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

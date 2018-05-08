@@ -7,9 +7,10 @@
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
       <link rel="start" href="index.html" title="How To Build a Friends List">
       <link rel="up" href="index.html" title="How To Build a Friends List">
-      <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Example Code"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Example Code">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_build_friends_list/ch04.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -37,9 +38,9 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch04.html#d0e1097">4.1. Asking for permission to be someone&#8217;s friend</a></span></dt>
-                  <dt><span class="sect1"><a href="ch04.html#d0e1237">4.2. Enforcing mutual friendship</a></span></dt>
-                  <dt><span class="sect1"><a href="ch04.html#d0e1260">4.3. Matching request and response</a></span></dt>
+                  <dt><span class="section"><a href="ch04.html#d0e1097">4.1. Asking for permission to be someone&#8217;s friend</a></span></dt>
+                  <dt><span class="section"><a href="ch04.html#d0e1237">4.2. Enforcing mutual friendship</a></span></dt>
+                  <dt><span class="section"><a href="ch04.html#d0e1260">4.3. Matching request and response</a></span></dt>
                </dl>
             </div>
             <p>The example here is a starting point for building your own
@@ -48,7 +49,7 @@
                    Certainly you will also have specific requirements for your game. This
                    section discusses some obvious variations and their implications.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -99,17 +100,17 @@
                               </li>
                               <li>
                                  <p>A possible situation exists where acceptance is rejected
-                                                  because the <em class="emphasis">asker</em>&#8217;s <em class="emphasis">friends list</em>
-                                                  has become full since the request was made.
+                                                  because the <em class="emphasis">asker</em>&#8217;s <em class="emphasis">friends
+                                                     list</em> has become full since the request was
+                                                  made.
                                  </p>
                               </li>
                            </ul>
                         </div>
                      </li>
                      <li>
-                        <p><em class="emphasis">On the client of the
-                                        askee and on the base of the player who is asking
-                                        (the asker).</em></p>
+                        <p><em class="emphasis">On the client of the askee and on the
+                                        base of the player who is asking (the asker).</em></p>
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
@@ -119,8 +120,8 @@
                                  </p>
                               </li>
                               <li>
-                                 <p>The <em class="emphasis">asker</em> can withdraw
-                                                  the request.
+                                 <p>The <em class="emphasis">asker</em> can withdraw the
+                                                  request.
                                  </p>
                               </li>
                               <li>
@@ -168,7 +169,7 @@
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -190,12 +191,11 @@
                         strangers from using up the limited number of friends each player is
                         allowed to have.
                </p>
-               <p>Note that enforcing mutual friendship would not allow
-                        a game world to have "leader" characters
-                        with many more admirers than friends.
+               <p>Note that enforcing mutual friendship would not allow a game world
+                        to have "leader" characters with many more admirers than friends.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -224,11 +224,12 @@
                            numbers</em> and have them passed back in the result
                         (<em class="emphasis">e.g.</em>, <span class="literal">showMessage(&lt;sequence
                            number&gt;,&lt;type&gt;,&lt;source&gt;,&lt;message&gt;)</span>). This
-                        would have the advantage of supporting multiple outstanding requests of the
-                        same type (<em class="emphasis">e.g.</em>, multiple <span class="literal">addFriends</span>),
-                        but is obviously more expensive (extra integer in message and dictionary in
-                        the client to map <em class="emphasis">sequence number</em> to request) and
-                        therefore should be limited to infrequent calls.
+                        would have the advantage of supporting multiple outstanding requests of
+                        the same type (<em class="emphasis">e.g.</em>, multiple
+                        <span class="literal">addFriends</span>), but is obviously more expensive (extra
+                        integer in message and dictionary in the client to map
+                        <em class="emphasis">sequence number</em> to request) and therefore should be
+                        limited to infrequent calls.
                </p>
             </div>
          </div>
@@ -247,7 +248,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Perform Accurate Targeting Of Entities">
       <link rel="up" href="index.html" title="How To Perform Accurate Targeting Of Entities">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Introduction">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Using the SkeletonCollider"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Using the SkeletonCollider">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_accurately_target_entities/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,12 +39,12 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch02.html#d0e34">2.1. Setup</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e44">2.2. Creating the boxes</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e86">2.3. Tweaking the boxes</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e34">2.1. Setup</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e44">2.2. Creating the boxes</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#d0e87">2.3. Tweaking the boxes</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -62,7 +63,7 @@
 entityDict = {'creatureType':1,'creatureName':'MyTarget'}
 entityId = BigWorld.createEntity(type, player.spaceID, 0, player.position, (0,0,0), entityDict)
 creature = BigWorld.entities[entityId]</pre></div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -76,32 +77,27 @@ creature = BigWorld.entities[entityId]</pre></div>
                         <span class="literal">SkeletonCollider</span> can use for the collisions. We give
                         the attachments the same name as the node they are to be attached to so
                         they are easier to manage. We also give the box attachments a rough
-                        starting size. 
+                        starting size.
                </p>
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                             To get the names of the nodes you can enable the watcher 
-                  
-                            <span class="literal">"render/Draw Node Labels"</span>
-                  
-                             , this will display the node names on the screen 
-                          
-               </div>
-               <p> </p><pre class="programlisting">headBox=BigWorld.BoxAttachment()
-headBox.name='biped Head'
-headBox.minBounds=(-0.1,-0.1,-0.1)
-headBox.maxBounds=(0.1,0.1,0.1)
-pelvisBox.name='biped Pelvis'
-pelvisBox.minBounds=(-0.2,-0.2,-0.2)
-pelvisBox.maxBounds=(0.2,0.2,0.2)</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                  <p>To get the names of the nodes you can enable the watcher
+                             <span class="literal">"render/Draw Node Labels"</span>, this will display the
+                             node names on the screen.
+                  </p>
+               </div><pre class="programlisting">headBox = BigWorld.BoxAttachment()
+headBox.name = 'biped Head'
+headBox.minBounds = (-0.1, -0.1, -0.1)
+headBox.maxBounds = (0.1, 0.1, 0.1)
+pelvisBox.name = 'biped Pelvis'
+pelvisBox.minBounds = (-0.2, -0.2, -0.2)
+pelvisBox.maxBounds = (0.2, 0.2, 0.2)</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                           For simplicity this example only uses two 
-                  
-                          <span class="literal">BoxAttachment</span>
-                  
-                           objects. In a real world game you would probably want to use more than two boxes, and you are free to use as many
-                  or as few bounding boxes that you like 
-                        
+                  <p>For simplicity this example only uses two
+                             <span class="literal">BoxAttachment</span> objects. In a real world game you
+                             would probably want to use more than two boxes, and you are free to
+                             use as many or as few bounding boxes that you like
+                  </p>
                </div>
                <p>The boxes are then attached to the entity's nodes so that we can
                         use them for targeting.
@@ -114,11 +110,11 @@ creature.model.node(pelvisBox.name).attach(pelvisBox)</pre><p>We can now display
                         <p>Displaying the impact boxes</p></span></div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e86"></a>2.3.&nbsp;Tweaking the boxes
+                        <h2 class="title" style="clear: both"><a name="d0e87"></a>2.3.&nbsp;Tweaking the boxes
                         </h2>
                      </div>
                   </div>
@@ -155,7 +151,7 @@ pelvisBox.maxBounds=(0.4,0.2,0.2)</pre><div class="informalfigure">
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Using the <span class="literal">SkeletonCollider</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

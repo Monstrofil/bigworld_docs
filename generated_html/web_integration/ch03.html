@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="BigWorld Web Integration Reference">
       <link rel="up" href="index.html" title="BigWorld Web Integration Reference">
       <link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Remote Methods with Return Values">
-      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Keep-alive Messages"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp;Keep-alive Messages">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/web_integration/ch03.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,35 +31,34 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e134"></a>Chapter&nbsp;3.&nbsp;Logging on Entities
+                     <h2 class="title"><a name="xref_Logging_On_Entities"></a>Chapter&nbsp;3.&nbsp;Logging on Entities
                      </h2>
                   </div>
                </div>
             </div>
-            <p>When a player logs on with the web module, and the player's entity
-               was not previously loaded from the database, then the entity is loaded
-               onto the least loaded BaseApp. A reference to the newly created or already
-                  existing entity base can then be looked up using one of the lookup methods
-                   present in the API.
+            <p>When a player logs on with the web module, and the player's entity was
+               not previously loaded from the database, then the entity is loaded onto the
+               least loaded BaseApp. A reference to the newly created or already existing
+                 entity base can then be looked up using one of the lookup methods present in
+                 the API.
             </p>
-            <p>If the entity is already logged on, for example, via the client,
-                   then the player entity has already been loaded and will have the
-                   <code class="methodname">BigWorld.onLogOnAttempt()</code> method called on the
-                   entity base (for details, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">BaseApp Python API
-                      documentation</a>). It is called with the parameters
-                   <span class="literal">ip</span>, <span class="literal">port</span> and
-                   <span class="literal">password</span>. If the logon attempt is from a web
-                   integration gateway, then the IP and port will be equal to 0.
+            <p>If the entity is already logged on, for example, via the client, then
+                 the player entity has already been loaded and will have the
+                 <code class="methodname">BigWorld.onLogOnAttempt()</code> method called on the
+                 entity base (for details, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/baseapp/index.html" class="olink">BaseApp Python API</a>).
+                 It is called with the parameters <em class="parameter"><code>ip</code></em>,
+                 <em class="parameter"><code>port</code></em> and <em class="parameter"><code>password</code></em>. If the
+                 logon attempt is from a web integration gateway, then the IP and port will
+                 be equal to 0.
             </p>
             <p>In script, the entity must deal with multiple logons from the client
-                   through the LoginApp versus multiple logons from the web integration
-                   gateway.
+                 through the LoginApp versus multiple logons from the web integration
+                 gateway.
             </p>
             <p>There is a facility for ensuring an entity is not destroyed
-                   prematurely when accessing entity methods on a mailbox, by sending
-                   keep-alive messages and specifying an interval for script callbacks when
-                   no keep-alive messages have been sent in that interval (for details, see
-                   <a href="ch04.html" title="Chapter&nbsp;4.&nbsp;Keep-alive Messages"><i xmlns:xlink="http://www.w3.org/1999/xlink">Keep-alive Messages</i></a>).
+                 prematurely when accessing entity methods on a mailbox, by sending
+                 keep-alive messages and specifying an interval for script callbacks when no
+                 keep-alive messages have been sent in that interval (for details, see <a href="ch04.html" title="Chapter&nbsp;4.&nbsp;Keep-alive Messages"><i xmlns:xlink="http://www.w3.org/1999/xlink">Keep-alive Messages</i></a>).
             </p>
          </div>
          <div class="navfooter">
@@ -76,7 +76,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;Keep-alive Messages</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

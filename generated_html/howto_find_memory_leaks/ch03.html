@@ -5,11 +5,12 @@
       <title>Chapter&nbsp;3.&nbsp;How To</title>
       <link rel="stylesheet" href="../css/bigworld.css" type="text/css">
       <meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
-      <link rel="start" href="index.html" title="How To Implement Items And Trading">
-      <link rel="up" href="index.html" title="How To Implement Items And Trading">
-      <link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Memory Tracker"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="start" href="index.html" title="How To Find Memory Leaks">
+      <link rel="up" href="index.html" title="How To Find Memory Leaks">
+      <link rel="prev" href="ch02.html" title="Chapter&nbsp;2.&nbsp;Memory Tracker">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_find_memory_leaks/ch03.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -29,7 +30,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e56"></a>Chapter&nbsp;3.&nbsp;How To
+                     <h2 class="title"><a name="d0e58"></a>Chapter&nbsp;3.&nbsp;How To
                      </h2>
                   </div>
                </div>
@@ -37,33 +38,30 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch03.html#d0e59">3.1. Find out if your program leaks</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e83">3.2. Break on a given memory allocation.</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e91">3.3. Defining slots</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e107">3.4. Ignoring leaks</a></span></dt>
-                  <dt><span class="sect1"><a href="ch03.html#d0e118">3.5. See the call stack for leaks</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e61">3.1. Find out if your program leaks</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e87">3.2. Break on a given memory allocation.</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e94">3.3. Defining slots</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e129">3.4. Ignoring leaks</a></span></dt>
+                  <dt><span class="section"><a href="ch03.html#d0e139">3.5. See the call stack for leaks</a></span></dt>
                </dl>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e59"></a>3.1.&nbsp;Find out if your program leaks
+                        <h2 class="title" style="clear: both"><a name="d0e61"></a>3.1.&nbsp;Find out if your program leaks
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>Link your program against <span class="literal">cstdmf</span>, and ensure
-                        every source file includes the <span class="literal">cstdmf.hpp</span>
-                        header.
+               <p>Link your program against the <span class="literal">cstdmf</span> library,
+                        and ensure every source file includes the
+                        <code class="filename">cstdmf.hpp</code> header.
                </p>
-               <p>Then, run the program in DEBUG configuration, and if leaks occur
-                        they will be output in the debugger (when the program exits) in the
-                        following format: 
-                        
-                        
-               </p><pre class="programlisting">
-MemTracker detected the following leaks:
+               <p>Then, run the program in the <span class="literal">DEBUG</span>
+                        configuration, and if leaks occur they will be output in the debugger,
+                        when the program exits, in the following format:
+               </p><pre class="programlisting">MemTracker detected the following leaks:
 Slot: Default, Id: 5007 - 88 bytes
 Slot: Default, Id: 8695 - 44 bytes
 Slot: Default, Id: 8883 - 60 bytes
@@ -72,49 +70,37 @@ Slot: Default, Id: 9435 - 28 bytes
 Slot: Default, Id: 9436 - 20 bytes
 Slot: Default, Id: 20975 - 116 bytes
 Slot: Default, Id: 20976 - 16 bytes
-Slot: Default, Id: 392363 - 12 bytes
-     </pre><p>
-                       
-               </p>
-               <p>Note <span class="literal">MemTracker</span> can be enabled for any build
-                        configuration by defining preprocessor symbol
+Slot: Default, Id: 392363 - 12 bytes</pre><p>Note <code class="classname">MemTracker</code> can be enabled for any
+                        build configuration by defining preprocessor symbol
                         <span class="literal">ENABLE_MEMTRACKER</span> for that configuration.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e83"></a>3.2.&nbsp;Break on a given memory allocation.
+                        <h2 class="title" style="clear: both"><a name="d0e87"></a>3.2.&nbsp;Break on a given memory allocation.
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>To enter the debugger on the first allocation in the example above,
-                        add the following line to your program (outside of a function body).
-                        
-               </p><pre class="programlisting">
-MEMTRACKER_BREAK_ON_ALLOC( Default, 5007 );
-      </pre><p>
-                        
-               </p>
-            </div>
-            <div class="sect1" lang="en">
+               <p>To enter the debugger on the first allocation in the example
+                        above, add the following line to your program (outside of a function
+                        body).
+               </p><pre class="programlisting">MEMTRACKER_BREAK_ON_ALLOC( Default, 5007 );</pre></div>
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e91"></a>3.3.&nbsp;Defining slots
+                        <h2 class="title" style="clear: both"><a name="d0e94"></a>3.3.&nbsp;Defining slots
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>
-                        Often it is convenient to divide up allocations into slots based on 
-                        function scope. To do this, <span class="literal">MemTracker</span> allows you
-                        to define slots. 
-                        
-               </p><pre class="programlisting">
-MEMTRACKER_DECLARE( Foo, "Foo's allocations", 0 );
+               <p>Often it is convenient to divide up allocations into slots based
+                        on function scope. To do this, <code class="classname">MemTracker</code> allows
+                        you to define slots.
+               </p><pre class="programlisting">MEMTRACKER_DECLARE( Foo, "Foo's allocations", 0 );
 
 void Foo()
 {
@@ -123,68 +109,55 @@ void Foo()
     DoFooStuff();
     DoOtherStuff();
 }
-      </pre><p>
-                        
-                        This will mark any allocations in Foo(), DoFooStuff() and DoOtherStuff()
-                        as belonging to the "Foo" slot, and each allocation will be numbered uniquely within
-                        the "Foo" slot. Slots are organised into a stack, so DoFooStuff() may contain
-                        its own definition for a slot, and its own leaks could be reported there.
-                        
+      </pre><p>This will mark any allocations in <code class="function">Foo()</code>,
+                        <code class="function">DoFooStuff()</code> and
+                        <code class="function">DoOtherStuff()</code> as belonging to the
+                        <span class="literal">"Foo"</span> slot, and each allocation will be numbered
+                        uniquely within the <span class="literal">"Foo"</span> slot. Slots are organised
+                        into a stack, so <code class="function">DoFooStuff()</code> may contain its own
+                        definition for a slot, and its own leaks could be reported there.
                </p>
-               <p>
-                        If you do not supply any slots, then the top level slot called 
+               <p>If you do not supply any slots, then the top level slot called
                         <span class="literal">Default</span> is used.
-                        
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e107"></a>3.4.&nbsp;Ignoring leaks
+                        <h2 class="title" style="clear: both"><a name="d0e129"></a>3.4.&nbsp;Ignoring leaks
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>
-                  			Sometimes it isn't convenient to fix leaks as soon as they are found.
-                  			If this is the case, you can prevent leaks from being reported by
-                  			declaring a slot with the <span class="literal">FLAG_DONT_REPORT</span> flag.
-                  			In the example above, if we wished to ignore all leaks in the Foo
-                  			slot, we would declare the slot like so:
-                  
-               </p><pre class="programlisting">
-MEMTRACKER_DECLARE( Foo, "Foo's allocations", FLAG_DONT_REPORT );
- </pre><p>
-                        
-                        
-               </p>
-            </div>
-            <div class="sect1" lang="en">
+               <p>Sometimes it isn't convenient to fix leaks as soon as they are
+                        found. If this is the case, you can prevent leaks from being reported by
+                        declaring a slot with the <span class="literal">FLAG_DONT_REPORT</span> flag. In
+                        the example above, if we wished to ignore all leaks in the Foo slot, we
+                        would declare the slot like so:
+               </p><pre class="programlisting">MEMTRACKER_DECLARE( Foo, "Foo's allocations", FLAG_DONT_REPORT );</pre></div>
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e118"></a>3.5.&nbsp;See the call stack for leaks
+                        <h2 class="title" style="clear: both"><a name="d0e139"></a>3.5.&nbsp;See the call stack for leaks
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>
-                  			If you require a stack trace for a leak, you should define the
-                  			<span class="literal">ENABLE_CALLSTACK</span> symbol as 1 in <span class="literal">memory_tracker.h</span> and
-                  			add the <span class="literal">FLAG_CALLSTACK</span> flag to the definition.
-                  			
-                  			Use of this flag requires a large amount of overhead per allocation, so it is
-                  			recomended for use within a small scope (for example, do not enable it in a slot 
-                  			that contains more than a few hundred allocations).
-                  	
+               <p>If you require a stack trace for a leak, you should define the
+                        <span class="literal">ENABLE_CALLSTACK</span> symbol as <span class="literal">1</span> in
+                        <code class="filename">memory_tracker.h</code> and add the
+                        <span class="literal">FLAG_CALLSTACK</span> flag to the definition. Use of this
+                        flag requires a large amount of overhead per allocation, so it is
+                        recommended for use within a small scope (for example, do not enable it
+                        in a slot that contains more than a few hundred allocations).
                </p>
-               <p>
-                  		  Here is an example stack trace from a leak, reading from bottom to top, the offending function is
-                  		  the one that calls bw_malloc - in this case, foo():	
-                  			
-               </p><pre class="programlisting">
-e:\mf_19_0\src\lib\cstdmf\memory_tracker.cpp (514): bw_malloc
+               <p>Here is an example stack trace from a leak, reading from bottom to
+                        top, the offending function is the one that calls
+                        <code class="function">bw_malloc()</code>, in this case
+                        <code class="function">foo()</code>:
+               </p><pre class="programlisting">e:\mf_19_0\src\lib\cstdmf\memory_tracker.cpp (514): bw_malloc
 e:\mf_19_0\src\lib\cstdmf\unit_test\test_memory_tracker.cpp (73): foo
 e:\mf_19_0\src\lib\cstdmf\unit_test\test_memory_tracker.cpp (79): bar
 e:\mf_19_0\src\lib\cstdmf\unit_test\test_memory_tracker.cpp (84): wuu
@@ -200,11 +173,7 @@ ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 76CE4911)
 ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 7743E4B6)
 7743E4B6 (ntdll): (filename not available): RtlInitializeExceptionChain
 ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 7743E489)
-7743E489 (ntdll): (filename not available): RtlInitializeExceptionChain
- </pre><p>
-                        
-               </p>
-            </div>
+7743E489 (ntdll): (filename not available): RtlInitializeExceptionChain</pre></div>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -221,7 +190,7 @@ ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 7743E489)
                   <td width="40%" align="right" valign="top">&nbsp;</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

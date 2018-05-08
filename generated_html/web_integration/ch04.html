@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="BigWorld Web Integration Reference">
       <link rel="up" href="index.html" title="BigWorld Web Integration Reference">
       <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Logging on Entities">
-      <link rel="next" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Threading Issues"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Threading Issues">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/web_integration/ch04.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,34 +39,34 @@
             <p>Mailboxes to entities residing on a BaseApp should exist for as long
                as they are needed. However, these same entities may be player entities
                controlled by the BigWorld client. These two different usages need to be
-               reconciled when it comes to managing entity lifetimes &#8212; for example, if
-               the client disconnects while the game's web interface is still using the
-               player's base entity, this entity should not be destructed until the
-                   game's web interface has finished with it.
+               reconciled when it comes to managing entity lifetimes &#8212; for example, if the
+               client disconnects while the game's web interface is still using the
+               player's base entity, this entity should not be destructed until the game's
+                 web interface has finished with it.
             </p>
             <p>Another example is if the player is currently not logged in via the
-                   BigWorld client. If the player does not explicitly log out, we would want
-                   to clean up that mailbox reference after an inactivity period.
+                 BigWorld client. If the player does not explicitly log out, we would want to
+                 clean up that mailbox reference after an inactivity period.
             </p>
             <p>A solution to this problem is to use a keep-alive interval for
-                   mailboxes that require it, so that the entity stays around even if the
-                   client has disconnected (destruction of the base entity is the normal
-                   course of action). If a keep-alive interval is set on a mailbox, then each
-                   time a method is called on that mailbox, it causes the keep-alive interval
-                   for that entity to be refreshed.
+                 mailboxes that require it, so that the entity stays around even if the
+                 client has disconnected (destruction of the base entity is the normal course
+                 of action). If a keep-alive interval is set on a mailbox, then each time a
+                 method is called on that mailbox, it causes the keep-alive interval for that
+                 entity to be refreshed.
             </p>
             <p>When a base entity enters a keep-alive interval, the base entity
-                   script method <code class="methodname">onKeepAliveStart()</code> is called. When
-                   the keep-alive interval expires without any refreshing from the web
-                   integration gateway, it is assumed to be no longer required, and so
-                   <code class="methodname">onKeepAliveStop()</code> is called in Python script. The
-                   base entity script should decide whether it is still required, and should
-                   destroy itself.
+                 script method <code class="methodname">onKeepAliveStart()</code> is called. When
+                 the keep-alive interval expires without any refreshing from the web
+                 integration gateway, it is assumed to be no longer required, and so
+                 <code class="methodname">onKeepAliveStop()</code> is called in Python script. The
+                 base entity script should decide whether it is still required, and should
+                 destroy itself.
             </p>
             <p>Keep-alive intervals can be used with HTTP session timeouts so that
-                   players have to re-login after a certain inactivity period to create a new
-                   HTTP session. Keep-alive intervals should be set to be equal to session
-                   durations or longer.
+                 players have to re-login after a certain inactivity period to create a new
+                 HTTP session. Keep-alive intervals should be set to be equal to session
+                 durations or longer.
             </p>
          </div>
          <div class="navfooter">
@@ -83,7 +84,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;5.&nbsp;Threading Issues</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

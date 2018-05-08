@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp;BinSection files">
-      <link rel="next" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Brush files"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch05.html" title="Chapter&nbsp;5.&nbsp;Brush files">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch04.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -36,20 +37,26 @@
                   </div>
                </div>
             </div>
-            <p>A <span class="literal">ZipSection</span> can be interpreted as a collection of data sections.
-                   When stored, the <span class="literal">ZipSection</span> uses the PKZIP file format
-                   (via the <span class="literal">ZipFileSystem</span> class) to group and compress multiple data sections, maintaining hierarchical structure.
-                   A <span class="literal">ZipSection</span> file can be opened with any standard .zip file viewer.
+            <p>A <code class="classname">ZipSection</code> can be interpreted as a collection
+                 of data sections. When stored, the <code class="classname">ZipSection</code> uses
+                 the PKZIP file format (via the <code class="classname">ZipFileSystem</code> class)
+                 to group and compress multiple data sections, maintaining hierarchical
+                 structure. A <code class="classname">ZipSection</code> file can be opened with any
+                 standard .zip file viewer.
             </p>
-            <p> A <span class="literal">ZipSection</span> is designed for use as a developer friendly format for easy access to it's held data.
-                   Whereas a <span class="literal">BinSection</span> cannot be accessed outside the BigWorld framework, a <span class="literal">ZipSection</span> can be
-                   viewed, debugged and edited externally. A <span class="literal">ZipSection</span> can also be used to only load specific portions of larger files.
-                   Unlike the <span class="literal">BinSection</span> which is forced to load the entire data structure before decoding.
+            <p>A <code class="classname">ZipSection</code> is designed for use as a developer
+                 friendly format for easy access to it's held data. Whereas a
+                 <code class="classname">BinSection</code> cannot be accessed outside the BigWorld
+                 framework, a <code class="classname">ZipSection</code> can be viewed, debugged and
+                 edited externally. A <code class="classname">ZipSection</code> can also be used to
+                 only load specific portions of larger files. Unlike the
+                 <code class="classname">BinSection</code> which is forced to load the entire data
+                 structure before decoding.
             </p>
-            <p> Note that data added to a <span class="literal">ZipSection</span> will automatically compressed when saved to disk.
+            <p>Note that data added to a <code class="classname">ZipSection</code> will
+                 automatically compressed when saved to disk.
             </p>
-            <p>Currently, the binary files <span class="literal">.cdata</span>, and <span class="literal">.fxo</span> use this
-                   format.
+            <p>Currently, the binary files <code class="filename">.cdata</code>, and <code class="filename">.fxo</code> use this format.
             </p>
          </div>
          <div class="navfooter">
@@ -69,7 +76,7 @@
                   </td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

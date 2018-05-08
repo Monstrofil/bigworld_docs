@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Implement Items And Trading">
       <link rel="up" href="index.html" title="How To Implement Items And Trading">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Introduction">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Trading"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Trading">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_items/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -30,7 +31,7 @@
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title"><a name="d0e25"></a>Chapter&nbsp;2.&nbsp;Items
+                     <h2 class="title"><a name="xref_Items"></a>Chapter&nbsp;2.&nbsp;Items
                      </h2>
                   </div>
                </div>
@@ -38,61 +39,61 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch02.html#d0e34">2.1. Item definition</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e125">2.2. Additional Security</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e133">2.3. Rendering the Item</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#d0e215">2.4. The Inventory</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Item_Definition">2.1. Item definition</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Additional_Security">2.2. Additional Security</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Rendering_The_Item">2.3. Rendering the Item</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Item_Inventory">2.4. The Inventory</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#d0e363">2.4.1. Inventory Manager</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e417">2.4.2. Serial Numbers</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#xref_Inventory_Manager">2.4.1. Inventory Manager</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#xref_Serial_Numbers">2.4.2. Serial Numbers</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Dropping_And_Picking_Items_Up">2.5. Dropping and picking items up</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Dropping_And_Picking_Items_Up">2.5. Dropping and picking items up</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch02.html#xref_Dropping_An_Item_On_The_Ground">2.5.1. Dropping an item on the ground</a></span></dt>
-                        <dt><span class="sect2"><a href="ch02.html#d0e602">2.5.2. Picking an item up from the ground</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#xref_Dropping_An_Item_On_The_Ground">2.5.1. Dropping an item on the ground</a></span></dt>
+                        <dt><span class="section"><a href="ch02.html#xref_Picking_An_Item_Up_From_The_Ground">2.5.2. Picking an item up from the ground</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch02.html#xref_Locking_Inventory_Items">2.6. Locking inventory items</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_Locking_Inventory_Items">2.6. Locking inventory items</a></span></dt>
                </dl>
             </div>
-            <p>Items are things that players and other entities can possess, such
-                   as guns, swords, loot, etc.
+            <p>Items are things that players and other entities can possess, such as
+                 guns, swords, loot, etc.
             </p>
             <p>Since these are, most of the time, attached to other entities and do
-                   not have a position of their own in the world, they do not need to be
-                   BigWorld entities. The only exceptions are items lying on the ground. For
-                   more details, see <a href="ch02.html#xref_Dropping_And_Picking_Items_Up" title="2.5.&nbsp;Dropping and picking items up">Dropping and picking items up</a>.
+                 not have a position of their own in the world, they do not need to be
+                 BigWorld entities. The only exceptions are items lying on the ground. For
+                 more details, see <a href="ch02.html#xref_Dropping_And_Picking_Items_Up" title="2.5.&nbsp;Dropping and picking items up">Dropping and picking items up</a>.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e34"></a>2.1.&nbsp;Item definition
+                        <h2 class="title" style="clear: both"><a name="xref_Item_Definition"></a>2.1.&nbsp;Item definition
                         </h2>
                      </div>
                   </div>
                </div>
                <p>The simplest way of representing an item is as an integer value,
-                        representing the <em class="emphasis">item type ID</em>. This <em class="emphasis">type
-                           ID</em> can then be transmitted between the server and
-                        clients.
+                      representing the <em class="emphasis">item type ID</em>. This <em class="emphasis">type
+                         ID</em> can then be transmitted between the server and
+                      clients.
                </p>
-               <p>It is recommended that an <em class="emphasis">alias</em> be defined
-                        for the item type in the file
-                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml</span>
-                        (where <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em></span> is the
-                        first folder specified in environment variables
-                        <span class="literal">BW_RES_PATH</span>). In the sample implementation, the
-                        definition looks like this:
+               <p>It is recommended that an <em class="emphasis">alias</em> be defined for
+                      the item type in the file
+                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml</code>
+                      (where <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em></span> is the
+                      first folder specified in environment variables
+                      <code class="envar">BW_RES_PATH</code>). In the sample implementation, the definition
+                      looks like this:
                </p><pre class="programlisting">&lt;root&gt;
     ...
     &lt;ITEMTYPE&gt;    INT32    &lt;/ITEMTYPE&gt;
-    ....   </pre><p>The items types are enumerated inside the file
-                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/common/ItemBase.py</span>:
-               </p><pre class="programlisting">class ItemBase:
+    ....</pre><p>The items types are enumerated inside the file
+                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/common/ItemBase.py</code>:
+               </p><pre class="programlisting">class ItemBase( object ):
     ...
     NONE_TYPE          = -1
     STAFF_TYPE         =  2
@@ -103,20 +104,21 @@
     SWORD_TYPE         =  7
     SWORD_TYPE_2       =  9
     GOBLET_TYPE        =  17
-    ...</pre><p>Mapping from <em class="emphasis">item type ID</em> to specific item
-                        look and behaviour can be coded on the client and server as needed. This
-                        can be done by simply using lookup tables or item classes. In the sample
-                        implementation, item classes are used on the client to implement the
-                        behaviour of each type of item. All items types derive from a base Item
-                        class and must specialize items behaviours like
-                        <span class="literal">enact</span>, <span class="literal">enactIdle</span><span class="literal">,
-                           enactDrawn</span> and <span class="literal">use</span>.
+    ...</pre><p>Mapping from <em class="emphasis">item type ID</em> to specific item look
+                      and behaviour can be coded on the client and server as needed. This can be
+                      done by simply using lookup tables or item classes. In the sample
+                      implementation, item classes are used on the client to implement the
+                      behaviour of each type of item. All items types derive from a base
+                      <code class="classname">Item</code> class and must specialize items behaviours
+                      like <code class="methodname">enact</code>, <code class="methodname">enactIdle</code>,
+                      <code class="methodname">enactDrawn</code> and
+                      <code class="methodname">use</code>.
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Item.py</span>:</em></p><pre class="programlisting">import ItemBase
+                                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Item.py</code>:</em></p><pre class="programlisting">import ItemBase
 ....
 
 class Item( ItemBase.ItemBase ):
@@ -125,7 +127,7 @@ class Item( ItemBase.ItemBase ):
     def name( self ):
         ...
 
-class Food(Item):
+class Food( Item ):
     def use( self, user, target ):
         ....
         user.eat( self.itemType )
@@ -133,14 +135,14 @@ class Food(Item):
         ...</pre></li>
                   </ul>
                </div>
-               <p>The type classes are also used to carry information about the
-                        items look, like models and icons.
+               <p>The type classes are also used to carry information about the items
+                      look, like models and icons.
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Item.py</span>:</em></p><pre class="programlisting">class Food(Item):
+                                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Item.py</code>:</em></p><pre class="programlisting">class Food( Item ):
     ...
     modelNames = {
         STRIFF_DRUMSTICK: "sets/items/item_food_drumstick.model",
@@ -156,61 +158,61 @@ class Food(Item):
     ...</pre></li>
                   </ul>
                </div>
-               <p>Within this system, creating a new item type is done by inserting
-                        a new <em class="emphasis">item type ID</em> into the items type list and
-                        implementing class for the specialized behaviour.
+               <p>Within this system, creating a new item type is done by inserting a
+                      new <em class="emphasis">item type ID</em> into the items type list and
+                      implementing class for the specialized behaviour.
                </p>
                <p>You can build more complex structures to represent an item as
-                        needed, such as adding its ammo count. This information could be encoded
-                        into the <span class="literal">int32</span> data type, or a new class structure
-                        could be created to implement it.
+                      needed, such as adding its ammo count. This information could be encoded
+                      into the <span class="literal">INT32</span> data type, or a new class structure
+                      could be created to implement it.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e125"></a>2.2.&nbsp;Additional Security
+                        <h2 class="title" style="clear: both"><a name="xref_Additional_Security"></a>2.2.&nbsp;Additional Security
                         </h2>
                      </div>
                   </div>
                </div>
                <p>The creation and deletion of items are best done using a
-                        <em class="emphasis">global items</em> manager on the base. This manager
-                        should ensure that items are created and destroyed according to specific
-                        rules, assign unique serial number to items, and enforce security so
-                        that things such as duplication exploits cannot be used.
+                      <em class="emphasis">global items</em> manager on the base. This manager should
+                      ensure that items are created and destroyed according to specific rules,
+                      assign unique serial number to items, and enforce security so that things
+                      such as duplication exploits cannot be used.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e133"></a>2.3.&nbsp;Rendering the Item
+                        <h2 class="title" style="clear: both"><a name="xref_Rendering_The_Item"></a>2.3.&nbsp;Rendering the Item
                         </h2>
                      </div>
                   </div>
                </div>
-               <p>For the item currently equipped by an Avatar to be properly
-                        rendered on all clients, the property containing the <em class="emphasis">item type
-                           ID</em> must be current on all clients at all times. Whenever a
-                        player chooses to equip a new item, it must notify its cell. The cell
-                        will then update all other clients with the newly selected
-                        <em class="emphasis">item type ID</em>.
+               <p>For the item currently equipped by an Avatar to be properly rendered
+                      on all clients, the property containing the <em class="emphasis">item type
+                         ID</em> must be current on all clients at all times. Whenever a
+                      player chooses to equip a new item, it must notify its cell. The cell will
+                      then update all other clients with the newly selected <em class="emphasis">item type
+                         ID</em>.
                </p>
                <p>In the sample implementation, the property
-                        <span class="literal">rightHand</span> carries the Avatar&#8217;s currently equipped
-                        item. The fact that this property is flagged
-                        <span class="literal">OTHER_CLIENTS</span> means that the owner
-                        <span class="literal">Avatar</span> in the client will not be updated when the
-                        property changes in the cell (this is because changes to it are
-                        triggered by the client <span class="literal">Avatar</span> itself).
+                      <code class="varname">rightHand</code> carries the Avatar&#8217;s currently equipped item.
+                      The fact that this property is flagged
+                      <span class="literal">OTHER_CLIENTS</span><sup>[<a name="d0e156" href="#ftn.d0e156">1</a>]</sup> means that the owner <code class="classname">Avatar</code> in the
+                      client will not be updated when the property changes in the cell as the
+                      changes to the property have been initiated by the client
+                      <code class="classname">Avatar</code>.
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/interfaces/Avatar.def</span>:</em></p><pre class="programlisting">&lt;root&gt;
+                                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/interfaces/Avatar.def</code>:</em></p><pre class="programlisting">&lt;root&gt;
     ...
     &lt;Properties&gt;
         &lt;rightHand&gt;
@@ -222,7 +224,7 @@ class Food(Item):
     ...</pre></li>
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar:
+                                      <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar( Avatar ):
     ...
     def equip( self, itemType ... ):
         ...
@@ -231,24 +233,24 @@ class Food(Item):
         ...</pre></li>
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def setRightHand( self, sourceID, itemType ):
+                                      <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def setRightHand( self, sourceID, itemType ):
     ...
     self.rightHand = itemType # will propagate to all otherClients</pre></li>
                   </ul>
                </div>
                <p>To render the item in the player's hand, the 3D model representing
-                        the item must be attached to a hard point in the Avatar model. This
-                        should be done whenever the player equips a new item. The sample
-                        implementation uses the <span class="literal">set_rightHand</span> method to do
-                        that. The <span class="literal">set_rightHand</span> method is implicitly called
-                        whenever the value of the property <span class="literal">rightHand</span> is
-                        updated in the client by the server.
+                      the item must be attached to a hard point in the Avatar model. This should
+                      be done whenever the player equips a new item. The sample implementation
+                      uses the <span class="literal">set_rightHand</span> method to do that. The
+                      <span class="literal">set_rightHand</span> method is implicitly called whenever the
+                      value of the property <span class="literal">rightHand</span> is updated in the
+                      client by the server.
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class Avatar:
+                                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</code>:</em></p><pre class="programlisting">class Avatar( BigWorld.Entity ):
     def set_rightHand( self, oldRH = None ... ):
         ...
         self.lockRightHandModel( True )
@@ -266,64 +268,63 @@ class Food(Item):
                   </ul>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e215"></a>2.4.&nbsp;The Inventory
+                        <h2 class="title" style="clear: both"><a name="xref_Item_Inventory"></a>2.4.&nbsp;The Inventory
                         </h2>
                      </div>
                   </div>
                </div>
                <p>An inventory is a collection of items. Inventories are typically
-                        stored on both the client and the base. Having the inventory on the cell
-                        would increase the load of migrating entities from cell to cell as they
-                        move in the space.
+                      stored on both the client and the base. Having the inventory on the cell
+                      would increase the load of migrating entities from cell to cell as they
+                      move in the space.
                </p>
                <p>The authoritative copy of an inventory should always reside on the
-                        base entity, where it can be easily stored and retrieved from persistent
-                        storage through the BigWorld database interface. The client copy of the
-                        inventory can then be regenerated from the base whenever
-                        necessary.
+                      base entity, where it can be easily stored and retrieved from persistent
+                      storage through the BigWorld database interface. The client copy of the
+                      inventory can then be regenerated from the base whenever necessary.
                </p>
-               <p>The client should have a graphics user interface to the inventory,
-                        so that players can view their items. They can use this interface to add
-                        or remove items from their inventories. This should then be updated on
-                        the base entity and stored on the database at convenient times.
+               <p>The client should have a graphical user interface to the inventory,
+                      so that players can view their items. Players can use this interface to
+                      add or remove items from their inventories. This should then be updated on
+                      the base entity and stored on the database at convenient times.
                </p>
-               <p>In the sample implementation, the inventory data is stored in a
-                        set of <span class="literal">BASE_AND_CLIENT</span> properties in the Avatar
-                        entity:
+               <p>In the sample implementation, the inventory data is stored in a set
+                      of <span class="literal">BASE_AND_CLIENT</span> properties in the
+                      <code class="classname">Avatar</code> entity:
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
-                        <p><span class="literal">inventoryItems</span></p>
+                        <p><code class="varname">inventoryItems</code></p>
                      </li>
                      <li>
-                        <p><span class="literal">inventoryLocks</span></p>
+                        <p><code class="varname">inventoryLocks</code></p>
                      </li>
                      <li>
-                        <p><span class="literal">inventoryGoldPieces</span></p>
+                        <p><code class="varname">inventoryGoldPieces</code></p>
                      </li>
                   </ul>
                </div>
-               <p><span class="literal">inventoryItems</span> is an array of the type
-                        <span class="literal">InventoryEntry</span>. <span class="literal">inventoryLocks</span> is
-                        an array of the type <span class="literal">LockedEntry</span>. Both
-                        <span class="literal">InventoryEntry</span> and <span class="literal">LockedEntry</span>
-                        types are defined in the
-                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml
-                           file</span>. These types are defined using BigWorld&#8217;s
-                        <span class="literal">FIXED_DICT</span> type feature.
-                        <span class="literal">inventoryGoldPieces</span> is of type
-                        <span class="literal">INT32</span>.
+               <p><code class="varname">inventoryItems</code> is an array of the type
+                      <span class="literal">InventoryEntry</span>. <code class="varname">inventoryLocks</code> is an
+                      array of the type <span class="literal">LockedEntry</span>. Both
+                      <span class="literal">InventoryEntry</span> and <span class="literal">LockedEntry</span> types
+                      are defined in the
+                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml
+                         file</code>. These types are defined using BigWorld's
+                      <span class="literal">FIXED_DICT</span> type feature.
+                      <code class="varname">inventoryGoldPieces</code> is of type
+                      <span class="literal">INT32</span>.
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/Avatar.def</span>:</em></p><pre class="programlisting">&lt;root&gt;
+                                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/Avatar.def</code>:</em></p><pre class="programlisting">&lt;root&gt;
     &lt;Properties&gt;
         ...
         &lt;inventoryItems&gt;
@@ -348,7 +349,7 @@ class Food(Item):
         ....</pre></li>
                      <li>
                         <p><em class="emphasis">In
-                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml</span>:</em></p><pre class="programlisting">&lt;root&gt;
+                                      <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/entity_defs/alias.xml</code>:</em></p><pre class="programlisting">&lt;root&gt;
     ...
     &lt;ITEMSERIAL&gt;  INT32  &lt;/ITEMSERIAL&gt;
     &lt;LOCKHANDLE&gt;  INT32  &lt;/LOCKHANDLE&gt;
@@ -382,51 +383,49 @@ class Food(Item):
                   </ul>
                </div>
                <p>The fact that the inventory properties are flagged
-                        <span class="literal">BASE_AND_CLIENT</span>, means that:
+                      <span class="literal">BASE_AND_CLIENT</span>, means that:
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
                      <li>
                         <p>When initialised, the owning client entity will be carrying an
-                                     exact copy of the properties as set on the base entity
+                                   exact copy of the properties as set on the base entity
                         </p>
                      </li>
                      <li>
-                        <p>The inventory property will not exist neither in the cell
-                                     entity nor in client Avatars not controlled by the owning
-                                     player.
+                        <p>The inventory property will not exist either in the cell entity
+                                   or in client Avatars not controlled by the owning player.
                         </p>
                      </li>
                      <li>
                         <p>Changes to the inventory property's value in the base will not
-                                     be propagated to the client. The game logic must take care of
-                                     keeping both copies synchronized as changes are made to the
-                                     inventory.
+                                   be propagated to the client. The game logic must take care of keeping
+                                   both copies synchronized as changes are made to the inventory.
                         </p>
                         <p>One example of such logic is an item being added to the
-                                     inventory after being picked up by the player:
+                                   inventory after being picked up by the player:
                         </p>
                         <div class="itemizedlist">
                            <ul type="circle">
                               <li>
                                  <p><em class="emphasis">After the pick up, the base adds the
-                                                     item into the inventory and notifies the cell.</em></p>
+                                                   item into the inventory and notifies the cell.</em></p>
                               </li>
                               <li>
-                                 <p><em class="emphasis">The cell forwards the notification
-                                                     to the client.</em></p>
+                                 <p><em class="emphasis">The cell forwards the notification to
+                                                   the client.</em></p>
                                  <div class="itemizedlist">
                                     <ul type="square">
                                        <li>
                                           <p><em class="emphasis">In
-                                                                  <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType ):
+                                                                <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</code>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType ):
     ...
     itemsSerial = self.inventoryMgr.addItem( itemType )
     self.cell.pickUpResponse( True, droppedItemID, itemType, itemsSerial )
     ...</pre></li>
                                        <li>
                                           <p><em class="emphasis">In
-                                                                  <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType, itemSerial ):
+                                                                <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</code>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType, itemSerial ):
     ...
     self.client.pickUpResponse( True, droppedItemID, itemSerial )
     ...</pre></li>
@@ -435,12 +434,12 @@ class Food(Item):
                               </li>
                               <li>
                                  <p><em class="emphasis">In the client, the Player replicates
-                                                     the addition of the item into the inventory.</em></p>
+                                                   the addition of the item into the inventory.</em></p>
                                  <div class="itemizedlist">
                                     <ul type="square">
                                        <li>
                                           <p><em class="emphasis">In
-                                                                  <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar:
+                                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar( Avatar ):
     ...
     def pickUpResponse( self, success, droppedItemID, itemSerial ):
         ...
@@ -461,43 +460,43 @@ class Food(Item):
                      </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e363"></a>2.4.1.&nbsp;Inventory Manager
+                           <h3 class="title"><a name="xref_Inventory_Manager"></a>2.4.1.&nbsp;Inventory Manager
                            </h3>
                         </div>
                      </div>
                   </div>
                   <p>In the sample implementation, the class
-                             <span class="literal">InventoryMgr</span> encapsulates the logic of adding,
-                             removing, selecting, locking, and trading items in the inventory. The
-                             <span class="literal">InventoryMgr</span> is initialised with a reference to the
-                             inventory holder entity. It looks for the inventory properties
-                             (<span class="literal">inventoryItems</span>, <span class="literal">inventoryLocks</span>
-                             and <span class="literal">inventoryGoldPieces</span>) in that entity.
+                           <span class="literal">InventoryMgr</span> encapsulates the logic of adding,
+                           removing, selecting, locking, and trading items in the inventory. The
+                           <span class="literal">InventoryMgr</span> is initialised with a reference to the
+                           inventory holder entity. It looks for the inventory properties
+                           (<code class="varname">inventoryItems</code>, <code class="varname">inventoryLocks</code>
+                           and <code class="varname">inventoryGoldPieces</code>) in that entity.
                   </p>
-                  <p>Only changes made to the entity&#8217;s properties (on the base) will
-                             be written to the database. <span class="literal">InventoryMgr</span> member
-                             variables will not persist, and should be treated as temporary. One
-                             such variable is <span class="literal">_currentItemIndex</span>, which is not
-                             considered a persistent property and is initialised to
-                             <span class="literal">NOITEM</span> (-1) every time a new inventory is
-                             instantiated.
+                  <p>Only changes made to the entity's properties (on the base) will be
+                           written to the database. <span class="literal">InventoryMgr</span> member
+                           variables will not persist, and should be treated as temporary. One such
+                           variable is <code class="varname">_currentItemIndex</code>, which is not
+                           considered a persistent property and is initialised to
+                           <span class="literal">NOITEM</span> (<span class="literal">-1</span>) every time a new
+                           inventory is instantiated.
                   </p>
                   <p>Adding and removing items to/from the inventory is just a matter
-                             of appending and popping items into/from the
-                             <span class="literal">inventoryItems</span> array, taking care of respecting
-                             locking rules, if any, and internal consistency constraints, like
-                             resetting the selected item, if it is the one being removed from
-                             inventory.
+                           of appending and popping items into/from the
+                           <code class="varname">inventoryItems</code> array, taking care of respecting
+                           locking rules, if any, and internal consistency constraints, like
+                           resetting the selected item, if it is the one being removed from
+                           inventory.
                   </p>
                   <div class="itemizedlist">
                      <ul type="disc">
                         <li>
                            <p><em class="emphasis">In
-                                             <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/common/Inventory.py</span>:</em></p><pre class="programlisting">NOLOCK = -1 
+                                           <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/common/Inventory.py</code>:</em></p><pre class="programlisting">NOLOCK = -1 
 NOITEM = -1
 ...
 def __init__( self, entity ):
@@ -534,57 +533,55 @@ def removeItem( self, itemSerial ):
                   </div>
                   <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                      <h3 class="title">Note</h3>
-                     <p>Instead of a straight reference, a <span class="literal">weakref</span>
-                                  to the entity is kept to avoid creating a cyclic reference that will
-                                  prevent the entity from being eventually deleted.
+                     <p>Instead of a straight reference, a <span class="literal">weakref</span> to
+                                the entity is kept to avoid creating a cyclic reference that will
+                                prevent the entity from being eventually deleted.
                      </p>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e417"></a>2.4.2.&nbsp;Serial Numbers
+                           <h3 class="title"><a name="xref_Serial_Numbers"></a>2.4.2.&nbsp;Serial Numbers
                            </h3>
                         </div>
                      </div>
                   </div>
-                  <p>Note that in the sample implementation items are not referenced
-                             by their index inside the <span class="literal">inventoryItems</span> array.
-                             Instead, they are assigned a serial number when added to the
-                             inventory, and are referenced by that serial throughout all their life
-                             inside it.
+                  <p>Note that in the sample implementation items are not referenced by
+                           their index inside the <span class="literal">inventoryItems</span> array. Instead,
+                           they are assigned a serial number when added to the inventory, and are
+                           referenced by that serial throughout all their life inside it.
                   </p>
                   <p>The reason for this is to allow simultaneously changes to the
-                             inventory from multiple sources (<em class="emphasis">e.g.</em>, game
-                             client, web interface, mobile device). In this case, if direct indices
-                             are used, references to items can become obsolete while a request is
-                             still being processed.
+                           inventory from multiple sources (<em class="emphasis">e.g.</em>, game client,
+                           web interface, mobile device). In this case, if direct indices are used,
+                           references to items can become obsolete while a request is still being
+                           processed.
                   </p>
                   <p>In the example, serial numbers are not attached to the item
-                             itself, but to their existence in an inventory, that is, serial
-                             numbers are guaranteed to be unique only within a single inventory.
-                             Two inventories can contain items with serial numbers duplicated
-                             between them.
+                           itself, but to their existence in an inventory, that is, serial numbers
+                           are guaranteed to be unique only within a single inventory. Two
+                           inventories can contain items with serial numbers duplicated between
+                           them.
                   </p>
-                  <p>A more comprehensive items systems can use a global serial
-                             number generator and have them assigned to items when they are first
-                             created. This serial numbers can then be used throughout all game
-                             subsystems to uniquely refer to items, to track duplicated items,
-                             etc.
+                  <p>A more comprehensive items systems can use a global serial number
+                           generator and have them assigned to items when they are first created.
+                           This serial numbers can then be used throughout all game subsystems to
+                           uniquely refer to items, to track duplicated items, etc.
                   </p>
                   <p>When using serial numbers it is important to have a single
-                             authoritative copy of the inventory generating the serials for each
-                             item, otherwise serial numbers can become inconsistent between
-                             instances of the same inventory. When adding an item to the
-                             non-authoritative copy of the inventory, its assigned serial number
-                             must be provided along with the item.
+                           authoritative copy of the inventory generating the serials for each
+                           item, otherwise serial numbers can become inconsistent between instances
+                           of the same inventory. When adding an item to the non-authoritative copy
+                           of the inventory, its assigned serial number must be provided along with
+                           the item.
                   </p>
                   <div class="itemizedlist">
                      <ul type="disc">
                         <li>
                            <p><em class="emphasis">In
-                                             <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/common/Inventory.py</span>:</em></p><pre class="programlisting">def addItem( self, itemType, itemSerial = None ):
+                                           <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/common/Inventory.py</span>:</em></p><pre class="programlisting">def addItem( self, itemType, itemSerial = None ):
     ...
     entry = { "itemType": itemType, "serial": itemSerial, "lockHandle": NOLOCK }
     self._entity.inventoryItems.append( entry )
@@ -594,7 +591,7 @@ def removeItem( self, itemSerial ):
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -604,31 +601,31 @@ def removeItem( self, itemSerial ):
                   </div>
                </div>
                <p>As mentioned above, the items can usually be represented as a
-                        property of an <em class="emphasis">entity</em> (or an entry into an array
-                        property). However, there is one case where this is not sufficient, and
-                        the item needs to be an <em class="emphasis">entity</em>.
+                      property of an <em class="emphasis">entity</em> (or an entry into an array
+                      property). However, there is one case where this is not sufficient, and
+                      the item needs to be an <em class="emphasis">entity</em>.
                </p>
-               <p>This is the case of an item that has been dropped on the ground.
-                        The reason for this is that if you walk away from an item that you
-                        dropped, other people still need to see it.
+               <p>This is the case of an item that has been dropped on the ground. The
+                      reason for this is that if you walk away from an item that you dropped,
+                      other people still need to see it.
                </p>
                <p>If the item was just a property of a player, then when the player
-                        left the <em class="emphasis">area of interest</em> (which is usually about
-                        500m), the property would disappear as well, and so would the dropped
-                        item.
+                      left the <em class="emphasis">area of interest</em> (which is usually about
+                      500m), the property would disappear as well, and so would the dropped
+                      item.
                </p>
                <p>On the other hand, if the dropped item itself is an entity, then
-                        other players will see it, as long as it is in their <em class="emphasis">area of
-                           interest</em>.
+                      other players will see it, as long as it is in their <em class="emphasis">area of
+                         interest</em>.
                </p>
-               <p>Making a dropped item an entity means that you can write
-                        interaction scripts just like any other entity in the world. You can
-                        target it, shoot it, pick it up, etc...
+               <p>Making a dropped item an entity means that you can write interaction
+                      scripts just like any other entity in the world. You can target it, shoot
+                      it, pick it up, etc...
                </p>
                <p>The process of dropping and picking items up should be something
-                        similar to the steps described below.
+                      similar to the steps described below.
                </p>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
@@ -637,13 +634,13 @@ def removeItem( self, itemSerial ):
                         </div>
                      </div>
                   </div>
-                  <p>Initially, the item is in the player&#8217;s inventory, expressed as
-                             an entry in the <em class="emphasis">inventoryItems</em> property, the
-                             <span class="literal">itemType</span> field in the entry holds the
-                             <em class="emphasis">item type ID</em>.
+                  <p>Initially, the item is in the player&#8217;s inventory, expressed as an
+                           entry in the <em class="emphasis">inventoryItems</em> property, the
+                           <span class="literal">itemType</span> field in the entry holds the <em class="emphasis">item
+                              type ID</em>.
                   </p>
                   <p>A game would follow the steps described below for an item
-                             drop:
+                           drop:
                   </p>
                   <div class="orderedlist">
                      <ol type="1">
@@ -652,23 +649,23 @@ def removeItem( self, itemSerial ):
                         </li>
                         <li>
                            <p>Because the item may be unavailable in the server
-                                          (<em class="emphasis">e.g.</em>, in case it has just been locked in the
-                                          inventory from a web interface to the trading system), the client
-                                          Avatar makes the drop item requests to the base. If the player can
-                                          drop the item, the base removes the item from the inventory and
-                                          notifies the cell about the dropped item:
+                                        (<em class="emphasis">e.g.</em>, in case it has just been locked in the
+                                        inventory from a web interface to the trading system), the client
+                                        Avatar makes the drop item requests to the base. If the player can
+                                        drop the item, the base removes the item from the inventory and
+                                        notifies the cell about the dropped item:
                            </p>
                            <div class="itemizedlist">
                               <ul type="disc">
                                  <li>
-                                    <p><em class="emphasis">In </em><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar:
+                                    <p><em class="emphasis">In </em><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar( Avatar ):
     ...
     def dropOnline( self ):
         ...
         self.base.dropRequest( itemSerial )</pre></li>
                                  <li>
                                     <p><em class="emphasis">In
-                                                          <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</span>:</em></p><pre class="programlisting">def dropRequest( self, itemSerial ):
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</span>:</em></p><pre class="programlisting">def dropRequest( self, itemSerial ):
     ...
     itemType = self.inventoryMgr.removeItem( itemIndex )
     self.cell.dropNotify( True, itemType )
@@ -677,14 +674,14 @@ def removeItem( self, itemSerial ):
                            </div>
                         </li>
                         <li>
-                           <p>The cell creates a <span class="literal">DroppedItem</span> entity
-                                          that matches the item dropped by the player:
+                           <p>The cell creates a <span class="literal">DroppedItem</span> entity that
+                                        matches the item dropped by the player:
                            </p>
                            <div class="itemizedlist">
                               <ul type="disc">
                                  <li>
                                     <p><em class="emphasis">In
-                                                          <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def dropNotify( self, success, itemType ):
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def dropNotify( self, success, itemType ):
     ...
     BigWorld.createEntity( "DroppedItem", ... )
     ...
@@ -694,31 +691,31 @@ def removeItem( self, itemSerial ):
                         </li>
                         <li>
                            <p>The server informs all clients within the <em class="emphasis">area of
-                                             interest</em> that a <span class="literal">DroppedItem</span> has been
-                                          created (via Python's function
-                                          <span class="literal">Bigworld.createEntity</span>).
+                                           interest</em> that a <span class="literal">DroppedItem</span> has been
+                                        created (via Python's function
+                                        <span class="literal">BigWorld.createEntity</span>).
                            </p>
                         </li>
                         <li>
-                           <p>The confirmation to the Avatar for his drop request comes
-                                          from the <span class="literal">DroppedItem</span> itself. The client then
-                                          plays the drop animation and removes the item from player&#8217;s right
-                                          hand (for simplicity, the code that synchronizes the drop
-                                          animations, the item model being removed from the avatar&#8217;s right
-                                          hand and reappearing on the ground is not shown here):
+                           <p>The confirmation to the Avatar for his drop request comes from
+                                        the <span class="literal">DroppedItem</span> itself. The client then plays the
+                                        drop animation and removes the item from player&#8217;s right hand (for
+                                        simplicity, the code that synchronizes the drop animations, the item
+                                        model being removed from the avatar&#8217;s right hand and reappearing on
+                                        the ground is not shown here):
                            </p>
                            <div class="itemizedlist">
                               <ul type="disc">
                                  <li>
                                     <p><em class="emphasis">In
-                                                          <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/DroppedItem.py</span>:</em></p><pre class="programlisting">def enterWorld( self ):
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/DroppedItem.py</span>:</em></p><pre class="programlisting">def enterWorld( self ):
     ...
     dropper = BigWorld.entities[ self.dropperID ]
     dropper.dropNotify( self ) 
     ...</pre></li>
                                  <li>
                                     <p><em class="emphasis">In
-                                                          <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class Avatar:
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class Avatar( BigWorld.Entity ):
     ...
     def dropNotify( self, droppedItem ):
         ...
@@ -733,13 +730,13 @@ def removeItem( self, itemSerial ):
                         </li>
                         <li>
                            <p>All clients now draw the correct model for the
-                                          <span class="literal">DroppedItem</span> entity on the ground:
+                                        <span class="literal">DroppedItem</span> entity on the ground:
                            </p>
                            <div class="itemizedlist">
                               <ul type="disc">
                                  <li>
                                     <p><em class="emphasis">In
-                                                          <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/DroppedItem.py</span>:</em></p><pre class="programlisting">class DroppedItem( BigWorld.Entity ):
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/DroppedItem.py</span>:</em></p><pre class="programlisting">class DroppedItem( BigWorld.Entity ):
     ...
     def dropComplete( self ):
         ...
@@ -754,49 +751,56 @@ def removeItem( self, itemSerial ):
                      </ol>
                   </div>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e602"></a>2.5.2.&nbsp;Picking an item up from the ground
+                           <h3 class="title"><a name="xref_Picking_An_Item_Up_From_The_Ground"></a>2.5.2.&nbsp;Picking an item up from the ground
                            </h3>
                         </div>
                      </div>
                   </div>
                   <p>Initially, the item is a <span class="literal">DroppedItem</span> entity
-                             lying on the ground, as described in <a href="ch02.html#xref_Dropping_An_Item_On_The_Ground" title="2.5.1.&nbsp;Dropping an item on the ground">Dropping an item on the ground</a>.
+                           lying on the ground, as described in <a href="ch02.html#xref_Dropping_An_Item_On_The_Ground" title="2.5.1.&nbsp;Dropping an item on the ground">Dropping an item on the ground</a>.
                   </p>
                   <p>A game would follow the steps described below for picking up an
-                             item:
+                           item:
                   </p>
                   <div class="orderedlist">
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar:
+                     <ol type="1">
+                        <li>
+                           <p>Client requests to pick item up.</p>
+                           <div class="itemizedlist">
+                              <ul type="bullet">
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar( Avatar ):
     ...
     def pickExecute( self, droppedItem ):
         ...
         self.cell.pickUpRequest( droppedItem.id )
         ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpRequest( self, sourceID, droppedItemID ):
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpRequest( self, sourceID, droppedItemID ):
     ...
     item = BigWorld.entities[ droppedItemID ]
     item.pickUpRequest( self.id )
     ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In </em><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/DroppedItem.py</span>:</em></p><pre class="programlisting">def pickUpRequest( self, whomID ):
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p>The item locks itself as being picked up by the requesting
+                                        Avatar. Further requests for pickup will be denied by the server.
+                                        The item also notifies the requester base about the pickup so that
+                                        the item is added to the player inventory. Finally, the item sets a
+                                        timer to remove itself from the world.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="bullet">
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In</em><em class="emphasis"><span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/DroppedItem.py</span>:</em></p><pre class="programlisting">def pickUpRequest( self, whomID ):
     ...
     if self.pickerID == 0:
         picker = BigWorld.entities[ whomID ]
@@ -804,37 +808,50 @@ def removeItem( self, itemSerial ):
         self.addTimer( 5, 0, DroppedItem.DESTROY_TIMER )
         self.pickerID = whomID
     ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType ):
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType ):
     if success:
         itemsSerial = self.inventoryMgr.addItem( itemType )
         self.cell.pickUpResponse( True, droppedItemID, itemType, itemsSerial )
     ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType, itemSerial ):
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p>The cell notifies all clients about the pick up and updates
+                                        the avatar&#8217;s right hand property.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="bullet">
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/Avatar.py</span>:</em></p><pre class="programlisting">def pickUpResponse( self, success, droppedItemID, itemType, itemSerial ):
     if success:
         # sucess:notify all clients this entity base
         self.client.pickUpResponse( True, droppedItemID, itemSerial )
         self.otherClients.pickUpNotify( droppedItemID )
         self.rightHand = itemType
     ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class Avatar:
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p>All clients are notified that the Avatar is picking up the
+                                        item. A picking item up animation is started on the Avatar&#8217;s model.
+                                        Note that, although other clients will see the item model in the
+                                        player hands as a consequence of <span class="literal">rightHand</span> being
+                                        set in the server, the <span class="literal">PlayerAvatar</span> will not have
+                                        its <span class="literal">rightHand</span> property updated and must
+                                        explicitly equip the item (remember that
+                                        <span class="literal">rightHand</span> is flagged
+                                        <span class="literal">OTHER_CLIENTS</span>).
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="bullet">
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class Avatar( BigWorld.Entity ):
     ...
     def pickUpNotify( self, droppedItemID ):
         ...
@@ -842,20 +859,25 @@ def removeItem( self, itemSerial ):
         self._pickUpProcedure( droppedItem )
         ...
 
-class PlayerAvatar
+class PlayerAvatar( Avatar ):
     ...
     def pickUpResponse( self, success, droppedItemID, itemSerial ):
         ...
         droppedItem = BigWorld.entities[ droppedItemId ]
         self._pickUpProcedure( droppedItem, itemSerial )
         ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar:
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p>The Player adds the picked item into his inventory and selects
+                                        it.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="bullet">
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client/Avatar.py</span>:</em></p><pre class="programlisting">class PlayerAvatar( Avatar ):
     ...
     def pickUpFinish( self, droppedItem ):
         ...
@@ -863,13 +885,18 @@ class PlayerAvatar
         self.inventoryMgr.addItem( itemType, itemSerial )
         self.inventoryMgr.selectItem( itemSerial )
         ...</pre></li>
-                        </ul>
-                     </div>
-                     <div class="itemizedlist">
-                        <ul type="bullet">
-                           <li style="list-style-type: disc">
-                              <p><em class="emphasis">In
-                                                <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/DroppedItem.py</span>:</em></p><pre class="programlisting">def pickUpRequest( self, whomID ):
+                              </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <p>On the base, the timer goes out and the
+                                        <span class="literal">DroppedItem</span> entity destroys itself.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul type="bullet">
+                                 <li style="list-style-type: disc">
+                                    <p><em class="emphasis">In
+                                                        <span class="literal"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell/DroppedItem.py</span>:</em></p><pre class="programlisting">def pickUpRequest( self, whomID ):
     ...
     self.addTimer( 5, 0, DroppedItem.DESTROY_TIMER )
 
@@ -877,58 +904,20 @@ def onTimer( self, timerId, userId ):
     ...
     if ( userId == DroppedItem.DESTROY_TIMER ):
         self.destroy()</pre></li>
-                        </ul>
-                     </div>
-                     <ol type="1">
-                        <li>
-                           <p>Client requests to pick item up.</p>
-                        </li>
-                        <li>
-                           <p>The item locks itself as being picked up by the requesting
-                                          Avatar. Further requests for pickup will be denied by the server.
-                                          The item also notifies the requester base about the pickup so that
-                                          the item is added to the player inventory. Finally, the item sets
-                                          a timer to remove itself from the world.
-                           </p>
-                        </li>
-                        <li>
-                           <p>The cell notifies all clients about the pick up and updates
-                                          the avatar&#8217;s right hand property.
-                           </p>
-                        </li>
-                        <li>
-                           <p>All clients are notified that the Avatar is picking up the
-                                          item. A picking item up animation is started on the Avatar&#8217;s
-                                          model. Note that, although other clients will see the item model
-                                          in the player hands as a consequence of
-                                          <span class="literal">rightHand</span> being set in the server, the
-                                          <span class="literal">PlayerAvatar</span> will not have its
-                                          <span class="literal">rightHand</span> property updated and must explicitly
-                                          equip the item (remember that <span class="literal">rightHand</span> is
-                                          flagged <span class="literal">OTHER_CLIENTS</span>).
-                           </p>
-                        </li>
-                        <li>
-                           <p>The Player adds the picked item into his inventory and
-                                          selects it.
-                           </p>
-                        </li>
-                        <li>
-                           <p>On the base, the timer goes out and the
-                                          <span class="literal">DroppedItem</span> entity destroys itself.
-                           </p>
+                              </ul>
+                           </div>
                         </li>
                         <li>
                            <p>The item has been added to the player inventory in both the
-                                          client and the server. All clients draw the item in player&#8217;s right
-                                          hand. The dropped item has been removed from the server.
+                                        client and the server. All clients draw the item in player&#8217;s right
+                                        hand. The dropped item has been removed from the server.
                            </p>
                         </li>
                      </ol>
                   </div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -937,47 +926,46 @@ def onTimer( self, timerId, userId ):
                      </div>
                   </div>
                </div>
-               <p>If the game design calls for some sort of asynchronous
-                        transactions to be carried out with inventory items, it will be
-                        necessary to implement locking of items inside the inventory.
+               <p>If the game design calls for some sort of asynchronous transactions
+                      to be carried out with inventory items, it will be necessary to implement
+                      locking of items inside the inventory.
                </p>
                <p>During asynchronous transactions, like those taking place over a
-                        mobile device or web interface, a player may offer one or more items for
-                        trading. A second player may, at his own time, inspect the items being
-                        offered and in turn reply the offer with one or more of his items. When
-                        the first player inspects and accepts the items in the reply offer, the
-                        transaction can be carried out.
+                      mobile device or web interface, a player may offer one or more items for
+                      trading. A second player may, at his own time, inspect the items being
+                      offered and in turn reply the offer with one or more of his items. When
+                      the first player inspects and accepts the items in the reply offer, the
+                      transaction can be carried out.
                </p>
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                  <p>Although this is not a requirement for asynchronous
-                             transactions, locking also offers a way to reference a set of items
-                             (and maybe also some amount of currency) using a convenient single
-                             handle.
+                  <p>Although this is not a requirement for asynchronous transactions,
+                           locking also offers a way to reference a set of items (and maybe also
+                           some amount of currency) using a convenient single handle.
                   </p>
                </div>
                <p>From first offer to final acceptance, a finite amount of time will
-                        have passed, from a couple of seconds to several hours or even days.
-                        Problems will occur if the items initially offered are no longer
-                        available when both parties accept the transaction (if, for example, one
-                        of the players drops, consumes or trades with a third player any of the
-                        offered items).
+                      have passed, from a couple of seconds to several hours or even days.
+                      Problems will occur if the items initially offered are no longer available
+                      when both parties accept the transaction (if, for example, one of the
+                      players drops, consumes or trades with a third player any of the offered
+                      items).
                </p>
                <p>One approach to avoid the problem is to lock the items inside the
-                        inventory once they have been committed to a trade offer. Locked items
-                        should not be available for dropping, offering on a second trade nor
-                        equipping (thus consuming). The player should be free to unlock the
-                        items at any time. Unlocking an item should invalidate the trade
-                        associated with it.
+                      inventory once they have been committed to a trade offer. Locked items
+                      should not be available for dropping, offering on a second trade nor
+                      equipping (thus consuming). The player should be free to unlock the items
+                      at any time. Unlocking an item should invalidate the trade associated with
+                      it.
                </p>
                <p>In the sample implementation, items are flagged as locked by
-                        assigning a valid lock handle to the <span class="literal">lockHandle</span> field
-                        in the item&#8217;s entry in the <span class="literal">inventoryItems</span> array. Some
-                        amount of gold pieces can also be locked together with the set of items.
-                        The gold information is stored in the <span class="literal">inventoryLocks</span>
-                        array. Locking items and gold pieces yields a lock handle. This lock
-                        handle can than be used to reference the locked lot, either to unlock it
-                        or to trade it for gold, other items or a combination of both.
+                      assigning a valid lock handle to the <span class="literal">lockHandle</span> field
+                      in the item&#8217;s entry in the <span class="literal">inventoryItems</span> array. Some
+                      amount of gold pieces can also be locked together with the set of items.
+                      The gold information is stored in the <span class="literal">inventoryLocks</span>
+                      array. Locking items and gold pieces yields a lock handle. This lock
+                      handle can than be used to reference the locked lot, either to unlock it
+                      or to trade it for gold, other items or a combination of both.
                </p>
                <div class="itemizedlist">
                   <ul type="disc">
@@ -1015,6 +1003,13 @@ def itemsUnlock( self, lockHandle ):
                   </ul>
                </div>
             </div>
+            <div class="footnotes"><br><hr width="100" align="left">
+               <div class="footnote">
+                  <p><sup>[<a name="ftn.d0e156" href="#d0e156">1</a>] </sup>For more information on the <span class="literal">OTHER_CLIENTS</span>
+                             property distribution flag please refer to the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/index.html" class="olink">Server Programming Guide</a> chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_programming_guide/ch04.html" class="olink"><i>Properties</i></a>.
+                  </p>
+               </div>
+            </div>
          </div>
          <div class="navfooter">
             <hr class="navheaderline">
@@ -1031,7 +1026,7 @@ def itemsUnlock( self, lockHandle ):
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Trading</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

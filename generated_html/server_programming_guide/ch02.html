@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Server Programming Guide">
       <link rel="up" href="pt01.html" title="Part&nbsp;I.&nbsp;Server Scripting Guide">
       <link rel="prev" href="ch01.html" title="Chapter&nbsp;1.&nbsp;Overview">
-      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Physical User Data Object Structure for Scripting"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch03.html" title="Chapter&nbsp;3.&nbsp;Physical User Data Object Structure for Scripting">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/server_programming_guide/ch02.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,9 +39,9 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch02.html#xref_The_entities_xml_File">2.1. The entities.xml File</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_The_Definition_File">2.2. The Entity Definition File</a></span></dt>
-                  <dt><span class="sect1"><a href="ch02.html#xref_The_Script_Files">2.3. The Script Files</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_The_entities_xml_File">2.1. The entities.xml File</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_The_Definition_File">2.2. The Entity Definition File</a></span></dt>
+                  <dt><span class="section"><a href="ch02.html#xref_The_Script_Files">2.3. The Script Files</a></span></dt>
                </dl>
             </div>
             <p>Entities are the objects that make up the game world. Using entities,
@@ -166,7 +167,7 @@
                   </li>
                </ul>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -203,7 +204,7 @@
                          <span class="symbol">&#8208;</span> Entity
                          definition</span></p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -270,6 +271,9 @@
     &lt;!-- levels of detail --&gt;
    &lt;/LODLevels&gt;
 
+  <em class="emphasis">&lt;NetworkCompression&gt;</em> <a name="co219" href="ch02.html#co219_desc"><img src="../images/callouts/10.png" alt="10" border="0"></a>
+    &lt;!-- internal and external network compression --&gt;
+   &lt;/NetworkCompression&gt;
 &lt;/root&gt;</pre><p><span class="citetitle"><code class="filename"><em class="replaceable"><code>&lt;res&gt;/</code></em>scripts/entity_defs/<em class="replaceable"><code>&lt;entity&gt;</code></em>.def</code>
                          <span class="symbol">&#8208;</span> Minimal entity definition
                          file</span></p>
@@ -279,7 +283,7 @@
                         <td width="5%" valign="top" align="left"><a name="co186_desc"></a><a href="#co186"><img src="../images/callouts/1.png" alt="1" border="0"></a> 
                         </td>
                         <td valign="top" align="left">
-                           <p>For details, see <a href="ch07.html#xref_Entity_Parents" title="7.3.&nbsp;Entity Parents">Entity Parents</a>.
+                           <p>For details, see <a href="ch06.html#xref_Entity_Parents" title="6.3.&nbsp;Entity Parents">Entity Parents</a>.
                            </p>
                         </td>
                      </tr>
@@ -287,7 +291,7 @@
                         <td width="5%" valign="top" align="left"><a name="co188_desc"></a><a href="#co188"><img src="../images/callouts/2.png" alt="2" border="0"></a> 
                         </td>
                         <td valign="top" align="left">
-                           <p>For details, see <a href="ch07.html#xref_Entity_Interfaces" title="7.2.&nbsp;Entity Interfaces">Entity Interfaces</a>.
+                           <p>For details, see <a href="ch06.html#xref_Entity_Interfaces" title="6.2.&nbsp;Entity Interfaces">Entity Interfaces</a>.
                            </p>
                         </td>
                      </tr>
@@ -295,7 +299,7 @@
                         <td width="5%" valign="top" align="left"><a name="co192_desc"></a><a href="#co192"><img src="../images/callouts/3.png" alt="3" border="0"></a> 
                         </td>
                         <td valign="top" align="left">
-                           <p>For details, see <a href="ch07.html#xref_Client_Entity_Reuse" title="7.4.&nbsp;Client Entity Reuse">Client Entity Reuse</a>.
+                           <p>For details, see <a href="ch06.html#xref_Client_Entity_Reuse" title="6.4.&nbsp;Client Entity Reuse">Client Entity Reuse</a>.
                            </p>
                         </td>
                      </tr>
@@ -319,7 +323,7 @@
                         <td width="5%" valign="top" align="left"><a name="co203_desc"></a><a href="#co203"><img src="../images/callouts/6.png" alt="6" border="0"></a> 
                         </td>
                         <td valign="top" align="left">
-                           <p>For details, see <a href="ch06.html" title="Chapter&nbsp;6.&nbsp;Methods"><i xmlns:xlink="http://www.w3.org/1999/xlink">Methods</i></a>.
+                           <p>For details, see <a href="ch05.html" title="Chapter&nbsp;5.&nbsp;Methods"><i xmlns:xlink="http://www.w3.org/1999/xlink">Methods</i></a>.
                            </p>
                         </td>
                      </tr>
@@ -327,7 +331,7 @@
                         <td width="5%" valign="top" align="left"><a name="co207_desc"></a><a href="#co207"><img src="../images/callouts/7.png" alt="7" border="0"></a> 
                         </td>
                         <td valign="top" align="left">
-                           <p>For details, see <a href="ch06.html" title="Chapter&nbsp;6.&nbsp;Methods"><i xmlns:xlink="http://www.w3.org/1999/xlink">Methods</i></a>.
+                           <p>For details, see <a href="ch05.html" title="Chapter&nbsp;5.&nbsp;Methods"><i xmlns:xlink="http://www.w3.org/1999/xlink">Methods</i></a>.
                            </p>
                         </td>
                      </tr>
@@ -335,7 +339,7 @@
                         <td width="5%" valign="top" align="left"><a name="co211_desc"></a><a href="#co211"><img src="../images/callouts/8.png" alt="8" border="0"></a> 
                         </td>
                         <td valign="top" align="left">
-                           <p>For details, see <a href="ch06.html" title="Chapter&nbsp;6.&nbsp;Methods"><i xmlns:xlink="http://www.w3.org/1999/xlink">Methods</i></a>.
+                           <p>For details, see <a href="ch05.html" title="Chapter&nbsp;5.&nbsp;Methods"><i xmlns:xlink="http://www.w3.org/1999/xlink">Methods</i></a>.
                            </p>
                         </td>
                      </tr>
@@ -347,6 +351,16 @@
                            </p>
                         </td>
                      </tr>
+                     <tr>
+                        <td width="5%" valign="top" align="left"><a name="co219_desc"></a><a href="#co219"><img src="../images/callouts/10.png" alt="10" border="0"></a> 
+                        </td>
+                        <td valign="top" align="left">
+                           <p>For details, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/index.html" class="olink">Server Operations Guide</a>'s
+                                      chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../server_operations_guide/ch02.html#xref_General_Configuration_Options" class="olink">General Configuration Options</a> for the
+                                      <span class="literal">networkCompression</span> options.
+                           </p>
+                        </td>
+                     </tr>
                   </table>
                </div>
                <p>By the end of this chapter, we should be able to replace all
@@ -354,7 +368,7 @@
                       code.
                </p>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
@@ -366,7 +380,8 @@
                <p>BigWorld Technology divides processing of entities in a game world
                       into three different execution contexts:
                </p>
-               <div class="altrow"><font color="red">&lt;title&gt;Entity Types&lt;/title&gt;</font><table summary="Entity Types" border="0">
+               <div class="altrow">
+                  <table border="0">
                      <colgroup>
                         <col width="33%">
                         <col width="33%">
@@ -382,10 +397,7 @@
                      <tbody>
                         <tr>
                            <td align="left">Cell</td>
-                           <td align="left">
-                                              <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell</code>
-                                            
-                           </td>
+                           <td align="left"><code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/cell</code></td>
                            <td align="left">Takes care of the portions of an entity that
                                             affect the space around it. Processing takes place on the server
                                             cluster.
@@ -393,10 +405,7 @@
                         </tr>
                         <tr>
                            <td align="left">Base</td>
-                           <td align="left">
-                                              <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base</code>
-                                            
-                           </td>
+                           <td align="left"><code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/base</code></td>
                            <td align="left">Takes care of the portions of an entity that
                                             do not affect the space around it (as well as possibly acting as
                                             a proxy for a player). Processing takes place on the server
@@ -405,10 +414,7 @@
                         </tr>
                         <tr>
                            <td align="left">Client</td>
-                           <td align="left">
-                                              <code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client</code>
-                                            
-                           </td>
+                           <td align="left"><code class="filename"><em class="replaceable"><code>&lt;res&gt;</code></em>/scripts/client</code></td>
                            <td align="left">Takes care of the portions of an entity that
                                             require heavy awareness of the surrounding environment.
                            </td>
@@ -416,6 +422,7 @@
                      </tbody>
                   </table>
                </div>
+               <p><span class="citetitle">Entity Types</span></p>
                <p>It is possible for some entity instances to not have one of these
                       three parts. Furthermore, some entity types may not support ever having
                       one of these parts. For each entity type, there is a script file for each
@@ -446,7 +453,8 @@
                <p>The entity's base class defined in the script file is determined by
                       the execution context that the file represents, as described below:
                </p>
-               <div class="altrow"><font color="red">&lt;title&gt;Entity's base class per execution context&lt;/title&gt;</font><table summary="Entity's base class per execution context" border="0">
+               <div class="altrow">
+                  <table border="0">
                      <colgroup>
                         <col width="50%">
                         <col width="50%">
@@ -460,35 +468,26 @@
                      <tbody>
                         <tr>
                            <td align="left">Cell</td>
-                           <td align="left">
-                                              <code class="classname">BigWorld.Entity</code>
-                                            
-                           </td>
+                           <td align="left"><code class="classname">BigWorld.Entity</code></td>
                         </tr>
                         <tr>
                            <td align="left">Base</td>
-                           <td align="left">
-                                              <code class="classname">BigWorld.Base</code>
-                              
-                                              <em class="emphasis">or</em>
-                              
-                                              <code class="classname">BigWorld.Proxy</code>
-                                            
-                           </td>
+                           <td align="left"><code class="classname">BigWorld.Base</code>
+                                            <em class="emphasis">or</em>
+                                            <code class="classname">BigWorld.Proxy</code></td>
                         </tr>
                         <tr>
                            <td align="left">Client</td>
-                           <td align="left">
-                                              <code class="classname">BigWorld.Entity</code>
-                                            
-                           </td>
+                           <td align="left"><code class="classname">BigWorld.Entity</code></td>
                         </tr>
                      </tbody>
                   </table>
                </div>
+               <p><span class="citetitle">Entity's base class per execution
+                         context</span></p>
                <p>For more details about the difference between the
                       <code class="classname">Base</code> and <code class="classname">Proxy</code> classes, see
-                      <a href="ch10.html" title="Chapter&nbsp;10.&nbsp;Proxies and Players"><i xmlns:xlink="http://www.w3.org/1999/xlink">Proxies and Players</i></a>.
+                      <a href="ch11.html" title="Chapter&nbsp;11.&nbsp;Proxies and Players"><i xmlns:xlink="http://www.w3.org/1999/xlink">Proxies and Players</i></a>.
                </p>
                <p>The start of the script for a <code class="classname">Seat</code> entity
                       could be implemented as below:
@@ -543,7 +542,7 @@ class <em class="emphasis">Seat</em>( <em class="emphasis">BigWorld.Entity</em> 
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;3.&nbsp;Physical User Data Object Structure for Scripting</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

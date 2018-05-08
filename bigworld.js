@@ -1,4 +1,4 @@
-var bwVersion = "1.9";
+var bwVersion = "2.0.0 ClientServer";
 var custName  = "BigWorld";
 var bwDocName = "Unknown";
 
@@ -53,7 +53,7 @@ function verifyCustomer()
 
 
 	var re = /^.*svn\/customers\//;
-	var customer = String( "$HeadURL: https://svn01.bigworldtech.com/svn/customers/ArtCoding/1.9.1/current/bigworld/doc/bigworld.js $" ).replace( re, "" );
+	var customer = String( "$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/bigworld.js $" ).replace( re, "" );
 	if (customer.match( "HeadURL" ) )
 	{
 		custName = "BigWorld";

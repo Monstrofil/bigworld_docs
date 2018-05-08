@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="How To Write a Bot Movement Controller">
       <link rel="up" href="index.html" title="How To Write a Bot Movement Controller">
       <link rel="prev" href="index.html" title="How To Write a Bot Movement Controller">
-      <link rel="next" href="ch02.html" title="Chapter&nbsp;2.&nbsp;The MovementFactory"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch02.html" title="Chapter&nbsp;2.&nbsp;The MovementFactory">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/howto_control_bot_movement/ch01.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -39,18 +40,18 @@
                    controls the movement of a bot.
             </p>
             <p>More specifically, it must sub-class the
-                   <span class="literal">MovementController</span> class defined in
-                   <span class="literal">bigworld/src/server/tools/bots/movement_controller.[ch]pp</span>,
-                   and therefore implement the virtual method <span class="literal">nextStep</span>,
-                   which supplies position and orientation updates for that bot.
+                   <code class="classname">MovementController</code> class defined in
+                   <code class="filename">bigworld/src/server/tools/bots/movement_controller.<em class="replaceable"><code>[ch]</code></em>pp</code>,
+                   and therefore implement the virtual method
+                   <code class="methodname">nextStep()</code>, which supplies position and
+                   orientation updates for that bot.
             </p>
             <p>Additionally, you will need to implement a sub-class of
-                   <span class="literal">MovementFactory</span> (defined in the same source files as
-                   <span class="literal">MovementController</span>) to supply
-                   <span class="literal">MovementController</span> objects to bots (either at bot
-                   instantiation time, or on change of movement controller) via the virtual
-                   method <span class="literal">create</span>. For details, see <a href="ch02.html#xref_The_create_Method" title="2.2.&nbsp;The create() method">The <span class="literal">create()</span>
-                        method</a>.
+                   <code class="classname">MovementFactory</code> (defined in the same source files
+                   as <code class="classname">MovementController</code>) to supply
+                   <code class="classname">MovementController</code> objects to bots, either at bot
+                   instantiation time, or on change of movement controller, via the virtual
+                   method <code class="methodname">create()</code>. For details, see <a href="ch02.html#xref_The_create_Method" title="2.2.&nbsp;The create() method">The <code class="methodname">create()</code> method</a>.
             </p>
             <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                <h3 class="title">Note</h3>
@@ -58,7 +59,7 @@
                         companion to this document.
                </p>
                <p>It can be found in
-                        <span class="literal">src/server/tools/bots/patrol_graph.[ch]pp</span>.
+                        <code class="filename">src/server/tools/bots/patrol_graph.<em class="replaceable"><code>[ch]</code></em>pp</code>.
                </p>
                <p>This file also contains useful classes other than the movement
                         controller and factory referenced in this document.
@@ -77,11 +78,10 @@
                <tr>
                   <td width="40%" align="left" valign="top">How To Write a Bot Movement Controller&nbsp;</td>
                   <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
-                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;2.&nbsp;The
-                         <span class="literal">MovementFactory</span></td>
+                  <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;2.&nbsp;The <code class="classname">MovementFactory</code></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

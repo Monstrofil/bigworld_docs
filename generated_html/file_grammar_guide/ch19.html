@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch18.html" title="Chapter&nbsp;18.&nbsp;LightMapSection">
-      <link rel="next" href="ch20.html" title="Chapter&nbsp;20.&nbsp;.mfm"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch20.html" title="Chapter&nbsp;20.&nbsp;.mfm">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch19.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -35,33 +36,37 @@
                </div>
             </div>
             <p>Defines material kinds to be displayed in ModelEditor's Materials
-               Settings panel's Material Kind drop-down list box &#8212; for details, see the
-                   Content Tools Reference Guide, section <em class="emphasis">ModelEditor</em>, <em class="emphasis">Panel
-                      summary</em>, <em class="emphasis">Materials Settings
-                      panel</em>.
+                 Settings panel's Material Kind drop-down list box &#8212; for details, see the
+                 <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>, section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html#xref_me_Panel_Summary" class="olink">Panel summary</a>, <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch03.html#xref_me_Material_Settings_Panel" class="olink">Materials Settings panel</a>.
             </p>
-            <p>Located under <span class="literal">bigworld/res/system/data</span>, the
-                   grammar is listed below:
+            <p>Located under <span class="literal">bigworld/res/system/data</span>, the grammar
+                 is listed below:
             </p><pre class="programlisting">&lt;root&gt;
 
   *&lt;kind&gt;
       &lt;id&gt;      <em class="replaceable"><code>integer</code></em>  &lt;/id&gt;
       &lt;desc&gt;    <em class="replaceable"><code>string</code></em>   &lt;/desc&gt;
+      &lt;sound&gt;    <em class="replaceable"><code>string</code></em>   &lt;/sound&gt;
       &lt;help&gt;    <em class="replaceable"><code>string</code></em>   &lt;/help&gt;
       &lt;sfx&gt;     <em class="replaceable"><code>file</code></em>     &lt;/sfx&gt;
+      &lt;weight&gt;  <em class="replaceable"><code>weight</code></em>   &lt;/weight&gt;
      *&lt;terrain&gt; <em class="replaceable"><code>file</code></em>     &lt;/terrain&gt;
    &lt;/kind&gt;
 
 &lt;/root&gt;</pre><p><span class="citetitle">Grammar of
-                      <span class="literal">bigworld/res/system/data/material_kinds.xml</span></span></p>
+                    <span class="literal">bigworld/res/system/data/material_kinds.xml</span></span></p>
             <p>The list below describes the tags in
-                   <span class="literal">bigworld/res/system/data/material_kinds.xml</span>:
+                 <span class="literal">bigworld/res/system/data/material_kinds.xml</span>:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal">desc</span></em></p>
                      <p>Name to be displayed for the material kind.</p>
+                  </li>
+                  <li>
+                     <p><em class="emphasis"><span class="literal">sound</span></em></p>
+                     <p>Name of the sound tag to be triggered by footsteps.</p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">help</span></em></p>
@@ -72,15 +77,31 @@
                      <p>Unique numeric identifier for the material kind.</p>
                   </li>
                   <li>
+                     <p><em class="emphasis"><span class="literal">weight</span></em></p>
+                     <p>Weight for all of this material kind's terrain texture maps. When
+                              the dominant terrain texture is calculated for any XZ position in a
+                              terrain, the associated weighting for textures are taken into account.
+                              This influences which material kind is returned for a given location,
+                              and also influences the flora that grows at a given location. The
+                              material kind weight can be overridden on a per-terrain texture basis,
+                              see the terrain section below. If the weight is not specifies, it
+                              defaults to 1.0
+                     </p>
+                  </li>
+                  <li>
                      <p><em class="emphasis"><span class="literal">sfx</span></em></p>
                      <p>Special effect file associated with the material.</p>
                      <p><em class="emphasis">This is currently not
-                                   implemented.</em></p>
+                                 implemented.</em></p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">terrain</span></em></p>
                      <p>Textures associated with this type of material.</p>
                      <p>It is given by the texture file path, without extension.</p>
+                     <p>Additionally, each terrain texture may have an associated weight.
+                              This overrides the material kind's weight (see above.) If the weight is
+                              not specified, it defaults to the material kind's weight.
+                     </p>
                   </li>
                </ul>
             </div>
@@ -100,7 +121,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;20.&nbsp;<span class="literal">.mfm</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

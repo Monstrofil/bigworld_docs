@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch17.html" title="Chapter&nbsp;17.&nbsp;gui.xml">
-      <link rel="next" href="ch19.html" title="Chapter&nbsp;19.&nbsp;material_kinds.xml"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch19.html" title="Chapter&nbsp;19.&nbsp;material_kinds.xml">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch18.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -36,14 +37,13 @@
                </div>
             </div>
             <p>The flora and sky configuration files have a light_map section,
-                specifying the settings for how the respective element should have light
-                   applied to it.
+                 specifying the settings for how the respective element should have light
+                 applied to it.
             </p>
-            <p>For more details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Client Programming
-                      Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">3D Engine (Moo)</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Features</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Lighting</a>.
+            <p>For more details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/index.html" class="olink">Client Programming Guide</a>'s section <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch21.html" class="olink"><i>3D Engine (Moo)</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch21.html#xref_Features" class="olink">Features</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch21.html#xref_Lighting" class="olink">Lighting</a>.
             </p>
             <p>The grammar for the <em class="emphasis">LightMapSection</em>
-                   is described below:
+                 is described below:
             </p><pre class="programlisting">&lt;light_map&gt;
 
    &lt;material&gt;             <em class="replaceable"><code>file</code></em>     &lt;material&gt;
@@ -54,9 +54,9 @@
    &lt;effectTextureName&gt;    <em class="replaceable"><code>string</code></em>   &lt;effectTextureName&gt;
    &lt;effectTransformName&gt;  <em class="replaceable"><code>string</code></em>   &lt;effectTransformName&gt;
   
-&lt;/light_map&gt;</pre><p><span class="citetitle">Grammar of <em class="emphasis">LightMapSection</em> in
-                      <span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span> and
-                      <span class="literal"><em class="replaceable"><code>&lt;sky&gt;</code></em>.xml</span></span></p>
+&lt;/light_map&gt;</pre><p><span class="citetitle">Grammar of <em class="emphasis">LightMapSection</em>
+                    in <span class="literal"><em class="replaceable"><code>&lt;flora&gt;</code></em>.xml</span> and
+                    <span class="literal"><em class="replaceable"><code>&lt;sky&gt;</code></em>.xml</span></span></p>
             <p>The list below describes the tags in <em class="emphasis">LightMapSection</em>:
             </p>
             <div class="itemizedlist">
@@ -64,39 +64,39 @@
                   <li>
                      <p><em class="emphasis"><span class="literal">effectTextureName</span></em></p>
                      <p>Name of the automatic <em class="emphasis">Effect</em>
-                                variable that this light map's <span class="literal">Texture</span> property
-                                will be exposed to the effect files as.
+                              variable that this light map's <span class="literal">Texture</span> property will
+                              be exposed to the effect files as.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">effectTransformName</span></em></p>
                      <p>Name of the automatic <em class="emphasis">Effect</em>
-                                variable that this light map's World to <span class="literal">Texture
-                                   Transform</span> will be exposed to the effect files as.
+                              variable that this light map's World to <span class="literal">Texture
+                                 Transform</span> will be exposed to the effect files as.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">height</span></em></p>
                      <p>Height of the light map in pixels. This should usually have the
-                                same value as <span class="literal">&lt;width&gt;</span>.
+                              same value as <span class="literal">&lt;width&gt;</span>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">material</span></em></p>
-                     <p>Effect&nbsp;material file that the engine will use to draw the light
-                                map.
+                     <p>Effect&nbsp;material file that the engine will use to draw the
+                              light map.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">textureFeedName</span></em></p>
-                     <p>Texture name. Light maps are registered as texture feeds, and
-                                this entry specifies the name of the texture feed.
+                     <p>Texture name. Light maps are registered as texture feeds, and this
+                              entry specifies the name of the texture feed.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">timeToleranceSecs</span></em></p>
                      <p>Delay in seconds of game time between light map updates.&nbsp; Set
-                                this to 0 to update the light map for every frame.
+                              this to 0 to update the light map for every frame.
                      </p>
                   </li>
                   <li>
@@ -122,7 +122,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;19.&nbsp;<span class="literal">material_kinds.xml</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

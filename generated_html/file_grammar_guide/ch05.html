@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch04.html" title="Chapter&nbsp;4.&nbsp;ZipSection files">
-      <link rel="next" href="ch06.html" title="Chapter&nbsp;6.&nbsp;capabilities.xml"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch06.html" title="Chapter&nbsp;6.&nbsp;capabilities.xml">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch05.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -36,11 +37,10 @@
                   </div>
                </div>
             </div>
-            <p>Brush files are used to store information used for terrain painting
-                   in <em class="emphasis">WorldEditor</em>.
+            <p>Brush files are used to store information used for terrain painting in
+                 <em class="emphasis">WorldEditor</em>.
             </p>
-            <p>They are described in the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Content Tools Reference
-                      Guide</a>'s sections <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Panel Summary</a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="/cgi-bin/olink?sysid=" class="olink">Terrain Texturing Panel</a>.
+            <p>They are described in the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s sections <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch04.html" class="olink"><i>Terrain</i></a> <span class="symbol">&#8594;</span> <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../client_programming_guide/ch05.html" class="olink"><i>Cloud shadows</i></a>.
             </p>
             <p>The grammar is listed below:</p><pre class="programlisting">&lt;root&gt;
 
@@ -96,104 +96,104 @@
                   <li>
                      <p><em class="emphasis"><span class="literal">h1 </span></em><em class="emphasis">(section</em> <em class="emphasis"><span class="literal">heightMask</span>)</em></p>
                      <p>The minimum height in meters at which the height mask will be
-                                fully off. Heights below this value will not get painted. Heights
-                                between <em class="emphasis">h1</em> and <em class="emphasis">h2</em> are painted with a strength that varies from
-                                zero strength at <em class="emphasis">h1</em> meters to full
-                                strength at <em class="emphasis">h2</em>.
+                              fully off. Heights below this value will not get painted. Heights
+                              between <em class="emphasis">h1</em> and <em class="emphasis">h2</em> are painted with a strength that varies from
+                              zero strength at <em class="emphasis">h1</em> meters to full
+                              strength at <em class="emphasis">h2</em>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">h2 </span></em><em class="emphasis">(section</em> <em class="emphasis"><span class="literal">heightMask</span>)</em></p>
                      <p>The minimum height in meters at which the height mask will be
-                                fully on. Heights between <em class="emphasis">h1</em> and
-                                <em class="emphasis">h2</em> are painted with a strength that
-                                varies from zero strength at <em class="emphasis">h1</em>
-                                meters to full strength at <em class="emphasis">h2</em>.
-                                Heights between <em class="emphasis">h2</em> and <em class="emphasis">h3</em> are painted with full strength.
+                              fully on. Heights between <em class="emphasis">h1</em> and
+                              <em class="emphasis">h2</em> are painted with a strength that
+                              varies from zero strength at <em class="emphasis">h1</em> meters
+                              to full strength at <em class="emphasis">h2</em>. Heights between
+                              <em class="emphasis">h2</em> and <em class="emphasis">h3</em> are painted with full strength.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">h3 </span></em><em class="emphasis">(section</em> <em class="emphasis"><span class="literal">heightMask</span>)</em></p>
                      <p>The maximum height in meters at which the height mask will be
-                                fully on. Heights between <em class="emphasis">h2</em> and
-                                <em class="emphasis">h3</em> are painted with full strength.
-                                Heights between <em class="emphasis">h3 </em>and <em class="emphasis">h4</em> are painted with a strength that varies from
-                                full strength at <em class="emphasis">h3</em> meters to zero
-                                strength at <em class="emphasis">h4</em>.
+                              fully on. Heights between <em class="emphasis">h2</em> and
+                              <em class="emphasis">h3</em> are painted with full strength.
+                              Heights between <em class="emphasis">h3 </em>and <em class="emphasis">h4</em> are painted with a strength that varies from
+                              full strength at <em class="emphasis">h3</em> meters to zero
+                              strength at <em class="emphasis">h4</em>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">h4 </span></em><em class="emphasis">(section</em> <em class="emphasis"><span class="literal">heightMask</span>)</em></p>
                      <p>The maximum height in meters at which the height mask will be
-                                fully off. Heights between <em class="emphasis">h3 </em>and
-                                <em class="emphasis">h4</em> are painted with a strength that
-                                goes from full strength at <em class="emphasis">h3</em> meters
-                                to zero strength at <em class="emphasis">h4</em>. Heights above
-                                <em class="emphasis">h4</em> will not get painted.
+                              fully off. Heights between <em class="emphasis">h3 </em>and
+                              <em class="emphasis">h4</em> are painted with a strength that
+                              goes from full strength at <em class="emphasis">h3</em> meters to
+                              zero strength at <em class="emphasis">h4</em>. Heights above
+                              <em class="emphasis">h4</em> will not get painted.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">heightmask
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">textureMask</span>)</em></p>
+                                    </span></em><em class="emphasis">(section
+                                 <span class="literal">textureMask</span>)</em></p>
                      <p>This is used to determine whether the height mask is
-                                enabled.
+                              enabled.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">includeProj
-                                      </span></em></p>
+                                    </span></em></p>
                      <p>This is used to determine whether the texture mask compares
-                                texture projections as well as the texture name when choosing which
-                                layers to replace.
+                              texture projections as well as the texture name when choosing which
+                              layers to replace.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">invert
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">textureMask</span>)</em></p>
+                                    </span></em><em class="emphasis">(section
+                                 <span class="literal">textureMask</span>)</em></p>
                      <p>Invert the sense of the texture mask. If this is false then
-                                painting with the texture mask will replace the masked texture. If
-                                this is true then painting with the texture mask will replace
-                                everything except the masked texture.
+                              painting with the texture mask will replace the masked texture. If this
+                              is true then painting with the texture mask will replace everything
+                              except the masked texture.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">opacity</span></em></p>
-                     <p>The opacity of the brush. The scale is 0 is completely
-                                transparent and 255 is completely solid.
+                     <p>The opacity of the brush. The scale is 0 is completely transparent
+                              and 255 is completely solid.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">minSat
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">noiseMask</span>)</em></p>
+                                    </span></em><em class="emphasis">(section
+                                 <span class="literal">noiseMask</span>)</em></p>
                      <p>This is the minimum saturation value of the noise as a number
-                                between 0.0 and 1.0. All noise values below this value get set to the
-                                minimum strength (<em class="emphasis">minStrength</em>).
+                              between 0.0 and 1.0. All noise values below this value get set to the
+                              minimum strength (<em class="emphasis">minStrength</em>).
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">minimumStrength
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">noiseMask</span>)</em></p>
-                     <p>This is the minimum strength of the noise mask as a number
-                                between 0.0 and 1.0.
+                                    </span></em><em class="emphasis">(section
+                                 <span class="literal">noiseMask</span>)</em></p>
+                     <p>This is the minimum strength of the noise mask as a number between
+                              0.0 and 1.0.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">maxSat</span></em><em class="emphasis"><em class="emphasis"><span class="literal">
-                                         </span></em>(section
-                                   <span class="literal">noiseMask</span>)</em></p>
+                                       </span></em>(section
+                                 <span class="literal">noiseMask</span>)</em></p>
                      <p>This is the maximum saturation value of the noise as a number
-                                between 0.0 and 1.0. All noise values above this value get set to the
-                                maximum strength (<em class="emphasis">maxStrength</em>).
+                              between 0.0 and 1.0. All noise values above this value get set to the
+                              maximum strength (<em class="emphasis">maxStrength</em>).
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">maximumStrength</span></em> <em class="emphasis">(section <span class="literal">noiseMask</span>)</em></p>
-                     <p>This is the maximum strength of the noise mask as a number
-                                between 0.0 and 1.0.
+                     <p>This is the maximum strength of the noise mask as a number between
+                              0.0 and 1.0.
                      </p>
                   </li>
                   <li>
@@ -202,57 +202,52 @@
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">s1 </span></em><em class="emphasis">(section
-                                   <span class="literal"><span class="literal">slopeMask</span></span>)</em></p>
-                     <p>The minimum angle in degrees at which the slope mask will be
-                                fully off. Slopes below this value will not get painted. Slopes
-                                between <em class="emphasis">s1</em> and <em class="emphasis">s2</em> are painted with a strength that varies from
-                                zero strength at <em class="emphasis">s1</em> degrees to full
-                                strength at <em class="emphasis">s2</em>.
+                                 <span class="literal"><span class="literal">slopeMask</span></span>)</em></p>
+                     <p>The minimum angle in degrees at which the slope mask will be fully
+                              off. Slopes below this value will not get painted. Slopes between
+                              <em class="emphasis">s1</em> and <em class="emphasis">s2</em> are painted with a strength that varies from
+                              zero strength at <em class="emphasis">s1</em> degrees to full
+                              strength at <em class="emphasis">s2</em>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">s2 </span></em><em class="emphasis">(section <span class="literal">slopeMask</span>)</em></p>
-                     <p>The minimum angle in degrees at which the slope mask will be
-                                fully on. Slopes between <em class="emphasis">s1</em> and
-                                <em class="emphasis">s2</em> are painted with a strength that
-                                varies from zero strength at <em class="emphasis">s1</em>
-                                degrees to full strength at <em class="emphasis">s2</em>.
-                                Slopes between <em class="emphasis">s2</em> and <em class="emphasis">s3</em> are painted with full strength.
+                     <p>The minimum angle in degrees at which the slope mask will be fully
+                              on. Slopes between <em class="emphasis">s1</em> and <em class="emphasis">s2</em> are painted with a strength that varies from
+                              zero strength at <em class="emphasis">s1</em> degrees to full
+                              strength at <em class="emphasis">s2</em>. Slopes between
+                              <em class="emphasis">s2</em> and <em class="emphasis">s3</em> are painted with full strength.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">s3 </span></em><em class="emphasis">(section <span class="literal">slopeMask</span>)</em></p>
-                     <p>The maximum slope in degrees at which the slope mask will be
-                                fully on. Slopes between <em class="emphasis">s2</em> and
-                                <em class="emphasis">s3</em> are painted with full strength.
-                                Slopes between <em class="emphasis">s3 </em>and <em class="emphasis">s4</em> are painted with a strength that varies from
-                                full strength at <em class="emphasis">s3</em> degrees to zero
-                                strength at <em class="emphasis">s4</em>.
+                     <p>The maximum slope in degrees at which the slope mask will be fully
+                              on. Slopes between <em class="emphasis">s2</em> and <em class="emphasis">s3</em> are painted with full strength. Slopes between
+                              <em class="emphasis">s3 </em>and <em class="emphasis">s4</em> are painted with a strength that varies from
+                              full strength at <em class="emphasis">s3</em> degrees to zero
+                              strength at <em class="emphasis">s4</em>.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">s4 </span></em><em class="emphasis">(section <span class="literal">slopeMask</span>)</em></p>
-                     <p>The maximum slope in degrees at which the slope mask will be
-                                fully off. Slopes between <em class="emphasis">s3 </em>and
-                                <em class="emphasis">s4</em> are painted with a strength that
-                                varies from full strength at <em class="emphasis">s3</em>
-                                meters to zero strength at <em class="emphasis">s4</em>. Slopes
-                                above <em class="emphasis">s4</em> will not get painted.
+                     <p>The maximum slope in degrees at which the slope mask will be fully
+                              off. Slopes between <em class="emphasis">s3 </em>and <em class="emphasis">s4</em> are painted with a strength that varies from
+                              full strength at <em class="emphasis">s3</em> meters to zero
+                              strength at <em class="emphasis">s4</em>. Slopes above <em class="emphasis">s4</em> will not get painted.
                      </p>
                   </li>
                   <li>
-                     <p><em class="emphasis"><span class="literal">seed
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">noiseMask/noise/octave</span>)</em></p>
+                     <p><em class="emphasis"><span class="literal">seed </span></em><em class="emphasis">(section
+                                 <span class="literal">noiseMask/noise/octave</span>)</em></p>
                      <p>The number used to seed the noise for this octave. Changing the
-                                seed allows for multiple copies of similar looking noise to be
-                                used.
+                              seed allows for multiple copies of similar looking noise to be
+                              used.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">slopeMask</span></em></p>
                      <p>This is used to determine whether the slope mask is
-                                enabled.
+                              enabled.
                      </p>
                   </li>
                   <li>
@@ -269,12 +264,12 @@
                         <ul type="circle">
                            <li>
                               <p><em class="emphasis">Section
-                                                <span class="literal">root</span></em></p>
+                                              <span class="literal">root</span></em></p>
                               <p>The name of the texture used to paint with.</p>
                            </li>
                            <li>
                               <p><em class="emphasis">Section
-                                                <span class="literal"><span class="literal">terrain</span>Mask</span></em></p>
+                                              <span class="literal"><span class="literal">terrain</span>Mask</span></em></p>
                               <p>The name of the texture to mask against.</p>
                            </li>
                         </ul>
@@ -287,7 +282,7 @@
                   <li>
                      <p><em class="emphasis"><span class="literal">type</span></em></p>
                      <p>This identifies the brush type. Currently this is set to
-                                "TerrainPainting".
+                              "TerrainPainting".
                      </p>
                   </li>
                   <li>
@@ -296,16 +291,16 @@
                         <ul type="circle">
                            <li>
                               <p><em class="emphasis">Section
-                                                <span class="literal">root</span></em></p>
+                                              <span class="literal">root</span></em></p>
                               <p>The u-projection of the brush. This combined with the
-                                             <em class="emphasis">vProjection</em> defines an orthogonal
-                                             coordinate system from which the yaw, pitch, roll and u/v scales
-                                             are derived.
+                                           <em class="emphasis">vProjection</em> defines an orthogonal
+                                           coordinate system from which the yaw, pitch, roll and u/v scales are
+                                           derived.
                               </p>
                            </li>
                            <li>
                               <p><em class="emphasis">Section
-                                                <span class="literal"><span class="literal">terrain</span>Mask</span></em></p>
+                                              <span class="literal"><span class="literal">terrain</span>Mask</span></em></p>
                               <p>The u-projection of textures to mask against.</p>
                            </li>
                         </ul>
@@ -314,15 +309,13 @@
                   <li>
                      <p><em class="emphasis"><span class="literal">uProjection</span></em></p>
                      <p>The u-projection of the brush. This combined with the <em class="emphasis">vProjection</em> defines an orthogonal coordinate
-                                system from which the yaw, pitch, roll and u/v scales are
-                                derived.
+                              system from which the yaw, pitch, roll and u/v scales are
+                              derived.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">uvLocked</span></em></p>
-                     <p>If true then the u and v scales are locked to be the
-                                same.
-                     </p>
+                     <p>If true then the u and v scales are locked to be the same.</p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">vProjection</span></em></p>
@@ -330,16 +323,16 @@
                         <ul type="circle">
                            <li>
                               <p><em class="emphasis">Section
-                                                <span class="literal">root</span></em></p>
+                                              <span class="literal">root</span></em></p>
                               <p>The v-projection of the brush. This combined with the
-                                             <em class="emphasis">uProjection</em> defines an orthogonal
-                                             coordinate system from which the yaw, pitch, roll and u/v scales
-                                             are derived.
+                                           <em class="emphasis">uProjection</em> defines an orthogonal
+                                           coordinate system from which the yaw, pitch, roll and u/v scales are
+                                           derived.
                               </p>
                            </li>
                            <li>
                               <p><em class="emphasis">Section
-                                                <span class="literal"><span class="literal">terrain</span>Mask</span></em></p>
+                                              <span class="literal"><span class="literal">terrain</span>Mask</span></em></p>
                               <p>The v-projection of textures to mask against.</p>
                            </li>
                         </ul>
@@ -347,16 +340,16 @@
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">waveLength
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">noiseMask/noise/octave</span>)</em></p>
+                                    </span></em><em class="emphasis">(section
+                                 <span class="literal">noiseMask/noise/octave</span>)</em></p>
                      <p>The size of an octave of noise in meters.</p>
                   </li>
                   <li>
                      <p><em class="emphasis"><span class="literal">weight
-                                      </span></em><em class="emphasis">(section
-                                   <span class="literal">noiseMask/noise/octave</span>)</em></p>
+                                    </span></em><em class="emphasis">(section
+                                 <span class="literal">noiseMask/noise/octave</span>)</em></p>
                      <p>The relative weight of an octave of noise. Octaves whose weights
-                                are larger will contribute more to the overall noise.
+                              are larger will contribute more to the overall noise.
                      </p>
                   </li>
                </ul>
@@ -378,7 +371,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;6.&nbsp;<span class="literal">capabilities.xml</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

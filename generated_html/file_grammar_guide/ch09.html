@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="File Grammar Guide">
       <link rel="up" href="index.html" title="File Grammar Guide">
       <link rel="prev" href="ch08.html" title="Chapter&nbsp;8.&nbsp;.chunk">
-      <link rel="next" href="ch10.html" title="Chapter&nbsp;10.&nbsp;dxenum.xml"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch10.html" title="Chapter&nbsp;10.&nbsp;dxenum.xml">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/file_grammar_guide/ch09.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -35,10 +36,10 @@
                </div>
             </div>
             <p>The <code class="filename">common_options.xml</code> file was created to hold
-                   settings and options that are common to two or more BigWorld tools.
+                 settings and options that are common to more than one BigWorld tool.
             </p>
-            <p>The <code class="filename">common_options.xml</code> file format
-                   specification is illustrated below:
+            <p>The <code class="filename">common_options.xml</code> file format specification
+                 is illustrated below:
             </p><pre class="programlisting">&lt;root&gt;
     &lt;cooperative&gt;
         ?&lt;mode&gt; [AUTO|ON|OFF] &lt;/mode&gt;
@@ -49,51 +50,51 @@
     &lt;/cooperative&gt;
 &lt;/root&gt;</pre><p><span class="citetitle">Grammar of common_options.xml file</span></p>
             <p>The list below describes the tags in the common_options.xml
-                   file:
+                 file:
             </p>
             <div class="itemizedlist">
                <ul type="disc">
                   <li>
                      <p><em class="emphasis"><span class="literal">mode</span> (section
-                                     cooperative)</em></p>
-                     <p>Sets the way WorldEditor, ModelEditor and ParticleEditor
-                                  should cooperate with each other and with other DirectX
-                                  applications. Only three values are allowed:
+                                   cooperative)</em></p>
+                     <p>Sets the way WorldEditor, ModelEditor and ParticleEditor should
+                                cooperate with each other and with other DirectX applications. Only
+                                three values are allowed:
                      </p>
                      <p><em class="emphasis">- AUTO</em>: It's the recommended
-                                  and default state, and ensures the <span class="literal">BigWorld</span> tools
-                                  release their video memory when an application in the
-                                  <span class="literal">&lt;apps&gt;</span> list below is running and the tool
-                                  is in the background, but keeps DirectX resources if no other
-                                  specified applications are running to improve performance.
+                                and default state, and ensures the tools release their video memory
+                                when an application in the <span class="literal">&lt;apps&gt;</span> list below
+                                is running and the tool is in the background, but keeps DirectX
+                                resources if no other specified applications are running to improve
+                                performance.
                      </p>
                      <p><em class="emphasis">- ON</em>: Always releases DirectX
-                                  resources when it is switched to the background, to allow maximum
-                                  compatibility with other applications, but makes switching between
-                                  applications slower.
+                                resources when it is switched to the background, to allow maximum
+                                compatibility with other applications, but makes switching between
+                                applications slower.
                      </p>
                      <p><em class="emphasis">- OFF</em>: Never releases its
-                                  DirectX resources, making application switching fast, but can result
-                                  in problems and/or crashes when running multiple DirectX
-                                  applications. 
+                                DirectX resources, making application switching fast, but can result
+                                in problems and/or crashes when running multiple DirectX
+                                applications.
                      </p>
                   </li>
                   <li>
                      <p><em class="emphasis">app (section
-                                     cooperative/apps)</em></p>
+                                   cooperative/apps)</em></p>
                      <p>Specifies one or more executables that WorldEditor,
-                                  ParticleEditor and ModelEditor should cooperate with. DOS-style
-                                  wildcards can be used so, for example, if you include
-                                  <code class="filename">modeleditor*.exe</code> in the
-                                  <span class="literal">&lt;apps&gt;</span> list, the tools will cooperate with
-                                  <code class="filename">modeleditor.exe</code>,
-                                  <code class="filename">modeleditor_debug.exe</code>,
-                                  <code class="filename">modeleditor_eval.exe</code>, etc. Multiple
-                                  applications can be specified by including more than one
-                                  <span class="literal">&lt;app&gt;</span> tags, and applications don't have to
-                                  be BigWorld tools. For example, you could include
-                                  <code class="filename">3dsmax.exe</code> and <code class="filename">maya.exe</code> to
-                                  ensure smooth operation with those tools.
+                                ParticleEditor and ModelEditor should cooperate with. DOS-style
+                                wildcards can be used so, for example, if you include
+                                <code class="filename">modeleditor*.exe</code> in the
+                                <span class="literal">&lt;apps&gt;</span> list, the tools will cooperate with
+                                <code class="filename">modeleditor.exe</code>,
+                                <code class="filename">modeleditor_debug.exe</code>,
+                                <code class="filename">modeleditor_eval.exe</code>, etc. Multiple applications
+                                can be specified by including more than one
+                                <span class="literal">&lt;app&gt;</span> tags, and applications don't have to be
+                                BigWorld tools. For example, you could include
+                                <code class="filename">3dsmax.exe</code> and <code class="filename">maya.exe</code> to
+                                ensure smooth operation with those tools.
                      </p>
                   </li>
                </ul>
@@ -115,7 +116,7 @@
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;10.&nbsp;<span class="literal">dxenum.xml</span></td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

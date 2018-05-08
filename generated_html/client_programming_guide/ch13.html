@@ -8,9 +8,10 @@
       <link rel="start" href="index.html" title="Client Programming Guide">
       <link rel="up" href="index.html" title="Client Programming Guide">
       <link rel="prev" href="ch12.html" title="Chapter&nbsp;12.&nbsp;Server Communications">
-      <link rel="next" href="ch14.html" title="Chapter&nbsp;14.&nbsp;Detail Objects"><script type="text/javascript" src="../css/bigworld.js"></script></head>
-   <body onLoad="loader();">
-      <div id="bigworld-header"><img src="bigworld_logo.gif" id="bwLogo" alt="bw logo"></div>
+      <link rel="next" href="ch14.html" title="Chapter&nbsp;14.&nbsp;Detail Objects">
+   </head>
+   <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div id="bigworld-header"><img src="http://try.bigworldtech.com/bigworld/image.php?img=bigworld_logo.gif&amp;svn=$HeadURL: https://svn01.bigworldtech.com/svn/customers/Xingyulongying/2.0/current/bigworld/doc/generated_html/client_programming_guide/ch13.html $" alt="bw logo"></div>
       <div id="content">
          <div class="navheader">
             <table width="95%" align="center" summary="Navigation header">
@@ -38,18 +39,18 @@
             <div class="toc">
                <p><b>Table of Contents</b></p>
                <dl>
-                  <dt><span class="sect1"><a href="ch13.html#d0e4371">13.1. Particle Systems</a></span></dt>
-                  <dt><span class="sect1"><a href="ch13.html#d0e4433">13.2. Particle Actions</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e4671">13.1. Particle Systems</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e4733">13.2. Particle Actions</a></span></dt>
                   <dd>
                      <dl>
-                        <dt><span class="sect2"><a href="ch13.html#d0e4463">13.2.1. Source actions</a></span></dt>
-                        <dt><span class="sect2"><a href="ch13.html#d0e4472">13.2.2. Movement actions</a></span></dt>
-                        <dt><span class="sect2"><a href="ch13.html#d0e4484">13.2.3. Sink actions</a></span></dt>
-                        <dt><span class="sect2"><a href="ch13.html#d0e4500">13.2.4. Alteration actions</a></span></dt>
+                        <dt><span class="section"><a href="ch13.html#d0e4763">13.2.1. Source actions</a></span></dt>
+                        <dt><span class="section"><a href="ch13.html#d0e4772">13.2.2. Movement actions</a></span></dt>
+                        <dt><span class="section"><a href="ch13.html#d0e4784">13.2.3. Sink actions</a></span></dt>
+                        <dt><span class="section"><a href="ch13.html#d0e4800">13.2.4. Alteration actions</a></span></dt>
                      </dl>
                   </dd>
-                  <dt><span class="sect1"><a href="ch13.html#d0e4505">13.3. Particle types</a></span></dt>
-                  <dt><span class="sect1"><a href="ch13.html#d0e4525">13.4. Attaching particle systems to bones</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e4805">13.3. Particle types</a></span></dt>
+                  <dt><span class="section"><a href="ch13.html#d0e4823">13.4. Attaching particle systems to bones</a></span></dt>
                </dl>
             </div>
             <p>A particle is a textured rectangle or a small mesh that can be drawn
@@ -60,11 +61,11 @@
                  of a number of particles with similar properties, and an identical function
                  pipeline to describe the transition of its particles' properties.
             </p>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e4371"></a>13.1.&nbsp;Particle Systems
+                        <h2 class="title" style="clear: both"><a name="d0e4671"></a>13.1.&nbsp;Particle Systems
                         </h2>
                      </div>
                   </div>
@@ -189,11 +190,11 @@ def onLoadResources( self, resources ):
   self.model.root.attach( resources["particles/one.xml"] )
   self.model.root.attach( resources["particles/two.xml"] )
 </pre></div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e4433"></a>13.2.&nbsp;Particle Actions
+                        <h2 class="title" style="clear: both"><a name="d0e4733"></a>13.2.&nbsp;Particle Actions
                         </h2>
                      </div>
                   </div>
@@ -224,11 +225,11 @@ def onLoadResources( self, resources ):
                      </li>
                   </ul>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4463"></a>13.2.1.&nbsp;Source actions
+                           <h3 class="title"><a name="d0e4763"></a>13.2.1.&nbsp;Source actions
                            </h3>
                         </div>
                      </div>
@@ -254,11 +255,11 @@ def onLoadResources( self, resources ):
                            0.5) is roughly the bounding box of the particle in position.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4472"></a>13.2.2.&nbsp;Movement actions
+                           <h3 class="title"><a name="d0e4772"></a>13.2.2.&nbsp;Movement actions
                            </h3>
                         </div>
                      </div>
@@ -275,11 +276,11 @@ def onLoadResources( self, resources ):
                            <em class="emphasis">e.g.</em>, spent bullets tumbling down steps.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4484"></a>13.2.3.&nbsp;Sink actions
+                           <h3 class="title"><a name="d0e4784"></a>13.2.3.&nbsp;Sink actions
                            </h3>
                         </div>
                      </div>
@@ -294,11 +295,11 @@ def onLoadResources( self, resources ):
                            particle limit.
                   </p>
                </div>
-               <div class="sect2" lang="en">
+               <div class="section" lang="en">
                   <div class="titlepage">
                      <div>
                         <div>
-                           <h3 class="title"><a name="d0e4500"></a>13.2.4.&nbsp;Alteration actions
+                           <h3 class="title"><a name="d0e4800"></a>13.2.4.&nbsp;Alteration actions
                            </h3>
                         </div>
                      </div>
@@ -311,11 +312,11 @@ def onLoadResources( self, resources ):
                   </p>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e4505"></a>13.3.&nbsp;Particle types
+                        <h2 class="title" style="clear: both"><a name="d0e4805"></a>13.3.&nbsp;Particle types
                         </h2>
                      </div>
                   </div>
@@ -329,9 +330,7 @@ def onLoadResources( self, resources ):
                       performance, meshes specific for use in particle systems should be
                       exported from 3ds Max or Maya in groups of 15, having the Mesh Particles
                       option button selected in its respective exporter dialog. For more
-                      details, see the document <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Content Tools Reference
-                         Guide</span>'s chapter <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">3ds Max and Maya
-                         Exporters</span> .
+                      details, see the document <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/index.html" class="olink">Content Tools Reference Guide</a>'s chapter <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../content_tools_reference_guide/ch11.html" class="olink"><i>3ds Max and Maya Exporters</i></a> .
                </p>
                <div class="informalfigure">
                   <div class="mediaobject"><img src="images/3ds_max_and_maya_visual_exporter_dialogs.png"><span class="caption">
@@ -340,19 +339,18 @@ def onLoadResources( self, resources ):
                         </p></span></div>
                </div>
             </div>
-            <div class="sect1" lang="en">
+            <div class="section" lang="en">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h2 class="title" style="clear: both"><a name="d0e4525"></a>13.4.&nbsp;Attaching particle systems to bones
+                        <h2 class="title" style="clear: both"><a name="d0e4823"></a>13.4.&nbsp;Attaching particle systems to bones
                         </h2>
                      </div>
                   </div>
                </div>
                <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
                   <h3 class="title">Note</h3>
-                  <p>For details on any class mentioned in this section, see the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Client Python API
-                              documentation</span>'s entry <em class="emphasis">Class
+                  <p>For details on any class mentioned in this section, see the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/client/index.html" class="olink">Client Python API</a>'s entry <em class="emphasis">Class
                               List</em>.
                   </p>
                </div>
@@ -404,8 +402,7 @@ def onLoadResources( self, resources ):
                </p>
                <p>Once you have an independent model, you can set its position and
                       orientation to any <span class="literal">MatrixProvider</span>, by using the
-                      <span class="literal">Servo Motor</span>. As explained in the <span xmlns:xlink="http://www.w3.org/1999/xlink" class="olink">Client Python API
-                         documentation</span>, the <span class="literal">Servo</span> class is a
+                      <span class="literal">Servo Motor</span>. As explained in the <a xmlns:xlink="http://www.w3.org/1999/xlink" href="../..//api_python/client/index.html" class="olink">Client Python API</a>, the <span class="literal">Servo</span> class is a
                       <span class="literal">Motor</span> that sets the transform of a model to the given
                       <span class="literal">MatrixProvider</span> &#8212; as the
                       <span class="literal">MatrixProvider</span> is updated, the model moves. The signal
@@ -478,7 +475,7 @@ def onLoadResources( self, resources ):
                   <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;14.&nbsp;Detail Objects</td>
                </tr>
                <tr>
-                  <td colspan="3">Copyright 1999-2008 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
+                  <td colspan="3">Copyright 1999-2010 BigWorld Pty. Ltd. All rights reserved. Proprietary commercial in confidence.
                      		   
                   </td>
                </tr>

@@ -16,13 +16,27 @@ body table {
 	font-style:normal;
 	}
 
-.sect1 table{
+.section table {
 	border: #999999 solid 1px;
 	background-color:#FFFFFF;
 	border-collapse:collapse;
 }
 
-.sect1 table th{
+.sect1 table {
+	border: #999999 solid 1px;
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+}
+
+.section table th {
+	border: #999999 solid 1px;
+	background-color:#000000;
+	color:#FFFFFF;
+	text-align:left;
+	padding: 5px;
+}
+
+.sect1 table th {
 	border: #999999 solid 1px;
 	background-color:#000000;
 	color:#FFFFFF;
@@ -38,6 +52,11 @@ body table {
 	color:#666666;
 	margin-top:0;
 	font-weight:bold;
+}
+
+.section table td{
+	border: #999999 solid 1px;
+	padding: 5px;
 }
 
 .sect1 table td{
@@ -150,10 +169,6 @@ h2 {
 }
 
 div.chapter, div.book {
-	margin: 0cm 1cm; 
-}
-
-div.article, div.book {
 	margin: 0cm 1cm; 
 }
 
@@ -403,22 +418,22 @@ div.navfooter {
 	padding-bottom:10px;
 }
 
-div.navfooter table{
+div.navfooter table {
 	background-color:#E7EFF8;
 }
 
-div.navfooter td{
+div.navfooter td {
 	font-size: 90%;
 	color: #666666;
 }
 
-div.navheader a:link, div.navheader a:visited, div.navfooter a:link, div.navfooter a:visited{
+div.navheader a:link, div.navheader a:visited, div.navfooter a:link, div.navfooter a:visited {
 	color: #3577FF;
 	font-weight: bold;
 	font-style:normal;
 }
 
-div.navheader a:hover, div.navheader a:active, div.navfooter a:hover, div.navfooter a:active{
+div.navheader a:hover, div.navheader a:active, div.navfooter a:hover, div.navfooter a:active {
 	color: #FF5300;
 	font-weight: bold;
 	font-style:normal;
